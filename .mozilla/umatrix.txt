@@ -1,0 +1,35 @@
+https-strict: * true
+https-strict: behind-the-scene false
+matrix-off: about-scheme true
+matrix-off: behind-the-scene true
+matrix-off: chrome-extension-scheme true
+matrix-off: chrome-scheme true
+matrix-off: moz-extension-scheme true
+matrix-off: opera-scheme true
+matrix-off: vivaldi-scheme true
+matrix-off: wyciwyg-scheme true
+noscript-spoof: * true
+referrer-spoof: * true
+referrer-spoof: behind-the-scene false
+* * * block
+* * css allow
+* * frame block
+* * image allow
+* 1st-party * allow
+* 1st-party frame allow
+github.com githubassets.com script allow
+gitlab.com gitlab-static.net script allow
+invidio.us * css inherit
+invidio.us * frame inherit
+invidio.us * image inherit
+invidio.us 1st-party frame inherit
+mozilla.org mozilla.net * allow
+reddit.com redd.it media allow
+reddit.com redd.it xhr allow
+reddit.com redditstatic.com script allow
+soundcloud.com sndcdn.com script allow
+soundcloud.com sndcdn.com xhr allow
+youtube-nocookie.com googlevideo.com xhr allow
+youtube-nocookie.com ytimg.com script allow
+youtube.com google.com script allow
+youtube.com googlevideo.com xhr allow

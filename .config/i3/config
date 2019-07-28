@@ -1,0 +1,324 @@
+# SemtexError: I3WM config
+
+font monaco:monospace 16
+
+set $mod Mod4
+set $gap 5
+set $nsi --no-startup-id
+
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+set $bg-color			#36445e
+set $bg-color-focus		#697791
+
+#code			border		background	text	indicator		child_border
+client.focused	$bg-color	#285577		#ffffff	$bg-color-focus	#285577
+
+smart_gaps on
+# smart_borders on
+gaps inner $gap
+gaps outer 0
+
+for_window [class="^.*"] border pixel 4
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod 
+
+# PrintScreen
+bindsym --release Print				exec $nsi spectacle
+bindsym $mod+Print 					exec echo ''
+bindsym $mod+Shift+Print 			exec echo ''
+bindsym $mod+Ctrl+Print 			exec echo ''
+bindsym $mod+Ctrl+Shift+Print		exec echo ''
+
+# Backspace
+bindsym $mod+BackSpace 				gaps inner current set $gap
+bindsym $mod+Shift+BackSpace 		gaps outer current set 0
+bindsym $mod+Ctrl+BackSpace 		exec echo ''
+bindsym $mod+Ctrl+Shift+BackSpace	exec echo ''
+
+# Enter
+bindsym $mod+Return 				exec i3-sensible-terminal
+bindsym $mod+Shift+Return 			exec echo ''
+bindsym $mod+Ctrl+Return 			exec echo ''
+bindsym $mod+Ctrl+Shift+Return		exec echo ''
+
+# Comma/,
+bindsym $mod+comma 					exec echo ''
+bindsym $mod+Shift+comma 			exec echo ''
+bindsym $mod+Ctrl+comma 			exec echo ''
+bindsym $mod+Ctrl+Shift+comma		exec echo ''
+
+# Plus
+bindsym $mod+plus 					gaps inner current plus 5
+bindsym $mod+Shift+plus 			gaps outer current plus 5
+bindsym $mod+Ctrl+plus 				exec echo ''
+bindsym $mod+Ctrl+Shift+plus		exec echo ''
+
+# Minus
+bindsym $mod+minus 					gaps inner current minus 5
+bindsym $mod+Shift+minus 			gaps outer current minus 5
+bindsym $mod+Ctrl+minus 			exec echo ''
+bindsym $mod+Ctrl+Shift+minus		exec echo ''
+
+# space
+bindsym $mod+space 					focus mode_toggle
+bindsym $mod+Shift+space 			floating toggle
+bindsym $mod+Ctrl+space 			exec echo ''
+bindsym $mod+Ctrl+Shift+space 		exec echo ''
+
+# ;
+bindsym $mod+semicolon 				focus right
+bindsym $mod+Shift+semicolon 		exec echo ''
+bindsym $mod+Ctrl+semicolon 		exec echo ''
+bindsym $mod+Ctrl+Shift+semicolon 	exec echo ''
+
+# Left
+bindsym $mod+Left 					focus left
+bindsym $mod+Shift+Left 			move left
+bindsym $mod+Ctrl+Left 				resize shrink width 10 px or 10 ppt
+bindsym $mod+Ctrl+Shift+Left 		exec echo ''
+
+# Right
+bindsym $mod+Right 					focus right
+bindsym $mod+Shift+Right			move right
+bindsym $mod+Ctrl+Right 			resize grow width 10 px or 10 ppt
+bindsym $mod+Ctrl+Shift+Right 		exec echo ''
+
+# Up
+bindsym $mod+Up 					focus up
+bindsym $mod+Shift+Up 				move up
+bindsym $mod+Ctrl+Up 				resize shrink height 10 px or 10 ppt
+bindsym $mod+Ctrl+Shift+Up 			exec echo ''
+
+# Down
+bindsym $mod+Down 					focus down
+bindsym $mod+Shift+Down 			move down
+bindsym $mod+Ctrl+Down 				resize grow height 10 px or 10 ppt
+bindsym $mod+Ctrl+Shift+Down 		exec echo ''
+
+# A
+bindsym $mod+a 						focus parent
+bindsym $mod+Shift+a 				exec echo ''
+bindsym $mod+Ctrl+a 				exec echo ''
+bindsym $mod+Ctrl+Shift+a 			exec echo ''
+
+# B
+bindsym $mod+b 						exec $nsi firefox
+bindsym $mod+Shift+b 				exec echo ''
+bindsym $mod+Ctrl+b 				exec echo ''
+bindsym $mod+Ctrl+Shift+b 			exec echo ''
+
+# C
+bindsym $mod+c 						exec echo ''
+bindsym $mod+Shift+c 				reload
+bindsym $mod+Ctrl+c 				exec echo ''
+bindsym $mod+Ctrl+Shift+c 			exec echo ''
+
+
+# D
+bindsym $mod+d 						exec $nsi rofi -show drun
+bindsym $mod+Shift+d 				exec echo ''
+bindsym $mod+Ctrl+d 				exec echo ''
+bindsym $mod+Ctrl+Shift+d 			exec echo ''
+
+# E
+bindsym $mod+e 						layout toggle split
+bindsym $mod+Shift+e 				exec echo ''
+bindsym $mod+Ctrl+e 				exec echo ''
+bindsym $mod+Ctrl+Shift+e 			exec echo ''
+
+# F
+bindsym $mod+f 						fullscreen toggle
+bindsym $mod+Shift+f 				exec echo ''
+bindsym $mod+Ctrl+f 				exec echo ''
+bindsym $mod+Ctrl+Shift+f 			exec echo ''
+
+# G
+bindsym $mod+g 						exec echo ''
+bindsym $mod+Shift+g 				exec echo ''
+bindsym $mod+Ctrl+g 				exec echo ''
+bindsym $mod+Ctrl+Shift+g 			exec echo ''
+
+# H
+bindsym $mod+h 						focus left
+bindsym $mod+Shift+h				move left
+bindsym $mod+Ctrl+h 				resize shrink width 10 px or 10 ppt
+bindsym $mod+Ctrl+Shift+h			exec echo ''
+
+# I
+bindsym $mod+i 						exec echo ''
+bindsym $mod+Shift+i 				exec echo ''
+bindsym $mod+Ctrl+i 				exec echo ''
+bindsym $mod+Ctrl+Shift+i 			exec echo ''
+
+# J
+bindsym $mod+j 						focus down 
+bindsym $mod+Shift+j 				move down
+bindsym $mod+Ctrl+j 				resize grow height 10 px or 10 ppt
+bindsym $mod+Ctrl+Shift+j 			exec echo ''
+
+# K
+bindsym $mod+k 						focus up
+bindsym $mod+Shift+k 				move up
+bindsym $mod+Ctrl+k 				resize shrink height 10 px or 10 ppt
+bindsym $mod+Ctrl+Shift+k 			exec echo ''
+
+# L
+bindsym $mod+l 						focus right 
+bindsym $mod+Shift+l 				move right
+bindsym $mod+Ctrl+l 				resize grow width 10 px or 10 ppt
+bindsym $mod+Ctrl+Shift+l 			exec betterlockscreen --lock
+
+# M
+bindsym $mod+m 						exec echo ''
+bindsym $mod+Shift+m 				exec echo ''
+bindsym $mod+Ctrl+m 				exec echo ''
+bindsym $mod+Ctrl+Shift+m 			exec echo ''
+
+# N
+bindsym $mod+n 						exec $nsi flash_window
+bindsym $mod+Shift+n 				exec echo ''
+bindsym $mod+Ctrl+n 				exec echo ''
+bindsym $mod+Ctrl+Shift+n 			exec echo ''
+
+# O
+bindsym $mod+o 						exec echo ''
+bindsym $mod+Shift+o 				exec echo ''
+bindsym $mod+Ctrl+o 				exec echo ''
+bindsym $mod+Ctrl+Shift+o 			exec echo ''
+
+# P
+bindsym $mod+p 						exec termite -e python
+bindsym $mod+Shift+p 				exec echo ''
+bindsym $mod+Ctrl+p 				exec echo ''
+bindsym $mod+Ctrl+Shift+p 			exec echo ''
+
+# Q
+bindsym $mod+q 						exec echo ''
+bindsym $mod+Shift+q 				kill
+bindsym $mod+Ctrl+q 				exec echo ''
+bindsym $mod+Ctrl+Shift+q 			exec echo ''
+
+# R
+bindsym $mod+r 						exec echo ''
+bindsym $mod+Shift+r 				restart
+bindsym $mod+Ctrl+r 				exec echo ''
+bindsym $mod+Ctrl+Shift+r 			exec echo ''
+
+# S
+bindsym $mod+s 						layout stacking
+bindsym $mod+Shift+s 				exec echo ''
+bindsym $mod+Ctrl+s 				exec echo ''
+bindsym $mod+Ctrl+Shift+s 			exec echo ''
+
+# T
+bindsym $mod+t 						exec echo ''
+bindsym $mod+Shift+t 				exec echo ''
+bindsym $mod+Ctrl+t 				exec echo ''
+bindsym $mod+Ctrl+Shift+t 			exec echo ''
+
+# U
+bindsym $mod+u 						exec echo ''
+bindsym $mod+Shift+u 				exec echo ''
+bindsym $mod+Ctrl+u 				exec echo ''
+bindsym $mod+Ctrl+Shift+u 			exec echo ''
+
+# V
+bindsym $mod+v 						split toggle
+bindsym $mod+Shift+v 				exec echo ''
+bindsym $mod+Ctrl+v 				exec echo ''
+bindsym $mod+Ctrl+Shift+v 			exec echo ''
+
+# W
+bindsym $mod+w 						layout tabbed
+bindsym $mod+Shift+w 				exec echo ''
+bindsym $mod+Ctrl+w	 				exec echo ''
+bindsym $mod+Ctrl+Shift+w 			exec echo ''
+
+# X
+bindsym $mod+x 						exec echo ''
+bindsym $mod+Shift+x 				exec echo ''
+bindsym $mod+Ctrl+x 				exec echo ''
+bindsym $mod+Ctrl+Shift+x 			exec echo ''
+
+# Y
+bindsym $mod+y 						exec echo ''
+bindsym $mod+Shift+y 				exec echo ''
+bindsym $mod+Ctrl+y 				exec echo ''
+bindsym $mod+Ctrl+Shift+y 			exec echo ''
+
+# Z
+bindsym $mod+z 						exec echo ''
+bindsym $mod+Shift+z 				exec echo ''
+bindsym $mod+Ctrl+z 				exec echo ''
+bindsym $mod+Ctrl+Shift+z 			exec echo ''
+
+# 1
+bindsym $mod+1 						workspace $ws1
+bindsym $mod+Shift+1				move container to workspace $ws1
+
+# 2
+bindsym $mod+2 						workspace $ws2
+bindsym $mod+Shift+2 				move container to workspace $ws2
+
+# 3
+bindsym $mod+3 						workspace $ws3
+bindsym $mod+Shift+3 				move container to workspace $ws3
+
+# 4
+bindsym $mod+4 						workspace $ws4
+bindsym $mod+Shift+4 				move container to workspace $ws4
+
+# 5
+bindsym $mod+5 						workspace $ws5
+bindsym $mod+Shift+5 				move container to workspace $ws5
+
+# 6
+bindsym $mod+6 						workspace $ws6
+bindsym $mod+Shift+6 				move container to workspace $ws6
+
+# 7
+bindsym $mod+7 						workspace $ws7
+bindsym $mod+Shift+7 				move container to workspace $ws7
+
+# 8
+bindsym $mod+8 						workspace $ws8
+bindsym $mod+Shift+8 				move container to workspace $ws8
+
+# 9
+bindsym $mod+9 						workspace $ws9
+bindsym $mod+Shift+9				move container to workspace $ws9
+
+# 0
+bindsym $mod+0 						workspace $ws10
+bindsym $mod+Shift+0 				move container to workspace $ws10
+
+# Media keys
+bindsym XF86MonBrightnessUp 		exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown 		exec xbacklight -dec 10
+
+bindsym XF86AudioRaiseVolume 		exec $nsi pactl set-sink-volume 1 +5%
+bindsym XF86AudioLowerVolume 		exec $nsi pactl set-sink-volume 1 -5%
+bindsym XF86AudioMute 				exec $nsi pactl set-sink-mute 1 toggle
+bindsym XF86AudioPause 				exec $nsi playerctl play-pause
+bindsym XF86AudioNext 				exec $nsi playerctl next
+bindsym XF86AudioPrev 				exec $nsi playerctl previous
+
+# Applications
+exec_always $nsi ~/.config/conky/launch.sh
+exec_always $nsi ~/.config/flashfocus/launch.sh
+exec_always $nsi ~/.config/polybar/launch.sh
+exec_always $nsi ~/.config/compton/launch.sh
+exec_always $nsi ~/.config/redshift/launch.sh
+exec_always $nsi ~/.config/feh/launch.sh
+# exec_always $nsi ~/.config/autolayout/i3autolayout
