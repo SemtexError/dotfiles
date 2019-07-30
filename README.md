@@ -30,6 +30,7 @@ The primary distro is Arch Linux but they will work on other distros also. By us
 * [CSS exfil protection](https://addons.mozilla.org/en-US/firefox/addon/css-exfil-protection/)
 * [Decentraleyes](https://addons.mozilla.org/en-US/firefox/addon/decentraleyes/)
 * [ExpressVPN](https://addons.mozilla.org/en-US/firefox/addon/expressvpn/)
+* [Don't touch my tabs! (rel=noopener)](https://addons.mozilla.org/en-US/firefox/addon/dont-touch-my-tabs/)
   * [HTTPS everywhere ](https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/) (already include in ExpressVPN)
 * [Firefox Multi-account container](https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/)
 * [Facebook Container](https://addons.mozilla.org/en-US/firefox/addon/facebook-container/)
@@ -37,13 +38,15 @@ The primary distro is Arch Linux but they will work on other distros also. By us
 * [Floccus](https://addons.mozilla.org/en-US/firefox/addon/floccus/)
 * [Privacy Possum](https://addons.mozilla.org/en-US/firefox/addon/privacy-possum/)
 * [Redirect AMP to HTML](https://addons.mozilla.org/en-US/firefox/addon/amp2html/)
+* [Request Control](https://addons.mozilla.org/en-US/firefox/addon/requestcontrol/)
 * [Skip Redirect](https://addons.mozilla.org/en-US/firefox/addon/skip-redirect/)
 * [Stylus](https://addons.mozilla.org/en-US/firefox/addon/styl-us/)
 * [Temporary Containers](https://addons.mozilla.org/en-US/firefox/addon/temporary-containers/)
-* [uMatrix](https://addons.mozilla.org/en-US/firefox/addon/umatrix/)
 * [YouTube Thumbnail Rating Bar](https://addons.mozilla.org/en-US/firefox/addon/youtube-thumbnail-rating-bar/)
+* [uBlock Orgin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/)
+* [uMatrix](https://addons.mozilla.org/en-US/firefox/addon/umatrix/)
+* [Vimium](https://addons.mozilla.org/en-US/firefox/addon/vimium-ff/)
 * [Matte Black V2](https://addons.mozilla.org/en-US/firefox/addon/matte-black-v2/)
-
 
 ## Android
 ### Application stores
@@ -81,5 +84,4 @@ They should only be downloaded through the Aorora store.
 * [Stack 🚩](https://play.google.com/store/apps/details?id=nl.transip.stack)
 * [Telegram](https://f-droid.org/en/packages/org.telegram.messenger)
 * [WhatsApp (bah) 🚩🚩🚩](https://play.google.com/store/apps/details?id=com.whatsapp)
-  
 
