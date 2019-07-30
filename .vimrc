@@ -64,8 +64,8 @@ set showmatch " Show matching braces
 set laststatus=2 " For lightline
 set noshowmode " For lightline
 set clipboard=unnamed " Gvim clipboard
-map <C-c> "+y
-map <C-v> "+P
+set wildmode=longest,list,full
+set showtabline=2 " tabs
 
 " Saving
 nmap <leader>w :w!<cr>
@@ -98,5 +98,16 @@ set incsearch
 " No annoying sound on errors
 set noerrorbells
 set novisualbell
+set t_vb=
+set tm=500
 
+" Ctrl C/V
+map <C-c> "+y
+map <C-v> "+P
 
+" Split
+set splitbelow splitright
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
