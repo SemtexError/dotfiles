@@ -36,6 +36,15 @@ call vundle#begin()
 
 	" https://github.com/OmniSharp/omnisharp-vim
 	Bundle 'OmniSharp/omnisharp-vim'
+
+	" https://github.com/junegunn/goyo.vim
+	Plugin 'junegunn/goyo.vim'
+
+	" https://github.com/terryma/vim-multiple-cursors
+	Plugin 'terryma/vim-multiple-cursors'
+
+	" https://github.com/terryma/vim-expand-region
+	Plugin 'terryma/vim-expand-region'
 call vundle#end() 
 filetype plugin indent on
 
@@ -44,15 +53,27 @@ let g:OmniSharp_server_stdio = 1
 let g:OmniSharp_server_use_mono = 1
 let g:OmniSharp_highlight_types = 2
 
+" Markdown
+let g:vim_markdown_folding_disabled = 1
+
 " Fzf
 map <C-t> :Files<CR>
 
 " NerdTree
 map <C-o> :NERDTreeToggle<CR>
 
+" Goyo
+map <C-f> :Goyo<CR>
+
+" YankStack
+nmap <leader>p <Plug>yankstack_substitute_older_paste
+nmap <leader>P <Plug>yankstack_substitute_newer_paste
+
 " ===================================
 " ============ !Plugins =============
 " ===================================
+
+let mapleader = ","
 
 set spell " Enable spell cehcking
 set history=1000 " The lines of history to remember
@@ -66,6 +87,8 @@ set noshowmode " For lightline
 set clipboard=unnamed " Gvim clipboard
 set wildmode=longest,list,full
 set showtabline=2 " tabs
+set shiftwidth=4 " Indent width
+
 
 " Saving
 nmap <leader>w :w!<cr>
@@ -110,4 +133,16 @@ set splitbelow splitright
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
-map <C-l> <C-w>l
+
+" Move lines
+nnoremap <leader>j :m .+1<CR>==
+nnoremap <leader>k :m .-2<CR>==
+inoremap <leader>j <Esc>:m .+1<CR>==gi
+inoremap <leader>k <Esc>:m .-2<CR>==gi
+vnoremap <leader>j :m '>+1<CR>gv=gv
+vnoremap <leader>k :m '<-2<CR>gv=gv
+
+
+" Item 1
+" Item 2
+" Item 3
