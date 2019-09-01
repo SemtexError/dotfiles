@@ -5,6 +5,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# ============================
+# ========= Exports ==========
+# ============================
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
@@ -18,7 +21,8 @@ export HISTFILESIZE=20000
 export HISTCONTROL=ignorespace
 export DOTNET_ROOT=/opt/dotnet
 export PATH="$PATH:$HOME/.dotnet/tools"
-export MSBuildSDKsPath=/opt/dotnet/sdk/2.2.105/Sdks/
+export MSBuildSDKsPath=/opt/dotnet/sdk/2.2.108/Sdks/
+export TERM=screen-256color
 
 # Set Bash PS1
 export PS1=""
@@ -30,6 +34,9 @@ fi
 export PS1+='${PWD#"${PWD%/*/*}/"}> '
 
 
+# ============================
+# ========= Alias ============
+# ============================
 alias ..='cd ..'
 alias vi='vim'
 alias la='ls -la'
@@ -37,8 +44,21 @@ alias code='vscodium'
 alias mkdir='mkdir -p'
 alias ipconfig='ifconfig'
 alias xclip='xclip -selection clipboard'
+
+alias mutt=neomutt
+alias mail=neomutt
+alias :q=exit
+
 # Color
 alias ls='ls -hN --color=auto --group-directories-first'
 alias grep='grep --color=auto'
 
+# Dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# ============================
+# ========= Other ============
+# ============================
+
+# Start to tmux
+# [ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}

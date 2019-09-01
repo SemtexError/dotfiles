@@ -8,6 +8,9 @@ call vundle#begin()
 	" https://github.com/pangloss/vim-javascript
 	Plugin 'pangloss/vim-javascript'
 
+	" https://github.com/posva/vim-vue
+	Plugin 'posva/vim-vue'
+
 	" https://github.com/tomasiser/vim-code-dark
 	Plugin 'tomasiser/vim-code-dark'
 
@@ -31,20 +34,9 @@ call vundle#begin()
 	" https://github.com/maxbrunsfeld/vim-yankstack
 	Plugin 'maxbrunsfeld/vim-yankstack'
 
-	" https://github.com/w0rp/ale
-	Plugin 'w0rp/ale'
+	" https://github.com/ycm-core/YouCompleteMe
+	Plugin 'ycm-core/YouCompleteMe'
 
-	" https://github.com/OmniSharp/omnisharp-vim
-	Bundle 'OmniSharp/omnisharp-vim'
-
-	" https://github.com/junegunn/goyo.vim
-	Plugin 'junegunn/goyo.vim'
-
-	" https://github.com/terryma/vim-multiple-cursors
-	Plugin 'terryma/vim-multiple-cursors'
-
-	" https://github.com/terryma/vim-expand-region
-	Plugin 'terryma/vim-expand-region'
 call vundle#end() 
 filetype plugin indent on
 
@@ -57,7 +49,7 @@ let g:OmniSharp_highlight_types = 2
 let g:vim_markdown_folding_disabled = 1
 
 " Fzf
-map <C-t> :Files<CR>
+map <C-t> :GFiles<CR>
 
 " NerdTree
 map <C-o> :NERDTreeToggle<CR>
@@ -69,11 +61,14 @@ map <C-f> :Goyo<CR>
 nmap <leader>p <Plug>yankstack_substitute_older_paste
 nmap <leader>P <Plug>yankstack_substitute_newer_paste
 
+" deoplete
+let g:deoplete#enable_at_startup = 1
+
 " ===================================
 " ============ !Plugins =============
 " ===================================
 
-let mapleader = ","
+let mapleader = "\\"
 
 set spell " Enable spell cehcking
 set history=1000 " The lines of history to remember
@@ -89,12 +84,12 @@ set wildmode=longest,list,full
 set showtabline=2 " tabs
 set shiftwidth=4 " Indent width
 
-
 " Saving
 nmap <leader>w :w!<cr>
 command W w
 command WQ wq
 command Wq wq
+command Q q
 
 " Syntax
 syntax on
@@ -118,6 +113,11 @@ set smartcase
 set hlsearch
 set incsearch
 
+" Indent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
 " No annoying sound on errors
 set noerrorbells
 set novisualbell
@@ -126,7 +126,7 @@ set tm=500
 
 " Ctrl C/V
 map <C-c> "+y
-map <C-v> "+P
+" map <C-v> "+P
 
 " Split
 set splitbelow splitright
@@ -142,7 +142,3 @@ inoremap <leader>k <Esc>:m .-2<CR>==gi
 vnoremap <leader>j :m '>+1<CR>gv=gv
 vnoremap <leader>k :m '<-2<CR>gv=gv
 
-
-" Item 1
-" Item 2
-" Item 3
