@@ -2,11 +2,6 @@
 
 font monaco:monospace 16
 
-# Set the workspace order on startup
-workspace 1 output DP-2.8
-workspace 2 output DP-0
-workspace 3 output DP-4.8
-
 set $mod Mod4
 set $gap 5
 set $nsi --no-startup-id
@@ -21,6 +16,21 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+
+# Set the workspace order on startup
+workspace $ws1 output DP-2.8
+workspace $ws2 output DP-0
+workspace $ws3 output DP-4.8
+
+workspace $ws4 output DP-2.8
+workspace $ws5 output DP-0
+workspace $ws6 output DP-4.8
+
+workspace $ws7 output DP-2.8
+workspace $ws8 output DP-0
+workspace $ws9 output DP-4.8
+
+workspace $ws10 output DP-2.8
 
 set $bg-color			#36445e
 set $bg-color-focus		#697791
@@ -221,7 +231,7 @@ bindsym $mod+Ctrl+Shift+r 			exec echo ''
 
 # S
 bindsym $mod+s 						layout stacking
-bindsym $mod+Shift+s 				exec echo ''
+bindsym $mod+Shift+s 				exec $nsi flatpak run com.spotify.Client
 bindsym $mod+Ctrl+s 				exec echo ''
 bindsym $mod+Ctrl+Shift+s 			exec echo ''
 

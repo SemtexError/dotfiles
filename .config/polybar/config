@@ -15,7 +15,7 @@ bottom = false
 fixed-center = true
 radius = 0.0
 
-modules-right = spotify battery backlight volume date time powermenu 
+modules-right = vpn spotify battery backlight volume date time powermenu 
 modules-center = xwindow
 modules-left = i3
 
@@ -130,10 +130,12 @@ ramp-volume-3 = 
 
 [module/vpn]
 type = custom/script
-exec = ~/.config/vpn/status.sh
-click-left = ~/.config/vpn/switch.sh
+exec = ~/.config/polybar/scripts/vpn.sh
+click-left = ~/.config/polybar/scripts/vpn-click.sh
 interval = 5
+format-background = #88000000
 format-padding = 3
+format-margin = 3
 
 [module/powermenu]
 type = custom/menu
