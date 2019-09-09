@@ -1,6 +1,6 @@
 [colors]
-background = #5a000000
-background-alt = #34495e
+background = #AF000000
+background-alt = #CF000000
 foreground = #dfdfdf
 foreground-alt = #555
 primary = #2980b9
@@ -43,7 +43,7 @@ font-2 = siji:pixelsize=10;0
 
 tray-position = right
 tray-padding = 6
-tray-background = rgba(0, 0, 0, 0.8)
+tray-background = rgba(0, 0, 0, 0.9)
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
@@ -68,7 +68,7 @@ label-mode-padding = 2
 label-mode-background = #e60053
  
 label-focused = %name%
-label-focused-background = #88000000
+label-focused-background = ${colors.background-alt}
 label-focused-underline = #ddd
 label-focused-padding = 2
  
@@ -111,7 +111,7 @@ format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 format-underline = #ffffff
 format-padding = 3
-format-background = #88000000
+format-background = ${colors.background-alt}
 
 [module/volume]
 type = internal/pulseaudio
@@ -133,7 +133,7 @@ type = custom/script
 exec = ~/.config/polybar/scripts/vpn.sh
 click-left = ~/.config/polybar/scripts/vpn-click.sh
 interval = 5
-format-background = #88000000
+format-background = ${colors.background-alt}
 format-padding = 3
 format-margin = 3
 

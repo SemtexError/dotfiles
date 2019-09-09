@@ -4,8 +4,7 @@ font = Fira code 24
 [colors]
 foreground = rgb(239, 240, 235)
 foreground_bold = rgb(239, 240, 235)
-# background = rgba(40, 42, 56, 0.8)
-background = rgba(0, 0, 0, 0.35)
+background = rgba(0, 0, 0, 0.69)
 
 # If unset, will reverse foreground and background
 highlight = #2f2f2f

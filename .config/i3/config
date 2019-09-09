@@ -46,7 +46,7 @@ smart_gaps on
 gaps inner $gap
 gaps outer 0
 
-for_window [class="^.*"] border pixel 4
+for_window [class="^.*"] border pixel 0
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod 

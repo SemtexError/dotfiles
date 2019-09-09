@@ -1,8 +1,7 @@
 #!/usr/bin/env sh
 
-if pgrep -u $UUID -x flashfocus > /dev/null 
-then
-         exit;
-fi      
- 
+killall -q flashfocus
+
+while pgrep -u $UID -x flashfocus >/dev/null; do sleep 1; done
+
 flashfocus

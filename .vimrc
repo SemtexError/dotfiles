@@ -1,3 +1,4 @@
+inoremap <Esc> <Nop>
 " ===================================
 " ============= Plugins =============
 " ===================================
@@ -20,6 +21,9 @@ call vundle#begin()
 
     " Show yank: https://github.com/machakann/vim-highlightedyank
     Plugin 'machakann/vim-highlightedyank'
+
+    " Surround: https://github.com/tpope/vim-surround
+    Plugin 'tpope/vim-surround'
 
     " === Javascript ===
     " = Theme
@@ -45,11 +49,19 @@ call vundle#begin()
     " https://github.com/dense-analysis/ale
     Plugin 'dense-analysis/ale'
 
+    " === CSS ===
+    " https://github.com/hail2u/vim-css3-syntax
+    Plugin 'hail2u/vim-css3-syntax'
+
+    " = Sassy theme
+    " https://github.com/cakebaker/scss-syntax.vim 
+    Plugin 'cakebaker/scss-syntax.vim'
+
 call vundle#end() 
 filetype plugin indent on
 
 " Fzf
-map <C-t> :GFiles<CR>
+nnoremap <expr> <C-t> (len(system('git rev-parse')) ? ':Files' : ':GFiles --exclude-standard --others --cached')."\<cr>"
 
 " NerdTree
 let g:NERDTreeWinPos = "right"
@@ -100,6 +112,7 @@ set clipboard=unnamed " Gvim clipboard
 set wildmode=longest,list,full
 set showtabline=2 " tabs
 set shiftwidth=4 " Indent width
+set autochdir
 
 " Saving
 nmap <leader>w :w!<cr>
@@ -152,4 +165,5 @@ set splitbelow splitright
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
+map <C-l> <C-w>l
 
