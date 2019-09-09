@@ -5,64 +5,81 @@ set nocompatible
 filetype off
 set rtp+=~/.config/vim/bundle/Vundle.vim
 call vundle#begin()
-	" https://github.com/pangloss/vim-javascript
-	Plugin 'pangloss/vim-javascript'
-
-	" https://github.com/posva/vim-vue
-	Plugin 'posva/vim-vue'
-
-	" https://github.com/tomasiser/vim-code-dark
+	" Theme: https://github.com/tomasiser/vim-code-dark
 	Plugin 'tomasiser/vim-code-dark'
 
-	" https://github.com/plasticboy/vim-markdown
-	Plugin 'godlygeek/tabular'
-	Plugin 'plasticboy/vim-markdown'
-
-	" https://github.com/junegunn/fzf.vim
+    " Ctrl+t https://github.com/junegunn/fzf.vim
 	Plugin 'junegunn/fzf'
 	Plugin 'junegunn/fzf.vim'
 
-	" https://github.com/tpope/vim-fugitive
-	Plugin 'tpope/vim-fugitive'
-
-	" https://github.com/itchyny/lightline.vim
+	" Status bar: https://github.com/itchyny/lightline.vim
 	Plugin 'itchyny/lightline.vim'
 
-	" https://github.com/scrooloose/nerdtree
+	" Ctrl+o: https://github.com/scrooloose/nerdtree
 	Bundle 'scrooloose/nerdtree'
 
-	" https://github.com/maxbrunsfeld/vim-yankstack
-	Plugin 'maxbrunsfeld/vim-yankstack'
+    " Show yank: https://github.com/machakann/vim-highlightedyank
+    Plugin 'machakann/vim-highlightedyank'
 
-	" https://github.com/ycm-core/YouCompleteMe
-	Plugin 'ycm-core/YouCompleteMe'
+    " === Javascript ===
+    " = Theme
+    " https://github.com/leafgarland/typescript-vim
+    Plugin 'leafgarland/typescript-vim'
+
+    " https://github.com/ianks/vim-tsx
+    Plugin 'ianks/vim-tsx'
+
+    " = Complition
+    " https://github.com/Shougo/deoplete.nvim
+    Plugin 'Shougo/deoplete.nvim'
+    Plugin 'roxma/nvim-yarp'
+    Plugin 'roxma/vim-hug-neovim-rpc'
+
+    " https://github.com/mhartington/nvim-typescript
+    Plugin 'mhartington/nvim-typescript'
+
+    " Allow tab in deoplete: https://github.com/ervandew/supertab
+    Plugin 'ervandew/supertab'
+
+    " = Linting
+    " https://github.com/dense-analysis/ale
+    Plugin 'dense-analysis/ale'
 
 call vundle#end() 
 filetype plugin indent on
-
-" OmniSharp
-let g:OmniSharp_server_stdio = 1
-let g:OmniSharp_server_use_mono = 1
-let g:OmniSharp_highlight_types = 2
-
-" Markdown
-let g:vim_markdown_folding_disabled = 1
 
 " Fzf
 map <C-t> :GFiles<CR>
 
 " NerdTree
+let g:NERDTreeWinPos = "right"
 map <C-o> :NERDTreeToggle<CR>
 
-" Goyo
-map <C-f> :Goyo<CR>
-
-" YankStack
-nmap <leader>p <Plug>yankstack_substitute_older_paste
-nmap <leader>P <Plug>yankstack_substitute_newer_paste
+" Vim highlightedyank
+let g:highlightedyank_highlight_duration = 300
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
+
+" SuperTab
+let g:SuperTabDefaultCompletionType = "<c-n>"
+
+" Ale
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'typescript': ['tsserver', 'eslint'],
+\   'vue': ['eslint']
+\}
+
+let g:ale_fixers = {
+\    'javascript': ['eslint'],
+\    'typescript': ['prettier'],
+\    'vue': ['eslint'],
+\    'scss': ['prettier'],
+\    'html': ['prettier']
+\}
+let g:ale_fix_on_save = 0
+
 
 " ===================================
 " ============ !Plugins =============
@@ -70,7 +87,7 @@ let g:deoplete#enable_at_startup = 1
 
 let mapleader = "\\"
 
-set spell " Enable spell cehcking
+set nospell " Enable spell cehcking
 set history=1000 " The lines of history to remember
 set autoread " Automaticly read the file when it's changed outside vim
 set number relativenumber " Relative line numbering
@@ -125,20 +142,14 @@ set t_vb=
 set tm=500
 
 " Ctrl C/V
-map <C-c> "+y
+" map <C-c> "+y
 " map <C-v> "+P
+
+nnoremap Q <Nop>
 
 " Split
 set splitbelow splitright
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
-
-" Move lines
-nnoremap <leader>j :m .+1<CR>==
-nnoremap <leader>k :m .-2<CR>==
-inoremap <leader>j <Esc>:m .+1<CR>==gi
-inoremap <leader>k <Esc>:m .-2<CR>==gi
-vnoremap <leader>j :m '>+1<CR>gv=gv
-vnoremap <leader>k :m '<-2<CR>gv=gv
 

@@ -1786,3 +1786,9 @@ user_pref("privacy.resistFingerprinting.letterboxing", false);
 user_pref("browser.tabs.loadBookmarksInTabs", false);
 //Unlocked in LibreFox because it's needed from time to time
 user_pref("dom.event.clipboardevents.enabled", false)
+user_pref("browser.tabs.closeWindowWithLastTab", true);
+user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+user_pref("browser.tabs.loadBookmarksInTabs", false);
+user_pref("browser.ctrlTab.recentlyUsedOrder", false);
+user_pref("general.autoScroll", true);
+user_pref("general.smoothScroll", false);

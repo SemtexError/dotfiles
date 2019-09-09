@@ -9,7 +9,7 @@
 # ========= Exports ==========
 # ============================
 
-export VISUAL=vim
+export VISUAL=nvim
 export EDITOR="$VISUAL"
 
 export LANG=en_US.UTF-8
@@ -38,9 +38,9 @@ export PS1+='${PWD#"${PWD%/*/*}/"}> '
 # ========= Alias ============
 # ============================
 alias ..='cd ..'
-alias vi='vim'
+alias vim='nvim'
+alias vi='nvim'
 alias la='ls -la'
-alias code='vscodium'
 alias mkdir='mkdir -p'
 alias ipconfig='ifconfig'
 alias xclip='xclip -selection clipboard'

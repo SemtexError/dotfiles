@@ -1,5 +1,5 @@
 [options]
-font = Monaco 24
+font = Fira code 24
 
 [colors]
 foreground = rgb(239, 240, 235)
