@@ -1,7 +1,17 @@
-inoremap <Esc> <Nop>
+let mapleader = "\\"
+map <Space> <Leader>
+
 " ===================================
 " ============= Plugins =============
 " ===================================
+
+" Download VundleVim
+if !isdirectory(expand('~/.config/vim/bundle/Vundle.vim'))
+	echo "Downloading BundleVim/Vundle.vim to manage plugins..."
+	silent !mkdir -p ~/.config/vim/bundle/
+    silent !git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/vim/bundle/Vundle.vim
+endif
+
 set nocompatible
 filetype off
 set rtp+=~/.config/vim/bundle/Vundle.vim
@@ -25,6 +35,21 @@ call vundle#begin()
     " Surround: https://github.com/tpope/vim-surround
     Plugin 'tpope/vim-surround'
 
+    " https://github.com/jiangmiao/auto-pairs
+    Plugin 'jiangmiao/auto-pairs'
+
+    " https://github.com/scrooloose/nerdcommenter
+    Plugin 'scrooloose/nerdcommenter'
+
+    " https://github.com/tpope/vim-unimpaired
+    Plugin 'tpope/vim-unimpaired'
+
+    " https://github.com/easymotion/vim-easymotion
+    Plugin 'easymotion/vim-easymotion'
+
+    " https://github.com/vim-scripts/SearchComplete
+    Plugin 'vim-scripts/SearchComplete'
+    
     " === Javascript ===
     " = Theme
     " https://github.com/leafgarland/typescript-vim
@@ -67,6 +92,9 @@ nnoremap <expr> <C-t> (len(system('git rev-parse')) ? ':Files' : ':GFiles --excl
 let g:NERDTreeWinPos = "right"
 map <C-o> :NERDTreeToggle<CR>
 
+" Easy motion
+map <Leader> <Plug>(easymotion-prefix)
+
 " Vim highlightedyank
 let g:highlightedyank_highlight_duration = 300
 
@@ -92,12 +120,22 @@ let g:ale_fixers = {
 \}
 let g:ale_fix_on_save = 0
 
+" C#
+let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
+
+" unimpaired
+" Move single selected line
+nmap <A-j> ]e
+nmap <A-k> [e
+
+" Move multiple selected lines
+vmap <A-j> ]egv
+vmap <A-k> [egv
 
 " ===================================
 " ============ !Plugins =============
 " ===================================
 
-let mapleader = "\\"
 
 set nospell " Enable spell cehcking
 set history=1000 " The lines of history to remember
@@ -154,10 +192,7 @@ set novisualbell
 set t_vb=
 set tm=500
 
-" Ctrl C/V
-" map <C-c> "+y
-" map <C-v> "+P
-
+" Disable ex mode
 nnoremap Q <Nop>
 
 " Split
@@ -167,3 +202,4 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+set clipboard+=unnamedplus

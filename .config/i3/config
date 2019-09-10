@@ -1,5 +1,8 @@
 # SemtexError: I3WM config
 
+# https://github.com/i3/i3/issues/3518
+focus_follows_mouse no
+
 font monaco:monospace 16
 
 set $mod Mod4
@@ -216,7 +219,7 @@ bindsym $mod+Ctrl+o 				exec echo ''
 bindsym $mod+Ctrl+Shift+o 			exec echo ''
 
 # P
-bindsym $mod+p 						exec termite -e node
+bindsym $mod+p 						exec rofi -show calc -modi calc -no-show-match -no-sort
 bindsym $mod+Shift+p 				exec echo ''
 bindsym $mod+Ctrl+p 				exec echo ''
 bindsym $mod+Ctrl+Shift+p 			exec echo ''
@@ -355,7 +358,7 @@ exec_always $nsi ~/.config/polybar/launch.sh
 exec_always $nsi ~/.config/compton/launch.sh
 # exec_always $nsi ~/.config/redshift/launch.sh
 exec_always $nsi ~/.config/feh/launch.sh
-exec_always $nsi ~/.screenlayout/screens.sh
+exec_always $nsi ~/.config/i3/screens.sh
 exec_always $nsi nvidia-led no-animation 0 &
 exec_always $nsi flashfocus
 
