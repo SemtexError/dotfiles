@@ -1,0 +1,194 @@
+{
+	// Editor
+	"editor.mouseWheelZoom": true,
+    "editor.insertSpaces": true,
+	"editor.fontFamily": "'Fira Code'",
+	"editor.fontLigatures": true,
+    "editor.cursorBlinking": "smooth",
+	"editor.cursorSmoothCaretAnimation": false,
+	"editor.formatOnSave": false,
+	"editor.wordWrap": "on",
+	"editor.lineNumbers": "relative",
+	"editor.suggestSelection": "first",
+	"editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?",
+	"editor.formatOnType": false,
+    "editor.tokenColorCustomizations": {
+        "[Visual Studio Dark]": {
+            "textMateRules": [
+                {
+                    "scope": "storage.type.cs",
+                    "settings": {
+                        "foreground": "#4dc6ad"
+                    }
+                },
+                {
+                    "scope": "entity.name.type.class.cs",
+                    "settings": {
+                        "foreground": "#4dc6ad"
+                    }
+				},
+				{
+					"scope": "entity.name.type.interface.cs",
+					"settings": {
+						"foreground": "#B8D7A3"
+					}
+				}
+            ]
+        }
+	},
+	
+	// Debug
+	"debug.openDebug": "neverOpen",
+	"debug.internalConsoleOptions": "neverOpen",
+
+	// Window
+	"window.zoomLevel": 2,
+	"window.titleBarStyle": "custom",
+	"window.newWindowDimensions": "inherit",
+
+	// Workbench
+	"workbench.colorTheme": "Visual Studio Dark",
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.activityBar.visible": true,
+    "workbench.sideBar.location": "right",
+    "workbench.editor.enablePreview": false,
+	"workbench.colorCustomizations": {
+		"statusBar.background": "#005f5f",
+		"statusBar.noFolderBackground": "#005f5f",
+		"statusBar.debuggingBackground": "#005f5f"
+	},
+
+	// Explorer
+	"explorer.confirmDragAndDrop": false,
+
+	//Telementry
+	"telemetry.enableCrashReporter": false,
+	"telemetry.enableTelemetry": false,
+
+	// Files
+	"files.associations": {
+	  "*.exclude": "asp"
+	},
+	"files.exclude": {
+		"*.DotSettings.user": true,
+		"*.min.css": true,
+		"*.min.js": true,
+		"**/__pycache__": true,
+		"**/.vs": true,
+		"**/.vscode": true,
+		"**/*.code-workspace": true,
+		"**/*.csproj.user": true,
+		"**/bin": true,
+		"**/Bin": true,
+		"**/node_modules": true,
+		"**/obj": true,
+		"**/venv/": true
+	},
+
+	// Search
+	"search.exclude": {
+        "*.min.css": true,
+        "*.min.js": true,
+        "**/.git": true,
+        "**/.vs": true,
+        "**/*.csproj.user": true,
+        "**/bin": true,
+        "**/Bin": true,
+        "**/min/": true
+    },
+
+	// Emmet
+	"emmet.triggerExpansionOnTab": true,
+	"emmet.showSuggestionsAsSnippets": true,
+
+	// Javascript
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"javascript.referencesCodeLens.enabled": true,
+	
+	// Typescript
+	"typescript.updateImportsOnFileMove.enabled": "always",
+
+	// Formatters
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+
+	// ===== Extensions =====
+	"extensions.ignoreRecommendations": true,
+	"extensions.showRecommendationsOnlyOnDemand": true,
+	
+	// Git
+	"git.autofetch": true,
+
+	// Vim
+	"vim.easymotion": true,
+	"vim.leader": "<space>",
+	"vim.highlightedyank.enable": true,
+	"vim.highlightedyank.color": "rgba(127, 140, 141, 0.1)",
+	"vim.hlsearch": true,
+	"vim.searchHighlightColor": "rgba(230, 126, 34, 0.4)",
+	"vim.useSystemClipboard": true,
+	"vim.statusBarColorControl": true,
+	"vim.normalModeKeyBindingsNonRecursive": [
+		{
+		  "before": ["<leader>", "s"],
+		  "after": ["<leader>", "<leader>", "s"]
+		},
+		{
+		  "before": ["<leader>", "w"],
+		  "commands": [":w"]
+		},
+	],
+
+	//Eslint
+	"eslint.options": {
+	  "extensions": [".js", ".vue", ".ts", ".tsx"]
+	},
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "vue",
+        "typescript",
+        "typescriptreact"
+    ],
+
+	// Prettier
+	"prettier.singleQuote": true,
+	"prettier.trailingComma": "all",
+	"prettier.printWidth": 300,
+
+	// Vetur
+    "vetur.format.defaultFormatter.html": "js-beautify-html",
+    "vetur.format.defaultFormatter.scss": "none",
+    "vetur.format.defaultFormatter.less": "none",
+    "vetur.format.defaultFormatter.postcss": "none",
+    "vetur.format.defaultFormatter.stylus": "none",
+    "vetur.format.defaultFormatter.ts": "none",
+    "vetur.format.defaultFormatter.css": "none",
+    "vetur.format.defaultFormatter.js": "none",
+	"vetur.format.options.tabSize": 4,
+	
+	// Csharp
+	"csharp.referencesCodeLens.enabled": false,
+	
+	// CSpell
+	"cSpell.language": "en,nl",
+	
+	// VsIntelliCode
+	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+	
+	// TODO: Unsorted
+}
+  

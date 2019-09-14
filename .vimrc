@@ -82,7 +82,11 @@ call vundle#begin()
     " https://github.com/cakebaker/scss-syntax.vim 
     Plugin 'cakebaker/scss-syntax.vim'
 
-call vundle#end() 
+    " === C# ===
+    " https://github.com/OmniSharp/omnisharp-vim
+    Plugin 'OmniSharp/omnisharp-vim'
+
+    call vundle#end() 
 filetype plugin indent on
 
 " Fzf
@@ -103,12 +107,15 @@ let g:deoplete#enable_at_startup = 1
 
 " SuperTab
 let g:SuperTabDefaultCompletionType = "<c-n>"
+set completeopt=menu,longest 
+let g:SuperTabLongestHighlight = 1
 
 " Ale
 let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'typescript': ['tsserver', 'eslint'],
-\   'vue': ['eslint']
+\   'vue': ['eslint'],
+\   'cs': ['OmniSharp']
 \}
 
 let g:ale_fixers = {
@@ -121,7 +128,7 @@ let g:ale_fixers = {
 let g:ale_fix_on_save = 0
 
 " C#
-let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
+let g:OmniSharp_server_stdio = 1
 
 " unimpaired
 " Move single selected line
@@ -202,4 +209,6 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" Set clipboard to + outside tmux
 set clipboard+=unnamedplus
+
