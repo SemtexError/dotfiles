@@ -39,12 +39,6 @@ workspace $ws9 output $mon3
 
 workspace $ws10 output $mon1
 
-set $bg-color			#36445e
-set $bg-color-focus		#697791
-
-#code			border		background	text	indicator		child_border
-client.focused	$bg-color	#285577		#ffffff	$bg-color-focus	#285577
-
 smart_gaps on
 gaps inner $gap
 gaps outer 0

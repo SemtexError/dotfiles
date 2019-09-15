@@ -60,7 +60,7 @@
 
     ; Tray
     tray-position = right
-    tray-padding = 6
+    tray-padding = 3
     tray-background = rgba(0, 0, 0, 0.9)
 
     ; Scroll
