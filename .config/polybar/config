@@ -23,7 +23,7 @@
 
 [bar/main]
     ; Modules
-    modules-right = spotify battery backlight volume powermenu date time 
+    modules-right = spotify screen battery volume powermenu date time 
     modules-center = vpn
     modules-left = i3
 
@@ -63,7 +63,6 @@
     ; Tray
     tray-position = right
     tray-padding = 3
-    tray-background = rgba(0, 0, 0, 0.9)
 
     ; Scroll
     scroll-up = i3wm-wsnext
@@ -150,17 +149,6 @@
     format-prefix = " "
 
 ; Only on laptop
-[module/backlight]
-    type = internal/backlight
-
-    card = intel_backlight
-    enable-scroll = true
-
-    format = <label>
-    format-prefix = " "   
-    label = %percentage%%
-
-; Only on laptop
 [module/battery]
     type = internal/battery
 
@@ -192,6 +180,27 @@
     animation-charging-3 = 
     animation-charging-4 = 
     animation-charging-framerate = 750
+
+; Only on laptop
+[module/screen]
+    type = custom/script
+    exec = echo "$(light | cut -d. -f1)%"
+    scroll-up = light -A 5
+    scroll-down = light -U 5
+    interval = 1
+    format-prefix = " "   
+
+; Only on laptop
+[module/backlight]
+    type = internal/backlight
+
+    card = intel_backlight
+    enable-scroll = true
+
+    format = <label>
+    format-prefix = " "   
+    label = %percentage%%
+
 
 ; ====================== Center
 [module/vpn]

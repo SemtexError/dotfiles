@@ -335,12 +335,12 @@ bindsym $mod+Shift+0 				move container to workspace $ws10
 bindsym $mod+Ctrl+Shift+0			move workspace to workspace $ws10
 
 # Media keys
-bindsym XF86MonBrightnessUp 		exec xbacklight -inc 10
-bindsym XF86MonBrightnessDown 		exec xbacklight -dec 10
+bindsym XF86MonBrightnessUp 		exec light -A 1
+bindsym XF86MonBrightnessDown 		exec light -U 1
 
-bindsym XF86AudioRaiseVolume 		exec $nsi pactl set-sink-volume 1 +1%
-bindsym XF86AudioLowerVolume 		exec $nsi pactl set-sink-volume 1 -1%
-bindsym XF86AudioMute 				exec $nsi pactl set-sink-mute 1 toggle
+bindsym XF86AudioRaiseVolume 		exec $nsi pactl set-sink-volume 0 +1%
+bindsym XF86AudioLowerVolume 		exec $nsi pactl set-sink-volume 0 -1%
+bindsym XF86AudioMute 				exec $nsi pactl set-sink-mute 0 toggle
 bindsym XF86AudioPause 				exec $nsi playerctl play-pause 
 bindsym XF86AudioNext 				exec $nsi playerctl next
 bindsym XF86AudioPrev 				exec $nsi playerctl previous
