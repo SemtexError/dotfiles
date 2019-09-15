@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-polybarName=mystatus
+polybarName=main
 
 # Terminate already running bar instances
 killall -q polybar

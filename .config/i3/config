@@ -352,14 +352,10 @@ bindsym XF86AudioNext 				exec $nsi playerctl next
 bindsym XF86AudioPrev 				exec $nsi playerctl previous
 
 # Applications
-# exec_always $nsi ~/.config/conky/launch.sh
 exec_always $nsi ~/.config/flashfocus/launch.sh
 exec_always $nsi ~/.config/polybar/launch.sh
 exec_always $nsi ~/.config/compton/launch.sh
-# exec_always $nsi ~/.config/redshift/launch.sh
+exec_always $nsi ~/.config/redshift/launch.sh
 exec_always $nsi ~/.config/feh/launch.sh
 exec_always $nsi ~/.config/i3/screens.sh
-exec_always $nsi nvidia-led no-animation 0 &
-exec_always $nsi flashfocus
-
-# exec_always $nsi ~/.config/autolayout/i3autolayout
+exec_always $nsi ~/.config/nvidia-led/launch.sh

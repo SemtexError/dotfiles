@@ -54,6 +54,14 @@
 		"key": "capslock",
 		"command": "extension.vim_escape",
 		"when": "editorTextFocus && vim.active && !inDebugRepl"
+	},
+	{
+		"key": "ctrl+b",
+		"command": "-workbench.action.toggleSidebarVisibility"
+	},
+	{
+		"key": "ctrl+o",
+		"command": "workbench.action.toggleSidebarVisibility"
 	}
 ]
   

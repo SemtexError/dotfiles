@@ -21,6 +21,7 @@ export HISTFILESIZE=20000
 export HISTCONTROL=ignorespace
 export DOTNET_ROOT=/opt/dotnet
 export PATH="$PATH:$HOME/.dotnet/tools"
+export PATH="$PATH:$HOME/.scripts"
 export MSBuildSDKsPath=/opt/dotnet/sdk/2.2.108/Sdks/
 export TERM=screen-256color
 
@@ -31,7 +32,7 @@ if [ -n "$SSH_CLIENT" ]; then
     # PS1="(\e[0;31m\h\[$(tput sgr0)\])\e[0m "
     PS1="(\h\[$(tput sgr0)\]) "
 fi
-export PS1+='${PWD#"${PWD%/*/*}/"}> '
+export PS1+='\[\e[0;34m\]${PWD#"${PWD%/*/*}/"}\[\e[0m\]> '
 
 
 # ============================

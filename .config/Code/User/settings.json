@@ -1,7 +1,6 @@
 {
 	// Editor
 	"editor.mouseWheelZoom": true,
-    "editor.insertSpaces": true,
 	"editor.fontFamily": "'Fira Code'",
 	"editor.fontLigatures": true,
     "editor.cursorBlinking": "smooth",
@@ -188,7 +187,8 @@
 	
 	// VsIntelliCode
 	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-	
+	"comments.openPanel": "neverOpen",
 	// TODO: Unsorted
+	
 }
   
