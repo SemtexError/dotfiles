@@ -23,7 +23,7 @@
 
 [bar/main]
     ; Modules
-    modules-right = spotify battery backlight volume date powermenu time 
+    modules-right = spotify battery backlight volume powermenu date time 
     modules-center = vpn
     modules-left = i3
 
