@@ -185,6 +185,8 @@
 [module/screen]
     type = custom/script
     exec = echo "$(light | cut -d. -f1)%"
+    exec-if = ${env:SHOWSCREEN:true}
+
     scroll-up = light -A 5
     scroll-down = light -U 5
     interval = 1

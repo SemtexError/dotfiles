@@ -1,0 +1,21 @@
+#!/bin/bash
+
+SINKID=0
+
+if [[ $(hostname -s) = "host" ]]; then
+    SINKID=1
+fi
+
+case $1 in --increase)
+        pactl set-sink-volume $SINKID +1%
+        ;;
+    --decrease)
+        pactl set-sink-volume $SINKID -1%
+        ;;
+    --toggle)
+        echo "toggle"
+        pactl set-sink-mute $SINKID toggle
+        ;;
+esac
+
+
