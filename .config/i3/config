@@ -50,143 +50,143 @@ floating_modifier $mod
 
 # PrintScreen
 bindsym --release Print				exec $nsi spectacle
-bindsym $mod+Print 					exec echo ''
-bindsym $mod+Shift+Print 			exec echo ''
-bindsym $mod+Ctrl+Print 			exec echo ''
-bindsym $mod+Ctrl+Shift+Print		exec echo ''
+# bindsym $mod+Print 					exec 
+# bindsym $mod+Shift+Print 			exec 
+# bindsym $mod+Ctrl+Print 			exec 
+# bindsym $mod+Ctrl+Shift+Print		exec 
 
 # Backspace
 bindsym $mod+BackSpace 				gaps inner current set $gap
 bindsym $mod+Shift+BackSpace 		gaps outer current set 0
-bindsym $mod+Ctrl+BackSpace 		exec echo ''
-bindsym $mod+Ctrl+Shift+BackSpace	exec echo ''
+# bindsym $mod+Ctrl+BackSpace 		exec 
+# bindsym $mod+Ctrl+Shift+BackSpace	exec 
 
 # Enter
 bindsym $mod+Return 				exec i3-sensible-terminal
-bindsym $mod+Shift+Return 			exec echo ''
-bindsym $mod+Ctrl+Return 			exec echo ''
-bindsym $mod+Ctrl+Shift+Return		exec echo ''
+# bindsym $mod+Shift+Return 			exec 
+# bindsym $mod+Ctrl+Return 			exec 
+# bindsym $mod+Ctrl+Shift+Return		exec 
 
 # Comma/,
-bindsym $mod+comma 					exec echo ''
-bindsym $mod+Shift+comma 			exec echo ''
-bindsym $mod+Ctrl+comma 			exec echo ''
-bindsym $mod+Ctrl+Shift+comma		exec echo ''
+# bindsym $mod+comma 					exec 
+# bindsym $mod+Shift+comma 			exec 
+# bindsym $mod+Ctrl+comma 			exec 
+# bindsym $mod+Ctrl+Shift+comma		exec 
 
 # Plus
 bindsym $mod+plus 					gaps inner current plus 5
 bindsym $mod+Shift+plus 			gaps outer current plus 5
-bindsym $mod+Ctrl+plus 				exec echo ''
-bindsym $mod+Ctrl+Shift+plus		exec echo ''
+# bindsym $mod+Ctrl+plus 				exec 
+# bindsym $mod+Ctrl+Shift+plus		exec 
 
 # Minus
 bindsym $mod+minus 					gaps inner current minus 5
 bindsym $mod+Shift+minus 			gaps outer current minus 5
-bindsym $mod+Ctrl+minus 			exec echo ''
-bindsym $mod+Ctrl+Shift+minus		exec echo ''
+# bindsym $mod+Ctrl+minus 			exec 
+# bindsym $mod+Ctrl+Shift+minus		exec 
 
 # space
 bindsym $mod+space 					focus mode_toggle
 bindsym $mod+Shift+space 			floating toggle
-bindsym $mod+Ctrl+space 			exec echo ''
-bindsym $mod+Ctrl+Shift+space 		exec echo ''
+# bindsym $mod+Ctrl+space 			exec 
+# bindsym $mod+Ctrl+Shift+space 		exec 
 
 # ;
 bindsym $mod+semicolon 				focus right
-bindsym $mod+Shift+semicolon 		exec echo ''
-bindsym $mod+Ctrl+semicolon 		exec echo ''
-bindsym $mod+Ctrl+Shift+semicolon 	exec echo ''
+# bindsym $mod+Shift+semicolon 		exec 
+# bindsym $mod+Ctrl+semicolon 		exec 
+# bindsym $mod+Ctrl+Shift+semicolon 	exec 
 
 # Left
 bindsym $mod+Left 					focus left
 bindsym $mod+Shift+Left 			move left
 bindsym $mod+Ctrl+Left 				resize shrink width 10 px or 10 ppt
-bindsym $mod+Ctrl+Shift+Left 		exec echo ''
+# bindsym $mod+Ctrl+Shift+Left 		exec 
 
 # Right
 bindsym $mod+Right 					focus right
 bindsym $mod+Shift+Right			move right
 bindsym $mod+Ctrl+Right 			resize grow width 10 px or 10 ppt
-bindsym $mod+Ctrl+Shift+Right 		exec echo ''
+# bindsym $mod+Ctrl+Shift+Right 		exec 
 
 # Up
 bindsym $mod+Up 					focus up
 bindsym $mod+Shift+Up 				move up
 bindsym $mod+Ctrl+Up 				resize shrink height 10 px or 10 ppt
-bindsym $mod+Ctrl+Shift+Up 			exec echo ''
+# bindsym $mod+Ctrl+Shift+Up 			exec 
 
 # Down
 bindsym $mod+Down 					focus down
 bindsym $mod+Shift+Down 			move down
 bindsym $mod+Ctrl+Down 				resize grow height 10 px or 10 ppt
-bindsym $mod+Ctrl+Shift+Down 		exec echo ''
+# bindsym $mod+Ctrl+Shift+Down 		exec 
 
 # A
 bindsym $mod+a 						focus parent
-bindsym $mod+Shift+a 				exec echo ''
-bindsym $mod+Ctrl+a 				exec echo ''
-bindsym $mod+Ctrl+Shift+a 			exec echo ''
+# bindsym $mod+Shift+a 				exec 
+# bindsym $mod+Ctrl+a 				exec 
+# bindsym $mod+Ctrl+Shift+a 			exec 
 
 # B
 bindsym $mod+b 						exec $nsi firefox
-bindsym $mod+Shift+b 				exec echo ''
-bindsym $mod+Ctrl+b 				exec echo ''
-bindsym $mod+Ctrl+Shift+b 			exec echo ''
+# bindsym $mod+Shift+b 				exec 
+# bindsym $mod+Ctrl+b 				exec 
+# bindsym $mod+Ctrl+Shift+b 			exec 
 
 # C
-bindsym $mod+c 						exec echo ''
+# bindsym $mod+c 						exec 
 bindsym $mod+Shift+c 				reload
-bindsym $mod+Ctrl+c 				exec echo ''
-bindsym $mod+Ctrl+Shift+c 			exec echo ''
+# bindsym $mod+Ctrl+c 				exec 
+# bindsym $mod+Ctrl+Shift+c 			exec 
 
 
 # D
-bindsym $mod+d 						exec echo ''
-bindsym $mod+Shift+d 				exec echo ''
-bindsym $mod+Ctrl+d 				exec echo ''
-bindsym $mod+Ctrl+Shift+d 			exec echo ''
+# bindsym $mod+d 						exec 
+# bindsym $mod+Shift+d 				exec 
+# bindsym $mod+Ctrl+d 				exec 
+# bindsym $mod+Ctrl+Shift+d 			exec 
 
 # E
 bindsym $mod+e 						layout toggle split
-bindsym $mod+Shift+e 				exec echo ''
-bindsym $mod+Ctrl+e 				exec echo ''
-bindsym $mod+Ctrl+Shift+e 			exec echo ''
+# bindsym $mod+Shift+e 				exec 
+# bindsym $mod+Ctrl+e 				exec 
+# bindsym $mod+Ctrl+Shift+e 			exec 
 
 # F
 bindsym $mod+f 						fullscreen toggle
-bindsym $mod+Shift+f 				exec echo ''
-bindsym $mod+Ctrl+f 				exec echo ''
-bindsym $mod+Ctrl+Shift+f 			exec echo ''
+# bindsym $mod+Shift+f 				exec 
+# bindsym $mod+Ctrl+f 				exec 
+# bindsym $mod+Ctrl+Shift+f 			exec 
 
 # G
-bindsym $mod+g 						exec echo ''
-bindsym $mod+Shift+g 				exec echo ''
-bindsym $mod+Ctrl+g 				exec echo ''
-bindsym $mod+Ctrl+Shift+g 			exec echo ''
+# bindsym $mod+g 						exec 
+# bindsym $mod+Shift+g 				exec 
+# bindsym $mod+Ctrl+g 				exec 
+# bindsym $mod+Ctrl+Shift+g 			exec 
 
 # H
 bindsym $mod+h 						focus left
 bindsym $mod+Shift+h				move left
 bindsym $mod+Ctrl+h 				resize shrink width 10 px or 10 ppt
-bindsym $mod+Ctrl+Shift+h			exec echo ''
+# bindsym $mod+Ctrl+Shift+h			exec 
 
 # I
-bindsym $mod+i 						exec echo ''
-bindsym $mod+Shift+i 				exec echo ''
-bindsym $mod+Ctrl+i 				exec echo ''
-bindsym $mod+Ctrl+Shift+i 			exec echo ''
+# bindsym $mod+i 						exec 
+# bindsym $mod+Shift+i 				exec 
+# bindsym $mod+Ctrl+i 				exec 
+# bindsym $mod+Ctrl+Shift+i 			exec 
 
 # J
 bindsym $mod+j 						focus down 
 bindsym $mod+Shift+j 				move down
 bindsym $mod+Ctrl+j 				resize grow height 10 px or 10 ppt
-bindsym $mod+Ctrl+Shift+j 			exec echo ''
+bindsym $mod+Ctrl+Shift+j 			exec 
 
 # K
 bindsym $mod+k 						focus up
 bindsym $mod+Shift+k 				move up
 bindsym $mod+Ctrl+k 				resize shrink height 10 px or 10 ppt
-bindsym $mod+Ctrl+Shift+k 			exec echo ''
+# bindsym $mod+Ctrl+Shift+k 			exec 
 
 # L
 bindsym $mod+l 						focus right 
@@ -195,94 +195,94 @@ bindsym $mod+Ctrl+l 				resize grow width 10 px or 10 ppt
 bindsym $mod+Ctrl+Shift+l 			exec i3lock -k -c 000000 --timecolor ffffffff --datecolor ffffffff
 
 # M
-bindsym $mod+m 						exec echo ''
-bindsym $mod+Shift+m 				exec echo ''
-bindsym $mod+Ctrl+m 				exec echo ''
-bindsym $mod+Ctrl+Shift+m 			exec echo ''
+# bindsym $mod+m 						exec 
+# bindsym $mod+Shift+m 				exec 
+# bindsym $mod+Ctrl+m 				exec 
+# bindsym $mod+Ctrl+Shift+m 			exec 
 
 # N
 bindsym $mod+n 						exec $nsi flash_window
-bindsym $mod+Shift+n 				exec echo ''
-bindsym $mod+Ctrl+n 				exec echo ''
-bindsym $mod+Ctrl+Shift+n 			exec echo ''
+# bindsym $mod+Shift+n 				exec 
+# bindsym $mod+Ctrl+n 				exec 
+# bindsym $mod+Ctrl+Shift+n 			exec 
 
 # O
-bindsym $mod+o 						exec echo ''
-bindsym $mod+Shift+o 				exec echo ''
-bindsym $mod+Ctrl+o 				exec echo ''
-bindsym $mod+Ctrl+Shift+o 			exec echo ''
+# bindsym $mod+o 						exec 
+# bindsym $mod+Shift+o 				exec 
+# bindsym $mod+Ctrl+o 				exec 
+# bindsym $mod+Ctrl+Shift+o 			exec 
 
 # P
 bindsym $mod+p 						exec rofi -show calc -modi calc -no-show-match -no-sort
-bindsym $mod+Shift+p 				exec echo ''
-bindsym $mod+Ctrl+p 				exec echo ''
-bindsym $mod+Ctrl+Shift+p 			exec echo ''
+# bindsym $mod+Shift+p 				exec 
+# bindsym $mod+Ctrl+p 				exec 
+# bindsym $mod+Ctrl+Shift+p 			exec 
 
 # Q
-bindsym $mod+q 						exec echo ''
+# bindsym $mod+q 						exec 
 bindsym $mod+Shift+q 				kill
-bindsym $mod+Ctrl+q 				exec echo ''
-bindsym $mod+Ctrl+Shift+q 			exec echo ''
+# bindsym $mod+Ctrl+q 				exec 
+# bindsym $mod+Ctrl+Shift+q 			exec 
 
 # R
-bindsym $mod+r 						exec echo ''
+# bindsym $mod+r 						exec 
 bindsym $mod+Shift+r 				restart
-bindsym $mod+Ctrl+r 				exec echo ''
-bindsym $mod+Ctrl+Shift+r 			exec echo ''
+# bindsym $mod+Ctrl+r 				exec 
+# bindsym $mod+Ctrl+Shift+r 			exec 
 
 # S
 bindsym $mod+s 						layout stacking
 bindsym $mod+Shift+s 				exec $nsi spotify
-bindsym $mod+Ctrl+s 				exec echo ''
-bindsym $mod+Ctrl+Shift+s 			exec echo ''
+# bindsym $mod+Ctrl+s 				exec 
+# bindsym $mod+Ctrl+Shift+s 			exec 
 
 # T
 bindsym $mod+t 						exec $nsi rofi -show drun
-bindsym $mod+Shift+t 				exec echo ''
-bindsym $mod+Ctrl+t 				exec echo ''
-bindsym $mod+Ctrl+Shift+t 			exec echo ''
+# bindsym $mod+Shift+t 				exec 
+# bindsym $mod+Ctrl+t 				exec 
+# bindsym $mod+Ctrl+Shift+t 			exec 
 
 # U
-bindsym $mod+u 						exec echo ''
-bindsym $mod+Shift+u 				exec echo ''
-bindsym $mod+Ctrl+u 				exec echo ''
-bindsym $mod+Ctrl+Shift+u 			exec echo ''
+# bindsym $mod+u 						exec 
+# bindsym $mod+Shift+u 				exec 
+# bindsym $mod+Ctrl+u 				exec 
+# bindsym $mod+Ctrl+Shift+u 			exec 
 
 # V
 bindsym $mod+v 						split toggle
-bindsym $mod+Shift+v 				exec echo ''
-bindsym $mod+Ctrl+v 				exec echo ''
-bindsym $mod+Ctrl+Shift+v 			exec echo ''
+# bindsym $mod+Shift+v 				exec 
+# bindsym $mod+Ctrl+v 				exec 
+# bindsym $mod+Ctrl+Shift+v 			exec 
 
 # W
 bindsym $mod+w 						layout tabbed
-bindsym $mod+Shift+w 				exec echo ''
-bindsym $mod+Ctrl+w	 				exec echo ''
-bindsym $mod+Ctrl+Shift+w 			exec echo ''
+# bindsym $mod+Shift+w 				exec 
+# bindsym $mod+Ctrl+w	 				exec 
+# bindsym $mod+Ctrl+Shift+w 			exec 
 
 # X
-bindsym $mod+x 						exec echo ''
-bindsym $mod+Shift+x 				exec echo ''
-bindsym $mod+Ctrl+x 				exec echo ''
-bindsym $mod+Ctrl+Shift+x 			exec echo ''
+# bindsym $mod+x 						exec 
+# bindsym $mod+Shift+x 				exec 
+# bindsym $mod+Ctrl+x 				exec 
+# bindsym $mod+Ctrl+Shift+x 			exec 
 
 # Y
-bindsym $mod+y 						exec echo ''
-bindsym $mod+Shift+y 				exec echo ''
-bindsym $mod+Ctrl+y 				exec echo ''
-bindsym $mod+Ctrl+Shift+y 			exec echo ''
+# bindsym $mod+y 						exec 
+# bindsym $mod+Shift+y 				exec 
+# bindsym $mod+Ctrl+y 				exec 
+# bindsym $mod+Ctrl+Shift+y 			exec 
 
 # Z
-bindsym $mod+z 						exec echo ''
-bindsym $mod+Shift+z 				exec echo ''
-bindsym $mod+Ctrl+z 				exec echo ''
-bindsym $mod+Ctrl+Shift+z 			exec echo ''
+# bindsym $mod+z 						exec 
+# bindsym $mod+Shift+z 				exec 
+# bindsym $mod+Ctrl+z 				exec 
+# bindsym $mod+Ctrl+Shift+z 			exec 
 
 # F7
 bindsym $mod+F7 					exec $nsi ~/.config/rofi/scripts/shutdown.sh
-bindsym $mod+Ctrl+F7			    exec echo ''
-bindsym $mod+Shift+F7				exec echo ''
-bindsym $mod+Ctrl+Shift+F7			exec echo ''
+# bindsym $mod+Ctrl+F7			    exec 
+# bindsym $mod+Shift+F7				exec 
+# bindsym $mod+Ctrl+Shift+F7			exec 
 
 # 1
 bindsym $mod+1 						workspace $ws1
