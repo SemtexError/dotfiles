@@ -1,4 +1,4 @@
-; Modules to add: Network, bluetooth, mounted devices
+; Modules to add: bluetooth, mounted devices
 
 [colors]
     background = #AF000000
@@ -23,7 +23,7 @@
 
 [bar/main]
     ; Modules
-    modules-right = spotify screen battery volume powermenu date time 
+    modules-right = spotify screen battery volume powermenu wireless-network wired-network date time 
     modules-center = vpn
     modules-left = i3
 
@@ -78,6 +78,22 @@
 
     format-prefix = " "
     format-background = ${colors.highlight-background}
+
+; Only on desktop
+[module/wired-network]
+    type = internal/network
+    interface = enp3s0
+	double-click-left = nm-connection-editor
+	format-connected = 
+	format-disconnected =  
+
+; Only on laptop
+[module/wireless-network]
+    type = internal/network
+    interface = 
+	double-click-left = nm-connection-editor
+	format-connected = 
+	format-disconnected =  
 
 [module/powermenu]
     type = custom/menu

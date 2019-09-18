@@ -46,6 +46,8 @@
 	"window.newWindowDimensions": "inherit",
 
 	// Workbench
+	"workbench.tree.renderIndentGuides": "always",
+	"workbench.tree.indent": 18,
 	"workbench.colorTheme": "Visual Studio Dark",
 	"workbench.iconTheme": "material-icon-theme",
 	"workbench.activityBar.visible": true,
@@ -142,13 +144,47 @@
 	"vim.statusBarColorControl": true,
 	"vim.normalModeKeyBindingsNonRecursive": [
 		{
-		  "before": ["<leader>", "s"],
-		  "after": ["<leader>", "<leader>", "s"]
+			// Easy motion
+			"before": ["<leader>", "s"],
+			"after": ["<leader>", "<leader>", "s"]
 		},
 		{
-		  "before": ["<leader>", "w"],
-		  "commands": [":w"]
+			// Save with leader
+			"before": ["<leader>", "w"],
+			"commands": [":w"]
 		},
+		{
+			// Go to implementation
+			"before": ["g", "d"],
+			"commands": ["editor.action.goToImplementation"]
+		},
+		{
+			// Go to definition
+			"before": ["g", "D"],
+			"commands": [ "editor.action.revealDefinition" ]
+		},
+		{
+			// Paste without yanking
+			"before": ["<leader>", "p"],
+			"after": [ "\"", "_", "d", "P"]
+		},
+		{
+			// Delete without yanking
+			"before": ["<leader>", "d"],
+			"after": [ "\"", "_", "d" ]
+		}
+	],
+	"vim.visualModeKeyBindings": [
+		{
+			// Paste without yanking
+			"before": ["<leader>", "p"],
+			"after": [ "\"", "_", "d", "P"]
+		},
+		{
+			// Delete without yanking
+			"before": ["<leader>", "d"],
+			"after": [ "\"", "_", "d" ]
+		}
 	],
 
 	//Eslint
@@ -188,6 +224,8 @@
 	// VsIntelliCode
 	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 	"comments.openPanel": "neverOpen",
+	"debug.showInStatusBar": "never",
+	"editor.acceptSuggestionOnCommitCharacter": false,
 	// TODO: Unsorted
 	
 }
