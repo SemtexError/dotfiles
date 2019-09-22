@@ -58,6 +58,9 @@ call vundle#begin()
     " https://github.com/ianks/vim-tsx
     Plugin 'ianks/vim-tsx'
 
+    " https://github.com/posva/vim-vue
+    Plugin 'posva/vim-vue'
+
     " = Complition
     " https://github.com/Shougo/deoplete.nvim
     Plugin 'Shougo/deoplete.nvim'

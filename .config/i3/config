@@ -86,8 +86,8 @@ bindsym $mod+Shift+minus 			gaps outer current minus 5
 # bindsym $mod+Ctrl+Shift+minus		exec 
 
 # space
-bindsym $mod+space 					focus mode_toggle
-bindsym $mod+Shift+space 			floating toggle
+bindsym $mod+space 					scratchpad show
+bindsym $mod+Shift+space 			move scratchpad 
 # bindsym $mod+Ctrl+space 			exec 
 # bindsym $mod+Ctrl+Shift+space 		exec 
 
@@ -154,8 +154,8 @@ bindsym $mod+e 						layout toggle split
 
 # F
 bindsym $mod+f 						fullscreen toggle
-# bindsym $mod+Shift+f 				exec 
-# bindsym $mod+Ctrl+f 				exec 
+bindsym $mod+Shift+f 				floating toggle
+bindsym $mod+Ctrl+f 				focus mode_toggle
 # bindsym $mod+Ctrl+Shift+f 			exec 
 
 # G
@@ -333,6 +333,7 @@ bindsym $mod+Ctrl+Shift+9			move workspace to workspace $ws9
 bindsym $mod+0 						workspace $ws10
 bindsym $mod+Shift+0 				move container to workspace $ws10
 bindsym $mod+Ctrl+Shift+0			move workspace to workspace $ws10
+
 
 # Media keys
 bindsym XF86MonBrightnessUp 		exec light -A 1

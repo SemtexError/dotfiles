@@ -1,5 +1,5 @@
 [options]
-font = Fira code 24
+font = Fira code 18
 
 [colors]
 foreground = rgb(239, 240, 235)

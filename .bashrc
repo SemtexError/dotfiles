@@ -2,6 +2,8 @@
 # ~/.bashrc
 #
 
+cdls() { cd "$@" && ls -hN --color=auto --group-directories-first; }
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -45,6 +47,7 @@ alias la='ls -la'
 alias mkdir='mkdir -p'
 alias ipconfig='ifconfig'
 alias xclip='xclip -selection clipboard'
+alias cd=cdls
 
 alias mutt=neomutt
 alias mail=neomutt
@@ -53,6 +56,8 @@ alias :q=exit
 # Color
 alias ls='ls -hN --color=auto --group-directories-first'
 alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 
 # Dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'

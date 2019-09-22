@@ -1,5 +1,6 @@
 {
 	// Editor
+	"editor.acceptSuggestionOnCommitCharacter": false,
 	"editor.mouseWheelZoom": true,
 	"editor.fontFamily": "'Fira Code'",
 	"editor.fontLigatures": true,
@@ -39,6 +40,7 @@
 	// Debug
 	"debug.openDebug": "neverOpen",
 	"debug.internalConsoleOptions": "neverOpen",
+	"debug.showInStatusBar": "never",
 
 	// Window
 	"window.zoomLevel": 2,
@@ -48,7 +50,6 @@
 	// Workbench
 	"workbench.tree.renderIndentGuides": "always",
 	"workbench.tree.indent": 18,
-	"workbench.colorTheme": "Visual Studio Dark",
 	"workbench.iconTheme": "material-icon-theme",
 	"workbench.activityBar.visible": true,
     "workbench.sideBar.location": "right",
@@ -172,6 +173,10 @@
 			// Delete without yanking
 			"before": ["<leader>", "d"],
 			"after": [ "\"", "_", "d" ]
+		},
+		{
+			"before": ["<leader>", "b"],
+			"commands": [ "editor.debug.action.toggleBreakpoint" ]
 		}
 	],
 	"vim.visualModeKeyBindings": [
@@ -223,10 +228,8 @@
 	
 	// VsIntelliCode
 	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-	"comments.openPanel": "neverOpen",
-	"debug.showInStatusBar": "never",
-	"editor.acceptSuggestionOnCommitCharacter": false,
 	// TODO: Unsorted
+	"empty": "empty"
 	
 }
   
