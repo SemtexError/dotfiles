@@ -354,3 +354,4 @@ exec_always $nsi ~/.config/redshift/launch.sh
 exec_always $nsi ~/.config/feh/launch.sh
 exec_always $nsi ~/.config/i3/screens.sh
 exec_always $nsi ~/.config/nvidia-led/launch.sh
+exec_always $nsi ~/.scripts/custom
