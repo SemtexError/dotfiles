@@ -7,14 +7,17 @@ if [[ $(hostname -s) = "host" ]]; then
 fi
 
 case $1 in --increase)
-        pactl set-sink-volume $SINKID +1%
+        ponymix increase 1
+        # pactl set-sink-volume $SINKID +1%
         ;;
     --decrease)
-        pactl set-sink-volume $SINKID -1%
+        ponymix decrease 1
+        # pactl set-sink-volume $SINKID -1%
         ;;
     --toggle)
         echo "toggle"
-        pactl set-sink-mute $SINKID toggle
+        ponymix toggle
+        # pactl set-sink-mute $SINKID toggle
         ;;
 esac
 

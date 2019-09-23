@@ -1,0 +1,17 @@
+# Custom
+export VISUAL=nvim
+export EDITOR="$VISUAL"
+
+export LANG=en_US.UTF-8
+export LV_CTYPE=en_US.UTF-8
+
+# Expand the command history, and ignore if it start with a space
+export HISTSIZE=10000
+export HISTFILESIZE=20000
+export HISTCONTROL=ignorespace
+export DOTNET_ROOT=/opt/dotnet
+export PATH="$PATH:$HOME/.dotnet/tools"
+export PATH="$PATH:$HOME/.scripts"
+export MSBuildSDKsPath=/opt/dotnet/sdk/2.2.108/Sdks/
+
+# vim: set filetype=bash
