@@ -62,6 +62,38 @@
 	{
 		"key": "ctrl+o",
 		"command": "workbench.action.toggleSidebarVisibility"
+	},
+	{
+		"key": "ctrl+=",
+		"command": "editor.action.fontZoomIn"
+	},
+	{
+		"key": "ctrl+-",
+		"command": "editor.action.fontZoomOut"
+	},
+	{
+		"key": "ctrl+shift+-",
+		"command": "workbench.action.zoomOut"
+	},
+	{
+		"key": "ctrl+-",
+		"command": "-workbench.action.zoomOut"
+	},
+	{
+		"key": "ctrl+shift+=",
+		"command": "workbench.action.zoomIn"
+	},
+	{
+		"key": "ctrl+=",
+		"command": "-workbench.action.zoomIn"
+	},
+	{
+		"key": "shift+f2",
+		"command": "explorer.newFile"
+	},
+	{
+		"key": "ctrl+shift+f2",
+		"command": "explorer.newFolder"
 	}
 ]
   

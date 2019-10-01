@@ -43,7 +43,7 @@
 	"debug.showInStatusBar": "never",
 
 	// Window
-	"window.zoomLevel": 2,
+	"window.zoomLevel": 1,
 	"window.titleBarStyle": "custom",
 	"window.newWindowDimensions": "inherit",
 
@@ -142,7 +142,6 @@
 	"vim.hlsearch": true,
 	"vim.searchHighlightColor": "rgba(230, 126, 34, 0.4)",
 	"vim.useSystemClipboard": true,
-	"vim.statusBarColorControl": true,
 	"vim.normalModeKeyBindingsNonRecursive": [
 		{
 			// Easy motion
@@ -179,6 +178,12 @@
 			"commands": [ "editor.debug.action.toggleBreakpoint" ]
 		}
 	],
+	"vim.insertModeKeyBindings": [
+		{
+			"before": [ "j", "j"],
+			"after": [ "<Esc>" ]
+		}
+	],
 	"vim.visualModeKeyBindings": [
 		{
 			// Paste without yanking
@@ -201,7 +206,8 @@
         "javascriptreact",
         "vue",
         "typescript",
-        "typescriptreact"
+		"typescriptreact",
+		"html"
     ],
 
 	// Prettier

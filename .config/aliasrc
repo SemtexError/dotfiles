@@ -7,8 +7,6 @@ alias mkdir='mkdir -p'
 alias ipconfig='ifconfig'
 alias xclip='xclip -selection clipboard'
 
-alias mutt=neomutt
-alias mail=neomutt
 alias :q=exit
 
 # Color

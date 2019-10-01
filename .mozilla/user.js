@@ -1792,3 +1792,5 @@ user_pref("browser.tabs.loadBookmarksInTabs", false);
 user_pref("browser.ctrlTab.recentlyUsedOrder", false);
 user_pref("general.autoScroll", true);
 user_pref("general.smoothScroll", false);
+user_pref("browser.tabs.loadBookmarksInTabs", false);
+user_pref("middlemouse.openNewWindow", false);

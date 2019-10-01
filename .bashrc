@@ -24,8 +24,6 @@ export HISTCONTROL=ignorespace
 export DOTNET_ROOT=/opt/dotnet
 export PATH="$PATH:$HOME/.dotnet/tools"
 export PATH="$PATH:$HOME/.scripts"
-export MSBuildSDKsPath=/opt/dotnet/sdk/2.2.108/Sdks/
-export TERM=screen-256color
 
 # Set Bash PS1
 export PS1=""

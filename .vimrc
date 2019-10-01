@@ -212,6 +212,9 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" Map jj to escape so that you can exit insert mode easly
+imap jj <Esc>
+
 " Set clipboard to + outside tmux
 set clipboard+=unnamedplus
 
