@@ -1,0 +1,32 @@
+# ======== Key bindings =======
+
+# Ctrl + Arrow: Move in the current line
+bindkey '^[[1;5A' beginning-of-line # Up
+bindkey '^[[1;5B' end-of-line # Down
+bindkey '^[[1;5C' forward-word # Right
+bindkey '^[[1;5D' backward-word # Left
+
+# Alt + Arrow: Move in the current line
+bindkey '^[[1;3A' beginning-of-line # Up
+bindkey '^[[1;3B' end-of-line # Down
+bindkey '^[[1;3C' forward-word # Right
+bindkey '^[[1;3D' backward-word # Left
+
+# del, home and end: Normal bevaviour
+bindkey "\e[3~" delete-char
+bindkey "\e[H"  beginning-of-line
+bindkey "\e[F"  end-of-line
+
+# CTRL + J/k: Search through history
+bindkey "^k" up-line-or-history
+bindkey "^j" down-line-or-history
+
+# Alt + K/j: Search through history
+bindkey "\ek" up-line-or-history
+bindkey "\ej" down-line-or-history
+
+# Reverse search
+bindkey '^R' history-incremental-search-backward
+
+# vim:ft=zsh
+

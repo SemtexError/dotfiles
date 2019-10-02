@@ -154,16 +154,6 @@
 			"commands": [":w"]
 		},
 		{
-			// Go to implementation
-			"before": ["g", "d"],
-			"commands": ["editor.action.goToImplementation"]
-		},
-		{
-			// Go to definition
-			"before": ["g", "D"],
-			"commands": [ "editor.action.revealDefinition" ]
-		},
-		{
 			// Paste without yanking
 			"before": ["<leader>", "p"],
 			"after": [ "\"", "_", "d", "P"]

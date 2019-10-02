@@ -9,9 +9,10 @@ export LV_CTYPE=en_US.UTF-8
 export HISTSIZE=10000
 export HISTFILESIZE=20000
 export HISTCONTROL=ignorespace
-export PATH="$PATH:$HOME/.dotnet/tools"
-export PATH="$PATH:$HOME/.scripts"
 export DOTNET_ROOT=/opt/dotnet
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
+
+export PATH="$PATH:$HOME/.dotnet/tools"
+export PATH="$PATH:$HOME/.scripts"
 
 # vim: set filetype=bash
