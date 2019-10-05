@@ -1,96 +1,94 @@
 let mapleader = "\\"
 map <Space> <Leader>
 
+set termguicolors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
 " ===================================
 " ============= Plugins =============
 " ===================================
 
-" Download VundleVim
-if !isdirectory(expand('~/.config/vim/bundle/Vundle.vim'))
-	echo "Downloading BundleVim/Vundle.vim to manage plugins..."
-	silent !mkdir -p ~/.config/vim/bundle/
-    silent !git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/vim/bundle/Vundle.vim
+" Download vim-plug
+if ! filereadable(expand('~/.config/nvim/autoload/plug.vim'))
+	echo "Downloading junegunn/vim-plug to manage plugins..."
+	silent !mkdir -p ~/.config/nvim/autoload/
+	silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > ~/.config/nvim/autoload/plug.vim
+	autocmd VimEnter * PlugInstall
 endif
 
-set nocompatible
-filetype off
-set rtp+=~/.config/vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.config/nvim/plugged')
 	" Theme: https://github.com/tomasiser/vim-code-dark
-	Plugin 'tomasiser/vim-code-dark'
+	Plug 'tomasiser/vim-code-dark'
 
+    " Theme: Syntax
+    " Plug 'sheerun/vim-polyglot'
+    
     " Ctrl+t https://github.com/junegunn/fzf.vim
-	Plugin 'junegunn/fzf'
-	Plugin 'junegunn/fzf.vim'
+	Plug 'junegunn/fzf'
+	Plug 'junegunn/fzf.vim'
 
 	" Status bar: https://github.com/itchyny/lightline.vim
-	Plugin 'itchyny/lightline.vim'
+	Plug 'itchyny/lightline.vim'
 
 	" Ctrl+o: https://github.com/scrooloose/nerdtree
-	Bundle 'scrooloose/nerdtree'
+	Plug 'scrooloose/nerdtree'
 
     " Show yank: https://github.com/machakann/vim-highlightedyank
-    Plugin 'machakann/vim-highlightedyank'
-
-    " Surround: https://github.com/tpope/vim-surround
-    Plugin 'tpope/vim-surround'
+    Plug 'machakann/vim-highlightedyank'
 
     " https://github.com/jiangmiao/auto-pairs
-    Plugin 'jiangmiao/auto-pairs'
+    Plug 'jiangmiao/auto-pairs'
 
     " https://github.com/scrooloose/nerdcommenter
-    Plugin 'scrooloose/nerdcommenter'
+    Plug 'scrooloose/nerdcommenter'
 
     " https://github.com/tpope/vim-unimpaired
-    Plugin 'tpope/vim-unimpaired'
+    Plug 'tpope/vim-unimpaired'
 
     " https://github.com/easymotion/vim-easymotion
-    Plugin 'easymotion/vim-easymotion'
+    Plug 'easymotion/vim-easymotion'
 
-    " https://github.com/vim-scripts/SearchComplete
-    Plugin 'vim-scripts/SearchComplete'
+    " https://github.com/vim-scripts/SearchComplete: Tab complete in search '/' or '?'
+    Plug 'vim-scripts/SearchComplete'
     
     " === Javascript ===
     " = Theme
     " https://github.com/leafgarland/typescript-vim
-    Plugin 'leafgarland/typescript-vim'
+    Plug 'leafgarland/typescript-vim'
 
     " https://github.com/ianks/vim-tsx
-    Plugin 'ianks/vim-tsx'
+    Plug 'ianks/vim-tsx'
 
     " https://github.com/posva/vim-vue
-    Plugin 'posva/vim-vue'
+    Plug 'posva/vim-vue'
 
     " = Complition
     " https://github.com/Shougo/deoplete.nvim
-    Plugin 'Shougo/deoplete.nvim'
-    Plugin 'roxma/nvim-yarp'
-    Plugin 'roxma/vim-hug-neovim-rpc'
-
-    " https://github.com/mhartington/nvim-typescript
-    Plugin 'mhartington/nvim-typescript'
-
-    " Allow tab in deoplete: https://github.com/ervandew/supertab
-    Plugin 'ervandew/supertab'
-
-    " = Linting
-    " https://github.com/dense-analysis/ale
-    Plugin 'dense-analysis/ale'
-
-    " === CSS ===
-    " https://github.com/hail2u/vim-css3-syntax
-    Plugin 'hail2u/vim-css3-syntax'
+    " Plug 'Shougo/deoplete.nvim'
+    " Plug 'roxma/nvim-yarp'
+    " Plug 'roxma/vim-hug-neovim-rpc'
 
     " = Sassy theme
     " https://github.com/cakebaker/scss-syntax.vim 
-    Plugin 'cakebaker/scss-syntax.vim'
+    Plug 'cakebaker/scss-syntax.vim'
+
+    " = Linting
+    " https://github.com/dense-analysis/ale
+    Plug 'dense-analysis/ale'
+
+    " = Autocomplete
+    " https://github.com/neoclide/coc.nvim
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
     " === C# ===
     " https://github.com/OmniSharp/omnisharp-vim
-    Plugin 'OmniSharp/omnisharp-vim'
+    Plug 'OmniSharp/omnisharp-vim'
 
-    call vundle#end() 
-filetype plugin indent on
+    " https://github.com/OrangeT/vim-csharp
+    Plug 'OrangeT/vim-csharp'
+
+call plug#end()
 
 " Fzf
 nnoremap <expr> <C-t> (len(system('git rev-parse')) ? ':Files' : ':GFiles --exclude-standard --others --cached')."\<cr>"
@@ -110,7 +108,8 @@ let g:deoplete#enable_at_startup = 1
 
 " SuperTab
 let g:SuperTabDefaultCompletionType = "<c-n>"
-set completeopt=menu,longest 
+" set completeopt=menu,longest 
+set completeopt=longest,menuone,preview
 let g:SuperTabLongestHighlight = 1
 
 " Ale
@@ -130,8 +129,6 @@ let g:ale_fixers = {
 \}
 let g:ale_fix_on_save = 0
 
-" C#
-let g:OmniSharp_server_stdio = 1
 
 " unimpaired
 " Move single selected line
@@ -141,6 +138,8 @@ nmap <A-k> [e
 " Move multiple selected lines
 vmap <A-j> ]egv
 vmap <A-k> [egv
+
+source $HOME/.config/nvim/csharp.vim
 
 " ===================================
 " ============ !Plugins =============
@@ -218,3 +217,14 @@ imap jj <Esc>
 " Set clipboard to + outside tmux
 set clipboard+=unnamedplus
 
+" = Custom highlighting
+" = C#/csharp
+" CS class, green
+highlight csClass guifg=#4EC9B0
+" CS Types (classes), green
+highlight csUserType guifg=#4EC9B0
+" Interfaces, yellow
+highlight csUserInterface guifg=#B3D19F
+highlight csIface guifg=#B3D19F
+" Async keyword, blue
+highlight csAsync guifg=#569CD6

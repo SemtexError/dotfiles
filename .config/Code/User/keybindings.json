@@ -94,6 +94,14 @@
 	{
 		"key": "ctrl+shift+f2",
 		"command": "explorer.newFolder"
+	},
+	{
+		"key": "ctrl+shift+s",
+		"command": "workbench.action.files.saveAll"
+	},
+	{
+		"key": "ctrl+shift+s",
+		"command": "-workbench.action.files.saveAs"
 	}
 ]
   

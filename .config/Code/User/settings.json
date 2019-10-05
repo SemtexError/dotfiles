@@ -154,6 +154,11 @@
 			"commands": [":w"]
 		},
 		{
+			"before": [ "g", "D"
+			 ],
+			 "commands": [ "editor.action.goToImplementation" ]
+		},
+		{
 			// Paste without yanking
 			"before": ["<leader>", "p"],
 			"after": [ "\"", "_", "d", "P"]

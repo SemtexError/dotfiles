@@ -29,15 +29,15 @@ workspace $ws1 output $mon1
 workspace $ws2 output $mon2
 workspace $ws3 output $mon3
 
-workspace $ws4 output $mon1
-workspace $ws5 output $mon2
-workspace $ws6 output $mon3
+# workspace $ws4 output $mon1
+# workspace $ws5 output $mon2
+# workspace $ws6 output $mon3
 
-workspace $ws7 output $mon1
-workspace $ws8 output $mon2
-workspace $ws9 output $mon3
+# workspace $ws7 output $mon1
+# workspace $ws8 output $mon2
+# workspace $ws9 output $mon3
 
-workspace $ws10 output $mon1
+# workspace $ws10 output $mon1
 
 smart_gaps on
 gaps inner $gap

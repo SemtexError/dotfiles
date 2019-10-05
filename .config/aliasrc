@@ -2,18 +2,21 @@
 alias ..='cd ..'
 alias vim='nvim'
 alias vi='nvim'
-alias la='ls -la'
 alias mkdir='mkdir -p'
 alias ipconfig='ifconfig'
 alias xclip='xclip -selection clipboard'
 
-alias :q=exit
-
 # Color
-alias ls='ls -hN --color=auto --group-directories-first'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+
+# ls: Hide Jagex cache files from ls
+alias ls='ls -hN --color=auto --group-directories-first -I jagexcache -I random.dat -I jagex_cl_oldschool_LIVE.dat'
+alias la='ls -la'
+
+# Quit the vim way
+alias :q=exit
 
 # Dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'

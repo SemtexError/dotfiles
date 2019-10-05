@@ -28,6 +28,10 @@ HISTFILE=~/.config/zsh/history
 # Exports
 [ -f "$HOME/.config/exportrc" ] && source "$HOME/.config/exportrc"
 
+
+# Auto complete
+fpath=(path/to/zsh-completions/src $fpath)
+
 # Must be at the end of the file
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
