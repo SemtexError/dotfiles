@@ -88,7 +88,12 @@ call plug#begin('~/.config/nvim/plugged')
     " https://github.com/OrangeT/vim-csharp
     Plug 'OrangeT/vim-csharp'
 
+    " https://github.com/puremourning/vimspector
+    Plug 'puremourning/vimspector'
+
 call plug#end()
+
+let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
 
 " Fzf
 nnoremap <expr> <C-t> (len(system('git rev-parse')) ? ':Files' : ':GFiles --exclude-standard --others --cached')."\<cr>"
@@ -221,10 +226,12 @@ set clipboard+=unnamedplus
 " = C#/csharp
 " CS class, green
 highlight csClass guifg=#4EC9B0
-" CS Types (classes), green
 highlight csUserType guifg=#4EC9B0
+highlight csAttribute guifg=#4EC9B0
+
 " Interfaces, yellow
 highlight csUserInterface guifg=#B3D19F
 highlight csIface guifg=#B3D19F
+
 " Async keyword, blue
 highlight csAsync guifg=#569CD6
