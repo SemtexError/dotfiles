@@ -1,5 +1,5 @@
-let mapleader = "\\"
 map <Space> <Leader>
+let mapleader = "\\"
 
 set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -89,11 +89,13 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'OrangeT/vim-csharp'
 
     " https://github.com/puremourning/vimspector
-    Plug 'puremourning/vimspector'
+    " Plug 'puremourning/vimspector'
 
 call plug#end()
 
-let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
+" let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
+" Coc
+inoremap <silent><expr> <c-space> coc#refresh()
 
 " Fzf
 nnoremap <expr> <C-t> (len(system('git rev-parse')) ? ':Files' : ':GFiles --exclude-standard --others --cached')."\<cr>"

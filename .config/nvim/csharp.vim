@@ -28,9 +28,9 @@ augroup omnisharp_commands
     autocmd FileType cs nnoremap <buffer> gd :OmniSharpGotoDefinition<CR>
     autocmd FileType cs nnoremap <buffer> gD :OmniSharpFindImplementations<CR>
     autocmd FileType cs nnoremap <buffer> gr :OmniSharpFindUsages<CR>
-    autocmd FileType cs nnoremap <buffer> <Leader>d :OmniSharpDocumentation<CR>
+    autocmd FileType cs nnoremap <buffer> <a-cr> :OmniSharpDocumentation<CR>
 
-    autocmd FileType cs nnoremap <buffer> <C-space> :OmniSharpGetCodeActions<CR>
+    autocmd FileType cs nnoremap <buffer> <M-.> :OmniSharpGetCodeActions<CR>
 
     autocmd FileType cs nnoremap <buffer> R :OmniSharpRename<CR>
 
