@@ -1,6 +1,3 @@
-map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
-\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
-\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
 " C#
 let g:OmniSharp_server_stdio = 1
@@ -83,3 +80,18 @@ function! s:CBReturnCount(count) abort
     execute ':sign place 99 line='.l.' name=OmniSharpCodeActions file='.f
   endif
 endfunction
+
+
+" = Custom highlighting
+" = C#/csharp
+" CS class, green
+highlight csClass guifg=#4EC9B0
+highlight csUserType guifg=#4EC9B0
+highlight csAttribute guifg=#4EC9B0
+
+" Interfaces, yellow
+highlight csUserInterface guifg=#B3D19F
+highlight csIface guifg=#B3D19F
+
+" Async keyword, blue
+highlight csAsync guifg=#569CD6
