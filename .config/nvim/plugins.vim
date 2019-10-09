@@ -23,6 +23,9 @@ call plug#begin('~/.config/nvim/plugged')
     " StatusBar: in bottom of screen
 	" https://github.com/itchyny/lightline.vim
 	Plug 'itchyny/lightline.vim'
+    Plug 'w0rp/ale'
+    Plug 'itchyny/lightline.vim'
+    Plug 'maximbaz/lightline-ale'
 
     " FileDialog: folder and file structure finder
 	" https://github.com/scrooloose/nerdtree

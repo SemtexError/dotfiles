@@ -4,30 +4,19 @@ let g:OmniSharp_server_stdio = 1
 let g:OmniSharp_selector_ui = 'fzf'
 let g:OmniSharp_highlight_types = 2
 
-" CS class, green
-highlight csClass guifg=#4EC9B0
-" CS Types (classes), green
-highlight csUserType guifg=#4EC9B0
-" Interfaces, yellow
-highlight csUserInterface guifg=#B3D19F
-highlight csIface guifg=#B3D19F
-" Async keyword, blue
-highlight csAsync guifg=#569CD6
-
-
 augroup omnisharp_commands
     autocmd!
 
     " Show type information automatically when the cursor stops moving
-    autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
+    " autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
 
     " The following commands are contextual, based on the cursor position.
     autocmd FileType cs nnoremap <buffer> gd :OmniSharpGotoDefinition<CR>
     autocmd FileType cs nnoremap <buffer> gD :OmniSharpFindImplementations<CR>
     autocmd FileType cs nnoremap <buffer> gr :OmniSharpFindUsages<CR>
-    autocmd FileType cs nnoremap <buffer> <a-cr> :OmniSharpDocumentation<CR>
+    autocmd FileType cs nnoremap <buffer> <Leader>d :OmniSharpDocumentation<CR>
 
-    autocmd FileType cs nnoremap <buffer> <M-.> :OmniSharpGetCodeActions<CR>
+    autocmd FileType cs nnoremap <buffer> <a-cr> :OmniSharpGetCodeActions<CR>
 
     autocmd FileType cs nnoremap <buffer> R :OmniSharpRename<CR>
 
@@ -95,3 +84,10 @@ highlight csIface guifg=#B3D19F
 
 " Async keyword, blue
 highlight csAsync guifg=#569CD6
+highlight csXmlTag guifg=#569CD6
+
+" Light blue
+highlight xmlAttrib guifg=#9CDCFE
+
+" Gray
+highlight xmlTag guifg=#808080

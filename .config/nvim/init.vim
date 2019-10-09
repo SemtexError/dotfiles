@@ -39,24 +39,25 @@ set tm=500
 
 
 " Keybindings
-source $HOME/.config/nvim/keybindings.vim
+source ~/.config/nvim/keybindings.vim
 
 " Plugins
-source $HOME/.config/nvim/plugins.vim
-source $HOME/.config/nvim/plugins/coc.vim
-source $HOME/.config/nvim/plugins/fzf.vim
-source $HOME/.config/nvim/plugins/nerdtree.vim
-source $HOME/.config/nvim/plugins/easymotion.vim
-source $HOME/.config/nvim/plugins/highlightedyank.vim
-source $HOME/.config/nvim/plugins/ale.vim
-source $HOME/.config/nvim/plugins/unimpaired.vim
-source $HOME/.config/nvim/plugins/codedark.vim
-source $HOME/.config/nvim/plugins/nerdcommenter.vim
+source ~/.config/nvim/plugins.vim
+source ~/.config/nvim/plugins/coc.vim
+source ~/.config/nvim/plugins/fzf.vim
+source ~/.config/nvim/plugins/nerdtree.vim
+source ~/.config/nvim/plugins/easymotion.vim
+source ~/.config/nvim/plugins/highlightedyank.vim
+source ~/.config/nvim/plugins/ale.vim
+source ~/.config/nvim/plugins/unimpaired.vim
+source ~/.config/nvim/plugins/codedark.vim
+source ~/.config/nvim/plugins/nerdcommenter.vim
+source ~/.config/nvim/plugins/lightline.vim
 
 " Languages
-source $HOME/.config/nvim/languages/csharp.vim
-source $HOME/.config/nvim/languages/javascript.vim
-source $HOME/.config/nvim/languages/css.vim
+source ~/.config/nvim/languages/csharp.vim
+source ~/.config/nvim/languages/javascript.vim
+source ~/.config/nvim/languages/css.vim
 
 " Debug
-source $HOME/.config/nvim/debug.vim
+source ~/.config/nvim/debug.vim

@@ -24,3 +24,6 @@ command Q q
 
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
+
+" Open quickfix in new tab
+autocmd FileType qf nnoremap <buffer> <Enter> <C-W><Enter><C-W>T
