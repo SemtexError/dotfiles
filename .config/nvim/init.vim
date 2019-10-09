@@ -52,6 +52,7 @@ source ~/.config/nvim/plugins/ale.vim
 source ~/.config/nvim/plugins/unimpaired.vim
 source ~/.config/nvim/plugins/codedark.vim
 source ~/.config/nvim/plugins/nerdcommenter.vim
+source ~/.config/nvim/plugins/nerdtreetabs.vim
 source ~/.config/nvim/plugins/lightline.vim
 
 " Languages

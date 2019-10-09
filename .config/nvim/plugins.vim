@@ -30,6 +30,7 @@ call plug#begin('~/.config/nvim/plugged')
     " FileDialog: folder and file structure finder
 	" https://github.com/scrooloose/nerdtree
 	Plug 'scrooloose/nerdtree'
+    Plug 'jistr/vim-nerdtree-tabs'
 
     " ShowYank: highlight the text that you yanked
     " https://github.com/machakann/vim-highlightedyank
