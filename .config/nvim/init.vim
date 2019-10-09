@@ -46,6 +46,7 @@ source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/plugins/coc.vim
 source $HOME/.config/nvim/plugins/fzf.vim
 source $HOME/.config/nvim/plugins/nerdtree.vim
+source $HOME/.config/nvim/plugins/nerdtreetabs.vim
 source $HOME/.config/nvim/plugins/easymotion.vim
 source $HOME/.config/nvim/plugins/highlightedyank.vim
 source $HOME/.config/nvim/plugins/ale.vim
