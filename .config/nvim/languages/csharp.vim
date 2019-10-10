@@ -85,6 +85,7 @@ highlight csIface guifg=#B3D19F
 " Async keyword, blue
 highlight csAsync guifg=#569CD6
 highlight csXmlTag guifg=#569CD6
+highlight xmlTagName guifg=#569CD6
 
 " Light blue
 highlight xmlAttrib guifg=#9CDCFE

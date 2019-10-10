@@ -1,3 +1,3 @@
 let g:NERDTreeWinPos = "right"
-" map <C-o> :NERDTreeToggle<CR>
+map <C-o> :NERDTreeToggle<CR>
 

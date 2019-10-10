@@ -7,6 +7,7 @@ let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " Default options
+set spell " Set spell check (English only)
 set history=1000 " The lines of history to remember
 set autoread " Automaticly read the file when it's changed outside vim
 set number relativenumber " Relative line numbering
@@ -52,7 +53,6 @@ source ~/.config/nvim/plugins/ale.vim
 source ~/.config/nvim/plugins/unimpaired.vim
 source ~/.config/nvim/plugins/codedark.vim
 source ~/.config/nvim/plugins/nerdcommenter.vim
-source ~/.config/nvim/plugins/nerdtreetabs.vim
 source ~/.config/nvim/plugins/lightline.vim
 
 " Languages

@@ -7,6 +7,8 @@ if ! filereadable(expand('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/plugged')
+    " ====== color
+    
 	" Theme: VsCode dark (ish)
     " https://github.com/tomasiser/vim-code-dark 
 	Plug 'tomasiser/vim-code-dark'
@@ -14,6 +16,8 @@ call plug#begin('~/.config/nvim/plugged')
     " Syntax: for a lot of different languages
     " https://github.com/sheerun/vim-polyglot
     Plug 'sheerun/vim-polyglot'
+
+    " ====== editor
     
     " Search: Fussy file searcher
     " https://github.com/junegunn/fzf.vim
@@ -30,7 +34,6 @@ call plug#begin('~/.config/nvim/plugged')
     " FileDialog: folder and file structure finder
 	" https://github.com/scrooloose/nerdtree
 	Plug 'scrooloose/nerdtree'
-    Plug 'jistr/vim-nerdtree-tabs'
 
     " ShowYank: highlight the text that you yanked
     " https://github.com/machakann/vim-highlightedyank
@@ -55,6 +58,8 @@ call plug#begin('~/.config/nvim/plugged')
     " SearchComplete: auto complete search
     " https://github.com/vim-scripts/SearchComplete
     Plug 'vim-scripts/SearchComplete'
+    
+    " ====== languages
 
     " Linting: Lint multiple languages
     " https://github.com/dense-analysis/ale
