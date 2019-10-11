@@ -160,7 +160,7 @@
     ; Seconds between update
     interval = 10
 
-    exec = ~/.scripts/spotify/spotify-artist
+    exec = ~/.config/scripts/spotify/spotify-artist
 
     format-prefix = " "
 
@@ -223,7 +223,7 @@
 ; ====================== Center
 [module/vpn]
     type = custom/script
-    exec = ~/.scripts/vpn/vpn-status
+    exec = ~/.config/scripts/vpn/vpn-status
     interval = 5
     format-background = ${colors.highlight-background}
     format-margin = 3

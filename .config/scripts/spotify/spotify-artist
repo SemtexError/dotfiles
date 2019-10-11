@@ -1,0 +1,3 @@
+#!/bin/sh
+
+python ~/.config/scripts/spotify/spotify_status.py -t 40 -f '{artist}: {song}' -p ','

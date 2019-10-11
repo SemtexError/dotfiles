@@ -15,6 +15,6 @@ let g:ale_fixers = {
 \}
 let g:ale_fix_on_save = 0
 
-map <F7> :ALEPrevious<CR>
-map <F8> :ALENext<CR>
+map <F8> :ALEPrevious<CR>
+map <F9> :ALENext<CR>
 

@@ -17,6 +17,8 @@ highlight typescriptClassHeritage guifg=#4EC9B0
 highlight typescriptGlobal guifg=#4EC9B0
 highlight typescriptPredefinedType guifg=#4EC9B0
 highlight typescriptTypeReference guifg=#4EC9B0
+highlight typescriptEnum guifg=#4EC9B0
+
 
 " Blue
 highlight typescriptClassKeyword guifg=#569CD6
@@ -29,6 +31,10 @@ highlight typescriptAccessibilityModifier guifg=#569CD6
 highlight typescriptTry guifg=#569CD6
 highlight typescriptAsyncFuncKeyword guifg=#569CD6
 highlight typescriptExceptions guifg=#569CD6
+highlight typescriptMethodAccessor guifg=#569CD6
+highlight typescriptEnumKeyword guifg=#569CD6
+
+
 
 " Light blue
 highlight typescriptObjectLabel guifg=#9CDCFE

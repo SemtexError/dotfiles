@@ -80,5 +80,5 @@ call plug#begin('~/.config/nvim/plugged')
     " Debugging: need fix/merge :(, C# debugging in vim
     " https://github.com/puremourning/vimspector
     " Plug 'puremourning/vimspector'
-
+    "
 call plug#end()

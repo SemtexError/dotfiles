@@ -17,7 +17,7 @@ The requirements for this method are:
 
 The primary distro is Arch Linux but they will work on other distros also. By using the following command your old dotfiles will be removed and is replaced by this repository.
 
-`curl -Lks https://raw.githubusercontent.com/SemtexError/dotfiles/master/.dotfiles.sh | /bin/bash`
+`curl -Lks https://raw.githubusercontent.com/SemtexError/dotfiles/master/.config/scripts/dotfiles.sh | /bin/bash`
 
 ## Firefox
 * [ShadowFox](https://overdodactyl.github.io/ShadowFox/)
