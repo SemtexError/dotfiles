@@ -1,0 +1,17 @@
+Include: utils/startserver.vader
+Include: utils/async-helper.vader
+
+Given cs():
+  public class Test {
+
+  }
+
+Execute (run code format):
+  call OmniSharpTestInitializeBuffer('CodeFormat')
+  call OmniSharpTestAwait('OmniSharp#CodeFormat', [])
+
+Expect cs(should format document):
+  public class Test
+  {
+
+  }

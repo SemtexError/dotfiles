@@ -18,7 +18,7 @@ set laststatus=2 " For lightline, 2 is always show
 set noshowmode " For lightline
 set wildmode=longest,list,full " Autocomplete order
 set showtabline=1 " Show file tab only when needed
-set autochdir " Automaticly create set dir when creating files
+" set autochdir " Automaticly create set dir when creating files
 set clipboard+=unnamedplus " Set clipboard to + outside tmux
 
 " Searching
@@ -46,6 +46,7 @@ source ~/.config/nvim/keybindings.vim
 source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/plugins/coc.vim
 source ~/.config/nvim/plugins/fzf.vim
+" source ~/.config/nvim/plugins/ctrlp.vim
 source ~/.config/nvim/plugins/nerdtree.vim
 source ~/.config/nvim/plugins/easymotion.vim
 source ~/.config/nvim/plugins/highlightedyank.vim
@@ -54,6 +55,7 @@ source ~/.config/nvim/plugins/unimpaired.vim
 source ~/.config/nvim/plugins/codedark.vim
 source ~/.config/nvim/plugins/nerdcommenter.vim
 source ~/.config/nvim/plugins/lightline.vim
+source ~/.config/nvim/plugins/ack.vim
 
 " Languages
 source ~/.config/nvim/languages/csharp.vim

@@ -1,0 +1,19 @@
+Include: utils/startserver.vader
+Include: utils/async-helper.vader
+
+Given cs():
+  public class Test
+  {
+    int i;
+    public Test()
+    {
+      i = 0;
+    }
+
+  }
+
+Execute (go to definition):
+  call OmniSharpTestInitializeBuffer('GotoDefinition')
+  call search("i = 0")
+  call OmniSharpTestAwait('OmniSharp#GotoDefinition', [])
+  AssertEqual 3, line(".")

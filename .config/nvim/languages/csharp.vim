@@ -72,6 +72,9 @@ endfunction
 
 
 " = Custom highlighting
+" Custom highlight
+" autocmd FileType cs syntax match csStringFormat "\$"
+
 " = C#/csharp
 " CS class, green
 highlight csClass guifg=#4EC9B0
@@ -87,9 +90,11 @@ highlight csAsync guifg=#569CD6
 highlight csXmlTag guifg=#569CD6
 highlight xmlTagName guifg=#569CD6
 highlight csContextualStatement guifg=#569CD6
+highlight csStringFormat guifg=#569CD6
 
 " Light blue
 highlight xmlAttrib guifg=#9CDCFE
 
 " Gray
 highlight xmlTag guifg=#808080
+

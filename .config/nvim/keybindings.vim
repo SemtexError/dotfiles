@@ -1,6 +1,5 @@
 " Map leader
-map <Space> <Leader>
-let mapleader = "\\"
+let mapleader = " "
 
 " Disable ex mode
 nnoremap Q <Nop>
@@ -16,7 +15,7 @@ map <C-l> <C-w>l
 imap jj <Esc>
 
 " Saving
-nmap <leader>w :w!<cr>
+nmap <leader><leader> :w!<cr>
 command W w
 command WQ wq
 command Wq wq

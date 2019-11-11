@@ -23,6 +23,10 @@ call plug#begin('~/.config/nvim/plugged')
     " https://github.com/junegunn/fzf.vim
 	Plug 'junegunn/fzf'
 	Plug 'junegunn/fzf.vim'
+    
+    " Search: content searchers
+    " https://github.com/mileszs/ack.vim
+    Plug 'mileszs/ack.vim'
 
     " StatusBar: in bottom of screen
 	" https://github.com/itchyny/lightline.vim
@@ -34,6 +38,8 @@ call plug#begin('~/.config/nvim/plugged')
     " FileDialog: folder and file structure finder
 	" https://github.com/scrooloose/nerdtree
 	Plug 'scrooloose/nerdtree'
+    " https://github.com/unkiwii/vim-nerdtree-sync
+    Plug 'unkiwii/vim-nerdtree-sync'
 
     " ShowYank: highlight the text that you yanked
     " https://github.com/machakann/vim-highlightedyank
@@ -77,8 +83,13 @@ call plug#begin('~/.config/nvim/plugged')
     " https://github.com/OrangeT/vim-csharp
     Plug 'OrangeT/vim-csharp'
 
+    " Plug 'Shougo/neosnippet.vim'
+    " Plug 'Shougo/neosnippet-snippets'
+
     " Debugging: need fix/merge :(, C# debugging in vim
     " https://github.com/puremourning/vimspector
     " Plug 'puremourning/vimspector'
     "
 call plug#end()
+
+
