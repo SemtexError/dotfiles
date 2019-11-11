@@ -43,7 +43,7 @@
 	"debug.showInStatusBar": "never",
 
 	// Window
-	"window.zoomLevel": 1,
+	"window.zoomLevel": 0,
 	"window.titleBarStyle": "custom",
 	"window.newWindowDimensions": "inherit",
 
@@ -150,7 +150,7 @@
 		},
 		{
 			// Save with leader
-			"before": ["<leader>", "w"],
+			"before": ["<leader>", "<leader>"],
 			"commands": [":w"]
 		},
 		{

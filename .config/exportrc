@@ -17,5 +17,6 @@ export NUGET_PACKAGES=$HOME/.local/NuGet/packages
 
 export PATH="$PATH:$HOME/.dotnet/tools"
 export PATH="$PATH:$HOME/.scripts"
+export PATH="$PATH:$HOME/.config/npm/global"
 
 # vim: set filetype=bash

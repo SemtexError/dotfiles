@@ -1,1 +1,1 @@
-feh --bg-fill ~/.config/feh/wallpaper.jpg
+feh --bg-fill ~/.config/feh/wallpaper.jpg --no-fehbg
