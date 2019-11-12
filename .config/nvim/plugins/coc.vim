@@ -7,11 +7,10 @@ let g:coc_global_extensions= [
             \ 'coc-css',
             \ 'coc-json',
             \ 'coc-eslint',
-            \ 'coc-tsserver'
+            \ 'coc-lists',
+            \ 'coc-yank'
             \]
 
-
-" Confirm on enter
 
 autocmd FileType json syntax match Comment +\/\/.\+$+
 
@@ -39,3 +38,6 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gD <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nmap <F2> <Plug>(coc-rename)
+
+nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
+nnoremap <a-cr> :CocAction<cr>

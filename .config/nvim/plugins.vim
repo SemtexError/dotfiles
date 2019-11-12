@@ -31,31 +31,19 @@ call plug#begin('~/.config/nvim/plugged')
     " StatusBar: in bottom of screen
 	" https://github.com/itchyny/lightline.vim
 	Plug 'itchyny/lightline.vim'
-    Plug 'w0rp/ale'
-    Plug 'itchyny/lightline.vim'
     Plug 'maximbaz/lightline-ale'
 
     " FileDialog: folder and file structure finder
 	" https://github.com/scrooloose/nerdtree
 	Plug 'scrooloose/nerdtree'
+
+    " Sync the current file with NerdTree
     " https://github.com/unkiwii/vim-nerdtree-sync
     Plug 'unkiwii/vim-nerdtree-sync'
-
-    " ShowYank: highlight the text that you yanked
-    " https://github.com/machakann/vim-highlightedyank
-    Plug 'machakann/vim-highlightedyank'
-
-    " AutoInsertPairs: Automaticly insert braces, bracets etc.
-    " https://github.com/jiangmiao/auto-pairs
-    Plug 'jiangmiao/auto-pairs'
 
     " Comments: (un)comment code
     " https://github.com/scrooloose/nerdcommenter
     Plug 'scrooloose/nerdcommenter'
-
-    " Commands: to move lines or blocks of code around
-    " https://github.com/tpope/vim-unimpaired
-    Plug 'tpope/vim-unimpaired'
 
     " EasyMotion: move around the buffer with key bindings
     " https://github.com/easymotion/vim-easymotion
@@ -83,13 +71,11 @@ call plug#begin('~/.config/nvim/plugged')
     " https://github.com/OrangeT/vim-csharp
     Plug 'OrangeT/vim-csharp'
 
-    " Plug 'Shougo/neosnippet.vim'
-    " Plug 'Shougo/neosnippet-snippets'
-
+    "Plug 'autozimu/LanguageClient-neovim', {
+        "\ 'branch': 'next',
+        "\ 'do': 'bash install.sh',
+        "\ }
     " Debugging: need fix/merge :(, C# debugging in vim
     " https://github.com/puremourning/vimspector
     " Plug 'puremourning/vimspector'
-    "
 call plug#end()
-
-

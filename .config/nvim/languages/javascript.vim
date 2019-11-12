@@ -70,3 +70,8 @@ highlight typescriptExport guifg=#C586C0
 highlight typescriptDefault guifg=#C586C0
 highlight typescriptArrowFuncArg guifg=#C586C0
 highlight typescriptCastKeyword guifg=#C586C0
+
+" Vue
+let g:LanguageClient_serverCommands = {
+\ 'vue': ['vls']
+\ }

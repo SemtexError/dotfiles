@@ -1,8 +1,9 @@
 " Ale
+let g:ale_linter_aliases = {'vue': ['vue', 'scss', 'javascript']}
 let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'typescript': ['tsserver', 'eslint'],
-\   'vue': ['eslint'],
+\   'vue': [ 'stylelint', 'eslint', 'vls'],
 \   'cs': ['OmniSharp']
 \}
 
