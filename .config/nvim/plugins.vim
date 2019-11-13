@@ -24,7 +24,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'junegunn/fzf'
 	Plug 'junegunn/fzf.vim'
 
-    " Plug 'SemtexError/fzf-filemru'
+    Plug 'SemtexError/fzf-filemru'
 
     " StatusBar: in bottom of screen
 	" https://github.com/itchyny/lightline.vim
@@ -69,5 +69,3 @@ call plug#begin('~/.config/nvim/plugged')
     " https://github.com/puremourning/vimspector
     " Plug 'puremourning/vimspector'
 call plug#end()
-
-source ~/documents/projects/fzf-filemru/plugin/fzf-filemru.vim
