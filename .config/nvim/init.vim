@@ -40,7 +40,8 @@ set novisualbell
 set t_vb=
 set tm=500
 
-silent !~/.config/nvim/services.sh
+" Auto download software, but make the startup very slow
+" silent !~/.config/nvim/services.sh
 
 " Keybindings
 source ~/.config/nvim/keybindings.vim
