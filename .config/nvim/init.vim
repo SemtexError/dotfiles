@@ -40,6 +40,8 @@ set novisualbell
 set t_vb=
 set tm=500
 
+silent !~/.config/nvim/services.sh
+
 " Keybindings
 source ~/.config/nvim/keybindings.vim
 
