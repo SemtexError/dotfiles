@@ -1,43 +1,46 @@
-inoremap <silent><expr> <c-space> coc#refresh()
-
-let g:coc_global_extensions= [ 
-            \ 'coc-omnisharp',
-            \ 'coc-vetur',
-            \ 'coc-pairs',
-            \ 'coc-css',
-            \ 'coc-json',
-            \ 'coc-eslint',
-            \ 'coc-lists',
-            \ 'coc-yank'
-            \]
-
-
+" Fix command in Coc setting json
 autocmd FileType json syntax match Comment +\/\/.\+$+
 
-" Use tab for trigger completion with characters ahead and navigate.
-" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" All Coc extensions which will be installed
+let g:coc_global_extensions= [ 
+    \ 'coc-omnisharp',
+    \ 'coc-tsserver',
+    \ 'coc-eslint',
+    \ 'coc-vetur',
+    \ 'coc-html',
+    \ 'coc-css',
+    \ 'coc-json',
+    \ 'coc-pairs',
+    \ 'coc-lists',
+    \ 'coc-yank'
+\]
 
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
+" control+space to refresh Coc list
 inoremap <silent><expr> <c-space> coc#refresh()
+
+" Complete with enter
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+" Step through errors: in ale.vim
 
+" Go to definition
 nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
+" Go to implementation
 nmap <silent> gD <Plug>(coc-implementation)
+" Find all reference
 nmap <silent> gr <Plug>(coc-references)
+" Rename
 nmap <F2> <Plug>(coc-rename)
 
+" Show a yank history list
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
+
+" control+enter to show code actions
 nnoremap <a-cr> :CocAction<cr>
+
+" <leader>+= format selection or document
+xmap <leader>=  <Plug>(coc-format-selected)
+nmap <leader>=  <Plug>(coc-format-selected)
+
+" <leader>+o Show file structure
+nnoremap <silent> <leader>o  :<C-u>CocList outline<cr>

@@ -28,10 +28,24 @@ HISTFILE=~/.config/zsh/history
 # Exports
 [ -f "$HOME/.config/exportrc" ] && source "$HOME/.config/exportrc"
 
+# Download Plugin manager if it doesn't exists
+if [ ! -f "$HOME/.config/zsh/antigen.zsh" ]; then
+    curl -L git.io/antigen > $HOME/.config/zsh/antigen.zsh
+fi
 
-# Auto complete
-fpath=(path/to/zsh-completions/src $fpath)
+# Load Plugins with plugin manager
+if [ -f "$HOME/.config/zsh/antigen.zsh" ]; then
+    source $HOME/.config/zsh/antigen.zsh
 
-# Must be at the end of the file
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    # 256 colors
+    antigen bundle chrissicool/zsh-256color
 
+    # Auto update plugins
+    antigen bundle unixorn/autoupdate-antigen.zshplugin
+
+    # Highlight zsh commands
+    antigen bundle zsh-users/zsh-syntax-highlighting
+
+    # Load plugins
+    antigen apply
+fi

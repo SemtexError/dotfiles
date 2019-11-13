@@ -1,6 +1,3 @@
 {
-  "tsserver.npm": "/usr/bin/npm",
-  "tsserver.log": "verbose",
-  "vetur.dev.logLevel": "DEBUG",
-  "vetur.trace.server": "verbose"
+  "tsserver.npm": "/usr/bin/npm"
 }

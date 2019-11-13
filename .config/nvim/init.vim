@@ -1,12 +1,14 @@
 " Colors, set colors to 265
 syntax on
 set termguicolors
+
 set t_Co=256
 set t_ut=
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " Default options
+set encoding=UTF-8
 set spell " Set spell check (English only)
 set history=1000 " The lines of history to remember
 set autoread " Automaticly read the file when it's changed outside vim
@@ -38,7 +40,6 @@ set novisualbell
 set t_vb=
 set tm=500
 
-
 " Keybindings
 source ~/.config/nvim/keybindings.vim
 
@@ -51,11 +52,10 @@ source ~/.config/nvim/plugins/nerdtree.vim
 source ~/.config/nvim/plugins/easymotion.vim
 source ~/.config/nvim/plugins/highlightedyank.vim
 source ~/.config/nvim/plugins/ale.vim
-source ~/.config/nvim/plugins/unimpaired.vim
 source ~/.config/nvim/plugins/codedark.vim
+source ~/.config/nvim/plugins/unimpaired.vim
 source ~/.config/nvim/plugins/nerdcommenter.vim
 source ~/.config/nvim/plugins/lightline.vim
-source ~/.config/nvim/plugins/ack.vim
 
 " Languages
 source ~/.config/nvim/languages/csharp.vim
@@ -64,3 +64,4 @@ source ~/.config/nvim/languages/css.vim
 
 " Debug
 source ~/.config/nvim/debug.vim
+

@@ -23,10 +23,8 @@ call plug#begin('~/.config/nvim/plugged')
     " https://github.com/junegunn/fzf.vim
 	Plug 'junegunn/fzf'
 	Plug 'junegunn/fzf.vim'
-    
-    " Search: content searchers
-    " https://github.com/mileszs/ack.vim
-    Plug 'mileszs/ack.vim'
+
+    " Plug 'SemtexError/fzf-filemru'
 
     " StatusBar: in bottom of screen
 	" https://github.com/itchyny/lightline.vim
@@ -40,7 +38,7 @@ call plug#begin('~/.config/nvim/plugged')
     " Sync the current file with NerdTree
     " https://github.com/unkiwii/vim-nerdtree-sync
     Plug 'unkiwii/vim-nerdtree-sync'
-
+    
     " Comments: (un)comment code
     " https://github.com/scrooloose/nerdcommenter
     Plug 'scrooloose/nerdcommenter'
@@ -67,15 +65,9 @@ call plug#begin('~/.config/nvim/plugged')
     " https://github.com/OmniSharp/omnisharp-vim
     Plug 'OmniSharp/omnisharp-vim'
 
-    " CSharp: Snippets and razor syntax
-    " https://github.com/OrangeT/vim-csharp
-    Plug 'OrangeT/vim-csharp'
-
-    "Plug 'autozimu/LanguageClient-neovim', {
-        "\ 'branch': 'next',
-        "\ 'do': 'bash install.sh',
-        "\ }
     " Debugging: need fix/merge :(, C# debugging in vim
     " https://github.com/puremourning/vimspector
     " Plug 'puremourning/vimspector'
 call plug#end()
+
+source ~/documents/projects/fzf-filemru/plugin/fzf-filemru.vim

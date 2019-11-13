@@ -1,4 +1,11 @@
-" Ale
+" dense-analysis/Ale
+" https://github.com/dense-analysis/ale
+"
+" ======
+" Check syntax in Vim asynchronously and fix files, with Language Server Protocol (LSP) support
+" ======
+
+" Error checking/linting
 let g:ale_linter_aliases = {'vue': ['vue', 'scss', 'javascript']}
 let g:ale_linters = {
 \   'javascript': ['eslint'],
@@ -7,15 +14,18 @@ let g:ale_linters = {
 \   'cs': ['OmniSharp']
 \}
 
+" Fixing those errors
 let g:ale_fixers = {
 \    'javascript': ['eslint'],
 \    'typescript': ['prettier'],
-\    'vue': ['eslint'],
+\    'vue': ['eslint', 'trim_whitespace', 'remove_trailing_lines'],
 \    'scss': ['prettier'],
 \    'html': ['prettier']
 \}
+
+" Don't fix on save, I can fix my own stuff
 let g:ale_fix_on_save = 0
 
-map <F8> :ALEPrevious<CR>
-map <F9> :ALENext<CR>
-
+" Step through errors
+nmap <silent> ]g :ALEPrevious<CR>
+nmap <silent> [g :ALENext<CR>
