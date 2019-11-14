@@ -5,7 +5,7 @@ autocmd FileType json syntax match Comment +\/\/.\+$+
 let g:coc_global_extensions= [ 
     \ 'coc-omnisharp',
     \ 'coc-tsserver',
-    \ 'coc-eslint',
+    "\ 'coc-eslint',
     \ 'coc-vetur',
     \ 'coc-html',
     \ 'coc-css',

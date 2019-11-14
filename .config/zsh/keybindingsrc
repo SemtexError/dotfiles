@@ -1,29 +1,56 @@
 # ======== Key bindings =======
+# Control: Moving around
+# Alt: Removing
+# Forward-kill-word doesn't exists
 
-# Ctrl + Arrow: Move in the current line
-bindkey '^[[1;5A' beginning-of-line # Up
-bindkey '^[[1;5B' end-of-line # Down
-bindkey '^[[1;5C' forward-word # Right
-bindkey '^[[1;5D' backward-word # Left
+# Move left
+bindkey '^[[1;5A' beginning-of-line # Control+up
+bindkey -a '^[[1;5A' beginning-of-line # Control+up (vi)
+bindkey '^[[1;5D' backward-word # Control+Left
+bindkey -a '^[[1;5D' backward-word # Control+Left (vi)
+bindkey "\e[H"  beginning-of-line # Home
+bindkey -a "\e[H"  beginning-of-line # Home (vi)
+bindkey "^h" backward-word # Control+h
 
-# Alt + Arrow: Move in the current line
-bindkey '^[[1;3A' beginning-of-line # Up
-bindkey '^[[1;3B' end-of-line # Down
-bindkey '^[[1;3C' forward-word # Right
-bindkey '^[[1;3D' backward-word # Left
+bindkey '^[[1;3B' forward-word # Alt+down
+bindkey -a '^[[1;3B' forward-word # Alt+down (vi)
+bindkey '^[[1;3C' forward-word # Alt+right
+bindkey -a '^[[1;3C' forward-word # Alt+right (vi)
+bindkey "^[l" forward-word # Alt+l
 
-# del, home and end: Normal bevaviour
-bindkey "\e[3~" delete-char
-bindkey "\e[H"  beginning-of-line
-bindkey "\e[F"  end-of-line
+# Move right
+bindkey '^[[1;5B' end-of-line # Control+down
+bindkey -a '^[[1;5B' end-of-line # Control+down (vi)
+bindkey '^[[1;5C' forward-word # Control+right
+bindkey -a '^[[1;5C' forward-word # Control+right
+bindkey "\el" forward-word # Control+l
+bindkey "\e[F"  end-of-line # End key
+bindkey -a "\e[F"  end-of-line # End key (vi)
+# bindkey "^l" forward-word # Control+l
 
-# CTRL + J/k: Search through history
-bindkey "^k" up-line-or-history
-bindkey "^j" down-line-or-history
+# Delete left
+bindkey '^[[1;3A' backward-kill-word # Alt+up
+bindkey -a '^[[1;3A' backward-kill-word # Alt+up (vi)
+bindkey '^[[1;3D' backward-kill-word # Alt+left
+bindkey -a '^[[1;3D' backward-kill-word # Alt+left (vi)
+bindkey "^[h" backward-kill-word # Alt+h
 
-# Alt + K/j: Search through history
-bindkey "\ek" up-line-or-history
-bindkey "\ej" down-line-or-history
+# Delete right
+bindkey "\e[3~" delete-char # Del key
+bindkey -a '^[[3~' delete-char # Del key (vi)
+
+# History
+bindkey "^k" up-line-or-history # Control+k
+bindkey -a "^k" up-line-or-history # Control+k (vi)
+bindkey "\ek" up-line-or-history # Alt+k
+bindkey "^[[5~" up-line-or-history # Page up
+bindkey -a "^[[5~" up-line-or-history # Page up (vi)
+
+bindkey "^j" down-line-or-history # Control+
+bindkey -a "^j" down-line-or-history # Control+j (vi)
+bindkey "\ej" down-line-or-history # Alt+
+bindkey "^[[6~" down-line-or-history # Page down
+bindkey -a "^[[6~" down-line-or-history # Page down (vi)
 
 # Reverse search
 bindkey '^R' history-incremental-search-backward

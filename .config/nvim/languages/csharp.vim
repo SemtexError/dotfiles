@@ -1,45 +1,28 @@
-
 " C#
 let g:OmniSharp_server_stdio = 1
 let g:OmniSharp_selector_ui = 'fzf'
 let g:OmniSharp_highlight_types = 2
 
-augroup omnisharp_commands
-    autocmd!
+"augroup omnisharp_commands
+    "autocmd!
 
-    " Show type information automatically when the cursor stops moving
-    " autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
-
-    " The following commands are contextual, based on the cursor position.
-    autocmd FileType cs nnoremap <buffer> gd :OmniSharpGotoDefinition<CR>
-    autocmd FileType cs nnoremap <buffer> gD :OmniSharpFindImplementations<CR>
-    autocmd FileType cs nnoremap <buffer> gr :OmniSharpFindUsages<CR>
     autocmd FileType cs nnoremap <buffer> <Leader>d :OmniSharpDocumentation<CR>
-
     autocmd FileType cs nnoremap <buffer> <a-cr> :OmniSharpGetCodeActions<CR>
 
-    autocmd FileType cs nnoremap <buffer> R :OmniSharpRename<CR>
+    "" Show type information automatically when the cursor stops moving
+    "" autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
 
-    autocmd FileType cs nnoremap <buffer> <C-k> :OmniSharpNavigateUp<CR>
-    autocmd FileType cs nnoremap <buffer> <C-j> :OmniSharpNavigateDown<CR>
+    "" The following commands are contextual, based on the cursor position.
+    "autocmd FileType cs nnoremap <buffer> gd :OmniSharpGotoDefinition<CR>
+    "autocmd FileType cs nnoremap <buffer> gD :OmniSharpFindImplementations<CR>
+    "autocmd FileType cs nnoremap <buffer> gr :OmniSharpFindUsages<CR>
 
-augroup END
+    "autocmd FileType cs nnoremap <buffer> R :OmniSharpRename<CR>
 
-" Tab to auto complete
-function! Tab_Or_Complete()
-  if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
-    return "\<C-N>"
-  else
-    return "\<Tab>"
-  endif
-endfunction
-inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
+    "autocmd FileType cs nnoremap <buffer> <C-k> :OmniSharpNavigateUp<CR>
+    "autocmd FileType cs nnoremap <buffer> <C-j> :OmniSharpNavigateDown<CR>
 
-" Close vim when only quickfix is vissible
-aug QFClose
-  au!
-  au WinEnter * if winnr('$') == 1 && &buftype == "quickfix"|q|endif
-aug END
+"augroup END
 
 " Code actions
 set updatetime=500
@@ -77,7 +60,7 @@ endfunction
 
 " = C#/csharp
 " CS class, green
-highlight csClass guifg=#4EC9B0
+highlight csClassType guifg=#4EC9B0
 highlight csUserType guifg=#4EC9B0
 highlight csAttribute guifg=#4EC9B0
 
@@ -86,6 +69,9 @@ highlight csUserInterface guifg=#B3D19F
 highlight csIface guifg=#B3D19F
 
 " blue
+highlight csClass guifg=#569CD6
+highlight csNew guifg=#569CD6
+highlight csNewType guifg=#569CD6
 highlight csAsync guifg=#569CD6
 highlight csXmlTag guifg=#569CD6
 highlight xmlTagName guifg=#569CD6

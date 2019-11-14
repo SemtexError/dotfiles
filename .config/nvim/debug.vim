@@ -1,4 +1,4 @@
-" Contain debuggin features which aren't always included
+" Contain debugging features which aren't always included
 
 " Check highlight class
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'

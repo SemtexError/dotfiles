@@ -68,3 +68,9 @@ source ~/.config/nvim/languages/css.vim
 " Debug
 source ~/.config/nvim/debug.vim
 
+" Highlight the current line
+augroup CursorLine
+  au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  au WinLeave * setlocal nocursorline
+augroup END

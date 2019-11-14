@@ -18,12 +18,13 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'sheerun/vim-polyglot'
 
     " ====== editor
-    
+     
     " Search: Fussy file searcher
     " https://github.com/junegunn/fzf.vim
 	Plug 'junegunn/fzf'
 	Plug 'junegunn/fzf.vim'
 
+    " Include Most recent files in FZF search
     Plug 'SemtexError/fzf-filemru'
 
     " StatusBar: in bottom of screen
@@ -50,6 +51,14 @@ call plug#begin('~/.config/nvim/plugged')
     " SearchComplete: auto complete search
     " https://github.com/vim-scripts/SearchComplete
     Plug 'vim-scripts/SearchComplete'
+
+    " https://github.com/wellle/targets.vim
+    Plug 'wellle/targets.vim'
+
+    " Fix . repeat
+    Plug 'tpope/vim-repeat'
+
+    Plug 'jiangmiao/auto-pairs'
     
     " ====== languages
 
