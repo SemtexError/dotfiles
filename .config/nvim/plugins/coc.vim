@@ -10,6 +10,7 @@ let g:coc_global_extensions= [
     \ 'coc-html',
     \ 'coc-css',
     \ 'coc-json',
+    \ 'coc-webpack',
     \ 'coc-pairs',
     \ 'coc-lists',
     \ 'coc-yank'
@@ -44,3 +45,13 @@ nmap <leader>=  <Plug>(coc-format-selected)
 
 " <leader>+o Show file structure
 nnoremap <silent> <leader>o  :<C-u>CocList outline<cr>
+
+" Show documentation
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction

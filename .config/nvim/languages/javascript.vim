@@ -1,14 +1,18 @@
 " Javascript, Typescript and Vue
-" #808080 - Dark gray
-" #4EC9B0 - green
-" #569CD6 - blue
-" #9CDCFE - Light blue
-" #DCDCAA - yellow
-" #D7BA7D - Member yellow
-" #C586C0 - Purple
+let darkGray = "#808080" " Dark gray
+let green = "#4EC9B0" " green
+let blue = "#569CD6" " blue
+let lightBlue = "#9CDCFE" " Light blue
+let yellow = "#DCDCAA" " yellow
+let memberYellow = "#D7BA7D" " Member yellow
+let purple = "#C586C0" " Purple
+
+autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
+autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
+autocmd BufNewFile,BufRead *.vue set filetype=vue
 
 " Green
-highlight vueSurroundingTag guifg=#808080
+highlight vueSurroundingTag guifg=darkGray
 
 " Green
 highlight typescriptBOM guifg=#4EC9B0
@@ -18,7 +22,6 @@ highlight typescriptGlobal guifg=#4EC9B0
 highlight typescriptPredefinedType guifg=#4EC9B0
 highlight typescriptTypeReference guifg=#4EC9B0
 highlight typescriptEnum guifg=#4EC9B0
-
 
 " Blue
 highlight typescriptClassKeyword guifg=#569CD6
@@ -33,8 +36,6 @@ highlight typescriptAsyncFuncKeyword guifg=#569CD6
 highlight typescriptExceptions guifg=#569CD6
 highlight typescriptMethodAccessor guifg=#569CD6
 highlight typescriptEnumKeyword guifg=#569CD6
-
-
 
 " Light blue
 highlight typescriptObjectLabel guifg=#9CDCFE
@@ -73,5 +74,5 @@ highlight typescriptCastKeyword guifg=#C586C0
 
 " Vue
 let g:LanguageClient_serverCommands = {
-\ 'vue': ['vls']
+    \ 'vue': ['vls']
 \ }

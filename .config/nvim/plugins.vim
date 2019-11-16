@@ -1,4 +1,4 @@
-" Download vim-plug
+" Download VIM-plug
 if ! filereadable(expand('~/.config/nvim/autoload/plug.vim'))
 	echo "Downloading junegunn/vim-plug to manage plugins..."
 	silent !mkdir -p ~/.config/nvim/autoload/
@@ -9,7 +9,7 @@ endif
 call plug#begin('~/.config/nvim/plugged')
     " ====== color
     
-	" Theme: VsCode dark (ish)
+	" VsCode dark colors
     " https://github.com/tomasiser/vim-code-dark 
 	Plug 'tomasiser/vim-code-dark'
 
@@ -18,8 +18,8 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'sheerun/vim-polyglot'
 
     " ====== editor
-     
-    " Search: Fussy file searcher
+    
+    " Fussy file searcher
     " https://github.com/junegunn/fzf.vim
 	Plug 'junegunn/fzf'
 	Plug 'junegunn/fzf.vim'
@@ -27,12 +27,12 @@ call plug#begin('~/.config/nvim/plugged')
     " Include Most recent files in FZF search
     Plug 'SemtexError/fzf-filemru'
 
-    " StatusBar: in bottom of screen
+    " Status bar in bottom of screen
 	" https://github.com/itchyny/lightline.vim
 	Plug 'itchyny/lightline.vim'
     Plug 'maximbaz/lightline-ale'
 
-    " FileDialog: folder and file structure finder
+    " File dialog folder and file structure finder
 	" https://github.com/scrooloose/nerdtree
 	Plug 'scrooloose/nerdtree'
 
@@ -40,41 +40,45 @@ call plug#begin('~/.config/nvim/plugged')
     " https://github.com/unkiwii/vim-nerdtree-sync
     Plug 'unkiwii/vim-nerdtree-sync'
     
-    " Comments: (un)comment code
+    " Comment code
     " https://github.com/scrooloose/nerdcommenter
     Plug 'scrooloose/nerdcommenter'
 
-    " EasyMotion: move around the buffer with key bindings
+    " Easy motion move around the buffer with key bindings
     " https://github.com/easymotion/vim-easymotion
     Plug 'easymotion/vim-easymotion'
 
-    " SearchComplete: auto complete search
+    " Search complete auto complete search
     " https://github.com/vim-scripts/SearchComplete
     Plug 'vim-scripts/SearchComplete'
 
+    " More word motion targets
     " https://github.com/wellle/targets.vim
     Plug 'wellle/targets.vim'
 
     " Fix . repeat
+    " https://github.com/tpope/vim-repeat
     Plug 'tpope/vim-repeat'
 
+    " Automatically add braces etc.
+    " https://github.com/tpope/vim-repeat
     Plug 'jiangmiao/auto-pairs'
     
     " ====== languages
 
-    " Linting: Lint multiple languages
+    " Lint multiple languages
     " https://github.com/dense-analysis/ale
     Plug 'dense-analysis/ale'
 
-    " Autocomplete: with multiple languages
+    " Auto complete multiple languages
     " https://github.com/neoclide/coc.nvim
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-    " Dotnet: language server
+    " .NET language server
     " https://github.com/OmniSharp/omnisharp-vim
     Plug 'OmniSharp/omnisharp-vim'
 
-    " Debugging: need fix/merge :(, C# debugging in vim
+    " Debugging need fix/merge :(, C# debugging in vim
     " https://github.com/puremourning/vimspector
     " Plug 'puremourning/vimspector'
 call plug#end()

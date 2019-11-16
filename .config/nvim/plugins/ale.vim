@@ -30,5 +30,5 @@ let g:ale_fixers = {
 let g:ale_fix_on_save = 0
 
 " Step through errors
-nmap <silent> ]g :ALEPrevious<CR>
-nmap <silent> [g :ALENext<CR>
+nmap <silent> ]g :ALEPreviousWrap<CR>
+nmap <silent> [g :ALENextWrap<CR>

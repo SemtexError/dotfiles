@@ -22,8 +22,8 @@
     format-prefix-foreground = ${colors.format-color}
 
 [bar/main]
-; Modules
-    modules-right = spotify screen battery volume powermenu wireless-network wired-network date time 
+; Modules : spotify
+    modules-right = screen battery volume powermenu wireless-network wired-network date time 
     modules-center = vpn
     modules-left = i3
 
