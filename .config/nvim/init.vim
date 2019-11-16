@@ -26,6 +26,14 @@ set cursorline " Enable current line indicator
 set clipboard+=unnamedplus " Set clipboard to + outside Tmux
 set splitbelow splitright
 
+" Find
+set path+=**
+set wildmenu
+set wildignore+=**/node_modules/** " NodeJS modules
+set wildignore+=**/.git/**
+set wildignore+=**/bin/** " C# 
+set wildignore+=**/bin/** " C# 
+
 " Searching
 set ignorecase
 set smartcase

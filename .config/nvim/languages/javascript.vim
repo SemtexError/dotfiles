@@ -37,6 +37,11 @@ highlight typescriptExceptions guifg=#569CD6
 highlight typescriptMethodAccessor guifg=#569CD6
 highlight typescriptEnumKeyword guifg=#569CD6
 
+highlight jsAsyncKeyword guifg=#569CD6
+highlight jsImport guifg=#569CD6
+highlight fromImport guifg=#569CD6
+highlight jsOperatorKeyword guifg=#569CD6
+
 " Light blue
 highlight typescriptObjectLabel guifg=#9CDCFE
 highlight typescriptBOMWindowProp guifg=#9CDCFE
@@ -48,6 +53,8 @@ highlight typescriptFuncCallArgs guifg=#9CDCFE
 highlight typescriptNodeGlobal guifg=#9CDCFE
 highlight typescriptConditionalParen guifg=#9CDCFE
 highlight typescriptIdentifierName guifg=#9CDCFE
+
+highlight jsObjectKey guifg=#9CDCFE
 
 " Yellow
 highlight typescriptFuncName guifg=#DCDCAA
@@ -63,6 +70,8 @@ highlight typescriptGlobalMethod guifg=#DCDCAA
 " Member yellow
 highlight typescriptDecorator guifg=#D7BA7D
 highlight typescriptMember guifg=#D7BA7D
+
+highlight jsObjectFuncName guifg=#D7BA7D
 
 " Purple
 highlight typescriptRepeat guifg=#C586C0
