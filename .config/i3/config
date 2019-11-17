@@ -287,7 +287,7 @@ bindsym $mod+F7 					exec $nsi ~/.config/rofi/scripts/shutdown.sh
 # 1
 bindsym $mod+1 						workspace $ws1
 bindsym $mod+Shift+1				move container to workspace $ws1
-bindsym $mod+Ctrl+Shift+1			move workspace to workspace $ws1
+bindsym $mod+Ctrl+Shift+1			move workspace $ws1
 
 # 2
 bindsym $mod+2 						workspace $ws2
