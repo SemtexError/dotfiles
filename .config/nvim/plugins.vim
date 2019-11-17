@@ -7,7 +7,7 @@ if ! filereadable(expand('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/plugged')
-    " ====== color
+    " ====== Appearance
     
 	" VsCode dark colors
     " https://github.com/tomasiser/vim-code-dark 
@@ -17,14 +17,23 @@ call plug#begin('~/.config/nvim/plugged')
     " https://github.com/sheerun/vim-polyglot
     Plug 'sheerun/vim-polyglot'
 
+    " Dev icons in nerd tree
+    " https://github.com/ryanoasis/vim-devicons
+    Plug 'ryanoasis/vim-devicons'
+
     " ====== editor
-    
+
+    " Match braces
+    " https://github.com/andymass/vim-matchup
+    Plug 'andymass/vim-matchup'
+
     " Fussy file searcher
     " https://github.com/junegunn/fzf.vim
 	Plug 'junegunn/fzf'
 	Plug 'junegunn/fzf.vim'
 
     " Include Most recent files in FZF search
+	" https://github.com/SemtexError/fzf-filemru
     Plug 'SemtexError/fzf-filemru'
 
     " Status bar in bottom of screen
@@ -35,6 +44,9 @@ call plug#begin('~/.config/nvim/plugged')
     " File dialog folder and file structure finder
 	" https://github.com/scrooloose/nerdtree
 	Plug 'scrooloose/nerdtree'
+    " Colors in nerdtree
+    " https://github.com/tiagofumo/vim-nerdtree-syntax-highlight
+    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
     " Sync the current file with NerdTree
     " https://github.com/unkiwii/vim-nerdtree-sync
