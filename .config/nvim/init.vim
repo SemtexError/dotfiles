@@ -25,6 +25,7 @@ set showtabline=1 " Show file tab only when needed
 set cursorline " Enable current line indicator
 set clipboard+=unnamedplus " Set clipboard to + outside Tmux
 set splitbelow splitright
+set mouse=a " Enable mouse select
 
 " Find
 set path+=**
@@ -51,9 +52,6 @@ set novisualbell
 set t_vb=
 set tm=500
 
-" Keybindings
-source ~/.config/nvim/keybindings.vim
-
 " Plugins
 source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/plugins/coc.vim
@@ -64,7 +62,6 @@ source ~/.config/nvim/plugins/easymotion.vim
 source ~/.config/nvim/plugins/highlightedyank.vim
 source ~/.config/nvim/plugins/ale.vim
 source ~/.config/nvim/plugins/codedark.vim
-source ~/.config/nvim/plugins/unimpaired.vim
 source ~/.config/nvim/plugins/nerdcommenter.vim
 source ~/.config/nvim/plugins/lightline.vim
 
@@ -72,6 +69,9 @@ source ~/.config/nvim/plugins/lightline.vim
 source ~/.config/nvim/languages/csharp.vim
 source ~/.config/nvim/languages/javascript.vim
 source ~/.config/nvim/languages/css.vim
+
+" Keybindings
+source ~/.config/nvim/keybindings.vim
 
 " Debug
 source ~/.config/nvim/debug.vim

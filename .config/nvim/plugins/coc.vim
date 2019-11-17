@@ -36,8 +36,8 @@ nmap <F2> <Plug>(coc-rename)
 " Show a yank history list
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 
-" control+enter to show code actions
-nnoremap <a-cr> :CocAction<cr>
+" leader+enter to show code actions
+nnoremap <leader><cr> :CocAction<cr>
 
 " <leader>+= format selection or document
 xmap <leader>=  <Plug>(coc-format-selected)

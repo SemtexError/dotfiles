@@ -16,8 +16,8 @@ autocmd FileType cs nnoremap <buffer> gD :OmniSharpFindImplementations<CR>
 augroup OSCountCodeActions
   autocmd!
   autocmd FileType cs set updatetime=500
-  autocmd FileType cs sign define OmniSharpCodeActions text=!>
   autocmd FileType cs set signcolumn=yes
+  autocmd FileType cs sign define OmniSharpCodeActions text=!> texthl=csCodeAction
   autocmd CursorHold *.cs call OSCountCodeActions()
 augroup end
 
@@ -43,6 +43,8 @@ endfunction
 
 " = Custom highlighting
 " Custom highlight
+" Code action sign, yellow
+autocmd FileType cs highlight csCodeAction guifg=#DCDCAA
 
 " CS class, green
 autocmd FileType cs highlight csClassType guifg=#4EC9B0

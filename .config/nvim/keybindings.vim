@@ -6,9 +6,13 @@ inoremap jj <Esc>
 
 " Reload VIM RC
 command! Reloadrc source $MYVIMRC
+nnoremap <leader>rr :Reloadrc<cr>
 
 " Disable ex mode
 nnoremap Q <Nop>
+
+" disable command history (type this way to many times wrong)
+nnoremap q: :q
 
 " Split
 map <C-h> <C-w>h
