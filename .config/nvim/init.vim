@@ -58,7 +58,6 @@ source ~/.config/nvim/plugins/coc.vim
 source ~/.config/nvim/plugins/fzf.vim
 source ~/.config/nvim/plugins/autopair.vim
 source ~/.config/nvim/plugins/nerdtree.vim
-source ~/.config/nvim/plugins/easymotion.vim
 source ~/.config/nvim/plugins/highlightedyank.vim
 source ~/.config/nvim/plugins/ale.vim
 source ~/.config/nvim/plugins/codedark.vim
@@ -73,6 +72,9 @@ source ~/.config/nvim/languages/css.vim
 
 " Keybindings
 source ~/.config/nvim/keybindings.vim
+
+" Easy motion after key bindings, otherwise it wont bind
+source ~/.config/nvim/plugins/easymotion.vim
 
 " Debug
 source ~/.config/nvim/debug.vim

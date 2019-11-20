@@ -28,6 +28,8 @@ HISTFILE=~/.config/zsh/history
 # Exports
 [ -f "$HOME/.config/exportrc" ] && source "$HOME/.config/exportrc"
 
+export ADOTDIR=$HOME/.config/zsh/antigen/
+
 # Download Plugin manager if it doesn't exists
 if [ ! -f "$HOME/.config/zsh/antigen.zsh" ]; then
     curl -L git.io/antigen > $HOME/.config/zsh/antigen.zsh
@@ -39,9 +41,6 @@ if [ -f "$HOME/.config/zsh/antigen.zsh" ]; then
 
     # 256 colors
     antigen bundle chrissicool/zsh-256color
-
-    # Auto update plugins
-    antigen bundle unixorn/autoupdate-antigen.zshplugin
 
     # Highlight zsh commands
     antigen bundle zsh-users/zsh-syntax-highlighting

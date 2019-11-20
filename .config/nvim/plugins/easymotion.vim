@@ -2,7 +2,7 @@
 let g:EasyMotion_do_mapping = 0
 
 " Set leader
-map <Leader> <Plug>(easymotion-prefix)
+" map <Leader> <Plug>(easymotion-prefix)
 
 " <leader>w search for start of word
 nmap <leader>w <Plug>(easymotion-bd-w)
