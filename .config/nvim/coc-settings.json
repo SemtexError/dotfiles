@@ -1,3 +1,65 @@
 {
-  "tsserver.npm": "/usr/bin/npm"
+    // Typescript
+    "tsserver.npm": "/usr/bin/npm",
+
+    // Vetur
+    "vetur.format.options.tabSize": 4,
+
+    // Tail wind
+    "tailwindCSS.jsLanguages": [
+        "javascript",
+        "typescript"
+    ],
+    "tailwindCSS.cssLanguages": [
+        "css",
+        "postcss",
+        "sass",
+        "scss",
+        "vue"
+    ],
+
+
+    // Explorer
+    "explorer.toggle": true,
+    "explorer.position": "right",
+    "explorer.icon.enableNerdfont": true,
+    "explorer.file.column.indent.chars": "    ",
+    "explorer.openAction.changeDirectory": false,
+    "explorer.sources": [
+        {
+            "name": "buffer",
+            "expand": true
+        },
+        {
+            "name": "file",
+            "expand": true
+        }
+    ],
+    "explorer.keyMappings": {
+        "<cr>": "open"
+    },
+    "explorer.icon.customIcons": {
+      "icons": {
+        "csharp": {
+          "code": "",
+          "color": "#009404"
+        },
+        "npm": {
+          "code": "ﯵ",
+          "color": "#cb3837"
+        }
+      },
+      "extensions": {
+        "cs": "csharp",
+        "csproj": "vs"
+      },
+      "filenames": {
+        "vue.config.js": "webpack",
+        "package.json": "npm",
+        "package-lock.json": "npm",
+        "yarn.lock": "npm"
+      },
+      "patternMatches": {
+      }
+    }
 }

@@ -20,4 +20,4 @@ let g:NERDTreeExtensionHighlightColor['vue'] = s:green
 let g:nerdtree_sync_cursorline = 1
 
 
-nnoremap <m-t> :NERDTreeToggle<CR>
+" nnoremap <m-t> :NERDTreeToggle<CR>

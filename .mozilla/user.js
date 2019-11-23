@@ -1728,6 +1728,11 @@ user_pref("extensions.screenshots.system-disabled", true);
 user_pref("devtools.debugger.remote-enabled", true);
 user_pref("devtools.chrome.enabled", true);
 
+// Enable hardware acceleration
+user_pref("gfx.direct2d.disabled", true); // [WINDOWS]
+user_pref("layers.acceleration.disabled", true); 
+user_pref("layers.accelerate-all", true);
+
 // user_pref("dom.event.clipboardevents.enabled", false)
 // user_pref("browser.tabs.DrawInTitlebar", true);
 // user_pref("browser.tabs.closeWindowWithLastTab", true);

@@ -1,12 +1,3 @@
-" Colors, set colors to 265
-syntax on
-set termguicolors
-
-set t_Co=256
-set t_ut=
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-
 " Default options
 set encoding=UTF-8 " Default file encoding
 set undofile " Enable undo persistence across sessions
@@ -28,7 +19,6 @@ set splitbelow splitright
 
 " Find
 set path+=**
-set wildmenu
 set wildignore+=**/node_modules/** " NodeJS modules
 set wildignore+=**/.git/**
 set wildignore+=**/bin/** " C# 
@@ -45,32 +35,35 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
-" No annoying sound on errors
+" No sound
 set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
 
+" Set colors to 265
+syntax on
+set termguicolors
 
-" Plugins
+" Plug-in
 source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/plugins/coc.vim
 source ~/.config/nvim/plugins/fzf.vim
-source ~/.config/nvim/plugins/autopair.vim
-source ~/.config/nvim/plugins/nerdtree.vim
-source ~/.config/nvim/plugins/highlightedyank.vim
 source ~/.config/nvim/plugins/ale.vim
+source ~/.config/nvim/plugins/matchup.vim
+source ~/.config/nvim/plugins/autopair.vim
 source ~/.config/nvim/plugins/codedark.vim
 source ~/.config/nvim/plugins/nerdcommenter.vim
-source ~/.config/nvim/plugins/lightline.vim
-source ~/.config/nvim/plugins/matchup.vim
+
+" Custom plug-in
+source ~/.config/nvim/plugins/statusline.vim
 
 " Languages
 source ~/.config/nvim/languages/csharp.vim
 source ~/.config/nvim/languages/javascript.vim
 source ~/.config/nvim/languages/css.vim
 
-" Keybindings
+" Key bindings
 source ~/.config/nvim/keybindings.vim
 
 " Easy motion after key bindings, otherwise it wont bind

@@ -1,6 +1,10 @@
 " Fix command in Coc setting json
 autocmd FileType json syntax match Comment +\/\/.\+$+
 
+set updatetime=300
+set shortmess+=c
+set signcolumn=yes
+
 " All Coc extensions which will be installed
 let g:coc_global_extensions= [ 
     \ 'coc-omnisharp',
@@ -13,8 +17,12 @@ let g:coc_global_extensions= [
     \ 'coc-webpack',
     \ 'coc-pairs',
     \ 'coc-lists',
+    \ 'coc-explorer',
     \ 'coc-yank'
 \]
+
+
+nmap <M-t> :CocCommand explorer<CR>
 
 " control+space to refresh Coc list
 inoremap <silent><expr> <c-space> coc#refresh()
@@ -37,7 +45,7 @@ nmap <F2> <Plug>(coc-rename)
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 
 " leader+enter to show code actions
-nnoremap <leader><cr> :CocAction<cr>
+nnoremap <m-cr> :CocAction<cr>
 
 " <leader>+= format selection or document
 xmap <leader>=  <Plug>(coc-format-selected)

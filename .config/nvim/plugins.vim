@@ -17,10 +17,6 @@ call plug#begin('~/.config/nvim/plugged')
     " https://github.com/sheerun/vim-polyglot
     Plug 'sheerun/vim-polyglot'
 
-    " Dev icons in nerd tree
-    " https://github.com/ryanoasis/vim-devicons
-    Plug 'ryanoasis/vim-devicons'
-
     " Smooth scrolling
     " https://github.com/psliwka/vim-smoothie
     Plug 'psliwka/vim-smoothie'
@@ -42,19 +38,8 @@ call plug#begin('~/.config/nvim/plugged')
 
     " Status bar in bottom of screen
 	" https://github.com/itchyny/lightline.vim
-	Plug 'itchyny/lightline.vim'
-    Plug 'maximbaz/lightline-ale'
-
-    " File dialog folder and file structure finder
-	" https://github.com/scrooloose/nerdtree
-	Plug 'scrooloose/nerdtree'
-    " Colors in nerdtree
-    " https://github.com/tiagofumo/vim-nerdtree-syntax-highlight
-    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
-    " Sync the current file with NerdTree
-    " https://github.com/unkiwii/vim-nerdtree-sync
-    Plug 'unkiwii/vim-nerdtree-sync'
+	" Plug 'itchyny/lightline.vim'
+    " Plug 'maximbaz/lightline-ale'
     
     " Comment code
     " https://github.com/scrooloose/nerdcommenter
