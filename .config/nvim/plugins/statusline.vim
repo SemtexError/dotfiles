@@ -5,12 +5,10 @@ endif
 
 let g:loaded_statusline = 1
 
-set guitablabel=test
-
 highlight StatusModeNormalColor guibg=#2c3e50 guifg=#ecf0f1 cterm=bold " Dark gray
 highlight StatusModeInsertColor guibg=#95a5a6 guifg=#2C3E50 cterm=bold " Light gray
 highlight StatusModeVisualColor guibg=#2980b9 guifg=#ecf0f1 cterm=bold " Blue
-highlight StatusModeCommandColor guibg=#d35400 guifg=#ecf0f1 cterm=bold " Orange
+highlight StatusModeCommandColor guibg=#2980b9 guifg=#ecf0f1 cterm=bold " Blue
 highlight StatusModeReplaceColor guibg=#E74C3C guifg=#ecf0f1 cterm=bold " Red
 highlight StatusErrorColor guibg=#E74C3C guifg=#ecf0f1 cterm=bold " Red
 highlight StatusWarningColor guibg=#F39C12 guifg=#ecf0f1 cterm=bold " Warning

@@ -1,0 +1,15 @@
+[colors]
+    background = #AF000000
+    format-color = #FFF
+    disabled-color = #7F8C8D
+    seperator-color = #FFB52A
+    visible-color = #555555
+
+    highlight-color = #FFF
+    highlight-background = #CF000000
+
+    alert-background = #E74C3c
+    alert-color = #000000
+
+
+; vim:ft=dosini

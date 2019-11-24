@@ -13,6 +13,7 @@ let g:coc_global_extensions= [
     \ 'coc-vetur',
     \ 'coc-html',
     \ 'coc-css',
+    \ 'coc-tailwindcss',
     \ 'coc-json',
     \ 'coc-webpack',
     \ 'coc-pairs',

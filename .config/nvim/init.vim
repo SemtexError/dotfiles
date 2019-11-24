@@ -45,6 +45,7 @@ set tm=500
 syntax on
 set termguicolors
 
+
 " Plug-in
 source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/plugins/coc.vim
@@ -68,6 +69,9 @@ source ~/.config/nvim/keybindings.vim
 
 " Easy motion after key bindings, otherwise it wont bind
 source ~/.config/nvim/plugins/easymotion.vim
+
+" Theme
+source ~/.config/nvim/theme/theme.vim
 
 " Debug
 source ~/.config/nvim/debug.vim

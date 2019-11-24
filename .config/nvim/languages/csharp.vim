@@ -3,6 +3,8 @@ let g:OmniSharp_server_stdio = 1
 let g:OmniSharp_selector_ui = 'fzf'
 let g:OmniSharp_highlight_types = 2
 
+autocmd FileType cs nnoremap <buffer> <M-e> :OmniSharpGlobalCodeCheck
+
 " Show documentation (summary) of an object
 autocmd FileType cs nnoremap <buffer> <Leader>d :OmniSharpDocumentation<CR>
 
@@ -15,8 +17,6 @@ autocmd FileType cs nnoremap <buffer> gD :OmniSharpFindImplementations<CR>
 " Code actions
 augroup OSCountCodeActions
   autocmd!
-  autocmd FileType cs set updatetime=500
-  autocmd FileType cs set signcolumn=yes
   autocmd FileType cs sign define OmniSharpCodeActions text=!> texthl=csCodeAction
   autocmd CursorHold *.cs call OSCountCodeActions()
 augroup end
@@ -40,34 +40,11 @@ function! s:CBReturnCount(count) abort
   endif
 endfunction
 
-
-" = Custom highlighting
-" Custom highlight
-" Code action sign, yellow
-autocmd FileType cs highlight csCodeAction guifg=#DCDCAA
-
-" CS class, green
-autocmd FileType cs highlight csClassType guifg=#4EC9B0
-autocmd FileType cs highlight csUserType guifg=#4EC9B0
-autocmd FileType cs highlight csAttribute guifg=#4EC9B0
-
-" Interfaces, yellow
-autocmd FileType cs highlight csUserInterface guifg=#B3D19F
-autocmd FileType cs highlight csIface guifg=#B3D19F
-
-" blue
-autocmd FileType cs highlight csClass guifg=#569CD6
-autocmd FileType cs highlight csNew guifg=#569CD6
-autocmd FileType cs highlight csNewType guifg=#569CD6
-autocmd FileType cs highlight csAsync guifg=#569CD6
-autocmd FileType cs highlight csXmlTag guifg=#569CD6
-autocmd FileType cs highlight xmlTagName guifg=#569CD6
-autocmd FileType cs highlight csContextualStatement guifg=#569CD6
-autocmd FileType cs highlight csStringFormat guifg=#569CD6
-
-" Light blue
-autocmd FileType cs highlight xmlAttrib guifg=#9CDCFE
-
-" Gray
-autocmd FileType cs highlight xmlTag guifg=#808080
-
+let g:OmniSharp_highlight_groups = {
+\ 'csUserIdentifier': [
+\   'constant name', 'enum member name', 'field name', 'identifier',
+\   'local name', 'parameter name', 'property name', 'static symbol', 'namespace name'],
+\ 'csUserInterface': ['interface name'],
+\ 'csUserMethod': ['extension method name', 'method name'],
+\ 'csUserType': ['class name', 'enum name', 'struct name']
+\}
