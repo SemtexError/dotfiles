@@ -1,28 +1,4 @@
-let s:group_colors = {}
-function! s:h(group, style, ...)
-  if (a:0 > 0)
-    let s:highlight = s:group_colors[a:group]
-    for style_type in ["fg", "bg", "sp"]
-      if (has_key(a:style, style_type))
-        let l:default_style = (has_key(s:highlight, style_type) ? s:highlight[style_type] : { "cterm16": "NONE", "cterm": "NONE", "gui": "NONE" })
-        let s:highlight[style_type] = extend(l:default_style, a:style[style_type])
-      endif
-    endfor
-    if (has_key(a:style, "gui"))
-      let s:highlight.gui = a:style.gui
-    endif
-  else
-    let s:highlight = a:style
-    let s:group_colors[a:group] = s:highlight
-  endif
-
-  execute "highlight" a:group
-    \ "guifg="   (has_key(s:highlight, "fg")    ? s:highlight.fg : "NONE")
-    \ "guibg="   (has_key(s:highlight, "bg")    ? s:highlight.bg   : "NONE")
-    \ "guisp="   (has_key(s:highlight, "sp")    ? s:highlight.sp   : "NONE")
-    \ "gui="     (has_key(s:highlight, "gui")   ? s:highlight      : "NONE")
-    \ "cterm="   (has_key(s:highlight, "cterm") ? s:highlight.cterm    : "NONE")
-endfunction
+source ~/.config/nvim/theme/methods.vim
 
 let s:gray = "#808080"
 let s:green = "#4EC9B0"
@@ -33,100 +9,120 @@ let s:memberYellow = "#D7BA7D"
 let s:interfaceYellow = "#B3D19F"
 let s:purple = "#C586C0"
 
-" Green
-call s:h("typescriptBOM", { "fg": s:green })
-call s:h("typescriptClassName", { "fg": s:green })
-call s:h("typescriptClassHeritage", { "fg": s:green })
-call s:h("typescriptGlobal", { "fg": s:green })
-call s:h("typescriptPredefinedType", { "fg": s:green })
-call s:h("typescriptTypeReference", { "fg": s:green })
-call s:h("typescriptEnum", { "fg": s:green })
-call s:h("typescriptFuncCallArg", { "fg": s:green })
+let s:background = "#1E1E1E"
+let s:statusLine = "#3C3C3C"
 
-call s:h("csClassType", { "fg": s:green })
-call s:h("csUserType", { "fg": s:green })
-call s:h("csAttribute", { "fg": s:green })
+" Vim
+call Highlight("TabLine", { "bg": s:statusLine })
+call Highlight("TabLineSelected", { "bg": s:background })
+
+call Highlight("StatusModeNormalColor", { "bg": s:statusLine, "fg": "#ecf0f1" })
+
+call Highlight("StatusModeInsertColor", { "bg": "#95a5a6", "fg": "#2C3E50" })
+
+call Highlight("StatusModeVisualColor", { "bg": "#2980b9", "fg": "#ecf0f1" })
+
+call Highlight("StatusModeCommandColor", { "bg": "#2980b9", "fg": "#ecf0f1" })
+
+call Highlight("StatusModeReplaceColor", { "bg": "#E74C3C", "fg": "#ecf0f1" })
+
+call Highlight("StatusErrorColor", { "bg": "#E74C3C", "fg": "#ecf0f1" })
+
+call Highlight("StatusWarningColor", { "bg": "#F39C12", "fg": "#ecf0f1" })
+
+" Green
+call Highlight("typescriptBOM", { "fg": s:green })
+call Highlight("typescriptClassName", { "fg": s:green })
+call Highlight("typescriptClassHeritage", { "fg": s:green })
+call Highlight("typescriptGlobal", { "fg": s:green })
+call Highlight("typescriptPredefinedType", { "fg": s:green })
+call Highlight("typescriptTypeReference", { "fg": s:green })
+call Highlight("typescriptEnum", { "fg": s:green })
+call Highlight("typescriptFuncCallArg", { "fg": s:green })
+
+call Highlight("csClassType", { "fg": s:green })
+call Highlight("csUserType", { "fg": s:green })
+call Highlight("csAttribute", { "fg": s:green })
 
 " Blue
-call s:h("vimCommand", { "fg": s:blue })
+call Highlight("vimCommand", { "fg": s:blue })
 
-call s:h("typescriptClassKeyword", { "fg": s:blue })
-call s:h("typescriptClassExtends", { "fg": s:blue })
-call s:h("typescriptImport", { "fg": s:blue })
-call s:h("typescriptOperator", { "fg": s:blue })
-call s:h("typescriptOperator", { "fg": s:blue })
-call s:h("typescriptFuncKeyword", { "fg": s:blue })
-call s:h("typescriptVariable", { "fg": s:blue })
-call s:h("typescriptAccessibilityModifier", { "fg": s:blue })
-call s:h("typescriptTry", { "fg": s:blue })
-call s:h("typescriptAsyncFuncKeyword", { "fg": s:blue })
-call s:h("typescriptExceptions", { "fg": s:blue })
-call s:h("typescriptMethodAccessor", { "fg": s:blue })
-call s:h("typescriptEnumKeyword", { "fg": s:blue })
-call s:h("jsAsyncKeyword", { "fg": s:blue })
-call s:h("jsImport", { "fg": s:blue })
-call s:h("fromImport", { "fg": s:blue })
-call s:h("jsOperatorKeyword", { "fg": s:blue })
+call Highlight("typescriptClassKeyword", { "fg": s:blue })
+call Highlight("typescriptClassExtends", { "fg": s:blue })
+call Highlight("typescriptImport", { "fg": s:blue })
+call Highlight("typescriptOperator", { "fg": s:blue })
+call Highlight("typescriptOperator", { "fg": s:blue })
+call Highlight("typescriptFuncKeyword", { "fg": s:blue })
+call Highlight("typescriptVariable", { "fg": s:blue })
+call Highlight("typescriptAccessibilityModifier", { "fg": s:blue })
+call Highlight("typescriptTry", { "fg": s:blue })
+call Highlight("typescriptAsyncFuncKeyword", { "fg": s:blue })
+call Highlight("typescriptExceptions", { "fg": s:blue })
+call Highlight("typescriptMethodAccessor", { "fg": s:blue })
+call Highlight("typescriptEnumKeyword", { "fg": s:blue })
+call Highlight("jsAsyncKeyword", { "fg": s:blue })
+call Highlight("jsImport", { "fg": s:blue })
+call Highlight("fromImport", { "fg": s:blue })
+call Highlight("jsOperatorKeyword", { "fg": s:blue })
 
-call s:h("csClass", { "fg": s:blue })
-call s:h("csClass", { "fg": s:blue })
-call s:h("csNew", { "fg": s:blue })
-call s:h("csNewType", { "fg": s:blue })
-call s:h("csAsync", { "fg": s:blue })
-call s:h("csXmlTag", { "fg": s:blue })
-call s:h("xmlTagName", { "fg": s:blue })
-call s:h("csContextualStatement", { "fg": s:blue })
-call s:h("csStringFormat", { "fg": s:blue })
+call Highlight("csClass", { "fg": s:blue })
+call Highlight("csClass", { "fg": s:blue })
+call Highlight("csNew", { "fg": s:blue })
+call Highlight("csNewType", { "fg": s:blue })
+call Highlight("csAsync", { "fg": s:blue })
+call Highlight("csXmlTag", { "fg": s:blue })
+call Highlight("xmlTagName", { "fg": s:blue })
+call Highlight("csContextualStatement", { "fg": s:blue })
+call Highlight("csStringFormat", { "fg": s:blue })
 
 " Light blue
-call s:h("typescriptObjectLabel", { "fg": s:lightBlue })
-call s:h("typescriptObjectLabel", { "fg": s:lightBlue })
-call s:h("typescriptBOMWindowProp", { "fg": s:lightBlue })
-call s:h("typescriptDOMFormProp", { "fg": s:lightBlue })
-call s:h("typescriptCall", { "fg": s:lightBlue })
-call s:h("typescriptVariableDeclaration", { "fg": s:lightBlue })
-call s:h("typescriptBlock", { "fg": s:lightBlue })
-call s:h("typescriptNodeGlobal", { "fg": s:lightBlue })
-call s:h("typescriptConditionalParen", { "fg": s:lightBlue })
-call s:h("typescriptIdentifierName", { "fg": s:lightBlue })
-call s:h("jsObjectKey", { "fg": s:lightBlue })
+call Highlight("typescriptObjectLabel", { "fg": s:lightBlue })
+call Highlight("typescriptObjectLabel", { "fg": s:lightBlue })
+call Highlight("typescriptBOMWindowProp", { "fg": s:lightBlue })
+call Highlight("typescriptDOMFormProp", { "fg": s:lightBlue })
+call Highlight("typescriptCall", { "fg": s:lightBlue })
+call Highlight("typescriptVariableDeclaration", { "fg": s:lightBlue })
+call Highlight("typescriptBlock", { "fg": s:lightBlue })
+call Highlight("typescriptNodeGlobal", { "fg": s:lightBlue })
+call Highlight("typescriptConditionalParen", { "fg": s:lightBlue })
+call Highlight("typescriptIdentifierName", { "fg": s:lightBlue })
+call Highlight("jsObjectKey", { "fg": s:lightBlue })
 
-call s:h("xmlAttrib", { "fg": s:lightBlue })
+call Highlight("xmlAttrib", { "fg": s:lightBlue })
 
 " Yellow
-call s:h("jsObjectKey", { "fg": s:yellow })
-call s:h("typescriptFuncName", { "fg": s:yellow })
-call s:h("typescriptStringMethod", { "fg": s:yellow })
-call s:h("typescriptMathStaticMethod", { "fg": s:yellow })
-call s:h("typescriptArrayMethod", { "fg": s:yellow })
-call s:h("typescriptES6SetMethod", { "fg": s:yellow })
-call s:h("typescriptObjectStaticMethod", { "fg": s:yellow })
-call s:h("typescriptBOMLocationMethod", { "fg": s:yellow })
-call s:h("typescriptJSONStaticMethod", { "fg": s:yellow })
-call s:h("typescriptGlobalMethod", { "fg": s:yellow })
+call Highlight("jsObjectKey", { "fg": s:yellow })
+call Highlight("typescriptFuncName", { "fg": s:yellow })
+call Highlight("typescriptStringMethod", { "fg": s:yellow })
+call Highlight("typescriptMathStaticMethod", { "fg": s:yellow })
+call Highlight("typescriptArrayMethod", { "fg": s:yellow })
+call Highlight("typescriptES6SetMethod", { "fg": s:yellow })
+call Highlight("typescriptObjectStaticMethod", { "fg": s:yellow })
+call Highlight("typescriptBOMLocationMethod", { "fg": s:yellow })
+call Highlight("typescriptJSONStaticMethod", { "fg": s:yellow })
+call Highlight("typescriptGlobalMethod", { "fg": s:yellow })
 
-call s:h("csCodeAction", { "fg": s:yellow })
+call Highlight("csCodeAction", { "fg": s:yellow })
 
 " Member yellow
-call s:h("typescriptDecorator", { "fg": s:memberYellow })
-call s:h("typescriptMember", { "fg": s:memberYellow })
-call s:h("typescriptBOMNavigatorProp", { "fg": s:memberYellow })
+call Highlight("typescriptDecorator", { "fg": s:memberYellow })
+call Highlight("typescriptMember", { "fg": s:memberYellow })
+call Highlight("typescriptBOMNavigatorProp", { "fg": s:memberYellow })
 
-call s:h("jsObjectFuncName", { "fg": s:memberYellow })
+call Highlight("jsObjectFuncName", { "fg": s:memberYellow })
 
 " Purple
-call s:h("typescriptRepeat", { "fg": s:purple })
-call s:h("typescriptStatementKeyword", { "fg": s:purple })
-call s:h("typescriptExport", { "fg": s:purple })
-call s:h("typescriptDefault", { "fg": s:purple })
-call s:h("typescriptArrowFuncArg", { "fg": s:purple })
-call s:h("typescriptCastKeyword", { "fg": s:purple })
+call Highlight("typescriptRepeat", { "fg": s:purple })
+call Highlight("typescriptStatementKeyword", { "fg": s:purple })
+call Highlight("typescriptExport", { "fg": s:purple })
+call Highlight("typescriptDefault", { "fg": s:purple })
+call Highlight("typescriptArrowFuncArg", { "fg": s:purple })
+call Highlight("typescriptCastKeyword", { "fg": s:purple })
 
 " Interfaces yellow
-call s:h("csUserInterface", { "fg": s:interfaceYellow })
-call s:h("csIface", { "fg": s:interfaceYellow })
+call Highlight("csUserInterface", { "fg": s:interfaceYellow })
+call Highlight("csIface", { "fg": s:interfaceYellow })
 
 " Gray
-call s:h("xmlTag", { "fg": s:gray })
-call s:h("vueSurroundingTag", { "fg": s:gray })
-
+call Highlight("xmlTag", { "fg": s:gray })
+call Highlight("vueSurroundingTag", { "fg": s:gray })

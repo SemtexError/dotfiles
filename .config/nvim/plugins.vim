@@ -6,7 +6,7 @@ if ! filereadable(expand('~/.config/nvim/autoload/plug.vim'))
 	autocmd VimEnter * PlugInstall
 endif
 
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin('~/.config/nvim/extensions')
     " ====== Appearance
     
 	" VsCode dark colors
@@ -35,11 +35,6 @@ call plug#begin('~/.config/nvim/plugged')
     " Include Most recent files in FZF search
 	" https://github.com/SemtexError/fzf-filemru
     Plug 'SemtexError/fzf-filemru'
-
-    " Status bar in bottom of screen
-	" https://github.com/itchyny/lightline.vim
-	" Plug 'itchyny/lightline.vim'
-    " Plug 'maximbaz/lightline-ale'
     
     " Comment code
     " https://github.com/scrooloose/nerdcommenter

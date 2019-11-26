@@ -57,7 +57,7 @@ source ~/.config/nvim/plugins/codedark.vim
 source ~/.config/nvim/plugins/nerdcommenter.vim
 
 " Custom plug-in
-source ~/.config/nvim/plugins/statusline.vim
+source ~/.config/nvim/plugins/statusline/statusline.vim
 
 " Languages
 source ~/.config/nvim/languages/csharp.vim
