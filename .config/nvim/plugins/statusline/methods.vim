@@ -36,7 +36,14 @@ endfunction
 function! GetFilePercentage()
     const byte = line2byte(line('.'))
     const size = line2byte(line('$'))
-    return (byte * 100) / size
+    let percentage = (byte * 100) / size
+    if percentage < 10
+        let content = '0'
+        let content .= percentage
+        return content
+    endif
+
+    return percentage
 endfunction
 
 " Check if ale is running and has data
@@ -65,4 +72,24 @@ function! GetAleWarnings()
     const l:counts = ale#statusline#Count(bufnr(''))
     const l:all_errors = l:counts.error + l:counts.style_error
     return l:counts.total - l:all_errors
+endfunction
+
+function! GetCurrentColumn()
+    let content = ''
+    let column = virtcol('.')
+    if column < 10
+        let content .= '0'
+    endif
+    let content .= column
+    return content
+endfunction
+
+function! GetCurrentRow()
+    let content = ''
+    let row = line('.')
+    if row < 0
+        let content .= '0';
+    endif
+    let content .= row
+    return content
 endfunction

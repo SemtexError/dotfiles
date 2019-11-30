@@ -52,4 +52,4 @@ nnoremap <expr> O getline('.') =~ '^\s*//' ? 'O<esc>S' : getline('.') =~ '^\s*\"
 nnoremap <expr> o getline('.') =~ '^\s*//' ? 'o<esc>S' : getline('.') =~ '^\s*\"' ? 'o<esc>S' : getline('.') =~ '^\s*\#' ? 'o<esc>S' : 'o'
 
 " Open quick fix in new tab
-autocmd FileType qf nnoremap <buffer> <Enter> <C-W><Enter><C-W>T
+" autocmd FileType qf nnoremap <buffer> <Enter> <C-W><Enter><C-W>T

@@ -36,6 +36,7 @@ function! TabLine()
         " Name of tab
         let fileName = bufname(bufferIndex)
         let fileName = fnamemodify(fileName, ':p:t')
+        let fileName = (fileName == '' ? '[no name]' : fileName)
         let content .= fileName
 
         " Modified

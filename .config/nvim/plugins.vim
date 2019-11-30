@@ -9,10 +9,6 @@ endif
 call plug#begin('~/.config/nvim/extensions')
     " ====== Appearance
     
-	" VsCode dark colors
-    " https://github.com/tomasiser/vim-code-dark 
-	Plug 'tomasiser/vim-code-dark'
-
     " Syntax: for a lot of different languages
     " https://github.com/sheerun/vim-polyglot
     Plug 'sheerun/vim-polyglot'

@@ -20,7 +20,6 @@ The primary distro is Arch Linux but they will work on other distros also. By us
 `curl -Lks https://raw.githubusercontent.com/SemtexError/dotfiles/master/.config/scripts/dotfiles.sh | /bin/bash`
 
 ## Firefox
-* [ShadowFox](https://overdodactyl.github.io/ShadowFox/)
 
 ### Add-ons
 * [Bitwarden](https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/)
@@ -28,11 +27,10 @@ The primary distro is Arch Linux but they will work on other distros also. By us
 * [ClearURLs](https://addons.mozilla.org/en-US/firefox/addon/clearurls/)
 * [Cookie AutoDelete](https://addons.mozilla.org/en-US/firefox/addon/cookie-autodelete/)
 * [CSS exfil protection](https://addons.mozilla.org/en-US/firefox/addon/css-exfil-protection/)
-* [Dark Night Mode](https://addons.mozilla.org/en-US/firefox/addon/dark-night-mode/)
 * [Decentraleyes](https://addons.mozilla.org/en-US/firefox/addon/decentraleyes/)
 * [ExpressVPN](https://addons.mozilla.org/en-US/firefox/addon/expressvpn/)
-* [Don't touch my tabs! (rel=noopener)](https://addons.mozilla.org/en-US/firefox/addon/dont-touch-my-tabs/)
   * [HTTPS everywhere ](https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/) (already include in ExpressVPN)
+* [Don't touch my tabs! (rel=noopener)](https://addons.mozilla.org/en-US/firefox/addon/dont-touch-my-tabs/)
 * [Firefox Multi-account container](https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/)
 * [Facebook Container](https://addons.mozilla.org/en-US/firefox/addon/facebook-container/)
 * [Google Container](https://addons.mozilla.org/en-US/firefox/addon/google-container/)
@@ -47,6 +45,9 @@ The primary distro is Arch Linux but they will work on other distros also. By us
 * [uBlock Orgin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/)
 * [uMatrix](https://addons.mozilla.org/en-US/firefox/addon/umatrix/)
 * [Vimium](https://addons.mozilla.org/en-US/firefox/addon/vimium-ff/)
+
+### Theme
+* [ShadowFox](https://overdodactyl.github.io/ShadowFox/)
 * [Matte Black V2](https://addons.mozilla.org/en-US/firefox/addon/matte-black-v2/)
 
 ## Android
@@ -69,14 +70,12 @@ They should only be downloaded through the Aorora store.
 * [ExpressVPN 🚩](https://play.google.com/store/apps/details?id=com.expressvpn.vpn)
 * [Simple file manager](https://f-droid.org/en/packages/com.simplemobiletools.filemanager.pro)
 * [Firefox Klar](https://f-droid.org/en/packages/org.mozilla.klar)
-* [Firefox Fenix (preview)](https://github.com/mozilla-mobile/fenix)
+* [Firefox Fenix 🚩](https://play.google.com/store/apps/details?id=org.mozilla.fenix)
 * [Flitsmeister 🚩](https://play.google.com/store/apps/details?id=nl.flitsmeister)
 * [Simple Gallery](https://f-droid.org/en/packages/com.simplemobiletools.gallery.pro)
 * [ICSx5](https://f-droid.org/en/packages/at.bitfire.icsdroid)
 * [Lawnchair](https://f-droid.org/en/packages/ch.deletescape.lawnchair.plah)
 * [Newpipe](https://f-droid.org/en/packages/org.schabi.newpipe)
-* [Nextcloud Deck](https://f-droid.org/en/packages/it.niedermann.nextcloud.deck)
-  * [Nextcloud (required by deck)](https://f-droid.org/en/packages/com.nextcloud.client)
 * [OsmAnd](https://f-droid.org/en/packages/net.osmand.plus)
 * [ProtonMail 🚩](https://play.google.com/store/apps/details?id=ch.protonmail.android)
 * [Share to Clipboard](https://f-droid.org/en/packages/com.tengu.sharetoclipboard)
@@ -84,5 +83,5 @@ They should only be downloaded through the Aorora store.
 * [Slide](https://f-droid.org/en/packages/me.ccrama.redditslide)
 * [Stack 🚩](https://play.google.com/store/apps/details?id=nl.transip.stack)
 * [Telegram](https://f-droid.org/en/packages/org.telegram.messenger)
-* [WhatsApp (bah) 🚩🚩🚩](https://play.google.com/store/apps/details?id=com.whatsapp)
+* [WhatsApp 🚩](https://play.google.com/store/apps/details?id=com.whatsapp)
 

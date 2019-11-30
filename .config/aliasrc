@@ -19,6 +19,6 @@ alias la='ls -la'
 alias :q=exit
 
 # Dotfiles
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME'
 
 # vim: set filetype=bash

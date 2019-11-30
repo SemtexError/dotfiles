@@ -2,9 +2,9 @@
 # https://www.atlassian.com/git/tutorials/dotfiles
 #
 
-git clone --bare --recurse-submodules https://github.com/SemtexError/dotfiles.git $HOME/.dotfiles
+git clone --bare --recurse-submodules https://github.com/SemtexError/dotfiles.git $HOME/.config/dotfiles
 function config {
-   /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@
+   /usr/bin/git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME $@
 }
 
 config checkout
