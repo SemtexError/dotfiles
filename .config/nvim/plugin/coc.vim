@@ -19,6 +19,7 @@ let g:coc_global_extensions= [
     \ 'coc-pairs',
     \ 'coc-lists',
     \ 'coc-explorer',
+    \ 'coc-snippets',
     \ 'coc-yank'
 \]
 

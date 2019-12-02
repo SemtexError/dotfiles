@@ -298,6 +298,34 @@ let s:class = { "fg": s:teal } " Classes
     call Highlight("cssFunction", s:function)
     call Highlight("scssFunctionName", s:function)
 
+" === ASP classic ===
+    call Highlight("aspStart", s:type)
+    call Highlight("aspEnd", s:type)
+    call Highlight("aspStorageClass", s:type)
+    call Highlight("aspConstant", s:type)
+    call Highlight("aspNaN", s:type)
+    call Highlight("aspBoolean", s:type)
+    call Highlight("aspNull", s:type)
+    call Highlight("aspDecleration", s:type)
+    call Highlight("aspFunction", s:type)
+    call Highlight("aspType", s:type)
+
+    call Highlight("aspComment", s:comment)
+    call Highlight("aspMultilineComment", s:comment)
+
+    call Highlight("aspVariableDef", s:identifier)
+
+    call Highlight("aspFuncCall", s:function)
+
+    call Highlight("aspString", s:string)
+
+    call Highlight("aspGlobalObjects", s:class)
+    call Highlight("aspClassDefinition", s:class)
+
+    call Highlight("aspConditional", s:statement)
+
+    call Highlight("aspNumber", s:interface)
+
 " === Json ===
     " Interface
     call Highlight("jsonNumber", s:interface)

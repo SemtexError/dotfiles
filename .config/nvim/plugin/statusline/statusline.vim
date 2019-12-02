@@ -1,6 +1,3 @@
-source ~/.config/nvim/plugins/statusline/tabline.vim
-source ~/.config/nvim/plugins/statusline/methods.vim
-
 augroup StatusLine
   autocmd!
 

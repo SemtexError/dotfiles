@@ -50,15 +50,6 @@ let g:netrw_banner = 0
 
 " Plug-in
 source ~/.config/nvim/plugins.vim
-source ~/.config/nvim/plugins/coc.vim
-source ~/.config/nvim/plugins/fzf.vim
-source ~/.config/nvim/plugins/ale.vim
-source ~/.config/nvim/plugins/matchup.vim
-source ~/.config/nvim/plugins/autopair.vim
-source ~/.config/nvim/plugins/nerdcommenter.vim
-
-" Custom plug-in
-source ~/.config/nvim/plugins/statusline/statusline.vim
 
 " Languages
 source ~/.config/nvim/languages/csharp.vim
@@ -67,9 +58,6 @@ source ~/.config/nvim/languages/css.vim
 
 " Key bindings
 source ~/.config/nvim/keybindings.vim
-
-" Easy motion after key bindings, otherwise it wont bind
-source ~/.config/nvim/plugins/easymotion.vim
 
 " Theme
 source ~/.config/nvim/theme/theme.vim
