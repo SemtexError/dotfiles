@@ -48,10 +48,15 @@
         "npm": {
           "code": "ﯵ",
           "color": "#cb3837"
+        },
+        "log": {
+          "code": "",
+          "color": "#3498db"
         }
       },
       "extensions": {
         "cs": "csharp",
+        "log": "log",
         "csproj": "vs"
       },
       "filenames": {

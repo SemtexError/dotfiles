@@ -8,7 +8,7 @@ endif
 
 call plug#begin('~/.config/nvim/extensions')
     " ====== Appearance
-    
+
     " Syntax: for a lot of different languages
     " https://github.com/sheerun/vim-polyglot
     Plug 'sheerun/vim-polyglot'
@@ -18,6 +18,10 @@ call plug#begin('~/.config/nvim/extensions')
     Plug 'psliwka/vim-smoothie'
 
     " ====== editor
+
+    " Editor config
+    " https://github.com/editorconfig/editorconfig-vim
+     Plug 'editorconfig/editorconfig-vim'
 
     " Match braces
     " https://github.com/andymass/vim-matchup
