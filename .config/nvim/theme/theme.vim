@@ -186,6 +186,9 @@ let s:class = { "fg": s:teal } " Classes
     " Statement
     call Highlight("jsExportDefault", s:statement)
 
+    " Todo
+    call Highlight("jsCommentTodo", s:statuslineNormal)
+
 " === Typescript ===
     " Types
     call Highlight("typescriptClassKeyword", s:type)
@@ -261,6 +264,7 @@ let s:class = { "fg": s:teal } " Classes
     " Types
     call Highlight("htmlSpecialTagName", s:type)
     call Highlight("htmlTagName", s:type)
+    call Highlight("htmlTagN", s:type)
     call Highlight("xmlTagName", s:type)
 
     " Identifiers

@@ -1,7 +1,15 @@
+" Include HTML syntax
+runtime! syntax/html.vim
 
-syntax region aspCode start=/<%/ end=/%>/ 
-            \ contains=aspClassDefinition,aspGlobalObjects,@aspTypes,@aspDefault,@aspComments,@aspFunctions,@aspConstants,@aspStrings,@aspConditionals,
+" Add the syntax group to the HTML group
+syntax cluster htmlPreProc add=aspCode
 
+syntax region aspCode keepend start=+<%+ end=+%>+
+            \ contains=aspClassDefinition,aspGlobalObjects,@aspTypes,
+            \ @aspDefault,@aspComments,@aspFunctions,@aspConstants,
+            \ @aspStrings,@aspConditionals
+
+" Syntax groups
 syntax cluster aspDefault contains=aspStart,aspEnd
 syntax cluster aspcomments contains=aspComment,aspMultilineComment
 syntax cluster aspFunctions contains=aspFuncCall,aspFunction
@@ -10,7 +18,9 @@ syntax cluster aspStrings contains=aspString
 syntax cluster aspConditionals contains=aspConditional
 syntax cluster aspTypes contains=aspType
 
+" Delimiter
 syntax match aspStart /<%/ contained
+syntax match aspEnd /%>/ contained
 
 " Comment
 syntax region aspComment start=+//+ end=/$/ contained
@@ -20,7 +30,7 @@ syntax region aspMultilineComment start=/\/\*/ end=/\*\// contained
 syntax match aspFuncCall /\<\K\k*\ze\s*(/
 syntax keyword aspFunction function
 
-" Numbers and contstants
+" Numbers and constants
 syntax match aspNumber /\c\<\%(\d\+\%(e[+-]\=\d\+\)\=\|0b[01]\+\|0o\o\+\|0x\x\+\)\>/
 syntax keyword aspNumber Infinity
 syntax keyword aspNaN NaN
@@ -56,7 +66,7 @@ syntax keyword aspClassDefinition Server
 syntax keyword aspClassDefinition Request
 
 " System
-syntax keyword aspGlobalObjects ArrayBuffer Array BigInt64Array BigUint64Array Float32Array Float64Array Int16Array Int32Array Int8Array Uint16Array Uint32Array Uint8Array Uint8ClampedArray Boolean Buffer Collator DataView Date DateTimeFormat Intl Iterator JSON Map Set WeakMap WeakSet Math Number NumberFormat Object ParallelArray Promise Proxy Reflect RegExp String Symbol Uint8ClampedArray WebAssembly console document fetch window
+syntax keyword aspGlobalObjects ArrayBuffer Array BigInt64Array BigUint64Array Float32Array Float64Array Int16Array Int32Array Int8Array Uint16Array Uint32Array Uint8Array Uint8ClampedArray Boolean Buffer Collator DataView Date DateTimeFormat Intl Iterator JSON Map WeakMap WeakSet Math Number NumberFormat Object ParallelArray Promise Proxy Reflect RegExp String Symbol Uint8ClampedArray WebAssembly console document fetch window
 
 
 
