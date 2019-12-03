@@ -48,12 +48,10 @@ syntax keyword aspConditional do
 syntax keyword aspConditional while
 syntax keyword aspConditional in
 syntax keyword aspConditional of
-syntax keyword aspConditional case
-syntax keyword aspConditional break
-syntax keyword aspConditional default
-syntax keyword aspConditional switch
+syntax keyword aspConditional switch case break default
 syntax keyword aspConditional for
 syntax keyword aspConditional return
+syntax keyword aspConditional try catch
 
 " Types
 syntax keyword aspType this 
@@ -62,6 +60,7 @@ syntax keyword aspType typeof
 
 " Custom
 syntax keyword aspClassDefinition Framework
+syntax keyword aspClassDefinition Functions
 syntax keyword aspClassDefinition Server
 syntax keyword aspClassDefinition Request
 
