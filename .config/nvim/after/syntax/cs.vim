@@ -1,2 +1,3 @@
-syntax keyword csNameof    nameof
-syntax keyword csSizeof    sizeof
+syntax keyword csKeyword nameof
+syntax keyword csKeyword sizeof
+syntax keyword csKeyword using

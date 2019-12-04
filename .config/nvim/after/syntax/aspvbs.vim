@@ -1,5 +1,3 @@
-syntax clear
-
 " Include HTML syntax
 runtime! syntax/html.vim
 

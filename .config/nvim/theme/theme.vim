@@ -135,8 +135,7 @@ let s:class = { "fg": s:teal } " Classes
     call Highlight("csXmlTag", s:type)
     call Highlight("csContextualStatement", s:type)
     call Highlight("csStringFormat", s:type)
-    call Highlight("csNameof", s:type)
-    call Highlight("csSizeof", s:type)
+    call Highlight("csKeyword", s:type)
 
     " Interfaces
     call Highlight("csUserInterface", s:interface)
