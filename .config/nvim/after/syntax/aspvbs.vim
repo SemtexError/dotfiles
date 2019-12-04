@@ -1,5 +1,9 @@
+syntax clear
+
 " Include HTML syntax
 runtime! syntax/html.vim
+
+syntax include @htmlJavaScript syntax/javascript.vim
 
 " Add the syntax group to the HTML group
 syntax cluster htmlPreProc add=aspCode
@@ -16,7 +20,7 @@ syntax cluster aspFunctions contains=aspFuncCall,aspFunction
 syntax cluster aspConstants contains=aspNumber,aspNaN,aspBoolean,aspNull,aspDecleration
 syntax cluster aspStrings contains=aspString
 syntax cluster aspConditionals contains=aspConditional
-syntax cluster aspTypes contains=aspType
+syntax cluster aspTypes contains=aspType,aspDebugger
 
 " Delimiter
 syntax match aspStart /<%/ contained
@@ -57,6 +61,7 @@ syntax keyword aspConditional try catch
 syntax keyword aspType this 
 syntax keyword aspType new
 syntax keyword aspType typeof
+syntax keyword aspDebugger debugger
 
 " Custom
 syntax keyword aspClassDefinition Framework

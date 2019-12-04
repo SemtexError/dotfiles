@@ -54,6 +54,7 @@ let s:statuslineReplace = { "bg": s:red, "fg": s:white }
 let s:statuslineError = { "bg": s:red, "fg": s:white }
 let s:statuslineWarning = { "bg": s:orange, "fg": s:white }
 
+let s:debugger = { "bg": s:blue, "fg": s:white } " Debugger
 let s:tag = { "fg": s:lightGray } " XML/HTML tags
 let s:statement = { "fg": s:purple } " An unknown statement
 let s:comment = { "fg": s:green } " Text comment
@@ -154,6 +155,7 @@ let s:class = { "fg": s:teal } " Classes
     call Highlight("jsImport", s:type)
     call Highlight("jsOperatorKeyword", s:type)
     call Highlight("jsClassKeyword", s:type)
+    call Highlight("jsThis", s:type)
 
     " Identifiers
     call Highlight("jsObjectKey", s:identifier)
@@ -303,6 +305,8 @@ let s:class = { "fg": s:teal } " Classes
     call Highlight("scssFunctionName", s:function)
 
 " === ASP classic ===
+    call Highlight("aspDebugger", s:debugger)
+
     call Highlight("aspStart", s:type)
     call Highlight("aspEnd", s:type)
     call Highlight("aspStorageClass", s:type)
