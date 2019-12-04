@@ -66,6 +66,7 @@ syntax keyword aspClassDefinition Framework
 syntax keyword aspClassDefinition Functions
 syntax keyword aspClassDefinition Server
 syntax keyword aspClassDefinition Request
+syntax keyword aspClassDefinition Response
 
 " System
 syntax keyword aspGlobalObjects ArrayBuffer Array BigInt64Array BigUint64Array Float32Array Float64Array Int16Array Int32Array Int8Array Uint16Array Uint32Array Uint8Array Uint8ClampedArray Boolean Buffer Collator DataView Date DateTimeFormat Intl Iterator JSON Map WeakMap WeakSet Math Number NumberFormat Object ParallelArray Promise Proxy Reflect RegExp String Symbol Uint8ClampedArray WebAssembly console document fetch window

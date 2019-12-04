@@ -302,6 +302,17 @@ let s:class = { "fg": s:teal } " Classes
     " Functions
     call Highlight("cssFunction", s:function)
     call Highlight("scssFunctionName", s:function)
+" === SQL ===
+    call Highlight("sqlStatement", s:type)
+    call Highlight("sqlKeyword", s:type)
+    call Highlight("sqlSpecial", s:type)
+
+    call Highlight("sqlModifier", s:statement)
+
+    call Highlight("Quote", s:string)
+
+    call Highlight("sqlAsIdentifier", s:identifier)
+    call Highlight("sqlVariable", s:identifier)
 
 " === ASP classic ===
     call Highlight("aspDebugger", s:debugger)

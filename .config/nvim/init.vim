@@ -52,9 +52,8 @@ let g:netrw_banner = 0
 source ~/.config/nvim/plugins.vim
 
 " Languages
+source ~/.config/nvim/languages.vim
 source ~/.config/nvim/languages/csharp.vim
-source ~/.config/nvim/languages/javascript.vim
-source ~/.config/nvim/languages/css.vim
 
 " Key bindings
 source ~/.config/nvim/keybindings.vim
@@ -64,3 +63,7 @@ source ~/.config/nvim/theme/theme.vim
 
 " Debug
 source ~/.config/nvim/debug.vim
+
+" File types
+source ~/.config/nvim/filetype.vim
+
