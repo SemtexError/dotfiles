@@ -21,6 +21,9 @@ augroup CsharpActions
     " Find the definition (Coc's version doesn't (always) work)
     autocmd FileType cs nnoremap <buffer> gd :OmniSharpGotoDefinition<CR>
 
+    " When creating or moving new file the language server can be a little funky
+    autocmd FileType cs nnoremap <buffer> <M-r> :OmniSharpRestartServer<CR>
+
     autocmd FileType cs nnoremap <buffer> <leader>gr :OmniSharpFindUsages<CR>
     autocmd FileType cs nnoremap <buffer> gs :OmniSharpFindSymbol<CR>
 

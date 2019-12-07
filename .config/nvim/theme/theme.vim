@@ -41,6 +41,7 @@ let s:focus = { "bg": s:gray } " Focused background: popup, search
 let s:cursor = { "bg": s:lightBlack, "fg": "NONE" } " Cursor line
 let s:searchCurrent = { "bg": s:lightGray } " Current searched item
 let s:selection = { "bg": s:darkBlue } " Visual selection
+let s:tailingWhitespace = { "bg": s:lightBlack } " Color tailing white space on lines with content
 
 let s:danger = { "fg": s:red, "bg": "NONE" } " Error
 let s:warning = { "fg": s:yellow, "bg": "NONE" } " Warning
@@ -54,7 +55,7 @@ let s:statuslineReplace = { "bg": s:red, "fg": s:white }
 let s:statuslineError = { "bg": s:red, "fg": s:white }
 let s:statuslineWarning = { "bg": s:orange, "fg": s:white }
 
-let s:debugger = { "bg": s:blue, "fg": s:white } " Debugger
+let s:debugger = { "bg": s:orange, "fg": s:black } " Debugger
 let s:tag = { "fg": s:lightGray } " XML/HTML tags
 let s:statement = { "fg": s:purple } " An unknown statement
 let s:comment = { "fg": s:green } " Text comment
@@ -205,6 +206,7 @@ let s:class = { "fg": s:teal } " Classes
     call Highlight("typescriptExceptions", s:type)
     call Highlight("typescriptMethodAccessor", s:type)
     call Highlight("typescriptEnumKeyword", s:type)
+    call Highlight("typescriptAbstract", s:type)
 
     " Identifiers
     call Highlight("typescriptObjectLabel", s:identifier)
@@ -291,6 +293,7 @@ let s:class = { "fg": s:teal } " Classes
     call Highlight("cssTagName", s:pseudoCass)
     call Highlight("cssClassName", s:pseudoCass)
     call Highlight("cssIdentifier", s:pseudoCass)
+    call Highlight("scssSelectorName", s:pseudoCass)
 
     " Interfaces
     call Highlight("cssValueLength", s:interface)
@@ -332,6 +335,7 @@ let s:class = { "fg": s:teal } " Classes
     call Highlight("aspMultilineComment", s:comment)
 
     call Highlight("aspVariableDef", s:identifier)
+    call Highlight("aspObjectProp", s:identifier)
 
     call Highlight("aspFuncCall", s:function)
 
@@ -343,6 +347,8 @@ let s:class = { "fg": s:teal } " Classes
     call Highlight("aspConditional", s:statement)
 
     call Highlight("aspNumber", s:interface)
+
+    call Highlight("aspTailingWhitespace", s:tailingWhitespace)
 
 " === Json ===
     " Interface

@@ -11,6 +11,8 @@ function! GetCurrentMode()
         return 'COMMAND'
     elseif mode == 'r'
         return 'REPLACE'
+    elseif mode == 's'
+        return 'SELECT'
     endif
 
     return mode
@@ -27,6 +29,8 @@ function! GetCurrentModeHighlight()
         return '%#StatusModeCommandColor#'
     elseif mode == 'r'
         return '%#StatusModeReplaceColor#'
+    elseif mode == 's'
+        return '%#StatusModeVisualColor#'
     endif
 
     return '%#StatusModeNormalColor#'

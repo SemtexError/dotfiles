@@ -1,7 +1,8 @@
 " Default options
 set encoding=UTF-8 " Default file encoding
 set undofile " Enable undo persistence across sessions
-set spell " Set spell check (English only)
+set spell " Enable spell checking
+set spelllang=en,nl " Set language to English and Dutch
 set history=10000 " The lines of history to remember
 set autoread " Automatically read the file when it's changed outside VIM
 set number relativenumber " Relative line numbering
