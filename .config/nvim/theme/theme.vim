@@ -274,6 +274,9 @@ let s:class = { "fg": s:teal } " Classes
     call Highlight("htmlArg", s:identifier)
     call Highlight("xmlAttrib", s:identifier)
 
+    " Comment
+    call Highlight("htmlComment", s:comment)
+
 " === CSS/SCSS/SASS/LESS ===
     call Highlight("scssAttribute", s:transparant)
 

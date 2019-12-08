@@ -266,7 +266,8 @@
 		"yaml",
 		"yml"
 	],
-	"vscode-neovim.neovimPath": "/usr/bin/nvim"
+	"vscode-neovim.neovimPath": "/usr/bin/nvim",
+	"editor.scrollBeyondLastLine": false
 	
 }
   
