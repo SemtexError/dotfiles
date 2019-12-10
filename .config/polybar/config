@@ -14,7 +14,7 @@
 [bar/main]
     modules-right = screen battery volume powermenu wireless-network wired-network date time 
     modules-center = vpn
-    modules-left = i3
+    modules-left = i3 bspwm
 
 ; Monitor
     monitor=${env:MONITOR:}
