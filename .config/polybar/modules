@@ -12,10 +12,11 @@
 ; Only on desktop
 [module/wired-network]
     type = internal/network
-    interface = enp3s0
-	double-click-left = nm-connection-editor
+    interface = eno1
+	double-click-left = nm-connection-editor &
 	format-connected = 
 	format-disconnected =  
+    label-connected = 
 
 ; Only on laptop
 [module/wireless-network]
@@ -153,17 +154,17 @@
 ; ====================== Center
 [module/vpn]
     type = custom/script
-    exec = ~/.config/scripts/vpn/vpn-status
     interval = 5
+    exec = ~/.config/scripts/vpn/vpn-status
+	click-left = ~/.config/scripts/vpn/switch.sh
     format-background = ${colors.highlight-background}
-    format-margin = 3
 
 ; ====================== Left
 [module/bspwm]
     type = internal/bspwm
 
 ; Only show workspaces defined on the same output as the bar
-    pin-workspaces = true
+    pin-workspaces = false
 
 ; Wrap around when reaching the first/last workspace
     wrapping-scroll = false
@@ -171,22 +172,29 @@
 ; Move it in the corner
     format-padding = 0
 
+; Out of focus desktop
+    label-dimmed-foreground = ${colors.disabled-color}
+
+; Workspace with items
+    label-occupied = %name%
+    label-occupied-padding = ${settings.padding}
+
+; Workspace without any items
+    label-empty = 
+    label-empty-padding = ${settings.padding}
+
+; Workspace that is active/focused
     label-focused = %name%
     label-focused-background = ${colors.highlight-background}
     label-focused-padding = ${settings.padding}
      
-    label-unfocused = %name%
-    label-unfocused-padding = ${settings.padding}
-     
-    label-visible = %name%
-    label-visible-underline = ${colors.visible-color}
-    label-visible-padding = ${settings.padding}
-
+; Workspace that is seeking attention
     label-urgent = %name%!
     label-urgent-foreground = ${colors.alert-color}
     label-urgent-background = ${colors.alert-background}
     label-urgent-padding = ${settings.padding}
 
+; Seperator in between workspaces
     label-separator-foreground = ${colors.seperator-color}
     label-separator-padding = ${settings.padding}
 

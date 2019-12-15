@@ -27,6 +27,8 @@ call plug#begin('~/.config/nvim/extensions')
     " https://github.com/andymass/vim-matchup
     Plug 'andymass/vim-matchup'
 
+    Plug 'liuchengxu/vim-clap'
+
     " Fussy file searcher
     " https://github.com/junegunn/fzf.vim
 	Plug 'junegunn/fzf'

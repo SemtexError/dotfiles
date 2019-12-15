@@ -22,22 +22,22 @@ set $ws10 "10"
 
 set $mon1 "DP-2.8"
 set $mon2 "DP-0"
-set $mon3 "DP-4.8"
+set $mon3 "DP-4"
 
 # Set the workspace order on startup
-workspace $ws1 output $mon1
-workspace $ws2 output $mon2
-workspace $ws3 output $mon3
+workspace $ws1   output $mon1
+workspace $ws2   output $mon1
+workspace $ws3   output $mon1
 
- workspace $ws4 output $mon1
- workspace $ws5 output $mon2
- workspace $ws6 output $mon3
+ workspace $ws4  output $mon2
+ workspace $ws5  output $mon2
+ workspace $ws6  output $mon2
+ workspace $ws7  output $mon2
 
- workspace $ws7 output $mon1
- workspace $ws8 output $mon2
- workspace $ws9 output $mon3
+ workspace $ws8  output $mon3
+ workspace $ws9  output $mon3
+ workspace $ws10 output $mon3
 
- workspace $ws10 output $mon1
 
 smart_gaps on
 gaps inner $gap

@@ -44,6 +44,8 @@ if [ -f "$HOME/.config/zsh/antigen.zsh" ]; then
 
     # Highlight zsh commands
     antigen bundle zsh-users/zsh-syntax-highlighting
+    antigen bundle zsh-users/zsh-completions
+    antigen bundle zsh-users/zsh-autosuggestions
 
     # Load plugins
     antigen apply

@@ -1,5 +1,6 @@
 " Disable mapping
 let g:EasyMotion_do_mapping = 0
+let g:EasyMotion_smartcase = 1
 
 " Set leader
 " map <Leader> <Plug>(easymotion-prefix)
