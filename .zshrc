@@ -1,3 +1,6 @@
+# Hide % symbol randomly showing up?
+unsetopt PROMPT_SP
+
 # Enable colors
 autoload -U colors && colors
 
