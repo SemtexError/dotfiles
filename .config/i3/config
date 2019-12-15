@@ -49,7 +49,7 @@ for_window [class="^.*"] border pixel 0
 floating_modifier $mod 
 
 # PrintScreen
-bindsym --release Print				exec $nsi spectacle
+bindsym --release Print				exec $nsi flameshot screen -c
 # bindsym $mod+Print 					exec 
 # bindsym $mod+Shift+Print 			exec 
 # bindsym $mod+Ctrl+Print 			exec 
@@ -62,7 +62,7 @@ bindsym $mod+Shift+BackSpace 		gaps outer current set 0
 # bindsym $mod+Ctrl+Shift+BackSpace	exec 
 
 # Enter
-bindsym $mod+Return 				exec i3-sensible-terminal
+bindsym $mod+Return 				exec termite
 # bindsym $mod+Shift+Return 			exec 
 # bindsym $mod+Ctrl+Return 			exec 
 # bindsym $mod+Ctrl+Shift+Return		exec 
@@ -339,9 +339,9 @@ bindsym $mod+Ctrl+Shift+0			move workspace to workspace $ws10
 bindsym XF86MonBrightnessUp 		exec light -A 1
 bindsym XF86MonBrightnessDown 		exec light -U 1
 
-bindsym XF86AudioRaiseVolume 		exec $nsi ~/.scripts/audio --increase
-bindsym XF86AudioLowerVolume 		exec $nsi ~/.scripts/audio --decrease
-bindsym XF86AudioMute 				exec $nsi ~/.scripts/audio --toggle
+bindsym XF86AudioRaiseVolume 		exec $nsi ~/.config/scripts/audio/audio --increase
+bindsym XF86AudioLowerVolume 		exec $nsi ~/.config/scripts/audio/audio --decrease
+bindsym XF86AudioMute 				exec $nsi ~/.config/scripts/audio/audio --toggle
 bindsym XF86AudioPause 				exec $nsi playerctl play-pause 
 bindsym XF86AudioNext 				exec $nsi playerctl next
 bindsym XF86AudioPrev 				exec $nsi playerctl previous
@@ -354,4 +354,4 @@ exec_always $nsi ~/.config/redshift/launch.sh
 exec_always $nsi ~/.config/feh/launch.sh
 exec_always $nsi ~/.config/i3/screens.sh
 exec_always $nsi ~/.config/nvidia-led/launch.sh
-exec_always $nsi ~/.config/scripts/custom
+exec_always $nsi nm-applet

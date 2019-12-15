@@ -12,9 +12,9 @@
     format-prefix-foreground = ${colors.format-color}
 
 [bar/main]
-    modules-right = screen battery volume powermenu wireless-network wired-network date time 
+    modules-right = powermenu wireless-network wired-network brightness battery volume date time 
     modules-center = vpn
-    modules-left = i3 bspwm
+    modules-left = i3
 
 ; Monitor
     monitor=${env:MONITOR:}

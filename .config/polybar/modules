@@ -22,9 +22,12 @@
     type = internal/network
     interface = wlp2s0
 	double-click-left = nm-connection-editor
+	label-connected = 
 	format-connected = 
 	format-disconnected =  
-
+    label-connected = 
+	label-disconnected =  
+    
 [module/powermenu]
     type = custom/menu
 
@@ -67,6 +70,15 @@
     label = %date%
 
     format-prefix = " "
+
+; Only on laptop
+[module/volume2]
+    type = custom/script
+    exec = ~/.config/scripts/audio/get
+
+    scroll-down = ~/.config/scripts/audio/audio --increase
+    scroll-up = ~/.config/scripts/audio/audio --decrease
+    interval = 1
 
 [module/volume]
     type = internal/pulseaudio
@@ -128,26 +140,15 @@
     animation-charging-framerate = 750
 
 ; Only on laptop
-[module/screen]
+[module/brightness]
     type = custom/script
     exec = echo "$(light | cut -d. -f1)%"
     exec-if = ${env:SHOWSCREEN:true}
 
-    scroll-up = light -A 5
-    scroll-down = light -U 5
+    scroll-up = light -A 1
+    scroll-down = light -U 1
     interval = 1
     format-prefix = " "   
-
-; Only on laptop
-[module/backlight]
-    type = internal/backlight
-
-    card = intel_backlight
-    enable-scroll = true
-
-    format = <label>
-    format-prefix = " "   
-    label = %percentage%%
 
 
 ; ====================== Center
