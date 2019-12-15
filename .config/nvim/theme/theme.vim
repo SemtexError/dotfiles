@@ -48,7 +48,7 @@ let s:warning = { "fg": s:yellow, "bg": "NONE" } " Warning
 let s:lineNumber = { "fg": s:gray } " line numbers
 let s:lineNumberFocus = { "fg": s:silver } " Current line number
 
-let s:statuslineNormal = { "bg": s:darkGray, "fg": s:white } 
+let s:statuslineNormal = { "bg": s:lightBlack, "fg": s:white } 
 let s:statuslineInsert = { "bg": s:lightGray, "fg": s:white }
 let s:statuslineVisual = { "bg": s:darkBlue, "fg": s:white }
 let s:statuslineReplace = { "bg": s:red, "fg": s:white }
@@ -83,6 +83,7 @@ let s:class = { "fg": s:teal } " Classes
 
 " === Vim cursor ===
     call Highlight("ColorColumn", s:cursor)
+    call Highlight("Folded", s:cursor)
     call Highlight("CursorLine", s:cursor)
     call Highlight("CursorColumn", s:cursor)
     call Highlight("LineNr", s:lineNumber)
@@ -146,6 +147,9 @@ let s:class = { "fg": s:teal } " Classes
 
     " fucntions
     call Highlight("csCodeAction", s:function)
+
+    " String
+    call Highlight("csCharacter", s:string)
 
 " == Javascript ==
 
@@ -236,9 +240,9 @@ let s:class = { "fg": s:teal } " Classes
     call Highlight("typescriptConsoleMethod", s:function)
 
     " Interfaces
-    call Highlight("typescriptDecorator", s:interface)
     call Highlight("typescriptBOMNavigatorProp", s:interface)
     call Highlight("typescriptNumber", s:interface)
+    call Highlight("typescriptDecorator", s:interface)
 
     " Statements
     call Highlight("typescriptRepeat", s:statement)
@@ -285,6 +289,8 @@ let s:class = { "fg": s:teal } " Classes
     call Highlight("scssProperty", s:identifier)
     call Highlight("cssVendor", s:identifier)
     call Highlight("cssAttributeSelector", s:identifier)
+    call Highlight("cssCustomProp", s:identifier)
+    call Highlight("scssParameterList", s:identifier)
 
     " Strings
     call Highlight("cssAttr", s:string)
@@ -301,6 +307,8 @@ let s:class = { "fg": s:teal } " Classes
     " Interfaces
     call Highlight("cssValueLength", s:interface)
     call Highlight("cssUnitDecorators", s:interface)
+    call Highlight("cssColor", s:interface)
+    call Highlight("cssValueNumber", s:interface)
 
     " Statements
     call Highlight("PreProc", s:statement)
@@ -352,6 +360,12 @@ let s:class = { "fg": s:teal } " Classes
     call Highlight("aspNumber", s:interface)
 
     call Highlight("aspTailingWhitespace", s:tailingWhitespace)
+
+" === Rust ===
+    call Highlight("rustCommentLineDoc", s:comment)
+
+    call Highlight("rustDecNumber", s:interface)
+    call Highlight("rustFloat", s:interface)
 
 " === Json ===
     " Interface

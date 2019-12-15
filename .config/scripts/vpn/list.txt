@@ -1,0 +1,157 @@
+smart Netherlands - The Hague
+inmu1 India - Mumbai - 1
+in India (via UK)
+inch India - Chennai
+nlam2 Netherlands - Amsterdam - 2
+nlth Netherlands - The Hague
+nlam Netherlands - Amsterdam
+nlro Netherlands - Rotterdam
+sgju Singapore - Jurong
+sgcb Singapore - CBD
+sgmb Singapore - Marina Bay
+ukel UK - East London
+ukke UK - Kent
+uklo UK - London
+ukdo UK - Docklands
+ukwe UK - Wembley
+hk2 Hong Kong - 2
+hk3 Hong Kong - 3
+hk4 Hong Kong - 4
+hk1 Hong Kong - 1
+usny USA - New York
+usnj1 USA - New Jersey - 1
+uswd USA - Washington DC
+uswd2 USA - Washington DC - 2
+ussf USA - San Francisco
+usch USA - Chicago
+usda USA - Dallas
+usmi USA - Miami
+usla3 USA - Los Angeles - 3
+usla2 USA - Los Angeles - 2
+usnj3 USA - New Jersey - 3
+usse USA - Seattle
+usmi2 USA - Miami - 2
+usde USA - Denver
+ussl1 USA - Salt Lake City
+uskc USA - Kansas City
+usta1 USA - Tampa - 1
+usla1 USA - Los Angeles - 1
+usny2 USA - New York - 2
+usnj2 USA - New Jersey - 2
+usho USA - Hollywood
+usda2 USA - Dallas - 2
+usla USA - Los Angeles
+ussj USA - San Jose
+usat USA - Atlanta
+usla5 USA - Los Angeles - 5
+usla4 USA - Los Angeles - 4
+ussm USA - Santa Monica
+frpa2 France - Paris - 2
+frpa1 France - Paris - 1
+frst France - Strasbourg
+jpto3 Japan - Tokyo - 3
+jpto2 Japan - Tokyo - 2
+jpto1 Japan - Tokyo - 1
+ch2 Switzerland - 2
+ch Switzerland
+itmi Italy - Milan
+itco Italy - Cosenza
+aume Australia - Melbourne
+ausy3 Australia - Sydney - 3
+ausy Australia - Sydney
+aupe Australia - Perth
+aubr Australia - Brisbane
+ausy2 Australia - Sydney - 2
+se Sweden
+defr3 Germany - Frankfurt - 3
+defr1 Germany - Frankfurt - 1
+denu Germany - Nuremberg
+defr2 Germany - Frankfurt - 2
+kr2 South Korea - 2
+ph Philippines (via Singapore)
+my Malaysia
+lk Sri Lanka
+pk Pakistan
+kz Kazakhstan
+th Thailand
+id Indonesia
+nz New Zealand
+tw3 Taiwan - 3
+vn Vietnam
+mo Macau
+kh Cambodia
+mn Mongolia
+la Laos
+mm Myanmar
+np Nepal
+kg Kyrgyzstan
+uz Uzbekistan
+bd Bangladesh
+bt Bhutan
+bnbr Brunei
+cato Canada - Toronto
+camo2 Canada - Montreal - 2
+cava Canada - Vancouver
+cato2 Canada - Toronto - 2
+camo Canada - Montreal
+mx Mexico
+br2 Brazil - 2
+br Brazil
+pa Panama
+cl Chile
+ar Argentina
+cr Costa Rica
+co Colombia
+ve Venezuela
+ec Ecuador
+gt Guatemala
+pe Peru
+uy Uruguay
+bs Bahamas
+ro Romania
+im Isle of Man
+esma Spain - Madrid
+esba Spain - Barcelona
+tr Turkey
+ie Ireland
+is Iceland
+no Norway
+dk Denmark
+be Belgium
+fi Finland
+gr Greece
+pt Portugal
+at Austria
+am Armenia
+pl Poland
+lt Lithuania
+lv Latvia
+ee Estonia
+cz Czech Republic
+ad Andorra
+me Montenegro
+ba Bosnia and Herzegovina
+lu Luxembourg
+hu Hungary
+bg Bulgaria
+by Belarus
+ua Ukraine
+mt Malta
+li Liechtenstein
+cy Cyprus
+al Albania
+hr Croatia
+si Slovenia
+sk Slovakia
+mc Monaco
+je Jersey
+mk North Macedonia
+md Moldova
+rs Serbia
+ge Georgia
+az Azerbaijan
+za South Africa
+il Israel
+eg Egypt
+ke Kenya
+dz Algeria

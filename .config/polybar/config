@@ -16,6 +16,7 @@
     modules-center = vpn
     modules-left = i3
 
+    wm-restack = bspwm
 ; Monitor
     monitor=${env:MONITOR:}
 

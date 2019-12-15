@@ -48,6 +48,7 @@ set termguicolors
 
 " Explorer
 let g:netrw_banner = 0
+let g:netrw_liststyle = 3
 
 " Plug-in
 source ~/.config/nvim/plugins.vim
