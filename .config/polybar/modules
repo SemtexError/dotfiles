@@ -157,7 +157,7 @@
     type = custom/script
     interval = 5
     exec = ~/.config/scripts/vpn/vpn-status
-	click-left = ~/.config/scripts/vpn/switch.sh
+	click-left = ~/.config/scripts/vpn/switch.sh &
     format-background = ${colors.highlight-background}
 
 ; ====================== Left
