@@ -76,6 +76,12 @@ call plug#begin('~/.config/nvim/extensions')
     " https://github.com/OmniSharp/omnisharp-vim
     Plug 'OmniSharp/omnisharp-vim'
 
+    " Latex live reload
+    " https://github.com/xuhdev/vim-latex-live-preview
+    Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+
+    Plug 'rust-lang/rust.vim'
+
     " Debugging need fix/merge :(, C# debugging in vim
     " https://github.com/puremourning/vimspector
     " Plug 'puremourning/vimspector'

@@ -46,16 +46,14 @@ set tm=500
 syntax on
 set termguicolors
 
-" Explorer
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
+" Should go here, otherwise it won't highlight properly
+let g:OmniSharp_highlight_types = 2
 
 " Plug-in
 source ~/.config/nvim/plugins.vim
 
 " Languages
 source ~/.config/nvim/languages.vim
-source ~/.config/nvim/languages/csharp.vim
 
 " Key bindings
 source ~/.config/nvim/keybindings.vim
@@ -68,4 +66,3 @@ source ~/.config/nvim/debug.vim
 
 " File types
 source ~/.config/nvim/filetype.vim
-

@@ -1,3 +1,6 @@
+autoload -U +X compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
+
 # Hide % symbol randomly showing up?
 unsetopt PROMPT_SP
 
@@ -46,9 +49,9 @@ if [ -f "$HOME/.config/zsh/antigen.zsh" ]; then
     antigen bundle chrissicool/zsh-256color
 
     # Highlight zsh commands
-    antigen bundle zsh-users/zsh-syntax-highlighting
     antigen bundle zsh-users/zsh-completions
     antigen bundle zsh-users/zsh-autosuggestions
+    antigen bundle zsh-users/zsh-syntax-highlighting
 
     # Load plugins
     antigen apply

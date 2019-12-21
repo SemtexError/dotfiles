@@ -282,7 +282,9 @@ let s:class = { "fg": s:teal } " Classes
     call Highlight("htmlComment", s:comment)
 
 " === CSS/SCSS/SASS/LESS ===
-    call Highlight("scssAttribute", s:transparant)
+    call Highlight("scssAttribute", s:type)
+
+    "call Highlight("scssAttribute", s:transparant)
 
     " Identifiers
     call Highlight("cssProp", s:identifier)

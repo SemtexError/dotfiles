@@ -22,5 +22,4 @@ export PATH="$(yarn global bin):$PATH"
 
 export LESSHISTFILE=/dev/null
 
-
 # vim: set filetype=bash

@@ -21,4 +21,6 @@ alias :q=exit
 # Dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME'
 
+alias se='vim $(fzf --height 50% --reverse)'
+
 # vim: set filetype=bash

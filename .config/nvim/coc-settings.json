@@ -1,4 +1,6 @@
 {
+    // Rust
+    "rust-analyzer.enableCargoWatchOnStartup": "enabled",
 
     // Typescript
     "tsserver.npm": "/usr/bin/npm",
