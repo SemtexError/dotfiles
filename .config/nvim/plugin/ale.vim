@@ -16,6 +16,7 @@ let g:ale_linters = {
 \   'typescript': ['tsserver', 'eslint'],
 \   'vue': [ 'stylelint', 'eslint', 'vls'],
 \   'scss': ['stylelint'],
+\   'rs': [ 'cargo', 'clippy', 'rls', 'rustc' ],
 \   'cs': ['OmniSharp']
 \}
 

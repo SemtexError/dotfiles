@@ -11,6 +11,7 @@ elif [[ $STATUS == *"Not connected"* ]]; then
     RESULT="${STATUS}"
 else
     RESULT=$(expressvpn status | head -n 1 | sed -r 's/\[.*?m//g')
+    sed "s/Connected to//g" <<< "$RESULT"
 fi
 
 echo $RESULT

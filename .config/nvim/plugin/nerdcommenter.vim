@@ -14,6 +14,7 @@ function! NERDCommenter_before()
     endif
   endif
 endfunction
+
 function! NERDCommenter_after()
   if g:ft == 'vue'
     setf vue

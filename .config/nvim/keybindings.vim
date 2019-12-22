@@ -50,6 +50,3 @@ onoremap <expr> N 'nN'[v:searchforward]
 " Only insert comments automatically witch enter (bit ugly but it works)
 nnoremap <expr> O getline('.') =~ '^\s*//' ? 'O<esc>S' : getline('.') =~ '^\s*\"' ? 'O<esc>S' : getline('.') =~ '^\s*\#' ? 'O<esc>S' : 'O'
 nnoremap <expr> o getline('.') =~ '^\s*//' ? 'o<esc>S' : getline('.') =~ '^\s*\"' ? 'o<esc>S' : getline('.') =~ '^\s*\#' ? 'o<esc>S' : 'o'
-
-" Open quick fix in new tab
-" autocmd FileType qf nnoremap <buffer> <Enter> <C-W><Enter><C-W>T

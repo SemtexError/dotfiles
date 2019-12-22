@@ -4,7 +4,7 @@ set undofile " Enable undo persistence across sessions
 set spell " Enable spell checking
 set spelllang=en,nl " Set language to English and Dutch
 set history=10000 " The lines of history to remember
-set autoread " Automatically read the file when it's changed outside VIM
+set autoread " Automatically read the file when it's changed
 set number relativenumber " Relative line numbering
 set ruler " Always show current position
 set lazyredraw " Don't redraw while performing a macro
@@ -22,7 +22,6 @@ set splitbelow splitright
 set path+=**
 set wildignore+=**/node_modules/** " NodeJS modules
 set wildignore+=**/.git/**
-set wildignore+=**/bin/** " C# 
 set wildignore+=**/bin/** " C# 
 
 " Searching
@@ -45,24 +44,20 @@ set tm=500
 " Set colors to 265
 syntax on
 set termguicolors
+colorscheme dark-plus
 
-" Should go here, otherwise it won't highlight properly
+" Should go in the cs file type but otherwise it won't highlight properly
 let g:OmniSharp_highlight_types = 2
+
+" File types
+source ~/.config/nvim/filetype.vim
 
 " Plug-in
 source ~/.config/nvim/plugins.vim
 
-" Languages
-source ~/.config/nvim/languages.vim
-
 " Key bindings
 source ~/.config/nvim/keybindings.vim
-
-" Theme
-source ~/.config/nvim/theme/theme.vim
 
 " Debug
 source ~/.config/nvim/debug.vim
 
-" File types
-source ~/.config/nvim/filetype.vim

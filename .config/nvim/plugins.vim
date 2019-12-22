@@ -6,18 +6,18 @@ if ! filereadable(expand('~/.config/nvim/autoload/plug.vim'))
 	autocmd VimEnter * PlugInstall
 endif
 
-call plug#begin('~/.config/nvim/extensions')
-    " ====== Appearance
+call plug#begin('~/.config/nvim/_extensions')
+" ====== Appearance ======
 
     " Syntax: for a lot of different languages
     " https://github.com/sheerun/vim-polyglot
     Plug 'sheerun/vim-polyglot'
 
+" ====== editor ======
+
     " Smooth scrolling
     " https://github.com/psliwka/vim-smoothie
     Plug 'psliwka/vim-smoothie'
-
-    " ====== editor
 
     " Editor config
     " https://github.com/editorconfig/editorconfig-vim
@@ -27,6 +27,8 @@ call plug#begin('~/.config/nvim/extensions')
     " https://github.com/andymass/vim-matchup
     Plug 'andymass/vim-matchup'
 
+    " For file content searching
+    " https://github.com/liuchengxu/vim-clap
     Plug 'liuchengxu/vim-clap'
 
     " Fussy file searcher
@@ -62,7 +64,7 @@ call plug#begin('~/.config/nvim/extensions')
     " https://github.com/tpope/vim-repeat
     Plug 'jiangmiao/auto-pairs'
     
-    " ====== languages
+" ====== languages tools ======
 
     " Lint multiple languages
     " https://github.com/dense-analysis/ale
@@ -72,17 +74,19 @@ call plug#begin('~/.config/nvim/extensions')
     " https://github.com/neoclide/coc.nvim
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" ====== languages ======
+
     " .NET language server
     " https://github.com/OmniSharp/omnisharp-vim
-    Plug 'OmniSharp/omnisharp-vim'
+    Plug 'OmniSharp/omnisharp-vim', { 'for': 'cs' }
 
     " Latex live reload
     " https://github.com/xuhdev/vim-latex-live-preview
     Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
-    Plug 'rust-lang/rust.vim'
-
-    " Debugging need fix/merge :(, C# debugging in vim
-    " https://github.com/puremourning/vimspector
-    " Plug 'puremourning/vimspector'
+    Plug 'rust-lang/rust.vim', { 'for': 'rs' }
 call plug#end()
+
+" Debugging need fix/merge :(, C# debugging in vim
+" https://github.com/puremourning/vimspector
+" Plug 'puremourning/vimspector'

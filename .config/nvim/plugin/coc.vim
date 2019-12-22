@@ -14,6 +14,7 @@ let g:coc_global_extensions= [
     \ 'coc-html',
     \ 'coc-css',
     \ 'coc-tailwindcss',
+    \ 'coc-rls',
     \ 'coc-rust-analyzer',
     \ 'coc-json',
     \ 'coc-webpack',
