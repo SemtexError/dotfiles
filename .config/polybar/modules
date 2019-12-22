@@ -6,7 +6,7 @@
     time = "%H:%M"
     label = %time%
 
-    format-prefix = " "
+    format-prefix = " "
     format-background = ${colors.highlight-background}
 
 ; Only on desktop
@@ -14,37 +14,37 @@
     type = internal/network
     interface = eno1
 	double-click-left = nm-connection-editor &
-	format-connected = 
-	format-disconnected =  
-    label-connected = 
+	format-connected = 
+    label-connected = 
+	format-disconnected =  
 
 ; Only on laptop
 [module/wireless-network]
     type = internal/network
     interface = wlp2s0
 	double-click-left = nm-connection-editor
-	label-connected = 
-	format-connected = 
-	format-disconnected =  
-    label-connected = 
-	label-disconnected =  
-    
+	label-connected = 
+	format-connected = 
+    label-connected = 
+	format-disconnected = 
+	label-disconnected = 
+
 [module/powermenu]
     type = custom/menu
 
-    label-open =   
-    label-close =  cancel
+    label-open = 
+    label-close =  cancel
 
 ; menu 1: select
-    menu-0-0 =  reboot
+    menu-0-0 =  reboot
     menu-0-0-exec = menu-open-1
     menu-0-0-padding = 3
 
-    menu-0-1 =  power off
+    menu-0-1 =  power off
     menu-0-1-exec = menu-open-2
     menu-0-1-padding = 3
 
-    menu-0-2 =  log out
+    menu-0-2 =  log out
     menu-0-2-exec = menu-open-3
     menu-0-2-padding = 3
 
@@ -70,7 +70,7 @@
     date = "%d-%m-%Y"
     label = %date%
 
-    format-prefix = " "
+    format-prefix = "ﷻ "
 
 ; Only on laptop
 [module/volume2]
@@ -87,12 +87,12 @@
 ; Mouse change interval
     interval = 1
 
-    ramp-volume-0 = 
-    ramp-volume-1 = 
-    ramp-volume-2 = 
-    ramp-volume-3 = 
+    ramp-volume-0 = 
+    ramp-volume-1 = 
+    ramp-volume-2 = 
+    ramp-volume-3 = 
 
-    label-muted =  muted
+    label-muted =  muted
     label-muted-foreground = ${colors.disabled-color}
 
     format-volume = <ramp-volume> <label-volume>
