@@ -13,7 +13,6 @@
 [module/wired-network]
     type = internal/network
     interface = eno1
-	double-click-left = nm-connection-editor &
 	format-connected = 
     label-connected = 
 	format-disconnected =  
@@ -22,7 +21,6 @@
 [module/wireless-network]
     type = internal/network
     interface = wlp2s0
-	double-click-left = nm-connection-editor
 	label-connected = 
 	format-connected = 
     label-connected = 
@@ -49,17 +47,17 @@
     menu-0-2-padding = 3
 
 ; Menu 2: reboot
-    menu-1-0 = reboot?  
+    menu-1-0 =  reboot?  
     menu-1-0-exec = reboot
     menu-1-0-padding = 3
 
 ; Menu 3: power off
-    menu-2-0 = power off?  
+    menu-2-0 =  power off?  
     menu-2-0-exec = shutdown now
     menu-2-0-padding = 3
 
 ; Menu 4: log out
-    menu-3-0 = log out?
+    menu-3-0 =  log out?
     menu-3-0-exec = i3-msg exit
     menu-3-0-padding = 3
 
@@ -155,9 +153,10 @@
 ; ====================== Center
 [module/vpn]
     type = custom/script
+    label = %output%
     interval = 5
     exec = ~/.config/scripts/vpn/vpn-status
-	click-left = ~/.config/scripts/vpn/switch.sh &
+    click-left = "~/.config/scripts/vpn/switch.sh >/dev/null 2>&1 &"
     format-background = ${colors.highlight-background}
 
 ; ====================== Left

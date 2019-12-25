@@ -355,3 +355,4 @@ exec_always $nsi ~/.config/feh/launch.sh
 exec_always $nsi ~/.config/i3/screens.sh
 exec_always $nsi ~/.config/nvidia-led/launch.sh
 exec_always $nsi nm-applet
+exec $nsi xss-lock -- i3lock -k -c 000000 --timecolor ffffffff --datecolor ffffffff

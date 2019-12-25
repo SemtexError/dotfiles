@@ -12,7 +12,7 @@
 
 [bar/main]
     modules-right = powermenu wireless-network wired-network brightness battery volume date time 
-    modules-center = vpn
+    modules-center = vpn vpn2
     modules-left = i3
 
     wm-restack = bspwm
