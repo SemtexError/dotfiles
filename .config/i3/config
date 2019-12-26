@@ -192,7 +192,7 @@ bindsym $mod+Ctrl+k 				resize shrink height 10 px or 10 ppt
 bindsym $mod+l 						focus right 
 bindsym $mod+Shift+l 				move right
 bindsym $mod+Ctrl+l 				resize grow width 10 px or 10 ppt
-bindsym $mod+Ctrl+Shift+l 			exec i3lock -k -c 000000 --timecolor ffffffff --datecolor ffffffff
+bindsym $mod+Ctrl+Shift+l 			exec ~/.config/i3lock/launch.sh
 
 # M
 # bindsym $mod+m 						exec 
@@ -355,4 +355,4 @@ exec_always $nsi ~/.config/feh/launch.sh
 exec_always $nsi ~/.config/i3/screens.sh
 exec_always $nsi ~/.config/nvidia-led/launch.sh
 exec_always $nsi nm-applet
-exec $nsi xss-lock -- i3lock -k -c 000000 --timecolor ffffffff --datecolor ffffffff
+exec $nsi xss-lock -- ~/.config/i3lock/launch.sh
