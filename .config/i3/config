@@ -355,3 +355,4 @@ exec_always $nsi ~/.config/feh/launch.sh
 exec_always $nsi ~/.config/i3/screens.sh
 exec_always $nsi ~/.config/nvidia-led/launch.sh
 exec_always $nsi nm-applet
+exec_always $nsi libinput-gestures-setup start
