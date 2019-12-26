@@ -43,7 +43,7 @@ function! GetStatusLine()
     if errorCount > 0
         let content .= '%#StatusErrorColor#'
         let content .= ' '
-        let content .= printf(' %d', errorCount) 
+        let content .= printf('x %d', errorCount) 
         let content .= ' '
     endif
 
@@ -51,7 +51,7 @@ function! GetStatusLine()
     if warningCount > 0
         let content .= '%#StatusWarningColor#'
         let content .= ' '
-        let content .= printf(' %d', warningCount)
+        let content .= printf('! %d', warningCount)
         let content .= ' '
     endif
 
