@@ -24,6 +24,7 @@
     height = 35
     offset-x = 0%
     offset-y = 0%
+    bottom = false
     fixed-center = true
 
 ; Color
