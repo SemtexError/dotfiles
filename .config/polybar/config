@@ -11,7 +11,7 @@
     format-prefix-foreground = ${colors.format-color}
 
 [bar/main]
-    modules-right = powermenu wireless-network wired-network brightness battery volume date time 
+    modules-right = powermenu wireless-network wired-network battery brightness volume date time 
     modules-center = vpn vpn2
     modules-left = i3
 
