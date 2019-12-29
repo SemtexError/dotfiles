@@ -1,0 +1,68 @@
+:root {
+    --background: #151515;
+    --border: #413f3f;
+    --text: #FFF;
+    --highlight: #3498db;
+    --code: #222222;
+}
+
+body {
+    background-color: var(--background);
+}
+
+#page-header {
+    background-color: var(--background);
+    border-color: var(--border);
+}
+
+#page-ctn {
+    color: var(--text);
+}
+
+.markdown-body {
+    background-color: var(--background);
+    border-color: var(--border);
+    color: var(--text);
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+    border-color: var(--border);
+}
+
+.markdown-body h6 {
+    font-size: .8rem;
+    color: var(--color);
+}
+
+.markdown-body blockquote {
+    color: var(--color);
+    border-color: var(--highlight);
+}
+
+.markdown-body a {
+    color: var(--highlight);
+}
+
+.markdown-body code,
+.markdown-body kbd {
+    background-color: var(--code);
+}
+
+.markdown-body hr {
+    border-color: var(--border);
+}
+
+.markdown-body table thead {
+    border-bottom: 2px solid var(--border);
+}
+
+.markdown-body table th,
+.markdown-body table td {
+    border-color: var(--border);
+}
+
+.markdown-body table tr,
+.markdown-body table tr:nth-child(2n) {
+    background: unset;
+}

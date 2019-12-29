@@ -98,12 +98,13 @@
 [module/spotify]
     type = custom/script
 
-    ; Seconds between update
-    interval = 10
+; Seconds between update
+    interval = 5
 
     exec = ~/.config/scripts/spotify/spotify-artist
+    click-left = playerctl play-pause &
 
-    format-prefix = " "
+    format-prefix = " "
 
 ; Only on laptop
 [module/battery]
