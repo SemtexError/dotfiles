@@ -1,4 +1,9 @@
-# SemtexError: I3WM config
+#  ___ _______        ____  __ 
+# |_ _|___ /\ \      / /  \/  |
+#  | |  |_ \ \ \ /\ / /| |\/| |
+#  | | ___) | \ V  V / | |  | |
+# |___|____/   \_/\_/  |_|  |_|
+# 
 
 # https://github.com/i3/i3/issues/3518
 focus_follows_mouse no

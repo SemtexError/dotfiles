@@ -1,2 +1,2 @@
-rofi.theme: ~/.config/rofi/custom.rasi
+rofi.theme: ~/.config/rofi/simple.rasi
 rofi.modi: window,run,ssh,calc

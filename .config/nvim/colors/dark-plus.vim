@@ -311,18 +311,20 @@ let s:class = { "fg": s:teal } " Classes
     call Highlight("htmlTagName", s:type)
     call Highlight("htmlTagN", s:type)
     call Highlight("xmlTagName", s:type)
+    call Highlight("xmlDecl", s:type)
+    call Highlight("svgElement", s:type)
 
     " Identifiers
     call Highlight("htmlArg", s:identifier)
     call Highlight("xmlAttrib", s:identifier)
+    call Highlight("svgAttr", s:identifier)
+    call Highlight("xmlDeclAttr", s:identifier)
 
     " Comment
     call Highlight("htmlComment", s:comment)
 
 " === CSS/SCSS/SASS/LESS ===
     call Highlight("scssAttribute", s:type)
-
-    "call Highlight("scssAttribute", s:transparant)
 
     " Identifiers
     call Highlight("cssProp", s:identifier)

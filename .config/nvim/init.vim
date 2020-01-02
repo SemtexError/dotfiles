@@ -60,3 +60,4 @@ source ~/.config/nvim/keybindings.vim
 
 " Debug
 source ~/.config/nvim/debug.vim
+
