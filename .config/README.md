@@ -59,7 +59,7 @@ The primary distro is Arch Linux but they will work on other distros also. By us
 }
 </style>
 
-<h4 class="header">Base</h4>
+<h4 style="text-align: center">Base</h4>
 <div class="wrapper">
 
   <div class="item">
