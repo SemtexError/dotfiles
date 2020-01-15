@@ -4,7 +4,8 @@
 [colors]
     background = #151515
     foreground = #D4D4D4
-    cursor     = #D4D4D4
+    cursor     = #808080
+    highlight  = #222222
 
 # 16 color space
 
@@ -38,4 +39,4 @@
     color6  = #4EC9B0
     color14 = #4EC9B0
 
-# vim:ft=dosini
+# vim: ft=dosini cms=#%s

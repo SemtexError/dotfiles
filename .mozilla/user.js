@@ -1856,7 +1856,7 @@ user_pref("devtools.chrome.enabled", true);
 
 // Enable hardware acceleration
 user_pref("gfx.direct2d.disabled", true); // [WINDOWS]
-user_pref("layers.acceleration.disabled", true); 
+user_pref("layers.acceleration.disabled", false); 
 user_pref("layers.accelerate-all", true);
 
 // user_pref("dom.event.clipboardevents.enabled", false)

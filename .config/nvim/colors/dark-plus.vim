@@ -430,3 +430,9 @@ let s:class = { "fg": s:teal } " Classes
 " == MatchUp ==
     call Highlight("MatchParen", s:focus)
 
+" == Razor ==
+    call Highlight("rUsing", s:type)
+    call Highlight("rModel", s:statement)
+    call Highlight("razorStart", s:type)
+    call Highlight("rNamespace", s:class)
+

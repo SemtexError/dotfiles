@@ -8,6 +8,16 @@
 # https://github.com/i3/i3/issues/3518
 focus_follows_mouse no
 
+for_window [class="Tor Browser"] floating enable move position center resize set 1100 1000
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="bubble"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [window_role="Preferences"] floating enable
+
+for_window [window_type="dialog"] floating enable
+for_window [window_type="menu"] floating enable
+
+
 font monaco:monospace 16
 
 set $mod Mod4

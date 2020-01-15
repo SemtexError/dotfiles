@@ -85,7 +85,7 @@ call plug#begin('~/.config/nvim/_extensions')
     Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
     Plug 'rust-lang/rust.vim', { 'for': 'rs' }
-    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
+    Plug 'iamcco/markdown-preview.nvim', { 'for': 'markdown','do': 'cd app & yarn install' }
 call plug#end()
 
 " Debugging need fix/merge :(, C# debugging in vim

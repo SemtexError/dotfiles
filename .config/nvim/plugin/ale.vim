@@ -17,7 +17,8 @@ let g:ale_linters = {
 \   'vue': [ 'stylelint', 'eslint', 'vls'],
 \   'scss': ['stylelint'],
 \   'rs': [ 'cargo', 'clippy', 'rls', 'rustc' ],
-\   'cs': ['OmniSharp']
+\   'cs': ['OmniSharp'],
+\   'tex': ['alex', 'chktex', 'lacheck', 'proselint', 'redpen', 'texlab', 'textlint', 'vale', 'writegood', 'languagetool']
 \}
 
 " Fixing those errors
@@ -26,7 +27,8 @@ let g:ale_fixers = {
 \    'typescript': ['prettier'],
 \    'vue': ['eslint', 'trim_whitespace', 'remove_trailing_lines'],
 \    'scss': ['prettier'],
-\    'html': ['prettier']
+\    'html': ['prettier'],
+\    'markdown': ['textlint']
 \}
 
 " Step through errors
