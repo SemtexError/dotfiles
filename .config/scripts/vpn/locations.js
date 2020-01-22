@@ -410,7 +410,11 @@ const getResult = async () =>
     const locationRows = allLocations.split('\n');
 
     // Get the section with in characters
+<<<<<<< HEAD
     const sectionHeaderLine = locationRows[headerRowCount -1];
+=======
+    const sectionHeaderLine = locationRows[headerRowCount - 1];
+>>>>>>> 17883089da313543b3d0010f58b794b886dde1ef
     const sectionLengths = getSectionLengths(sectionHeaderLine);
 
     // Remove headers

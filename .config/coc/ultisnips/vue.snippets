@@ -25,3 +25,26 @@
 # Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
 
 
+
+snippet vue.typescript "Typescript template" b
+<template>
+	<div>
+		${0}
+	</div>
+</template>
+
+<script lang="ts">
+// Vue
+import { Component, Vue } from 'vue-property-decorator';
+
+@Component({
+	components: {
+
+	}
+})
+export default class Comp extends Vue
+{
+	${1}
+}
+</script>
+endsnippet
