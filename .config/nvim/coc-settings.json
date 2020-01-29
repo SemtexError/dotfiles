@@ -1,4 +1,10 @@
 {
+    // Yank
+    "yank.enableCompletion": false,
+
+    // Latex
+    "latex.build.executable": "xelatex",
+
     // Rust
     "rust-analyzer.enableCargoWatchOnStartup": "enabled",
 

@@ -1,3 +1,5 @@
+" TODO: vimgrep in replacement for vim-clap.
+
 " Default options
 set encoding=UTF-8 " Default file encoding
 set undofile " Enable undo persistence across sessions
@@ -23,6 +25,7 @@ set path+=**
 set wildignore+=**/node_modules/** " NodeJS modules
 set wildignore+=**/.git/**
 set wildignore+=**/bin/** " C# 
+set wildignore+=**/_extensions/**  
 
 " Searching
 set ignorecase
@@ -47,14 +50,13 @@ set termguicolors
 colorscheme dark-plus
 
 " Should go in tex file but otherwise it won't work
-let g:livepreview_previewer = 'zathura'
-"let g:livepreview_engine = 'xelatex'
 let g:livepreview_cursorhold_recompile = 0
+let g:livepreview_previewer = 'zathura'
 
 " Should go in the cs file type but otherwise it won't highlight properly
+let g:OmniSharp_autoselect_existing_sln = 1
 let g:OmniSharp_highlight_types = 2
 let g:OmniSharp_server_stdio = 1
-let g:OmniSharp_autoselect_existing_sln=1
 
 " File types
 source ~/.config/nvim/filetype.vim
@@ -67,4 +69,3 @@ source ~/.config/nvim/keybindings.vim
 
 " Debug
 source ~/.config/nvim/debug.vim
-

@@ -15,6 +15,8 @@ alias egrep='egrep --color=auto'
 alias ls='ls -hN --color=auto --group-directories-first -I jagexcache -I random.dat -I jagex_cl_oldschool_LIVE.dat'
 alias la='ls -la'
 
+alias tm='tmux a || tmux'
+
 # Quit the vim way
 alias :q=exit
 

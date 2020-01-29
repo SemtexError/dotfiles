@@ -45,7 +45,7 @@
 	"debug.showInStatusBar": "never",
 
 	// Window
-	"window.zoomLevel": 1,
+	"window.zoomLevel": 2,
 	"window.titleBarStyle": "custom",
 	"window.newWindowDimensions": "inherit",
 
@@ -269,7 +269,18 @@
 		"yml"
 	],
 	"vscode-neovim.neovimPath": "/usr/bin/nvim",
-	"editor.scrollBeyondLastLine": false
+	"editor.scrollBeyondLastLine": false,
+	"cSpell.userWords": [
+		"fontawesome",
+		"fortawesome",
+		"prepend",
+		"readonly",
+		"rgba"
+	],
+	"scss.lint.validProperties": [
+		"composes"
+	],
+	"scss.lint.unknownAtRules": "ignore"
 	
 }
   

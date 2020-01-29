@@ -47,6 +47,13 @@ nnoremap <expr> N 'nN'[v:searchforward]
 xnoremap <expr> N 'nN'[v:searchforward]
 onoremap <expr> N 'nN'[v:searchforward]
 
+" Tags
+nnoremap <leader>[ :cprev<CR>
+nnoremap <leader>] :cnext<CR>
+
 " Only insert comments automatically witch enter (bit ugly but it works)
 nnoremap <expr> O getline('.') =~ '^\s*//' ? 'O<esc>S' : getline('.') =~ '^\s*\"' ? 'O<esc>S' : getline('.') =~ '^\s*\#' ? 'O<esc>S' : 'O'
 nnoremap <expr> o getline('.') =~ '^\s*//' ? 'o<esc>S' : getline('.') =~ '^\s*\"' ? 'o<esc>S' : getline('.') =~ '^\s*\#' ? 'o<esc>S' : 'o'
+
+" Correct previous spelling mistake
+inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u

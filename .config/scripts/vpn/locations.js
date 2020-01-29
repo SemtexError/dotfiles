@@ -414,7 +414,7 @@ const getResult = async () =>
     const sectionLengths = getSectionLengths(sectionHeaderLine);
 
     // Remove headers
-    const rowOffsetIndex = headerRowCount + 1;
+    const rowOffsetIndex = headerRowCount;
     const rows = locationRows.splice(rowOffsetIndex);
     const locations = getLocation(rows, sectionLengths);
 

@@ -18,7 +18,7 @@ let g:ale_linters = {
 \   'scss': ['stylelint'],
 \   'rs': [ 'cargo', 'clippy', 'rls', 'rustc' ],
 \   'cs': ['OmniSharp'],
-\   'tex': ['alex', 'chktex', 'lacheck', 'proselint', 'redpen', 'texlab', 'textlint', 'vale', 'writegood', 'languagetool']
+\   'tex': ['languagetool', 'alex', 'chktex', 'lacheck', 'proselint', 'redpen', 'texlab', 'textlint', 'vale', 'writegood']
 \}
 
 " Fixing those errors

@@ -428,7 +428,7 @@ let s:class = { "fg": s:teal } " Classes
     call Highlight("mkdBlockquote", s:identifier)
 
 " == MatchUp ==
-    call Highlight("MatchParen", s:focus)
+    call Highlight("MatchParen", s:tailingWhitespace)
 
 " == Razor ==
     call Highlight("rUsing", s:type)
