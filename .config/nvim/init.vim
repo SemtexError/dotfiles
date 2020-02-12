@@ -1,4 +1,5 @@
 " TODO: vimgrep in replacement for vim-clap.
+let g:python3_host_prog = '/usr/bin/python3.8'
 
 " Default options
 set encoding=UTF-8 " Default file encoding

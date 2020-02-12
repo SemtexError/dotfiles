@@ -9,6 +9,7 @@ endif
 call plug#begin('~/.config/nvim/_extensions')
 " ====== Appearance ======
     Plug 'sheerun/vim-polyglot' " https://github.com/sheerun/vim-polyglot
+    Plug 'junegunn/goyo.vim' " https://github.com/junegunn/goyo.vim
 
 " ====== Files ======
 	Plug 'junegunn/fzf' " https://github.com/junegunn/fzf.vim
