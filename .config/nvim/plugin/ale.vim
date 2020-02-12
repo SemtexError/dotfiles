@@ -32,12 +32,12 @@ let g:ale_fixers = {
 \}
 
 " Step through errors
-nmap <silent> [g :ALEPreviousWrap<CR>
-nmap <silent> ]g :ALENextWrap<CR>
+nnoremap <silent> [g :ALEPreviousWrap<CR>
+nnoremap <silent> ]g :ALENextWrap<CR>
 
-nmap <silent> [e <Plug>(ale_previous_wrap_error)
-nmap <silent> ]e <Plug>(ale_next_wrap_error)
+nnoremap <silent> [e <Plug>(ale_previous_wrap_error)
+nnoremap <silent> ]e <Plug>(ale_next_wrap_error)
 
-nmap <silent> [w <Plug>(ale_previous_wrap_warning)
-nmap <silent> ]w <Plug>(ale_next_wrap_warning)
+nnoremap <silent> [w <Plug>(ale_previous_wrap_warning)
+nnoremap <silent> ]w <Plug>(ale_next_wrap_warning)
 

@@ -52,7 +52,7 @@ nmap <silent> gr <Plug>(coc-references)
 nmap <F2> <Plug>(coc-rename)
 
 " Show a yank history list
-nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
+nnoremap <silent> <leader>y  :<C-u>CocList -A --normal yank<cr>
 
 " leader+enter to show code actions
 nnoremap <m-cr> :CocAction<cr>

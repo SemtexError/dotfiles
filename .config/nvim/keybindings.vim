@@ -15,10 +15,10 @@ nnoremap Q <Nop>
 nnoremap q: :q
 
 " Split
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " Paste on a new line
 nnoremap <C-p> :pu<cr>

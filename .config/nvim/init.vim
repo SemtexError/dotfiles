@@ -1,6 +1,3 @@
-" TODO: vimgrep in replacement for vim-clap.
-let g:python3_host_prog = '/usr/bin/python3.8'
-
 " Default options
 set encoding=UTF-8 " Default file encoding
 set undofile " Enable undo persistence across sessions
@@ -49,15 +46,6 @@ set tm=500
 syntax on
 set termguicolors
 colorscheme dark-plus
-
-" Should go in tex file but otherwise it won't work
-let g:livepreview_cursorhold_recompile = 0
-let g:livepreview_previewer = 'zathura'
-
-" Should go in the cs file type but otherwise it won't highlight properly
-let g:OmniSharp_autoselect_existing_sln = 1
-let g:OmniSharp_highlight_types = 2
-let g:OmniSharp_server_stdio = 1
 
 " File types
 source ~/.config/nvim/filetype.vim

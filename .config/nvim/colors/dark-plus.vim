@@ -404,11 +404,20 @@ let s:class = { "fg": s:teal } " Classes
     call Highlight("aspTailingWhitespace", s:tailingWhitespace)
 
 " === Rust ===
-    call Highlight("rustKeyword", s:type)
     call Highlight("rustSelf", s:statement)
+
+    call Highlight("rustKeyword", s:type)
     call Highlight("rustOperator", s:type)
 
+    call Highlight("rustModPathSep", s:identifier)
+
+    call Highlight("rustAttributeParenthesizedParens", s:type)
+
     call Highlight("rustMacro", s:function)
+
+    call Highlight("rustEnum", s:class)
+    call Highlight("rustEnumVariant", s:class)
+    call Highlight("rustModPath", s:class)
     call Highlight("rustIdentifier", s:class)
     call Highlight("rustDeriveTrait", s:class)
 
