@@ -1,0 +1,97 @@
+# NeoVIM
+
+Visual Studio (Code) dark theme
+![vim1](images/vim1.png)
+![vim2](images/vim2.png)
+
+## Fonts
+* [Fira code](https://github.com/tonsky/FiraCode)
+* [Nerd font](https://github.com/ryanoasis/nerd-fonts)
+
+
+## Key bindings
+
+| Key(s)           | Action                             | Mode  | file type | extension     |
+| ---------------- | ---------------------------------- | ----- | --------- | ------------- |
+| space            | leader                             |       |           |               |
+| jj               | Exit insertion mode!               | i     |           |               |
+| leader+leader    | Save document                      | n     |           |               |
+| CTRL+l           | Correct previous spelling mistake  | i     |           |               |
+| F10              | Show highlight group               | n     |           |               |
+| CTRL+h           | Move pane left                     | n     |           |               |
+| CTRL+l           | Move pane right                    | n     |           |               |
+| CTRL+k           | Move pane down                     | n     |           |               |
+| CTRL+j           | Move pane up                       | n     |           |               |
+| CTRL+p           | Paste on new line down             | n     |           |               |
+| MTRL+p           | Paste on new line up               | n     |           |               |
+| leader+[         | Move to the previous tag           | n     |           |               |
+| leader+]         | Move to the next tag               | n     |           |               |
+| [+g              | Previous error/warning/note        | n     |           |               |
+| ]+g              | Next error/warning/note            | n     |           |               |
+| [+e              | Next error                         | n     |           |               |
+| ]+e              | Previous error                     | n     |           |               |
+| [+w              | Previous warning                   | n     |           |               |
+| ]+w              | Next warning                       | n     |           |               |
+| F3               | Grep popup dialog                  | n     |           |               |
+| F4               | Grep files popup dialog            | n     |           |               |
+| ALT+r            | Restart COC plugin                 | n     | cs        |               |
+| ALT+e            | Global code check                  | n     | cs        |               |
+| leader+d         | Documentation                      | n     | cs        |               |
+| ALT+enter        | Code actions                       | n     | cs        |               |
+| g+D              | Find implementation                | n     | cs        |               |
+| g+d              | Find definition                    | n     | cs        |               |
+| leader+gd        | Find usages                        | n     | cs        |               |
+| g+s              | Find symbols                       | n     | cs        |               |
+| F4               | Compile biber                      | n     | tex       |               |
+| F5               | Compile PFD LaTeX                  | n     | tex       |               |
+| F6               | Compile Xe LaTeX                   | n     | tex       |               |
+| F6               | Compile Xe LaTeX                   | n     | tex       |               |
+| ALT+t            | Open file explorer                 | n     |           | COC           |
+| CTRL+space       | Refresh COC auto complete          | n     |           | COC           |
+| ALT+enter        | Show COC actions                   | n     |           | COC           |
+| leader+=         | Format selection                   | n     |           | COC           |
+| leader+=         | Format selection                   | v     |           | COC           |
+| leader+o         | Show file outline                  | n     |           | COC           |
+| K                | Show documentation                 | n     |           | COC           |
+| g+d              | Go to definition                   | n     |           | COC           |
+| g+D              | Go to implementation               | n     |           | COC           |
+| g+r              | Go to references                   | n     |           | COC           |
+| F2               | Rename symbol                      | n     |           | COC           |
+| leader+y         | Show yank history                  | n     |           | COC           |
+| leader+w         | Easy motion: word                  | n     |           | EasyMotion    |
+| leader+W         | Easy motion: Word                  | n     |           | EasyMotion    |
+| leader+e         | Easy motion: end                   | n     |           | EasyMotion    |
+| leader+E         | Easy motion: End                   | n     |           | EasyMotion    |
+| leader+b         | Easy motion: back                  | n     |           | EasyMotion    |
+| leader+B         | Easy motion: Back                  | n     |           | EasyMotion    |
+| leader+t         | Easy motion: till                  | n     |           | EasyMotion    |
+| leader+T         | Easy motion: Till                  | n     |           | EasyMotion    |
+| leader+f         | Easy motion: find                  | n     |           | EasyMotion    |
+| leader+F         | Easy motion: Find                  | n     |           | EasyMotion    |
+| leader+s         | Easy motion: Search                | n     |           | EasyMotion    |
+| CTRL+t           | Fuzzy find files                   | n     |           | FZF           |
+
+
+## Plugins
+| Plugin                                                                            | Functionality                     |
+| --------------------------------------------------------------------------------- | --------------------------------- |
+| [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot)                   | Syntax for a lot of extensions.   |
+| [junegunn/fzf](https://github.com/junegunn/fzf)                                   | Fuzzy file search.                |
+| [junegunn/fzf.vim](https://github.com/junegunn/fzf.vim)                           | Fuzzy file search.                |
+| [liuchengxu/vim-clap](https://github.com/liuchengxu/vim-clap)                     | Grep and Fuzzy file search        |
+| [psliwka/vim-smoothie](https://github.com/psliwka/vim-smoothie)                   | Smooth scrolling                  |
+| [easymotion/vim-easymotion](https://github.com/easymotion/vim-easymotion)         | Jump to tekst with shortcuts      |
+| [scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter)           | Toggle code comments              |
+| [wellle/targets.vim](https://github.com/wellle/targets.vim)                       | More text objects                 |
+| [tpope/vim-repeat](https://github.com/tpope/vim-repeat)                           | Better command repeat             |
+| [vim-scripts/SearchComplete](https://github.com/vim-scripts/SearchComplete)       | Auto complete search results      |
+| [andymass/vim-matchup](https://github.com/andymass/vim-matchup)                   | Highlight brace matches           |
+| [jiangmiao/auto-pairs](https://github.com/jiangmiao/auto-pairs)                   | Auto insert braces                |
+| [dense-analysis/ale](https://github.com/dense-analysis/ale)                       | Linting engine                    |
+| [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim)                         | Auto completion engine            |
+| [OmniSharp/omnisharp-vim](https://github.com/OmniSharp/omnisharp-vim)             | C# integration                    |
+| [rust-lang/rust.vim](https://github.com/rust-lang/rust.vim)                       | Rust integration                  |
+| [xuhdev/vim-latex-live-preview](https://github.com/xuhdev/vim-latex-live-preview) | Live compile LaTeX files          |
+| [iamcco/markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)   | Live preview Markdown files       |
+| [puremourning/vimspector](https://github.com/puremourning/vimspector)             | Debugging in VIM                  |
+
