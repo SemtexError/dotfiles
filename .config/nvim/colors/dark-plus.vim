@@ -445,3 +445,21 @@ let s:class = { "fg": s:teal } " Classes
     call Highlight("razorStart", s:type)
     call Highlight("rNamespace", s:class)
 
+" == LaTeX ==
+    call Highlight("texStatement", s:type)
+    call Highlight("texSection", s:type)
+    call Highlight("texMathZoneX", s:class)
+    call Highlight("texTypeStyle", s:function)
+    call Highlight("texBeginEndName", s:identifier)
+    call Highlight("texDocTypeArgs", s:identifier)
+    call Highlight("texLength", s:interface)
+
+" == Bib ==
+    call Highlight("bibQuote", s:string)
+    call Highlight("bibType", s:type)
+    call Highlight("bibKey", s:interface)
+    call Highlight("bibBrace", s:identifier)
+    call Highlight("bibEntryKw", s:identifier)
+    call Highlight("texRefZone", s:type)
+    call Highlight("texCite", s:identifier)
+    

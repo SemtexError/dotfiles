@@ -60,11 +60,22 @@
         "log": {
           "code": "",
           "color": "#3498db"
+        },
+        "latex": {
+          "code": "ﭔ",
+          "color": "#3498db"
+        },
+        "bibliography": {
+          "code": "",
+          "color": "#27ae60"
         }
       },
       "extensions": {
         "cs": "csharp",
         "log": "log",
+        "tex": "latex",
+        "bib": "bibliography",
+        "sty": "bibliography",
         "csproj": "vs"
       },
       "filenames": {
