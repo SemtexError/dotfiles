@@ -22,6 +22,9 @@ let g:coc_global_extensions= [
     \ 'coc-lists',
     \ 'coc-explorer',
     \ 'coc-snippets',
+    \ 'coc-texlab',
+    \ 'coc-bibtex',
+    \ 'coc-import-cost',
     \ 'coc-yank'
 \]
 
