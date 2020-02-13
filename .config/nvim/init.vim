@@ -56,6 +56,18 @@ syntax on
 set termguicolors
 colorscheme dark-plus
 
+" Faster searching
+if executable('rg')
+    set grepprg=rg\ --vimgrep
+    set grepformat^=%f:%l:%c:%m
+
+    augroup autoquickfix
+        autocmd!
+        autocmd QuickFixCmdPost [^l]* cwindow
+        autocmd QuickFixCmdPost    l* lwindow
+    augroup END
+endif
+
 " File types
 source ~/.config/nvim/filetype.vim
 
