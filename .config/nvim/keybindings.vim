@@ -57,3 +57,6 @@ nnoremap <expr> o getline('.') =~ '^\s*//' ? 'o<esc>S' : getline('.') =~ '^\s*\"
 
 " Correct previous spelling mistake
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+
+" Remap 0 to the first non blank character
+nnoremap 0 ^

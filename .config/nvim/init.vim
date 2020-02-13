@@ -4,7 +4,6 @@ set undofile " Enable undo persistence across sessions
 set spell " Enable spell checking
 set spelllang=en,nl " Set language to English and Dutch
 set history=10000 " The lines of history to remember
-set autoread " Automatically read the file when it's changed
 set number relativenumber " Relative line numbering
 set ruler " Always show current position
 set lazyredraw " Don't redraw while performing a macro
@@ -17,6 +16,16 @@ set showtabline=1 " Show file tab only when needed
 set cursorline " Enable current line indicator
 set clipboard+=unnamedplus " Set clipboard to + outside Tmux
 set splitbelow splitright
+
+" Automatically read the file when it's changed from the outside
+set autoread 
+autocmd FocusGained,BufEnter * checktime
+
+" Save as SUDO user
+command! WS execute 'w !sudo tee % > /dev/null' <bar> edit!
+
+" Return to the last edit position when returning to a buffer
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " Find
 set path+=**

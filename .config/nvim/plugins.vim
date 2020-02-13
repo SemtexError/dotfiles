@@ -24,6 +24,7 @@ call plug#begin('~/.config/nvim/_extensions')
     Plug 'wellle/targets.vim'
     Plug 'tpope/vim-repeat'
     Plug 'vim-scripts/SearchComplete'
+    Plug 'airblade/vim-gitgutter'
 
 " ====== Helpers ======
     Plug 'andymass/vim-matchup'

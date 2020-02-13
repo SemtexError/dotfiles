@@ -15,6 +15,7 @@ Visual Studio (Code) dark theme
 | ---------------- | ---------------------------------- | ----- | --------- | ------------- |
 | space            | leader                             |       |           |               |
 | jj               | Exit insertion mode!               | i     |           |               |
+| leader+r+        | Reload the VIM rc                  | n     |           |               |
 | leader+leader    | Save document                      | n     |           |               |
 | CTRL+l           | Correct previous spelling mistake  | i     |           |               |
 | F10              | Show highlight group               | n     |           |               |
@@ -70,7 +71,19 @@ Visual Studio (Code) dark theme
 | leader+F         | Easy motion: Find                  | n     |           | EasyMotion    |
 | leader+s         | Easy motion: Search                | n     |           | EasyMotion    |
 | CTRL+t           | Fuzzy find files                   | n     |           | FZF           |
+| leader+g         | Toggle git gutter                  | n     |           | GitGutter     |
 
+## Commands
+| Command       | Action                        | File type |
+| ------------- | ----------------------------- | --------- |
+| WS            | Save buffer as sudo user      |           |
+| W             | Save file                     |           |
+| WQ            | Save file and quit            |           |
+| Wq            | Save file and quit            |           |
+| Q             | Quit                          |           |
+| Reloadrc      | Reload the VIM rc             |           |
+| GenerateTags  | Generate tags                 | aspvbs    |
+| WordCount     | Calculate LaTex word cound    | tex       |
 
 ## Plugins
 | Plugin                                                                            | Functionality                     |
