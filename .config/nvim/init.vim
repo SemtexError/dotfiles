@@ -68,8 +68,6 @@ if executable('rg')
     augroup END
 endif
 
-let g:gitgutter_map_keys = 0
-
 " File types
 source ~/.config/nvim/filetype.vim
 
