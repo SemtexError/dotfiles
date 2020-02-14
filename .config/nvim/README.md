@@ -27,7 +27,7 @@ Visual Studio (Code) dark theme
 | leader+E         | Easy motion: End                   | n     |           | EasyMotion    |
 | leader+f         | Easy motion: find                  | n     |           | EasyMotion    |
 | leader+F         | Easy motion: Find                  | n     |           | EasyMotion    |
-| leader+g         | Toggle git gutter                  | n     |           | GitGutter     |
+| leader+g+g       | Toggle git gutter                  | n     |           | GitGutter     |
 | leader+g+d       | Find usages                        | n     | cs        |               |
 | leader+o         | Show file outline                  | n     |           | COC           |
 | leader+s         | Easy motion: Search                | n     |           | EasyMotion    |

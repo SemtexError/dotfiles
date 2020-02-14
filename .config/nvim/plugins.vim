@@ -24,6 +24,9 @@ call plug#begin('~/.config/nvim/_extensions')
     Plug 'wellle/targets.vim'
     Plug 'tpope/vim-repeat'
     Plug 'vim-scripts/SearchComplete'
+
+" ====== Git ======
+    Plug 'rhysd/git-messenger.vim'
     Plug 'airblade/vim-gitgutter'
 
 " ====== Helpers ======
