@@ -14,7 +14,6 @@ let g:coc_global_extensions= [
     \ 'coc-html',
     \ 'coc-css',
     \ 'coc-tailwindcss',
-    \ 'coc-rls',
     \ 'coc-rust-analyzer',
     \ 'coc-json',
     \ 'coc-webpack',
@@ -25,7 +24,8 @@ let g:coc_global_extensions= [
     \ 'coc-texlab',
     \ 'coc-bibtex',
     \ 'coc-import-cost',
-    \ 'coc-yank'
+    \ 'coc-yank',
+    \ 'coc-marketplace'
 \]
 
 " When creating or moving new file the language server can be a little funky

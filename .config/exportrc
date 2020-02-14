@@ -19,6 +19,7 @@ export PATH="$PATH:$HOME/.dotnet/tools"
 export PATH="$PATH:$HOME/.config/scripts"
 export PATH="$PATH:$HOME/.config/npm/global/bin"
 export PATH="$(yarn global bin):$PATH"
+export PATH="$PATH:$HOME/.cargo/bin"
 
 export LESSHISTFILE=/dev/null
 

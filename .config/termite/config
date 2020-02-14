@@ -1,5 +1,6 @@
 [options]
-    font = Fira code 16
+    font = Material Design Icons 18
+    font = Fira code 14
 
 [colors]
     background = #151515
