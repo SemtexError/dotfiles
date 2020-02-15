@@ -4,7 +4,6 @@ set undofile " Enable undo persistence across sessions
 set spell " Enable spell checking
 set spelllang=en,nl " Set language to English and Dutch
 set history=10000 " The lines of history to remember
-set autoread " Automatically read the file when it's changed
 set number relativenumber " Relative line numbering
 set ruler " Always show current position
 set lazyredraw " Don't redraw while performing a macro
@@ -18,11 +17,22 @@ set cursorline " Enable current line indicator
 set clipboard+=unnamedplus " Set clipboard to + outside Tmux
 set splitbelow splitright
 
+" Automatically read the file when it's changed from the outside
+set autoread 
+autocmd FocusGained,BufEnter * checktime
+
+" Save as SUDO user
+command! WS execute 'w !sudo tee % > /dev/null' <bar> edit!
+
+" Return to the last edit position when returning to a buffer
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
 " Find
 set path+=**
 set wildignore+=**/node_modules/** " NodeJS modules
 set wildignore+=**/.git/**
 set wildignore+=**/bin/** " C# 
+set wildignore+=**/_extensions/**  
 
 " Searching
 set ignorecase
@@ -46,14 +56,22 @@ syntax on
 set termguicolors
 colorscheme dark-plus
 
-" Should go in the cs file type but otherwise it won't highlight properly
-let g:OmniSharp_highlight_types = 2
-let g:OmniSharp_autoselect_existing_sln = 1
-
 if system('$PATH')=~ '/mnt/c/WINDOWS'
     let g:OmniSharp_start_server = 1
     let g:OmniSharp_server_path = '/mnt/c/ProgramData/omnisharp/OmniSharp.exe'
     let g:OmniSharp_translate_cygwin_wsl = 1
+endif
+
+" Faster searching
+if executable('rg')
+    set grepprg=rg\ --vimgrep
+    set grepformat^=%f:%l:%c:%m
+
+    augroup autoquickfix
+        autocmd!
+        autocmd QuickFixCmdPost [^l]* cwindow
+        autocmd QuickFixCmdPost    l* lwindow
+    augroup END
 endif
 
 " File types
@@ -67,4 +85,3 @@ source ~/.config/nvim/keybindings.vim
 
 " Debug
 source ~/.config/nvim/debug.vim
-

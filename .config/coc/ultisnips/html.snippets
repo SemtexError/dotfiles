@@ -24,27 +24,25 @@
 #
 # Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
 
-
-
-snippet vue.typescript "Typescript template" b
-<template>
-	<div>
-		${0}
-	</div>
-</template>
-
-<script lang="ts">
-// Vue
-import { Component, Vue } from 'vue-property-decorator';
-
-@Component({
-	components: {
-
-	}
-})
-export default class Comp extends Vue
-{
-	${1}
-}
-</script>
+snippet doc "default html" b
+<html lang="en">
+<head>
+	<meta charset="utf-8">	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>${1}</title>
+</head>
+<body>
+	${2}
+</body>
+</html>
 endsnippet
+
+snippet script "Create a script tag" b
+<script src="${1}"></script>
+endsnippet
+
+snippet style "Create a style link" b
+<link rel="stylesheet" href="${1}">
+endsnippet
+
+

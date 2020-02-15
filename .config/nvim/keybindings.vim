@@ -15,10 +15,10 @@ nnoremap Q <Nop>
 nnoremap q: :q
 
 " Split
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " Paste on a new line
 nnoremap <C-p> :pu<cr>
@@ -47,6 +47,16 @@ nnoremap <expr> N 'nN'[v:searchforward]
 xnoremap <expr> N 'nN'[v:searchforward]
 onoremap <expr> N 'nN'[v:searchforward]
 
+" Tags
+nnoremap <leader>[ :cprev<CR>
+nnoremap <leader>] :cnext<CR>
+
 " Only insert comments automatically witch enter (bit ugly but it works)
 nnoremap <expr> O getline('.') =~ '^\s*//' ? 'O<esc>S' : getline('.') =~ '^\s*\"' ? 'O<esc>S' : getline('.') =~ '^\s*\#' ? 'O<esc>S' : 'O'
 nnoremap <expr> o getline('.') =~ '^\s*//' ? 'o<esc>S' : getline('.') =~ '^\s*\"' ? 'o<esc>S' : getline('.') =~ '^\s*\#' ? 'o<esc>S' : 'o'
+
+" Correct previous spelling mistake
+inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+
+" Remap 0 to the first non blank character
+nnoremap 0 ^

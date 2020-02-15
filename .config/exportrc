@@ -16,9 +16,10 @@ export npm_config_cache=$HOME/.local/npm
 export NUGET_PACKAGES=$HOME/.local/NuGet/packages
 
 export PATH="$PATH:$HOME/.dotnet/tools"
-export PATH="$PATH:$HOME/.scripts"
+export PATH="$PATH:$HOME/.config/scripts"
 export PATH="$PATH:$HOME/.config/npm/global/bin"
 export PATH="$(yarn global bin):$PATH"
+export PATH="$PATH:$HOME/.cargo/bin"
 
 export LESSHISTFILE=/dev/null
 

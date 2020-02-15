@@ -14,7 +14,6 @@ let g:coc_global_extensions= [
     \ 'coc-html',
     \ 'coc-css',
     \ 'coc-tailwindcss',
-    \ 'coc-rls',
     \ 'coc-rust-analyzer',
     \ 'coc-json',
     \ 'coc-webpack',
@@ -22,7 +21,11 @@ let g:coc_global_extensions= [
     \ 'coc-lists',
     \ 'coc-explorer',
     \ 'coc-snippets',
-    \ 'coc-yank'
+    \ 'coc-texlab',
+    \ 'coc-bibtex',
+    \ 'coc-import-cost',
+    \ 'coc-yank',
+    \ 'coc-marketplace'
 \]
 
 " When creating or moving new file the language server can be a little funky
@@ -49,7 +52,7 @@ nmap <silent> gr <Plug>(coc-references)
 nmap <F2> <Plug>(coc-rename)
 
 " Show a yank history list
-nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
+nnoremap <silent> <leader>y  :<C-u>CocList -A --normal yank<cr>
 
 " leader+enter to show code actions
 nnoremap <m-cr> :CocAction<cr>

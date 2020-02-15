@@ -405,7 +405,25 @@ let s:class = { "fg": s:teal } " Classes
     call Highlight("aspTailingWhitespace", s:tailingWhitespace)
 
 " === Rust ===
+    call Highlight("rustSelf", s:statement)
+
+    call Highlight("rustKeyword", s:type)
+    call Highlight("rustOperator", s:type)
+
+    call Highlight("rustModPathSep", s:identifier)
+
+    call Highlight("rustAttributeParenthesizedParens", s:type)
+
+    call Highlight("rustMacro", s:function)
+
+    call Highlight("rustEnum", s:class)
+    call Highlight("rustEnumVariant", s:class)
+    call Highlight("rustModPath", s:class)
+    call Highlight("rustIdentifier", s:class)
+    call Highlight("rustDeriveTrait", s:class)
+
     call Highlight("rustCommentLineDoc", s:comment)
+    call Highlight("rustCharacter", s:string)
 
     call Highlight("rustDecNumber", s:interface)
     call Highlight("rustFloat", s:interface)
@@ -429,5 +447,29 @@ let s:class = { "fg": s:teal } " Classes
     call Highlight("mkdBlockquote", s:identifier)
 
 " == MatchUp ==
-    call Highlight("MatchParen", s:focus)
+    call Highlight("MatchParen", s:tailingWhitespace)
 
+" == Razor ==
+    call Highlight("rUsing", s:type)
+    call Highlight("rModel", s:statement)
+    call Highlight("razorStart", s:type)
+    call Highlight("rNamespace", s:class)
+
+" == LaTeX ==
+    call Highlight("texStatement", s:type)
+    call Highlight("texSection", s:type)
+    call Highlight("texTypeStyle", s:type)
+    call Highlight("texMathZoneX", s:class)
+    call Highlight("texBeginEndName", s:identifier)
+    call Highlight("texDocTypeArgs", s:identifier)
+    call Highlight("texLength", s:interface)
+
+" == Bib ==
+    call Highlight("bibQuote", s:string)
+    call Highlight("bibType", s:type)
+    call Highlight("bibKey", s:interface)
+    call Highlight("bibBrace", s:identifier)
+    call Highlight("bibEntryKw", s:identifier)
+    call Highlight("texRefZone", s:type)
+    call Highlight("texCite", s:identifier)
+    

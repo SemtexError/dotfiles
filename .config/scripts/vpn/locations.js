@@ -400,16 +400,22 @@ const getCountryFlags = () =>
 
 const getResult = async () =>
 {    
+    let headerRowCount = 2;
     // Get locations from the CLI
     const allLocations = await execute('expressvpn ls all');
+    if (allLocations.indexOf('new version') > -1)
+    {
+        headerRowCount += 1;
+    }
     const locationRows = allLocations.split('\n');
 
     // Get the section with in characters
-    const sectionHeaderLine = locationRows[1];
+    const sectionHeaderLine = locationRows[headerRowCount - 1];
     const sectionLengths = getSectionLengths(sectionHeaderLine);
 
     // Remove headers
-    const rows = locationRows.splice(2);
+    const rowOffsetIndex = headerRowCount;
+    const rows = locationRows.splice(rowOffsetIndex);
     const locations = getLocation(rows, sectionLengths);
 
     // Add country flags
