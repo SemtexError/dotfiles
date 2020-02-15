@@ -248,6 +248,7 @@ let s:class = { "fg": s:teal } " Classes
     call Highlight("typescriptMethodAccessor", s:type)
     call Highlight("typescriptEnumKeyword", s:type)
     call Highlight("typescriptAbstract", s:type)
+    call Highlight("typescriptObjectLiteral", s:type)
 
     " Identifiers
     call Highlight("typescriptObjectLabel", s:identifier)

@@ -4,6 +4,14 @@ let g:OmniSharp_highlight_types = 2
 let g:OmniSharp_highlight_debug = 1
 let g:OmniSharp_selector_ui = 'fzf'
 
+" Use the Windows OmniSharp implementation
+if system('$PATH')=~ '/mnt/c/WINDOWS'
+    let g:OmniSharp_start_server = 1
+    let g:OmniSharp_server_path = '/mnt/c/ProgramData/omnisharp/OmniSharp.exe'
+    let g:OmniSharp_translate_cygwin_wsl = 1
+endif
+
+
 " Code actions
 augroup CsharpActions
     autocmd!

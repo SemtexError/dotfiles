@@ -66,3 +66,8 @@ body {
 .markdown-body table tr:nth-child(2n) {
     background: unset;
 }
+
+.markdown-body pre {
+    background-color: var(--background);
+    border: 1px solid var(--border);
+}
