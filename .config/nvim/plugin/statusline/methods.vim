@@ -38,16 +38,11 @@ endfunction
 
 " Get the file progression in percentage
 function! GetFilePercentage()
-    const byte = line2byte(line('.'))
-    const size = line2byte(line('$'))
+    const byte = line('.')
+    const size = line('$')
     let percentage = (byte * 100) / size
-    if percentage < 10
-        let content = '0'
-        let content .= percentage
-        return content
-    endif
 
-    return percentage
+    return MakeFixed(percentage)
 endfunction
 
 " Check if ale is running and has data
@@ -79,21 +74,21 @@ function! GetAleWarnings()
 endfunction
 
 function! GetCurrentColumn()
-    let content = ''
     let column = virtcol('.')
-    if column < 10
-        let content .= '0'
-    endif
-    let content .= column
-    return content
+    return MakeFixed(column)
 endfunction
 
 function! GetCurrentRow()
-    let content = ''
     let row = line('.')
-    if row < 0
-        let content .= '0';
+    return MakeFixed(row)
+endfunction
+
+" Make number a fixed size so it doesn't jump
+function! MakeFixed(number)
+    let content = ''
+    if a:number < 10
+        let content .= '0'
     endif
-    let content .= row
+    let content .= a:number
     return content
 endfunction

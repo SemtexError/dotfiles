@@ -7,7 +7,7 @@ if ! filereadable(expand('~/.config/nvim/autoload/plug.vim'))
 endif
 
 " View the README for plguin explanations
-call plug#begin('~/.config/nvim/_extensions')
+call plug#begin('~/.config/nvim/.extensions')
 " ====== Appearance ======
     Plug 'sheerun/vim-polyglot'
     Plug 'junegunn/goyo.vim'

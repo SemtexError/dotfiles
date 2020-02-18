@@ -1,5 +1,5 @@
 augroup StatusLine
-  autocmd!
+    autocmd!
 
     " On buffer change
     autocmd VimEnter,WinEnter,BufWinEnter *
@@ -66,7 +66,8 @@ function! GetStatusLine()
     let content .= ' '
 
     " Percentage of cursor in file
-    let content .= "%{GetFilePercentage()}%%"
+    let content .= GetFilePercentage()
+    let content .= "%%"
 
     " Padding right
     let content .= ' '
