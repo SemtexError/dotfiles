@@ -60,3 +60,7 @@ inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 " Remap 0 to the first non blank character
 nnoremap 0 ^
+
+" Move buffers
+nnoremap gb :bprevious<CR>
+nnoremap gn :bnext<CR>

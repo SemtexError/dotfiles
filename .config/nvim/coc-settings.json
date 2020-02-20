@@ -2,12 +2,6 @@
     // Yank
     "yank.enableCompletion": false,
 
-    // Latex
-    "latex.build.executable": "xelatex",
-
-    // Rust
-    "rust-analyzer.enableCargoWatchOnStartup": "enabled",
-
     // Typescript
     "tsserver.npm": "/usr/bin/npm",
 
@@ -44,8 +38,20 @@
             "expand": true
         }
     ],
-    "explorer.keyMappings": {
-        "<cr>": "open"
+    "explorer.file.hiddenRules": {
+        "extensions": [
+
+        ],
+        "filenames": [
+
+        ],
+        "patternMatches": [
+            "^\\.", // Dot files
+            "^bin$", // C#
+            "^obj$", // C#
+            "^dist$", // Javascript
+            "^node_modules$", // NPM
+        ]
     },
     "explorer.icon.customIcons": {
       "icons": {

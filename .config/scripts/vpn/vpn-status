@@ -7,6 +7,7 @@ RED='\033[0;31m'
 if [[ $STATUS == *"A new version"* ]]; then
     # Re get status, otherwise it wont work, idk
     RESULT=$(expressvpn status | tail -n +3 | head -n 1 | sed -r 's/\[.*?m//g')
+    sed "s/Connected to//g" <<< "$RESULT"
 elif [[ $STATUS == *"Unable to connect"* ]]; then
     RESULT="Unable to connect"
 elif [[ $STATUS == *"Not connected"* ]]; then

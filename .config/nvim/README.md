@@ -65,10 +65,12 @@ Visual Studio (Code) dark theme
 | ]+g              | Next error/warning/note            | n     |           |               |
 | [+w              | Previous warning                   | n     |           |               |
 | ]+w              | Next warning                       | n     |           |               |
+| g+b              | Go to previous buffer              | n     |           |               |
 | g+d              | Find definition                    | n     | cs        |               |
 | g+d              | Go to definition                   | n     |           | COC           |
 | g+D              | Find implementation                | n     | cs        |               |
 | g+D              | Go to implementation               | n     |           | COC           |
+| g+n              | Go to next buffer                  | n     |           |               |
 | g+r              | Go to references                   | n     |           | COC           |
 | g+s              | Find symbols                       | n     | cs        |               |
 | K                | Show documentation                 | n     |           | COC           |

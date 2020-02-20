@@ -1,4 +1,5 @@
 " Default options
+set hidden " Allow switching of buffer when it hasn't been saved yet
 set encoding=UTF-8 " Default file encoding
 set undofile " Enable undo persistence across sessions
 set spell " Enable spell checking

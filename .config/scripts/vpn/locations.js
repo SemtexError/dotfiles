@@ -405,7 +405,8 @@ const getResult = async () =>
     const allLocations = await execute('expressvpn ls all');
     if (allLocations.indexOf('new version') > -1)
     {
-        headerRowCount += 1;
+        // Add two rows because first row is the new version message and second is a spacer
+        headerRowCount += 2;
     }
     const locationRows = allLocations.split('\n');
 
