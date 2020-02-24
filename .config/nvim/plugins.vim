@@ -38,12 +38,17 @@ call plug#begin('~/.config/nvim/.extensions')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " ====== Languages ======
+    " C#
     Plug 'OmniSharp/omnisharp-vim', { 'for': 'cs' }
+
+    " Rust
     Plug 'rust-lang/rust.vim', { 'for': 'rs' }
+
+    " Markup
     Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
     Plug 'iamcco/markdown-preview.nvim', { 'for': 'markdown', 'do': 'cd app & yarn install' }
 
-" ====== Other ======
+    " Other
     Plug 'puremourning/vimspector'
 
 call plug#end()

@@ -18,6 +18,7 @@ function! Highlight(group, style, ...)
         let s:group_colors[a:group] = s:highlight
     endif
 
+
     execute "highlight" a:group
         \ "guifg="   (has_key(s:highlight, "fg")    ? s:highlight.fg    : "NONE")
         \ "guibg="   (has_key(s:highlight, "bg")    ? s:highlight.bg    : "NONE")
@@ -103,6 +104,9 @@ let s:string = { "fg": s:redOrange } " String literals
 let s:interface = { "fg": s:lightGreen } " Interface members
 let s:pseudoCass = { "fg": s:lightOrange } " CSS pseudo classes
 let s:class = { "fg": s:teal } " Classes
+
+" === Doesn't work otherwise for some reason, can't be bothered to fix that ATM of writing this
+    highlight SpellBad gui=underline term=underline guisp=#E74C3C
 
 " === Vim ===
     call Highlight("Normal", s:background)
@@ -409,6 +413,7 @@ let s:class = { "fg": s:teal } " Classes
 
     call Highlight("rustKeyword", s:type)
     call Highlight("rustOperator", s:type)
+    call Highlight("rustOperator", s:type)
 
     call Highlight("rustModPathSep", s:identifier)
 
@@ -421,6 +426,7 @@ let s:class = { "fg": s:teal } " Classes
     call Highlight("rustModPath", s:class)
     call Highlight("rustIdentifier", s:class)
     call Highlight("rustDeriveTrait", s:class)
+    call Highlight("rustUserType", s:class)
 
     call Highlight("rustCommentLineDoc", s:comment)
     call Highlight("rustCharacter", s:string)
@@ -463,6 +469,7 @@ let s:class = { "fg": s:teal } " Classes
     call Highlight("texBeginEndName", s:identifier)
     call Highlight("texDocTypeArgs", s:identifier)
     call Highlight("texLength", s:interface)
+    call Highlight("texRefZone", s:class)
 
 " == Bib ==
     call Highlight("bibQuote", s:string)

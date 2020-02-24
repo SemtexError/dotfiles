@@ -2,6 +2,9 @@
     // Yank
     "yank.enableCompletion": false,
 
+    // Latex
+    "latex.build.executable": "xelatex",
+
     // Typescript
     "tsserver.npm": "/usr/bin/npm",
 
@@ -25,6 +28,7 @@
     // Explorer
     "explorer.toggle": true,
     "explorer.position": "right",
+    "explorer.previewAction.onHover": false,
     "explorer.icon.enableNerdfont": true,
     "explorer.file.column.indent.chars": "    ",
     "explorer.openAction.changeDirectory": false,
