@@ -234,6 +234,7 @@ let s:class = { "fg": s:teal } " Classes
 
 " === Typescript ===
     " Types
+    call Highlight("typescriptAmbientDeclaration", s:type)
     call Highlight("typescriptClassKeyword", s:type)
     call Highlight("typescriptClassExtends", s:type)
     call Highlight("typescriptImport", s:type)
