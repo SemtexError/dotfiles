@@ -470,6 +470,7 @@ let s:class = { "fg": s:teal } " Classes
     call Highlight("texDocTypeArgs", s:identifier)
     call Highlight("texLength", s:interface)
     call Highlight("texRefZone", s:class)
+    call Highlight("texZone", s:identifier)
 
 " == Bib ==
     call Highlight("bibQuote", s:string)
@@ -477,6 +478,5 @@ let s:class = { "fg": s:teal } " Classes
     call Highlight("bibKey", s:interface)
     call Highlight("bibBrace", s:identifier)
     call Highlight("bibEntryKw", s:identifier)
-    call Highlight("texRefZone", s:type)
     call Highlight("texCite", s:identifier)
     

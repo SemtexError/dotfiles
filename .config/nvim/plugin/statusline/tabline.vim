@@ -1,10 +1,11 @@
+" Hide tab line
+set showtabline=0
+
 " Check if tab line is supported
 if !exists('+showtabline')
   finish
 endif
 
-" Hide tab line
-set showtabline=0
 
 " Create tab line
 function! TabLine()
