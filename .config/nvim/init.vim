@@ -65,7 +65,7 @@ if executable('rg')
     augroup autoquickfix
         autocmd!
         autocmd QuickFixCmdPost [^l]* cwindow
-        autocmd QuickFixCmdPost    l* lwindow
+        autocmd QuickFixCmdPost l* lwindow
     augroup END
 endif
 
