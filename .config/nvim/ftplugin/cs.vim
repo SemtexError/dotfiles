@@ -4,6 +4,12 @@ let g:OmniSharp_highlight_types = 2
 let g:OmniSharp_highlight_debug = 1
 let g:OmniSharp_selector_ui = 'fzf'
 
+" Disable 'Use explicit type' and 'Variable not initialized' warnings.
+let g:OmniSharp_diagnostic_overrides = {
+    \ 'IDE0058': {'type': 'None'},
+    \ 'IDE0008': {'type': 'None'}
+\}
+
 " Code actions
 augroup CsharpActions
     autocmd!
