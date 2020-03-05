@@ -64,3 +64,7 @@ nnoremap 0 ^
 " Move buffers
 nnoremap gb :bprevious<CR>
 nnoremap gn :bnext<CR>
+
+" Move around in insert mode, handy with auto insert braces etc.
+inoremap <M-l> <right>
+inoremap <M-h> <left>
