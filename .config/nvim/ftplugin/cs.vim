@@ -13,7 +13,8 @@ augroup CsharpActions
     nnoremap <buffer> <Leader>d :OmniSharpDocumentation<CR>
 
     " Get code action
-    nnoremap <buffer> <a-cr> :OmniSharpGetCodeActions<CR>
+    nnoremap <buffer> <M-cr> :OmniSharpGetCodeActions<CR>
+    nnoremap <buffer> <leader>a :OmniSharpGetCodeActions<cr>
 
     " Find the implementation (Coc's version doesn't work)
     nnoremap <buffer> gD :OmniSharpFindImplementations<CR>

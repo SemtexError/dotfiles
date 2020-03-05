@@ -5,8 +5,6 @@ set updatetime=300
 set shortmess+=c
 set signcolumn=yes
     
-" \ 'coc-omnisharp',
-
 " All Coc extensions which will be installed
 let g:coc_global_extensions= [ 
     \ 'coc-tsserver',
