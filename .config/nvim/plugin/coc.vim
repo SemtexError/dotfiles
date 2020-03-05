@@ -51,6 +51,7 @@ nnoremap <silent> <leader>y  :<C-u>CocList -A --normal yank<cr>
 
 " leader+enter to show code actions
 nnoremap <m-cr> :CocAction<cr>
+nnoremap <C-cr> :CocAction<cr>
 nnoremap <leader>a :CocAction<cr>
 
 " <leader>+= format selection or document
