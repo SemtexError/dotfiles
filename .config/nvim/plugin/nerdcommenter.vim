@@ -1,5 +1,6 @@
 " Toggle comments in source code
 let g:NERDToggleCheckAllLines = 1
+let g:NERDSpaceDelims = 1
 
 let g:ft = ''
 function! NERDCommenter_before()
