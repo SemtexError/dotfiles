@@ -4,10 +4,11 @@ autocmd FileType json syntax match Comment +\/\/.\+$+
 set updatetime=300
 set shortmess+=c
 set signcolumn=yes
+    
+" \ 'coc-omnisharp',
 
 " All Coc extensions which will be installed
 let g:coc_global_extensions= [ 
-    \ 'coc-omnisharp',
     \ 'coc-tsserver',
     \ 'coc-eslint',
     \ 'coc-vetur',
@@ -27,10 +28,6 @@ let g:coc_global_extensions= [
     \ 'coc-yank',
     \ 'coc-marketplace'
 \]
-
-" When creating or moving new file the language server can be a little funky
-autocmd FileType cs nnoremap <buffer> <M-r> :CocRestart<CR>
-
 
 nmap <M-t> :CocCommand explorer<CR>
 

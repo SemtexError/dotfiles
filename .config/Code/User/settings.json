@@ -45,7 +45,7 @@
 	"debug.showInStatusBar": "never",
 
 	// Window
-	"window.zoomLevel": 0,
+	"window.zoomLevel": 1,
 	"window.titleBarStyle": "custom",
 	"window.newWindowDimensions": "inherit",
 

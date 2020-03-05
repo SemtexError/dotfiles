@@ -1,4 +1,6 @@
 {
+    "diagnostic.displayByAle": true,
+
     // Yank
     "yank.enableCompletion": false,
 
