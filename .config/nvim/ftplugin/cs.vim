@@ -7,7 +7,10 @@ let g:OmniSharp_selector_ui = 'fzf'
 " Disable 'Use explicit type' and 'Variable not initialized' warnings.
 let g:OmniSharp_diagnostic_overrides = {
     \ 'IDE0058': {'type': 'None'},
-    \ 'IDE0008': {'type': 'None'}
+    \ 'IDE0008': {'type': 'None'},
+    \ 'IDE0022': {'type': 'None'},
+    \ 'IDE0049': {'type': 'None'},
+    \ 'RCS1183': {'type': 'None'}
 \}
 
 " Code actions
@@ -16,7 +19,7 @@ augroup CsharpActions
     nnoremap <buffer> <M-e> :OmniSharpGlobalCodeCheck<CR>
 
     " Show documentation (summary) of an object
-    nnoremap <buffer> <Leader>d :OmniSharpDocumentation<CR>
+    nnoremap <buffer> K :OmniSharpDocumentation<CR>
 
     " Get code action
     nnoremap <buffer> <M-cr> :OmniSharpGetCodeActions<CR>
@@ -28,7 +31,7 @@ augroup CsharpActions
     " Find the definition (Coc's version doesn't (always) work)
     nnoremap <buffer> gd :OmniSharpGotoDefinition<CR>
 
-    nnoremap <buffer> <leader>gr :OmniSharpFindUsages<CR>
+    nnoremap <buffer> gr :OmniSharpFindUsages<CR>
     nnoremap <buffer> gs :OmniSharpFindSymbol<CR>
 
     " Rename
