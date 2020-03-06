@@ -171,7 +171,6 @@ let s:class = { "fg": s:teal } " Classes
     call Highlight("csClassType", s:class)
     call Highlight("csUserType", s:class)
     call Highlight("csAttribute", s:class)
-    call Highlight("csUserIdentifier", s:class)
 
     " Types
     call Highlight("csClass", s:type)
@@ -192,6 +191,8 @@ let s:class = { "fg": s:teal } " Classes
 
     " fucntions
     call Highlight("csCodeAction", s:function)
+
+    call Highlight("csUserIdentifier", s:identifier)
 
     " String
     call Highlight("csCharacter", s:string)
