@@ -1,5 +1,6 @@
 " Toggle comments in source code
 let g:NERDToggleCheckAllLines = 1
+let g:NERDSpaceDelims = 1
 
 " Add spaces after comment
 let g:NERDSpaceDelims = 1

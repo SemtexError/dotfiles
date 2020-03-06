@@ -4,6 +4,12 @@ let g:OmniSharp_highlight_types = 2
 let g:OmniSharp_highlight_debug = 1
 let g:OmniSharp_selector_ui = 'fzf'
 
+" Disable 'Use explicit type' and 'Variable not initialized' warnings.
+let g:OmniSharp_diagnostic_overrides = {
+    \ 'IDE0058': {'type': 'None'},
+    \ 'IDE0008': {'type': 'None'}
+\}
+
 " Code actions
 augroup CsharpActions
     autocmd!
@@ -13,7 +19,8 @@ augroup CsharpActions
     nnoremap <buffer> <Leader>d :OmniSharpDocumentation<CR>
 
     " Get code action
-    nnoremap <buffer> <a-cr> :OmniSharpGetCodeActions<CR>
+    nnoremap <buffer> <M-cr> :OmniSharpGetCodeActions<CR>
+    nnoremap <buffer> <leader>a :OmniSharpGetCodeActions<cr>
 
     " Find the implementation (Coc's version doesn't work)
     nnoremap <buffer> gD :OmniSharpFindImplementations<CR>
@@ -23,6 +30,9 @@ augroup CsharpActions
 
     nnoremap <buffer> <leader>gr :OmniSharpFindUsages<CR>
     nnoremap <buffer> gs :OmniSharpFindSymbol<CR>
+
+    " Rename
+    nnoremap <F2> :OmniSharpRename<CR>
 
     sign define OmniSharpCodeActions text=!> texthl=csCodeAction
     autocmd CursorHold *.cs call OSCountCodeActions()
