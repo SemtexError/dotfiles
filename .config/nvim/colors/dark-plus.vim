@@ -163,6 +163,9 @@ let s:class = { "fg": s:teal } " Classes
     call Highlight("StatusErrorColor", s:statuslineError)
     call Highlight("StatusWarningColor", s:statuslineWarning)
 
+" === C ===
+    call Highlight("cOperator", s:type)
+
 " === C# ===
     " Classes
     call Highlight("csClassType", s:class)
