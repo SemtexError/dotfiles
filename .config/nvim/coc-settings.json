@@ -1,4 +1,14 @@
 {
+    "tsserver.trace.server": "verbose",
+
+    "languageserver": {
+        "aspls": {
+            "module": "/home/robin/documents/projects/aspls/lib/server.js",
+            "filetypes": ["asp", "aspvbs"],
+            "trace.server": "verbose"
+        }
+    },
+
     "diagnostic.displayByAle": true,
 
     // Yank

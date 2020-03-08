@@ -1,0 +1,32 @@
+" Map leader to space
+let mapleader = " "
+
+" Map jj to escape so that you can exit insert mode easily
+inoremap jj <Esc>
+
+" Saving
+nnoremap <leader><leader> :w!<cr>
+command! W w
+command! WQ wq
+command! Wq wq
+command! Q q
+
+" Maintain visual selection on indent change
+xnoremap < <gv
+xnoremap > >gv
+
+" Split
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+nnoremap gr :action FindUsages<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gD :action GotoImplementation<CR>
+nnoremap <leader>c<leader> :action CommentByLineComment<CR>
+
+nnoremap <C-o> :action Back<CR>
+nnoremap <C-i> :action Forward<CR>
+nnoremap <C-r> :action $Redo<CR>
+nnoremap <A-r> :action RefactoringMenu<CR>

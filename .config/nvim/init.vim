@@ -18,16 +18,6 @@ set cursorline " Enable current line indicator
 set clipboard+=unnamedplus " Set clipboard to + outside Tmux
 set splitbelow splitright
 
-" Automatically read the file when it's changed from the outside
-set autoread 
-autocmd FocusGained,BufEnter * checktime
-
-" Save as SUDO user
-command! WS execute 'w !sudo tee % > /dev/null' <bar> edit!
-
-" Return to the last edit position when returning to a buffer
-autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-
 " Find
 set path+=**
 set wildignore+=**/node_modules/** " NodeJS modules
@@ -56,6 +46,16 @@ set tm=500
 syntax on
 set termguicolors
 colorscheme dark-plus
+
+" Automatically read the file when it's changed from the outside
+set autoread 
+autocmd FocusGained,BufEnter * checktime
+
+" Save as SUDO user
+command! WS execute 'w !sudo tee % > /dev/null' <bar> edit!
+
+" Return to the last edit position when returning to a buffer
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " Faster searching
 if executable('rg')
