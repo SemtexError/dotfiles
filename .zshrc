@@ -56,3 +56,5 @@ if [ -f "$HOME/.config/zsh/antigen.zsh" ]; then
     # Load plugins
     antigen apply
 fi
+
+ls

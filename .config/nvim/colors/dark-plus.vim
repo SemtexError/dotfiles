@@ -166,12 +166,15 @@ let s:class = { "fg": s:teal } " Classes
 " === C ===
     call Highlight("cOperator", s:type)
 
+" === Java ===
+    call Highlight("javaAccessKeyword", s:type)
+    call Highlight("javaType", s:class)
+
 " === C# ===
     " Classes
     call Highlight("csClassType", s:class)
     call Highlight("csUserType", s:class)
     call Highlight("csAttribute", s:class)
-    call Highlight("csUserIdentifier", s:class)
 
     " Types
     call Highlight("csClass", s:type)
@@ -189,6 +192,8 @@ let s:class = { "fg": s:teal } " Classes
     call Highlight("csIface", s:interface)
     call Highlight("csGeneric", s:interface)
     call Highlight("csNumber", s:interface)
+
+    call Highlight("csUserIdentifier", s:identifier)
 
     " fucntions
     call Highlight("csCodeAction", s:function)
