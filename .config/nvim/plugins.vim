@@ -50,5 +50,4 @@ call plug#begin('~/.config/nvim/.extensions')
 
     " Other
     Plug 'puremourning/vimspector'
-
 call plug#end()

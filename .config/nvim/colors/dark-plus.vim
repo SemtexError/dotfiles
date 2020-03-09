@@ -198,6 +198,8 @@ let s:class = { "fg": s:teal } " Classes
     " fucntions
     call Highlight("csCodeAction", s:function)
 
+    call Highlight("csUserIdentifier", s:identifier)
+
     " String
     call Highlight("csCharacter", s:string)
 
