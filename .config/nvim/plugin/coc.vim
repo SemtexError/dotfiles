@@ -7,6 +7,7 @@ set signcolumn=yes
     
 " All Coc extensions which will be installed
 let g:coc_global_extensions= [ 
+    \ 'coc-tabnine',
     \ 'coc-tsserver',
     \ 'coc-eslint',
     \ 'coc-vetur',
