@@ -1,19 +1,22 @@
-# Alias
+# vim: filetype=zsh
+
 alias ..='cd ..'
-alias vim='nvim'
 alias vi='nvim'
+alias vim='nvim'
 alias mkdir='mkdir -p'
 alias ipconfig='ifconfig'
 alias xclip='xclip -selection clipboard'
 
-# Color
-alias grep='grep --color=auto'
+alias find='fd'
+alias du='dust'
+
+alias grep='rg --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-# ls: Hide Jagex cache files from ls
-alias ls='ls -hN --color=auto --group-directories-first -I jagexcache -I random.dat -I jagex_cl_oldschool_LIVE.dat'
-alias la='ls -la'
+# List files
+alias ls='exa --color=auto --group-directories-first'
+alias la='exa -la --color=auto --group-directories-first'
 
 alias tm='tmux a || tmux'
 
@@ -25,4 +28,4 @@ alias config='/usr/bin/git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME'
 
 alias se='vim $(fzf --height 50% --reverse)'
 
-# vim: set filetype=bash
+

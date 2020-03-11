@@ -280,8 +280,7 @@
 	"scss.lint.validProperties": [
 		"composes"
 	],
-	"scss.lint.unknownAtRules": "ignore",
-	"workbench.colorTheme": "Default Light+"
+	"scss.lint.unknownAtRules": "ignore"
 	
 }
   
