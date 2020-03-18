@@ -28,4 +28,4 @@ alias config='/usr/bin/git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME'
 
 alias se='vim $(fzf --height 50% --reverse)'
 
-
+alias latexmk=latexmk -pdf -pvc -outdir=out -interaction=nonstopmode 
