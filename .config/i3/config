@@ -146,7 +146,7 @@ bindsym $mod+a 						focus parent
 bindsym $mod+b 						exec $nsi firefox
 # bindsym $mod+Shift+b 				exec 
 # bindsym $mod+Ctrl+b 				exec 
-# bindsym $mod+Ctrl+Shift+b 			exec 
+bindsym $mod+Ctrl+Shift+b 			exec ~/.config/feh/launch.sh
 
 # C
 # bindsym $mod+c 						exec 

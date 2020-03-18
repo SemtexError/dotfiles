@@ -1,13 +1,14 @@
 {
     "tsserver.trace.server": "verbose",
 
-    // "languageserver": {
-    //     "aspls": {
-    //         "module": "/home/robin/documents/projects/aspls/lib/server.js",
-    //         "filetypes": ["asp", "aspvbs"],
-    //         "trace.server": "verbose"
-    //     }
-    // },
+
+    "languageserver": {
+        "aspls": {
+            "module": "/home/robin/documents/projects/aspls/lib/server.js",
+            "filetypes": ["asp", "aspvbs"],
+            "trace.server": "verbose"
+        }
+    },
 
     "diagnostic.displayByAle": true,
 
@@ -43,7 +44,10 @@
     "explorer.previewAction.onHover": false,
     "explorer.icon.enableNerdfont": true,
     "explorer.file.column.indent.chars": "    ",
-    "explorer.openAction.changeDirectory": false,
+    "explorer.openAction.for.directory": "expandOrCollapse",
+    "explorer.keyMappings":{
+        "<cr>": ["expandable?", "expandOrCollapse", "open"]
+    },
     "explorer.sources": [
         {
             "name": "buffer",
@@ -70,44 +74,44 @@
         ]
     },
     "explorer.icon.customIcons": {
-      "icons": {
-        "csharp": {
-          "code": "",
-          "color": "#009404"
+        "icons": {
+            "csharp": {
+                "code": "",
+                "color": "#009404"
+            },
+            "npm": {
+                "code": "ﯵ",
+                "color": "#cb3837"
+            },
+            "log": {
+                "code": "",
+                "color": "#3498db"
+            },
+            "latex": {
+                "code": "ﭔ",
+                "color": "#3498db"
+            },
+            "bibliography": {
+                "code": "",
+                "color": "#27ae60"
+            }
         },
-        "npm": {
-          "code": "ﯵ",
-          "color": "#cb3837"
+        "extensions": {
+            "cs": "csharp",
+            "log": "log",
+            "tex": "latex",
+            "bib": "bibliography",
+            "sty": "bibliography",
+            "csproj": "vs"
         },
-        "log": {
-          "code": "",
-          "color": "#3498db"
+        "filenames": {
+            "vue.config.js": "webpack",
+            "package.json": "npm",
+            "package-lock.json": "npm",
+            "yarn.lock": "npm"
         },
-        "latex": {
-          "code": "ﭔ",
-          "color": "#3498db"
-        },
-        "bibliography": {
-          "code": "",
-          "color": "#27ae60"
+        "patternMatches": {
+            ".*postcss.*.js$": "mootools"
         }
-      },
-      "extensions": {
-        "cs": "csharp",
-        "log": "log",
-        "tex": "latex",
-        "bib": "bibliography",
-        "sty": "bibliography",
-        "csproj": "vs"
-      },
-      "filenames": {
-        "vue.config.js": "webpack",
-        "package.json": "npm",
-        "package-lock.json": "npm",
-        "yarn.lock": "npm"
-      },
-      "patternMatches": {
-        ".*postcss.*.js$": "mootools"
-      }
     }
 }
