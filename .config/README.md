@@ -2,7 +2,8 @@
 
 ## Contents
 * [Introduction](#introduction)
-* [Theme](#theme)
+* [Todo](#todo)
+* [Software](#software)
 * [Firefox](#firefox)
 * [Android](#android)
 
@@ -16,11 +17,31 @@ The requirements for this method are:
 * [Git](https://www.archlinux.org/packages/extra/x86_64/git/)
 * [Curl](https://www.archlinux.org/packages/core/x86_64/curl/)
 
-The primary distro is Arch Linux but they will work on other distros also. By using the following command your old dotfiles will be removed and is replaced by this repository.
+The primary distro is Arch Linux, but they will work on other distros also. By using the following command your old dotfiles will be removed and is replaced by this repository.
 
 `curl -Lks https://raw.githubusercontent.com/SemtexError/dotfiles/master/.config/scripts/dotfiles.sh | /bin/bash`
 
-## Theme
+## TODO
+* Create auto installer for Ubuntu/Debian and Arch that will install all required software (perfect for setting up a server etc.).
+* Make Config usable on Ubuntu/Debian (for (testing) servers).
+* Make Config overwrite/backup existing files when cloning.
+
+## Software
+* [git](https://git-scm.com/) --- To manage the dotfiles.
+* [zsh](https://www.zsh.org/) --- Shell.
+* [tmux](https://github.com/tmux/tmux) --- Terminal multiplexer.
+* [neovim](https://neovim.io/) --- Text editor.
+* [dust](https://github.com/bootandy/dust) --- (DU) Modern disk usages replacement.
+* [exa](https://github.com/ogham/exa) --- (LS) Modern list files and directories replacement.
+* [fd](https://github.com/sharkdp/fd) --- (find) Modern find replacement.
+* [ripgrep](https://github.com/BurntSushi/ripgrep) --- Modern grep replacement and files searching tool.
+
+### Dependencies
+The software that must be installed to make the above software work.
+* [xclip](https://github.com/astrand/xclip) --- X11 clipboard CLI for Tmux and NeoVIM.
+* [yarn](https://yarnpkg.com/) --- Package manager for NeoVIM plugins and development.
+* [NodeJS](https://nodejs.org/en/) --- Node for NeoVIM plugins.
+* [NeoVIM (node)](https://www.npmjs.com/package/neovim) --- NodeJS/NeoVIM dependency.
 
 ### Font
 * Font: [Fira code 18](https://www.archlinux.org/packages/community/any/ttf-fira-code/)
@@ -34,9 +55,10 @@ The primary distro is Arch Linux but they will work on other distros also. By us
 * [ClearURLs](https://addons.mozilla.org/en-US/firefox/addon/clearurls/)
 * [Cookie AutoDelete](https://addons.mozilla.org/en-US/firefox/addon/cookie-autodelete/)
 * [CSS exfil protection](https://addons.mozilla.org/en-US/firefox/addon/css-exfil-protection/)
+* [Dark reader](https://addons.mozilla.org/en-US/firefox/addon/darkreader/)
 * [Decentraleyes](https://addons.mozilla.org/en-US/firefox/addon/decentraleyes/)
 * [ExpressVPN](https://addons.mozilla.org/en-US/firefox/addon/expressvpn/)
-  * [HTTPS everywhere ](https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/) (already include in ExpressVPN)
+  * [HTTPS everywhere](https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/) (already include in ExpressVPN)
 * [Don't touch my tabs! (rel=noopener)](https://addons.mozilla.org/en-US/firefox/addon/dont-touch-my-tabs/)
 * [Firefox Multi-account container](https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/)
 * [Facebook Container](https://addons.mozilla.org/en-US/firefox/addon/facebook-container/)
@@ -54,7 +76,7 @@ The primary distro is Arch Linux but they will work on other distros also. By us
 * [Vimium](https://addons.mozilla.org/en-US/firefox/addon/vimium-ff/)
 
 ### Theme
-* [ShadowFox](https://overdodactyl.github.io/ShadowFox/)
+* [MaterialFox](https://github.com/muckSponge/MaterialFox) (Yes I know: Chromium bad, Firefox good)
 * [Matte Black V2](https://addons.mozilla.org/en-US/firefox/addon/matte-black-v2/)
 
 ## Android

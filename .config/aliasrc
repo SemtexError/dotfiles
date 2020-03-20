@@ -1,31 +1,26 @@
 # vim: filetype=zsh
 
-alias ..='cd ..'
-alias vi='nvim'
-alias vim='nvim'
+# Dotfiles
+alias config='/usr/bin/git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME'
+
+# Text editors
+alias vi=nvim
+alias vim=nvim
+alias nano=nvim
+
+# File system
 alias mkdir='mkdir -p'
-alias ipconfig='ifconfig'
+alias du='dust'
+alias find='fd'
+
+alias ls='exa --color=auto --group-directories-first'
+alias la='exa -la --color=auto --group-directories-first'
+
+# Tmux
+alias tm='tmux a || tmux'
 alias xclip='xclip -selection clipboard'
 
-alias find='fd'
-alias du='dust'
 
 alias grep='rg --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-
-# List files
-alias ls='exa --color=auto --group-directories-first'
-alias la='exa -la --color=auto --group-directories-first'
-
-alias tm='tmux a || tmux'
-
-# Quit the vim way
-alias :q=exit
-
-# Dotfiles
-alias config='/usr/bin/git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME'
-
-alias se='vim $(fzf --height 50% --reverse)'
-
-

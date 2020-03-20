@@ -11,6 +11,12 @@ autoload -U colors && colors
 setopt PROMPT_SUBST
 PROMPT='%F{blue}${PWD#"${PWD%/*/*}/"}%f> '
 
+# If in SSH append a prefix
+if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+    export TERM=vt100
+    prompt='(SSH) $PROMPT'
+fi
+
 # Enable history
 HISTSIZE=10000
 SAVEHIST=20000

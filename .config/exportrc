@@ -1,8 +1,12 @@
-# vim: set filetype=zsh
+# vim: filetype=zsh
 
 # Custom
 export VISUAL=nvim
+export BROWSER=firefox
 export EDITOR="$VISUAL"
+
+# Include custom scripts
+export PATH="$PATH:$HOME/.config/scripts"
 
 export LANG=en_US.UTF-8
 export LV_CTYPE=en_US.UTF-8
@@ -11,19 +15,20 @@ export LV_CTYPE=en_US.UTF-8
 export HISTSIZE=10000
 export HISTFILESIZE=20000
 export HISTCONTROL=ignorespace
+
+# Dotnet
 export DOTNET_ROOT=/opt/dotnet
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export MSSQL_CLI_TELEMETRY_OPTOUT=1
-export npm_config_cache=$HOME/.local/npm
-export NUGET_PACKAGES=$HOME/.local/NuGet/packages
 export MSBuildSDKsPath=/usr/share/dotnet/sdk/3.1.102/Sdks
-
-
+export NUGET_PACKAGES=$HOME/.local/NuGet/packages
 export PATH="$PATH:$HOME/.dotnet/tools"
-export PATH="$PATH:$HOME/.config/scripts"
-export PATH="$PATH:$HOME/.config/npm/global/bin"
-export PATH="$(yarn global bin):$PATH"
+
+# Rust
 export PATH="$PATH:$HOME/.cargo/bin"
+
+# NodeJS
+export PATH="$(yarn global bin):$PATH"
 
 export LESSHISTFILE=/dev/null
 

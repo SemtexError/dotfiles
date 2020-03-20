@@ -168,7 +168,7 @@ let s:class = { "fg": s:teal } " Classes
 
 " === Java ===
     call Highlight("javaAccessKeyword", s:type)
-    call Highlight("javaType", s:class)
+    call Highlight("javaType", s:type)
 
 " === C# ===
     " Classes

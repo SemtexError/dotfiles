@@ -293,6 +293,12 @@ bindsym $mod+w 						layout tabbed
 # bindsym $mod+Ctrl+z 				exec 
 # bindsym $mod+Ctrl+Shift+z 			exec 
 
+#F2
+bindsym $mod+F2 					exec ~/.config/flashfocus/restart.sh
+# bindsym $mod+Ctrl+F2			    exec 
+# bindsym $mod+Shift+F2				exec 
+# bindsym $mod+Ctrl+Shift+F2			exec 
+
 # F7
 bindsym $mod+F7 					exec $nsi ~/.config/rofi/scripts/shutdown.sh
 # bindsym $mod+Ctrl+F7			    exec 
