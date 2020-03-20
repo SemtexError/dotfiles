@@ -20,7 +20,9 @@ alias la='exa -la --color=auto --group-directories-first'
 alias tm='tmux a || tmux'
 alias xclip='xclip -selection clipboard'
 
-
 alias grep='rg --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+
+# Other
+alias latexmk=latexmk -pdf -pvc -outdir=out -interaction=nonstopmode 
