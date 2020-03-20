@@ -1,5 +1,4 @@
 ~/.config/flashfocus/launch.sh & # Launch flashfocus
-~/.config/polybar/launch.sh & # Launch statusbar(s)
 ~/.config/compton/launch.sh & # Compositor for transparency
 ~/.config/redshift/launch.sh &  # Blue shift at night
 ~/.config/scripts/setbg ~/documents/pictures/wallpaper/ & # Set the wallpaper
