@@ -146,7 +146,7 @@ bindsym $mod+a 						focus parent
 bindsym $mod+b 						exec $nsi firefox
 # bindsym $mod+Shift+b 				exec 
 # bindsym $mod+Ctrl+b 				exec 
-bindsym $mod+Ctrl+Shift+b 			exec ~/.config/feh/launch.sh
+bindsym $mod+Ctrl+Shift+b 			exec setbg $WALLPAPERS
 
 # C
 # bindsym $mod+c 						exec 
@@ -355,7 +355,6 @@ bindsym $mod+0 						workspace $ws10
 bindsym $mod+Shift+0 				move container to workspace $ws10
 bindsym $mod+Ctrl+Shift+0			move workspace to workspace $ws10
 
-
 # Media keys
 bindsym XF86MonBrightnessUp 		exec light -A 1
 bindsym XF86MonBrightnessDown 		exec light -U 1
@@ -366,15 +365,3 @@ bindsym XF86AudioMute 				exec $nsi ~/.config/scripts/audio/audio --toggle
 bindsym XF86AudioPause 				exec $nsi playerctl play-pause 
 bindsym XF86AudioNext 				exec $nsi playerctl next
 bindsym XF86AudioPrev 				exec $nsi playerctl previous
-
-# Applications
-exec_always $nsi ~/.config/flashfocus/launch.sh
-exec_always $nsi ~/.config/polybar/launch.sh
-exec_always $nsi ~/.config/compton/launch.sh
-exec_always $nsi ~/.config/redshift/launch.sh
-exec_always $nsi ~/.config/feh/launch.sh
-exec_always $nsi ~/.config/i3/screens.sh
-exec_always $nsi ~/.config/nvidia-led/launch.sh
-exec_always $nsi nm-applet
-exec_always $nsi libinput-gestures-setup start
-exec $nsi xss-lock -- ~/.config/i3lock/launch.sh

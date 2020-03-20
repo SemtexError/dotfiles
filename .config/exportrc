@@ -1,9 +1,19 @@
 # vim: filetype=zsh
 
 # Custom
+export WALLPAPERS=~/documents/pictures/wallpaper/
+
+# System
 export VISUAL=nvim
 export BROWSER=firefox
 export EDITOR="$VISUAL"
+
+export TERM=screen-256color
+export TERMINAL=termite
+
+export VDPAU_DRIVER=nvidia
+export MOZ_USE_OMTC=1 # Firefox
+export CHROME_PATH=/usr/bin/brave # Lighthouse
 
 # Include custom scripts
 export PATH="$PATH:$HOME/.config/scripts"
@@ -25,10 +35,15 @@ export NUGET_PACKAGES=$HOME/.local/NuGet/packages
 export PATH="$PATH:$HOME/.dotnet/tools"
 
 # Rust
-export PATH="$PATH:$HOME/.cargo/bin"
+export PATH="$PATH:$HOME/.local/cargo/bin"
+export CARGO_HOME="$HOME/.local/cargo"
+export RUSTUP_HOME="$HOME/.local/rustup"
 
 # NodeJS
 export PATH="$(yarn global bin):$PATH"
+
+# Java
+export M2_HOME="$HOME/.local/m2"
 
 export LESSHISTFILE=/dev/null
 

@@ -1,7 +1,6 @@
 {
     "tsserver.trace.server": "verbose",
 
-
     "languageserver": {
         "aspls": {
             "module": "/home/robin/documents/projects/aspls/lib/server.js",

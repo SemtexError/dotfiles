@@ -2,6 +2,9 @@
     font = Material Design Icons 18
     font = Fira code 14
 
+# I missclick way more then I actually use it
+    clickable_url = false
+
 [colors]
     background = #151515
     foreground = #D4D4D4

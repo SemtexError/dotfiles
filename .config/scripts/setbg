@@ -1,0 +1,8 @@
+# Either set the wallpaper by the default value or a random one
+# !/bin/bash
+
+[ -f "$1" ] && cp "$1" ~/.config/wallpaper.png && notify-send -i "$HOME/.config/wallpaper.png" "Wallpaper changed."
+
+[ -d "$1" ] && mv "$(find "$1"/*.{jpg,jpeg,png} -type f | shuf -n 1)" ~/.config/wallpaper.png && notify-send -i "$HOME/.config/wallpaper.png" "Random Wallpaper chosen."
+
+xwallpaper --zoom ~/.config/wallpaper.png
