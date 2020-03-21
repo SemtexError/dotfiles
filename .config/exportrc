@@ -8,7 +8,6 @@ export VISUAL=nvim
 export BROWSER=firefox
 export EDITOR="$VISUAL"
 
-export TERM=screen-256color
 export TERMINAL=termite
 
 export VDPAU_DRIVER=nvidia
