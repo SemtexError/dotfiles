@@ -128,7 +128,6 @@ install_default_arch () {
     by_yay \
         zsh \
         tmux \
-        dust \
         exa \
         fd \
         ripgrep \

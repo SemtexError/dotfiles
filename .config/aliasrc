@@ -10,7 +10,6 @@ alias nano=nvim
 
 # File system
 alias mkdir='mkdir -p'
-alias du='dust'
 alias find='fd'
 
 alias ls='exa --color=auto --group-directories-first'
