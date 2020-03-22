@@ -1,0 +1,169 @@
+# !/bin/bash
+# vim: ft=sh
+# Install required software
+
+PACMAN="/usr/bin/pacman"
+YAY="/usr/bin/yay"
+YARN="/usr/bin/yarn"
+
+# Install software on arch Linux
+by_pacman () {
+    [ -f "$PACMAN" ] && pacman -S $@ --noconfirm --needed
+}
+
+by_yay () {
+    [ -f "$YAY" ] && yay -S $@ --noconfirm --needed
+}
+
+by_yarn () {
+    [ -f "$YARN" ] && yarn global add $@
+}
+
+# Install AUR helper
+install_yay () {
+    git clone https://aur.archlinux.org/yay-bin.git
+    cd yay
+    makepkg -si
+    cd ..
+    rm -rf yay
+}
+
+# === === === VIM === === ===
+
+# Install VIM requirements on arch
+install_vim_arch () {
+    by_yay \
+        neovim \
+        git \
+        fzf \
+        nodejs \
+        yarn \
+        aspnet-runtime-bin \
+        dotnet-host-bin \
+        dotnet-runtime-bin \
+        dotnet-sdk-bin
+}
+
+install_vim () {
+    [ -f "$PACMAN" ] && install_vim_arch
+
+    by_yarn \
+        neovim \
+        vue-language-server
+}
+
+# === === === I3 === === ===
+install_i3_arch () {
+    by_yay \
+        i3-gaps \
+        i3lock-color \
+        lightdm \
+        lightdm-slick-greeter \
+        dunst \
+        playerctl \
+        light \
+        redshift \
+        rofi \
+        rofi-calc \
+        rofi-dmenu \
+        sxiv \
+        termite \
+        unclutter \
+        xss-lock \
+        xwallpaper \
+        compton-tryone-git \
+        flashfocus-git \
+        polybar \
+        ttf-material-design-icons-webfont \
+        matcha-gtk-theme
+}
+
+install_default () {
+    [ -f "$PACMAN" ] && install_i3_arch
+}
+
+# === === === LATEX === === ===
+
+install_latex_arch () {
+    by_yay \
+        latex-pgfplots \
+        texlive-bibtexextra \
+        texlive-core \
+        texlive-fontsextra \
+        texlive-latexextra \
+        texlive-science
+}
+
+install_latex () {
+    [ -f "$PACMAN" ] && install_latex_arch
+}
+
+# === === === OTHER === === ===
+install_other_arch () {
+    by_yay \
+        firefox \
+        hunspell-nl \
+        hunspell-en_US \
+        zathura \
+        zathura-pdf-poppler \
+        yubico-pam \
+        firejail \
+        expressvpn \
+        visual-studio-code-bin \
+        ttf-material-design-icons-webfont \
+        ttf-fira-code \
+        noto-fonts-emoji \
+        nerd-fonts-complete \
+
+}
+
+install_other () {
+    [ -f "$PACMAN" ] && install_i3_arch
+}
+
+# === === === DEFAULT === === ===
+
+# Install default requirements on arch
+install_default_arch () {
+    by_pacman \
+        zsh \
+        tmux \
+        dust \
+        exa \
+        fd \
+        ripgrep \
+        xclip \
+        htop
+
+    # Install YAY if it doesn't exists
+    [ ! -f "$YAY" ] && install_yay
+}
+
+install_default () {
+    [ -f "$PACMAN" ] && install_default_arch
+}
+
+for i in "$@"
+do
+case $i in
+    -d|--default)
+        install_default
+    ;;
+    -v|--vim)
+        install_vim
+    ;;
+    -i|--i3)
+        install_vim
+    ;;
+    -l|--latex)
+        install_latex
+    ;;
+    -o|--other)
+        install_other
+    ;;
+    *)
+        echo 'Unknown options'
+    ;;
+esac
+done
+
