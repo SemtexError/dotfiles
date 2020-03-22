@@ -125,7 +125,7 @@ install_other () {
 
 # Install default requirements on arch
 install_default_arch () {
-    by_pacman \
+    by-yay \
         zsh \
         tmux \
         dust \
