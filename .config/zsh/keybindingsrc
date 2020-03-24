@@ -3,6 +3,8 @@
 # Alt: Removing
 # Forward-kill-word doesn't exists
 
+bindkey -v
+
 # Move left
 bindkey '^[[1;5A' beginning-of-line # Control+up
 bindkey -a '^[[1;5A' beginning-of-line # Control+up (vi)

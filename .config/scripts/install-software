@@ -2,21 +2,23 @@
 # vim: ft=sh
 # Install required software
 
+YARN="/usr/bin/yarn"
+by_yarn () {
+    [ -f "$YARN" ] && $YARN global add $@
+}
+
+# === === === ARCH === === ===
+# {{{
 PACMAN="/usr/bin/pacman"
 YAY="/usr/bin/yay"
-YARN="/usr/bin/yarn"
-
-# Install software on arch Linux
 by_pacman () {
-    [ -f "$PACMAN" ] && pacman -S $@ --noconfirm --needed
+    # No user confirmation and only install if not already
+    [ -f "$PACMAN" ] && $PACMAN -S $@ --noconfirm --needed
 }
 
 by_yay () {
-    [ -f "$YAY" ] && yay -S $@ --noconfirm --needed
-}
-
-by_yarn () {
-    [ -f "$YARN" ] && yarn global add $@
+    # No user confirmation and only install if not already
+    [ -f "$YAY" ] && $YARN -S $@ --noconfirm --needed
 }
 
 # Install AUR helper
@@ -27,17 +29,30 @@ install_yay () {
     cd ..
     rm -rf yay
 }
+# }}}
+
+# === === === DEBIAN === === ===
+# {{{
+APT="/usr/bin/apt"
+by_apt () {
+    # No user confirmation
+    [ -f "$APT" ] && $APT install $@ -y
+}
+
+# }}}
 
 # === === === VIM === === ===
+# {{{
 
 # Install VIM requirements on arch
 install_vim_arch () {
     by_yay \
-        neovim \
+        neovim \ # In unstabe
         git \
         fzf \
         nodejs \
         yarn \
+
         aspnet-runtime-bin \
         dotnet-host-bin \
         dotnet-runtime-bin \
@@ -51,8 +66,10 @@ install_vim () {
         neovim \
         vue-language-server
 }
+# }}}
 
 # === === === I3 === === ===
+# {{{
 install_i3_arch () {
     by_yay \
         i3-gaps \
@@ -81,8 +98,10 @@ install_i3_arch () {
 install_default () {
     [ -f "$PACMAN" ] && install_i3_arch
 }
+# }}}
 
 # === === === LATEX === === ===
+# {{{
 
 install_latex_arch () {
     by_yay \
@@ -97,8 +116,10 @@ install_latex_arch () {
 install_latex () {
     [ -f "$PACMAN" ] && install_latex_arch
 }
+# }}}
 
 # === === === OTHER === === ===
+# {{{
 install_other_arch () {
     by_yay \
         firefox \
@@ -120,8 +141,10 @@ install_other_arch () {
 install_other () {
     [ -f "$PACMAN" ] && install_i3_arch
 }
+# }}}
 
 # === === === DEFAULT === === ===
+# {{{
 
 # Install default requirements on arch
 install_default_arch () {
@@ -138,9 +161,26 @@ install_default_arch () {
     [ ! -f "$YAY" ] && install_yay
 }
 
+install_default_debian () {
+    by_apt \
+        zsh \
+        tmux \
+        htop \
+        xclip \
+
+        exa \ # In unstable
+        fd \ # In unstable
+        ripgrep \ # In unstable
+}
+
 install_default () {
     [ -f "$PACMAN" ] && install_default_arch
+    [ -f "$APT" ] && install_default_debian
+
+    # Set shell as default
+    [ -x "$(which zsh)" ] && chsh -s $(which zsh)
 }
+# }}}
 
 for i in "$@"
 do

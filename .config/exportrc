@@ -25,6 +25,10 @@ export HISTSIZE=10000
 export HISTFILESIZE=20000
 export HISTCONTROL=ignorespace
 
+# Move shit out of home folder
+export GNUPGHOME="$HOME/.config/gnupg"
+export GRADLE_HOME="$HOME/.config/gradle"
+
 # Dotnet
 export DOTNET_ROOT=/opt/dotnet
 export DOTNET_CLI_TELEMETRY_OPTOUT=1

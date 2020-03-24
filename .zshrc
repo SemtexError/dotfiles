@@ -15,6 +15,8 @@ PROMPT='%F{blue}${PWD#"${PWD%/*/*}/"}%f> '
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
     export TERM=vt100
     prompt="(SSH) $PROMPT"
+else
+    export TERM=screen-256color
 fi
 
 # Enable history
