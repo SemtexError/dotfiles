@@ -13,9 +13,10 @@ PROMPT='%F{blue}${PWD#"${PWD%/*/*}/"}%f> '
 
 # If in SSH append a prefix
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
-    export TERM=vt100
     prompt="(SSH) $PROMPT"
-else
+    export TERM=vt100
+# If it's not a WSL terminal
+elif [[ ! $(uname -r) =~ Microsoft$  ]]; then
     export TERM=screen-256color
 fi
 
