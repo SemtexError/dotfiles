@@ -213,7 +213,7 @@
     format-padding = 0
 
     label-focused = %icon% %name%
-    label-focused-background = ${colors.highlight-background}
+    label-focused-background = ${colors.focus-background}
     label-focused-padding = ${settings.padding}
      
     label-unfocused = %icon% %name%

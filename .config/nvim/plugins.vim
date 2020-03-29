@@ -6,7 +6,7 @@ if ! filereadable(expand('~/.config/nvim/autoload/plug.vim'))
 	autocmd VimEnter * PlugInstall
 endif
 
-" View the README for plguin explanations
+" View the README for plugin explanations
 call plug#begin('~/.config/nvim/.extensions')
 " ====== Appearance ======
     Plug 'sheerun/vim-polyglot'
@@ -52,5 +52,5 @@ call plug#begin('~/.config/nvim/.extensions')
     Plug 'uiiaoo/java-syntax.vim'
 
     " Other
-    Plug 'puremourning/vimspector'
+    " Plug 'puremourning/vimspector'
 call plug#end()

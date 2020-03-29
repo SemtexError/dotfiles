@@ -23,5 +23,9 @@ alias grep='rg --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+# Move shit out of the home directory
+alias mvn='mvn -gs "$XDG_CONFIG_HOME"/maven/settings.xml'
+alias tmux='tmux -f "$XDG_CONFIG_HOME"/tmux/tmux.conf'
+
 # Other
 alias latexmk=latexmk -pdf -pvc -outdir=out -interaction=nonstopmode 

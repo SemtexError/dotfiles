@@ -26,8 +26,18 @@ export HISTFILESIZE=20000
 export HISTCONTROL=ignorespace
 
 # Move shit out of home folder
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local"
+export XDG_RUNTIME_DIR="$HOME/.cache"
+
+export ZDOTDIR="$HOME/.config/zsh"
 export GNUPGHOME="$HOME/.config/gnupg"
 export GRADLE_HOME="$HOME/.config/gradle"
+export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
+export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
+export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
+export RIDER_PROPERTIES="$XDG_CONFIG_HOME/rider"
 
 # Dotnet
 export DOTNET_ROOT=/opt/dotnet
@@ -59,3 +69,4 @@ export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 
+export NO_AT_BRIDGE=1

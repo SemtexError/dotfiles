@@ -1,4 +1,4 @@
-autoload -U +X compinit && compinit
+autoload -U +X compinit && compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
 autoload -U +X bashcompinit && bashcompinit
 
 # Hide % symbol randomly showing up?

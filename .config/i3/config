@@ -17,7 +17,14 @@ for_window [window_role="task_dialog"] floating enable
 for_window [window_role="Preferences"] floating enable
 for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 5
+
+# Class                 Border      background  text        indicator   child_border
+client.focused          #4C7899     #285577     #FFFFFF     #7F8C8D     #2980B9
+client.focused_inactive #333333     #5F676A     #FFFFFF     #484E50     #151515
+client.unfocused        #333333     #222222     #888888     #292D2E     #5F676A
+client.urgent           #2F343A     #900000     #FFFFFF     #900000     #900000
+client.placeholder      #000000     #0C0C0C     #FFFFFF     #000000     #0C0C0C
 
 set $mod Mod4
 set $gap 5

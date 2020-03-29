@@ -11,5 +11,6 @@
     alert-background = #c0392b
     alert-color = #D4D4D4
 
+    focus-background = #2980B9
 
 ; vim:ft=dosini

@@ -1,4 +1,7 @@
 {
+    // Prevent VIM folder to show up in the home directory
+    "session.directory": "~/.config/nvim/.sessions",
+
     "tsserver.trace.server": "verbose",
 
     // "languageserver": {
