@@ -73,10 +73,10 @@
 ; Only on laptop
 [module/volume2]
     type = custom/script
-    exec = ~/.config/scripts/audio/get
+    exec = ~/.config/scripts/change-volume
 
-    scroll-down = ~/.config/scripts/audio/audio --increase
-    scroll-up = ~/.config/scripts/audio/audio --decrease
+    scroll-down = ~/.config/scripts/audio --increase
+    scroll-up = ~/.config/scripts/audio --decrease
     interval = 1
 
 [module/volume]

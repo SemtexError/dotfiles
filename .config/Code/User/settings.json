@@ -280,7 +280,8 @@
 	"scss.lint.validProperties": [
 		"composes"
 	],
-	"scss.lint.unknownAtRules": "ignore"
+	"scss.lint.unknownAtRules": "ignore",
+	"graalvm.home": "/home/robin/.config/Code/User/globalStorage/oracle-labs-graalvm.graalvm/graalvm-ce-java8-20.0.0"
 	
 }
   

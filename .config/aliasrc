@@ -1,31 +1,37 @@
-# vim: filetype=zsh
+# vim: filetype=sh
 
 # Dotfiles
-alias config='/usr/bin/git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME'
+alias config="/usr/bin/git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME"
 
 # Text editors
-alias vi=nvim
-alias vim=nvim
-alias nano=nvim
-
-# File system
-alias mkdir='mkdir -p'
-alias find='fd'
-
-alias ls='exa --color=auto --group-directories-first'
-alias la='exa -la --color=auto --group-directories-first'
+alias vi="$EDITOR"
+alias vim="$EDITOR"
+alias nano="$EDITOR"
 
 # Tmux
-alias tm='tmux a || tmux'
-alias xclip='xclip -selection clipboard'
-
-alias grep='rg --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
+alias tm="tmux a || tmux"
+alias xclip="xclip -selection clipboard"
 
 # Move shit out of the home directory
-alias mvn='mvn -gs "$XDG_CONFIG_HOME"/maven/settings.xml'
-alias tmux='tmux -f "$XDG_CONFIG_HOME"/tmux/tmux.conf'
+alias mvn="mvn -gs "$XDG_CONFIG_HOME"/maven/settings.xml"
+alias tmux="tmux -f "$XDG_CONFIG_HOME"/tmux/tmux.conf"
 
 # Other
-alias latexmk=latexmk -pdf -pvc -outdir=out -interaction=nonstopmode 
+alias latexmk="latexmk -pdf -pvc -outdir=out -interaction=nonstopmode"
+
+# File system
+alias mkdir="mkdir -p"
+alias find="fd"
+
+# Grep by ripgrep or fallback to default grep
+grep () {
+    rg --color=auto $@ 2> /dev/null ||
+        /usr/bin/grep --color=auto $@
+}
+
+# List files by Exa or fallback to the default LS
+ls () {
+    exa --color=auto --group-directories-first $@ 2> /dev/null || 
+        /usr/bin/ls --color=auto --group-directories-first $@
+}
+alias la="ls -la"

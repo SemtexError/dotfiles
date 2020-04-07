@@ -35,7 +35,7 @@ augroup CsharpActions
     nnoremap <buffer> gs :OmniSharpFindSymbol<CR>
 
     " Rename
-    nnoremap <F2> :OmniSharpRename<CR>
+    nnoremap <buffer> <F2> :OmniSharpRename<CR>
 
     sign define OmniSharpCodeActions text=!> texthl=csCodeAction
     autocmd CursorHold *.cs call OSCountCodeActions()

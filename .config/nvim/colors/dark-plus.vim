@@ -1,36 +1,18 @@
-let s:group_colors = {}
-
-function! Highlight(group, style, ...)
-    if (a:0 > 0)
-        let s:highlight = s:group_colors[a:group]
-        for style_type in ["fg", "bg", "sp"]
-            if (has_key(a:style, style_type))
-                let l:default_style = (has_key(s:highlight, style_type) ? s:highlight[style_type] : { "cterm16": "NONE", "cterm": "NONE", "gui": "NONE" })
-                let s:highlight[style_type] = extend(l:default_style, a:style[style_type])
-            endif
-        endfor
-
-        if (has_key(a:style, "gui"))
-            let s:highlight.gui = a:style.gui
-        endif
-    else
-        let s:highlight = a:style
-        let s:group_colors[a:group] = s:highlight
-    endif
-
-
+function! Highlight(group, highlight)
     execute "highlight" a:group
-        \ "guifg="   (has_key(s:highlight, "fg")    ? s:highlight.fg    : "NONE")
-        \ "guibg="   (has_key(s:highlight, "bg")    ? s:highlight.bg    : "NONE")
-        \ "guisp="   (has_key(s:highlight, "sp")    ? s:highlight.sp    : "NONE")
-        \ "gui="     (has_key(s:highlight, "gui")   ? s:highlight       : "NONE")
-        \ "cterm="   (has_key(s:highlight, "cterm") ? s:highlight.cterm : "NONE")
+        \ "guifg="   (has_key(a:highlight, "fg")        ? a:highlight.fg        : "NONE")
+        \ "guibg="   (has_key(a:highlight, "bg")        ? a:highlight.bg        : "NONE")
+        \ "guisp="   (has_key(a:highlight, "sp")        ? a:highlight.sp        : "NONE")
+        \ "gui="     (has_key(a:highlight, "gui")       ? a:highlight.gui       : "NONE")
+        \ "ctermbg=" (has_key(a:highlight, "ctermbg")   ? a:highlight.ctermbg   : "NONE")
+        \ "ctermfg=" (has_key(a:highlight, "ctermfg")   ? a:highlight.ctermfg   : "NONE")
 endfunction
+
 
 " ==============================
 
 set background=dark
-hi clear
+highlight clear
 if exists("syntax_on")
     syntax reset
 endif
@@ -104,9 +86,7 @@ let s:string = { "fg": s:redOrange } " String literals
 let s:interface = { "fg": s:lightGreen } " Interface members
 let s:pseudoCass = { "fg": s:lightOrange } " CSS pseudo classes
 let s:class = { "fg": s:teal } " Classes
-
-" === Doesn't work otherwise for some reason, can't be bothered to fix that ATM of writing this
-    highlight SpellBad gui=underline term=underline guisp=#E74C3C
+let s:spelling = { "sp": s:red, "gui": "underline" } " Spelling
 
 " === Vim ===
     call Highlight("Normal", s:background)
@@ -121,6 +101,7 @@ let s:class = { "fg": s:teal } " Classes
     call Highlight("Search", s:focus)
     call Highlight("Visual", s:selection)
     call Highlight("Question", s:comment)
+    call Highlight("SpellBad", s:spelling)
 
 " === Vim cursor ===
     call Highlight("ColorColumn", s:cursor)
@@ -138,6 +119,7 @@ let s:class = { "fg": s:teal } " Classes
 " === Vim script ===
     call Highlight("VimUserFunc", s:function)
     call Highlight("vimCommand", s:type)
+    call Highlight("vimOperParen", s:identifier)
 
 " === Code defaults ===
     call Highlight("Title", s:transparant)
@@ -165,6 +147,7 @@ let s:class = { "fg": s:teal } " Classes
 
 " === C ===
     call Highlight("cOperator", s:type)
+    call Highlight("cCharacter", s:string)
 
 " === Java ===
     call Highlight("javaAccessKeyword", s:type)
@@ -422,6 +405,7 @@ let s:class = { "fg": s:teal } " Classes
 
 " === Rust ===
     call Highlight("rustSelf", s:statement)
+    call Highlight("rustLifetime", s:statement)
 
     call Highlight("rustKeyword", s:type)
     call Highlight("rustOperator", s:type)
@@ -492,3 +476,6 @@ let s:class = { "fg": s:teal } " Classes
     call Highlight("bibEntryKw", s:identifier)
     call Highlight("texCite", s:identifier)
     
+" == Bib ==
+    call Highlight("logDate", s:statement)
+    call Highlight("logTime", s:identifier)

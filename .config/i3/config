@@ -8,7 +8,7 @@
 # https://github.com/i3/i3/issues/3518
 focus_follows_mouse no
 
-for_window [class="Tor Browser"] floating enable move position center resize set 1100 1000
+for_window [class="Tor Browser"] floating enable move position center resize set 1100 1100
 for_window [class="xfreerdp"] floating enable move position center
 
 for_window [window_role="pop-up"] floating enable
@@ -27,7 +27,7 @@ client.urgent           #2F343A     #900000     #FFFFFF     #900000     #900000
 client.placeholder      #000000     #0C0C0C     #FFFFFF     #000000     #0C0C0C
 
 set $mod Mod4
-set $gap 5
+set $gap 0
 set $nsi --no-startup-id
 
 set $ws1 "1"
@@ -362,9 +362,9 @@ bindsym $mod+Ctrl+Shift+0			move workspace to workspace $ws10
 bindsym XF86MonBrightnessUp 		exec light -A 1
 bindsym XF86MonBrightnessDown 		exec light -U 1
 
-bindsym XF86AudioRaiseVolume 		exec $nsi ~/.config/scripts/audio/audio --increase
-bindsym XF86AudioLowerVolume 		exec $nsi ~/.config/scripts/audio/audio --decrease
-bindsym XF86AudioMute 				exec $nsi ~/.config/scripts/audio/audio --toggle
+bindsym XF86AudioRaiseVolume 		exec $nsi ~/.config/scripts/audio --increase
+bindsym XF86AudioLowerVolume 		exec $nsi ~/.config/scripts/audio --decrease
+bindsym XF86AudioMute 				exec $nsi ~/.config/scripts/audio --toggle
 bindsym XF86AudioPause 				exec $nsi playerctl play-pause 
 bindsym XF86AudioNext 				exec $nsi playerctl next
 bindsym XF86AudioPrev 				exec $nsi playerctl previous

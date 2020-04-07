@@ -1,1 +1,1 @@
-command! Format execute '%!python -m json.tool' | w  
+command! -buffer Format execute '%!python -m json.tool' | w  

@@ -1,30 +1,11 @@
-let s:group_colors = {}
-
-function! Highlight(group, style, ...)
-    if (a:0 > 0)
-        let s:highlight = s:group_colors[a:group]
-        for style_type in ["fg", "bg", "sp"]
-            if (has_key(a:style, style_type))
-                let l:default_style = (has_key(s:highlight, style_type) ? s:highlight[style_type] : { "cterm16": "NONE", "cterm": "NONE", "gui": "NONE" })
-                let s:highlight[style_type] = extend(l:default_style, a:style[style_type])
-            endif
-        endfor
-
-        if (has_key(a:style, "gui"))
-            let s:highlight.gui = a:style.gui
-        endif
-    else
-        let s:highlight = a:style
-        let s:group_colors[a:group] = s:highlight
-    endif
-
-
+function! Highlight(group, highlight)
     execute "highlight" a:group
-        \ "guifg="   (has_key(s:highlight, "fg")    ? s:highlight.fg    : "NONE")
-        \ "guibg="   (has_key(s:highlight, "bg")    ? s:highlight.bg    : "NONE")
-        \ "guisp="   (has_key(s:highlight, "sp")    ? s:highlight.sp    : "NONE")
-        \ "gui="     (has_key(s:highlight, "gui")   ? s:highlight       : "NONE")
-        \ "cterm="   (has_key(s:highlight, "cterm") ? s:highlight.cterm : "NONE")
+        \ "guifg="   (has_key(a:highlight, "fg")        ? a:highlight.fg        : "NONE")
+        \ "guibg="   (has_key(a:highlight, "bg")        ? a:highlight.bg        : "NONE")
+        \ "guisp="   (has_key(a:highlight, "sp")        ? a:highlight.sp        : "NONE")
+        \ "gui="     (has_key(a:highlight, "gui")       ? a:highlight.gui       : "NONE")
+        \ "ctermbg=" (has_key(a:highlight, "ctermbg")   ? a:highlight.ctermbg   : "NONE")
+        \ "ctermfg=" (has_key(a:highlight, "ctermfg")   ? a:highlight.ctermfg   : "NONE")
 endfunction
 
 " ==============================
@@ -39,7 +20,7 @@ let g:colors_name="light-plus"
 
 " Color
 " Black - White
-let s:black = "#eaeaea" " Black: 21, 21, 21
+let s:black = "#eeeeee" " Black: 21, 21, 21
 let s:lightBlack = "#dddddd" " Light black: 34, 34, 34
 let s:darkGray = "#c3c3c3" " Gray: 60, 60, 60
 let s:gray = "#afafaf" " Gray: 80, 80, 80

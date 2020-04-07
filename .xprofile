@@ -12,3 +12,5 @@ nm-applet & # Launch network manager applet (Laptop)
 libinput-gestures-setup start & # Launch gestures (Laptop)
 
 xss-lock -- ~/.config/i3lock/launch.sh & # Auto lock after a while
+
+[ -f "$HOME/.config/Xresources" ] && xrdb -merge "$HOME/.config/Xresources"

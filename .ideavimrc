@@ -29,4 +29,4 @@ nnoremap <leader>c<leader> :action CommentByLineComment<CR>
 nnoremap <C-o> :action Back<CR>
 nnoremap <C-i> :action Forward<CR>
 nnoremap <C-r> :action $Redo<CR>
-nnoremap <A-r> :action RefactoringMenu<CR>
+nnoremap R :action RefactoringMenu<CR>
