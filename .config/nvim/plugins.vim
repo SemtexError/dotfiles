@@ -43,6 +43,7 @@ call plug#begin('~/.config/nvim/.extensions')
 
     " Rust
     Plug 'rust-lang/rust.vim', { 'for': 'rs' }
+    Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh \| UpdateRemotePlugins' }
 
     " Markup
     Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }

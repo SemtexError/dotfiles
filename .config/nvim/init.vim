@@ -80,3 +80,6 @@ source ~/.config/nvim/keybindings.vim
 
 " Debug
 source ~/.config/nvim/debug.vim
+
+" Correct spell file
+set spellfile=~/.config/nvim/spell/spelling.utf-8.add

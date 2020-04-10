@@ -1,7 +1,7 @@
 /******
 * name: ghacks user.js
-* date: 11 March 2020
-* version 74-alpha
+* date: 07 April 2020
+* version 75-alpha
 * authors: v52+ github | v51- www.ghacks.net
 * url: https://github.com/ghacksuserjs/ghacks-user.js
 * license: MIT: https://github.com/ghacksuserjs/ghacks-user.js/blob/master/LICENSE.txt
@@ -1054,12 +1054,14 @@ user_pref("dom.vibrator.enabled", false);
  * [5] https://www.mozilla.org/security/advisories/mfsa2017-05/#CVE-2017-5400
  * [6] https://rh0dev.github.io/blog/2017/the-return-of-the-jit/ ***/
 user_pref("javascript.options.asmjs", false);
-/* 2421: disable Ion and baseline JIT to help harden JS against exploits
- * [NOTE] Disabling JIT also disables Ion. In FF75+ disabling Ion no longer affects extensions (1599226)
- * [WARNING] If false, causes the odd site issue and there is also a performance loss
+/* 2421: disable Ion and baseline JIT to harden against JS exploits [SETUP-HARDEN]
+ * [NOTE] In FF75+, when **both** Ion and JIT are disabled, **and** the new pref
+ * hidden pref is enabled, then Ion can still be used by extensions (1599226)
+ * [WARNING] Disabling Ion/JIT can cause some site issues and performance loss
  * [1] https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0817 ***/
    // user_pref("javascript.options.ion", false);
    // user_pref("javascript.options.baselinejit", false);
+   // user_pref("javascript.options.jit_trustedprincipals", true); // [FF75+] [HIDDEN PREF]
 /* 2422: disable WebAssembly [FF52+] [SETUP-PERF]
  * [NOTE] In FF71+ this no longer affects extensions (1576254)
  * [1] https://developer.mozilla.org/docs/WebAssembly ***/
@@ -1192,6 +1194,12 @@ user_pref("network.protocol-handler.external.ms-windows-store", false);
 /* 2622: enforce no system colors; they can be fingerprinted
  * [SETTING] General>Language and Appearance>Fonts and Colors>Colors>Use system colors ***/
 user_pref("browser.display.use_system_colors", false); // [DEFAULT: false]
+/* 2623: disable permissions delegation [FF73+]
+ * Currently applies to cross-origin geolocation, camera, mic and screen-sharing
+ * permissions, and fullscreen requests. Disabling delegation means any prompts
+ * for these will show/use their correct 3rd party origin
+ * [1] https://groups.google.com/forum/#!topic/mozilla.dev.platform/BdFOMAuCGW8/discussion */
+user_pref("permissions.delegation.enabled", false);
 
 /** DOWNLOADS ***/
 /* 2650: discourage downloading to desktop

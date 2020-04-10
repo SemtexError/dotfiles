@@ -6,7 +6,6 @@ if !exists('+showtabline')
   finish
 endif
 
-
 " Create tab line
 function! TabLine()
     let content = ''
