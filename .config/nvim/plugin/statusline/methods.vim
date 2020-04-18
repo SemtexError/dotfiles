@@ -47,9 +47,9 @@ endfunction
 
 " Check if ale is running and has data
 function! HasLinted()
-  return get(g:, 'ale_enabled', 0) == 1
-    \ && getbufvar(bufnr(''), 'ale_linted', 0) > 0
-    \ && ale#engine#IsCheckingBuffer(bufnr('')) == 0
+    return get(g:, 'ale_enabled', 0) == 1
+                \ && getbufvar(bufnr(''), 'ale_linted', 0) > 0
+                \ && ale#engine#IsCheckingBuffer(bufnr('')) == 0
 endfunction
 
 " Get all the errors from ale

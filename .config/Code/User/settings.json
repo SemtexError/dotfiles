@@ -268,7 +268,6 @@
 		"yaml",
 		"yml"
 	],
-	"vscode-neovim.neovimPath": "/usr/bin/nvim",
 	"editor.scrollBeyondLastLine": false,
 	"cSpell.userWords": [
 		"fontawesome",
@@ -280,8 +279,7 @@
 	"scss.lint.validProperties": [
 		"composes"
 	],
-	"scss.lint.unknownAtRules": "ignore",
-	"graalvm.home": "/home/robin/.config/Code/User/globalStorage/oracle-labs-graalvm.graalvm/graalvm-ce-java8-20.0.0"
+	"scss.lint.unknownAtRules": "ignore"
 	
 }
   

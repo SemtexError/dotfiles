@@ -12,7 +12,7 @@
     //     }
     // },
 
-    "diagnostic.displayByAle": true,
+    // "diagnostic.displayByAle": true,
 
     // Yank
     "yank.enableCompletion": false,
@@ -21,7 +21,7 @@
     "latex.build.executable": "xelatex",
 
     // Typescript
-    "tsserver.npm": "/usr/bin/npm",
+    // "tsserver.npm": "/usr/bin/npm",
 
     // Vetur
     "vetur.format.options.tabSize": 4,

@@ -10,6 +10,8 @@ focus_follows_mouse no
 
 for_window [class="Tor Browser"] floating enable move position center resize set 1100 1100
 for_window [class="xfreerdp"] floating enable move position center
+for_window [class="hybrid-saas"] resize set 2500 1300
+for_window [class="hybrid-saas"] move position center
 
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="bubble"] floating enable
@@ -152,7 +154,7 @@ bindsym $mod+b 						exec $nsi firefox
 bindsym $mod+Ctrl+Shift+b 			exec $nsi ~/.config/scripts/setbg ~/documents/pictures/wallpaper/
 
 # C
-# bindsym $mod+c 						exec 
+bindsym $mod+c 						move position center
 bindsym $mod+Shift+c 				reload
 # bindsym $mod+Ctrl+c 				exec 
 # bindsym $mod+Ctrl+Shift+c 			exec 

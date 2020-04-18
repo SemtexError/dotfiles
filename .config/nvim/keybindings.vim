@@ -35,9 +35,6 @@ command! Q q
 xnoremap < <gv
 xnoremap > >gv
 
-" Configure backspace so it acts as it should act
-set backspace=eol,start,indent
-
 " Always have n search forward and N search backwards
 nnoremap <expr> n 'Nn'[v:searchforward]
 xnoremap <expr> n 'Nn'[v:searchforward]
@@ -51,7 +48,7 @@ onoremap <expr> N 'nN'[v:searchforward]
 nnoremap <leader>[ :cprev<CR>
 nnoremap <leader>] :cnext<CR>
 
-" Only insert comments automatically witch enter (bit ugly but it works)
+" Only insert comments automatically with enter (bit ugly but it works)
 nnoremap <expr> O getline('.') =~ '^\s*//' ? 'O<esc>S' : getline('.') =~ '^\s*\"' ? 'O<esc>S' : getline('.') =~ '^\s*\#' ? 'O<esc>S' : 'O'
 nnoremap <expr> o getline('.') =~ '^\s*//' ? 'o<esc>S' : getline('.') =~ '^\s*\"' ? 'o<esc>S' : getline('.') =~ '^\s*\#' ? 'o<esc>S' : 'o'
 

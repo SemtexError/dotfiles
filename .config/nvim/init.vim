@@ -1,3 +1,8 @@
+" Indent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
 " Default options
 set hidden " Allow switching of buffer when it hasn't been saved yet
 set encoding=UTF-8 " Default file encoding
@@ -9,32 +14,15 @@ set number relativenumber " Relative line numbering
 set ruler " Always show current position
 set lazyredraw " Don't redraw while performing a macro
 set showmatch " Show matching braces
-set laststatus=2 " For light line, 2 is always show
-set noshowmode " For Light line
-set wildmode=longest,list,full " Auto complete order
-set completeopt=longest,menuone,preview
-set showtabline=1 " Show file tab only when needed
+set wildmode=longest,list,full " Auto complete order of Vim commands
 set cursorline " Enable current line indicator
 set clipboard+=unnamedplus " Set clipboard to + outside Tmux
-set splitbelow splitright
+set splitbelow splitright " Split below instead of above first
+set backspace=eol,start,indent " Configure backspace so it acts as it should act
+set completeopt=longest,menuone,preview
 
-" Find
-set path+=**
-set wildignore+=**/node_modules/** " NodeJS modules
-set wildignore+=**/.git/**
-set wildignore+=**/bin/** " C# 
-set wildignore+=**/_extensions/**  
-
-" Searching
-set ignorecase
-set smartcase
-set hlsearch
-set incsearch
-
-" Indent
-set tabstop=4
-set shiftwidth=4
-set expandtab
+" Correct spell file
+set spellfile=~/.config/nvim/spell/spelling.utf-8.add
 
 " No sound
 set noerrorbells
@@ -51,23 +39,11 @@ colorscheme dark-plus
 set autoread 
 autocmd FocusGained,BufEnter * checktime
 
-" Save as SUDO user
+" Save as sudo user
 command! WS execute 'w !sudo tee % > /dev/null' <bar> edit!
 
 " Return to the last edit position when returning to a buffer
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-
-" Faster searching
-if executable('rg')
-    set grepprg=rg\ --vimgrep
-    set grepformat^=%f:%l:%c:%m
-
-    augroup autoquickfix
-        autocmd!
-        autocmd QuickFixCmdPost [^l]* cwindow
-        autocmd QuickFixCmdPost l* lwindow
-    augroup END
-endif
 
 " File types
 source ~/.config/nvim/filetype.vim
@@ -80,6 +56,3 @@ source ~/.config/nvim/keybindings.vim
 
 " Debug
 source ~/.config/nvim/debug.vim
-
-" Correct spell file
-set spellfile=~/.config/nvim/spell/spelling.utf-8.add

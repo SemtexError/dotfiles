@@ -3,16 +3,17 @@ augroup StatusLine
 
     " On buffer change
     autocmd VimEnter,WinEnter,BufWinEnter *
-        \ call Update()
+                \ call Update()
 
     " On ALE change
     autocmd User ALELintPre,ALELintPost,ALEJobStarted,ALEFixPre,ALEFixPost
-        \ call Update()
+                \ call Update()
 
 augroup END
 
 " Update the status line
 function Update()
+    set laststatus=2
     set statusline=%!GetStatusLine()
 endfunction
 
@@ -71,7 +72,7 @@ function! GetStatusLine()
 
     " Padding right
     let content .= ' '
-    
+
     return content
 endfunction
 

@@ -4,28 +4,29 @@ autocmd FileType json syntax match Comment +\/\/.\+$+
 set updatetime=300
 set shortmess+=c
 set signcolumn=yes
-    
+
 " All Coc extensions which will be installed
 let g:coc_global_extensions= [ 
-    \ 'coc-tsserver',
-    \ 'coc-eslint',
-    \ 'coc-vetur',
-    \ 'coc-html',
-    \ 'coc-css',
-    \ 'coc-tailwindcss',
-    \ 'coc-rust-analyzer',
-    \ 'coc-json',
-    \ 'coc-webpack',
-    \ 'coc-pairs',
-    \ 'coc-lists',
-    \ 'coc-explorer',
-    \ 'coc-snippets',
-    \ 'coc-texlab',
-    \ 'coc-bibtex',
-    \ 'coc-import-cost',
-    \ 'coc-yank',
-    \ 'coc-marketplace'
-\]
+            \ 'coc-tsserver',
+            \ 'coc-eslint',
+            \ 'coc-vetur',
+            \ 'coc-html',
+            \ 'coc-css',
+            \ 'coc-tailwindcss',
+            \ 'coc-rust-analyzer',
+            \ 'coc-json',
+            \ 'coc-webpack',
+            \ 'coc-pairs',
+            \ 'coc-lists',
+            \ 'coc-explorer',
+            \ 'coc-snippets',
+            \ 'coc-texlab',
+            \ 'coc-bibtex',
+            \ 'coc-import-cost',
+            \ 'coc-yank',
+            \ 'coc-rls',
+            \ 'coc-marketplace'
+            \]
 
 nmap <M-t> :CocCommand explorer<CR>
 
@@ -64,9 +65,9 @@ nnoremap <silent> <leader>o  :<C-u>CocList outline<cr>
 " Show documentation
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
+    if (index(['vim','help'], &filetype) >= 0)
+        execute 'h '.expand('<cword>')
+    else
+        call CocAction('doHover')
+    endif
 endfunction

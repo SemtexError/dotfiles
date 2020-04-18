@@ -61,7 +61,7 @@ syntax keyword aspConditional do
 syntax keyword aspConditional while
 syntax keyword aspConditional in
 syntax keyword aspConditional of
-syntax keyword aspConditional switch case break default
+syntax keyword aspConditional switch case break default continue
 syntax keyword aspConditional for
 syntax keyword aspConditional return
 syntax keyword aspConditional try catch

@@ -4,6 +4,7 @@ autocmd BufNewFile,BufRead *.exclude :set filetype=aspvbs
 autocmd BufNewFile,BufRead *.js.asp :set filetype=aspjs
 autocmd BufNewFile,BufRead *.cshtml :set filetype=razor
 autocmd BufNewFile,BufRead *.svg :set filetype=html
+autocmd BufNewFile,BufRead *.tex :set filetype=tex
 
 " Images that has a command to view them
 autocmd BufNewFile,BufRead *.png :set filetype=image
