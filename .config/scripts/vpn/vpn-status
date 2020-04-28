@@ -4,7 +4,9 @@ STATUS="$(expressvpn status)"
 RESULT=''
 RED='\033[0;31m'
 
-if [[ $STATUS == *"A new version"* ]]; then
+if [[ $STATUS == *"expressvpnd"* ]]; then
+    RESULT="Daemon is not running"
+elif [[ $STATUS == *"A new version"* ]]; then
     # Re get status, otherwise it wont work, idk
     RESULT=$(expressvpn status | tail -n +3 | head -n 1 | sed -r 's/\[.*?m//g')
     sed "s/Connected to//g" <<< "$RESULT"

@@ -134,6 +134,7 @@ call Highlight("Identifier", s:identifier)
 call Highlight("Function", s:function)
 call Highlight("constant", s:constant)
 call Highlight("Operator", s:transparant)
+
 " === Vim tabline ===
 call Highlight("Statusline", s:statuslineNormal)
 call Highlight("TabLine", s:statuslineNormal)
@@ -146,6 +147,12 @@ call Highlight("StatusModeCommandColor", s:statuslineVisual)
 call Highlight("StatusModeReplaceColor", s:statuslineReplace)
 call Highlight("StatusErrorColor", s:statuslineError)
 call Highlight("StatusWarningColor", s:statuslineWarning)
+
+" == ALE ==
+call Highlight("ALEWarning", s:warning)
+call Highlight("ALEWarningSign", s:notice)
+call Highlight("ALEError", s:error)
+call Highlight("ALEErrorSign", s:danger)
 
 " === C ===
 call Highlight("cOperator", s:type)
@@ -487,7 +494,4 @@ call Highlight("logDate", s:statement)
 call Highlight("logTime", s:identifier)
 
 " == ALE ==
-call Highlight("ALEWarning", s:warning)
-call Highlight("ALEWarningSign", s:notice)
-call Highlight("ALEError", s:error)
-call Highlight("ALEErrorSign", s:danger)
+call Highlight("yamlKey", s:statement)

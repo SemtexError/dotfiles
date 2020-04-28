@@ -33,7 +33,7 @@ configuration {
     background-color:   @background;
     location:           center;
     anchor:             center;
-    height:             80%;
+    height:             85%;
     width:              55%;
     border:             0;
     padding:            20;

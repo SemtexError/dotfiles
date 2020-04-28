@@ -1814,3 +1814,6 @@ user_pref("layout.spellcheckDefault", 1);
 
 // Merge omnibar/search bar
 user_pref("browser.search.widget.inNavBar", false)
+
+// Disable picture in picture icon 
+user_pref("media.videocontrols.picture-in-picture.video-toggle.enabled", false);

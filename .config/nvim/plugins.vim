@@ -10,7 +10,6 @@ endif
 call plug#begin('~/.config/nvim/.extensions')
 " ====== Appearance ======
     Plug 'sheerun/vim-polyglot'
-    Plug 'junegunn/goyo.vim'
 
 " ====== Files ======
 	Plug 'junegunn/fzf'
@@ -45,9 +44,5 @@ call plug#begin('~/.config/nvim/.extensions')
     Plug 'rust-lang/rust.vim', { 'for': 'rs' }
 
     " Markup
-    Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
     Plug 'iamcco/markdown-preview.nvim', { 'for': 'markdown', 'do': 'cd app & yarn install' }
-
-    " Java
-    Plug 'uiiaoo/java-syntax.vim'
 call plug#end()

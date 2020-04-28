@@ -100,13 +100,13 @@ Visual Studio (Code) dark theme
 | [wellle/targets.vim](https://github.com/wellle/targets.vim)                       | More text objects                 |
 | [tpope/vim-repeat](https://github.com/tpope/vim-repeat)                           | Better command repeat             |
 | [vim-scripts/SearchComplete](https://github.com/vim-scripts/SearchComplete)       | Auto complete search results      |
+| [rhysd/git-messenger.vim](https://github.com/rhysd/git-messenger.vim)             | Show Git commit message popup     |
+| [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter)               | Show Git status in status line    |
 | [andymass/vim-matchup](https://github.com/andymass/vim-matchup)                   | Highlight brace matches           |
 | [jiangmiao/auto-pairs](https://github.com/jiangmiao/auto-pairs)                   | Auto insert braces                |
 | [dense-analysis/ale](https://github.com/dense-analysis/ale)                       | Linting engine                    |
 | [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim)                         | Auto completion engine            |
 | [OmniSharp/omnisharp-vim](https://github.com/OmniSharp/omnisharp-vim)             | C# integration                    |
 | [rust-lang/rust.vim](https://github.com/rust-lang/rust.vim)                       | Rust integration                  |
-| [xuhdev/vim-latex-live-preview](https://github.com/xuhdev/vim-latex-live-preview) | Live compile LaTeX files          |
 | [iamcco/markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)   | Live preview Markdown files       |
-| [puremourning/vimspector](https://github.com/puremourning/vimspector)             | Debugging in VIM                  |
 

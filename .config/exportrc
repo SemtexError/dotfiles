@@ -38,6 +38,9 @@ export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
 export RIDER_PROPERTIES="$XDG_CONFIG_HOME/rider"
+export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
+export PSQL_HISTORY="$XDG_CACHE_HOME/pg/psql_history"
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 
 # Dotnet
 export DOTNET_ROOT=/opt/dotnet
@@ -78,3 +81,4 @@ export ERRFILE="/dev/null"
 
 # NodeJS
 [ -f "/usr/bin/yarn" ] && export PATH="$PATH:$(yarn global bin)"
+

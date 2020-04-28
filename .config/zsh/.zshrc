@@ -25,6 +25,27 @@ HISTSIZE=10000
 SAVEHIST=20000
 HISTFILE=~/.config/zsh/history
 
+## Ignore all repetitions of commands
+setopt HIST_IGNORE_ALL_DUPS
+
+## Do not display the string found earlier
+setopt HIST_FIND_NO_DUPS
+
+## Ignore rows if they are duplicates
+setopt HIST_IGNORE_DUPS
+ 
+## Delete empty lines from history file
+setopt HIST_REDUCE_BLANKS
+
+## Ignore a record starting with a space
+setopt HIST_IGNORE_SPACE
+
+## Do not add history and fc commands to the history
+setopt HIST_NO_STORE
+
+## Ignore a record starting with a space
+setopt HIST_IGNORE_SPACE
+
 # Backward kill words with backspace
 [ -f "$HOME/.config/zsh/lscdrc" ] && source "$HOME/.config/zsh/lscdrc"
 
