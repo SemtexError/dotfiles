@@ -1,0 +1,22 @@
+set selection-clipboard clipboard
+
+set default-bg "#212121"
+set default-fg "#1212ff"
+
+set statusbar-fg "#999999"
+set statusbar-bg "#222222"
+
+set inputbar-bg "#000000"
+set inputbar-fg "#C1C1C1"
+
+set notification-bg "#000000"
+set notification-fg "#C1C1C1"
+
+set notification-error-bg "#000000"
+set notification-error-fg "#5F8787"
+
+set notification-warning-bg "#000000"
+set notification-warning-fg "#5f8787"
+
+set recolor-lightcolor "#000000"
+set recolor-darkcolor "#D4D4D4"
