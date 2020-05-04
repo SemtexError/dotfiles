@@ -16,7 +16,7 @@
     modules-center = vpn
     modules-left = i3
 
-    wm-restack = bspwm
+    wm-restack = i3
 ; Monitor
     monitor=${env:MONITOR:}
 
@@ -56,4 +56,49 @@
     tray-position = right
     tray-padding = 3
 
+
+[bar/secondary]
+    modules-right = 
+    modules-center = 
+    modules-left = i3
+
+    wm-restack = i3
+; Monitor
+    monitor=${env:MONITOR:}
+
+; Position
+    width = 100%
+    height = 35
+    offset-x = 0%
+    offset-y = 0%
+    bottom = false
+    fixed-center = true
+
+; Color
+    background = ${colors.background}
+    foreground = ${colors.format-color}
+
+; Line
+    line-size = 0
+    line-color = #f00
+
+; Border
+    border-size = 0
+    border-color = #00000000
+
+; Padding
+    padding-left = 0
+    padding-right = 0
+
+; Module margin
+    module-margin-left = 0
+    module-margin-right = 0
+
+; Font
+    font-0 = Noto Sans:size=13;0
+    font-1 = Material Design Icons:size=14;1
+
+; Tray
+    tray-position = right
+    tray-padding = 3
 ; vim:ft=dosini

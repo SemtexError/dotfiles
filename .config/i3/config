@@ -19,7 +19,7 @@ for_window [window_role="task_dialog"] floating enable
 for_window [window_role="Preferences"] floating enable
 for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
-for_window [class="^.*"] border pixel 5
+for_window [class="^.*"] border pixel 3
 
 # Class                 Border      background  text        indicator   child_border
 client.focused          #4C7899     #285577     #FFFFFF     #7F8C8D     #3498DB

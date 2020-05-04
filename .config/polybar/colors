@@ -13,4 +13,5 @@
 
     focus-background = #2980B9
 
+    secondary = #151515
 ; vim:ft=dosini

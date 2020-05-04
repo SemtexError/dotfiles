@@ -218,10 +218,12 @@
      
     label-unfocused = %icon% %name%
     label-unfocused-padding = ${settings.padding}
+; label-unfocused-background = #ff0000
      
     label-visible = %icon% %index%
     label-visible-underline = ${colors.visible-color}
     label-visible-padding = ${settings.padding}
+    label-visible-background = ${colors.secondary}
 
     label-urgent = %icon% %name%
     label-urgent-foreground = ${colors.alert-color}
