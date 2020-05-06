@@ -97,8 +97,4 @@
 ; Font
     font-0 = Noto Sans:size=13;0
     font-1 = Material Design Icons:size=14;1
-
-; Tray
-    tray-position = right
-    tray-padding = 3
 ; vim:ft=dosini

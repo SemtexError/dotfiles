@@ -53,7 +53,7 @@ let s:purple = "#C586C0" " Purple: 196, 134, 192
 
 " Groups
 let s:transparant = {  }
-let s:background = { "bg": s:black, "fg": s:white } " Default colors
+let s:background = { "bg": "none", "fg": s:white } " Default colors
 let s:split = { "bg": s:black, "fg": s:darkGray } " Vim window split
 let s:popup = { "bg": s:lightBlack, "fg": s:silver } " Auto complete popup
 let s:focus = { "bg": s:gray } " Focused background: popup, search

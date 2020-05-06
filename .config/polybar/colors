@@ -1,12 +1,12 @@
 [colors]
-    background = #000 
+    background = #99000000
     format-color = #D4D4D4
     disabled-color = #7F8C8D
     seperator-color = #FFB52A
     visible-color = #555555
 
     highlight-color = #D4D4D4
-    highlight-background = #151515
+    highlight-background = #99151515
 
     alert-background = #c0392b
     alert-color = #D4D4D4

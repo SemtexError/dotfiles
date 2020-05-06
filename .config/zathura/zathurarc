@@ -19,12 +19,14 @@ set notification-warning-bg "#000000"
 set notification-warning-fg "#5f8787"
 
 set recolor-lightcolor "#000000"
-set recolor-darkcolor "#D4D4D4"
+set recolor-darkcolor "#f2f2f2"
 
 map _ zoom out
 map - zoom out
+map <C--> zoom out
 map = zoom in
 map + zoom in
+map <C-=> zoom in
 
 map <C-k> navigate previous
 map <C-j> navigate next 

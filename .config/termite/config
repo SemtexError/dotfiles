@@ -6,7 +6,7 @@
     clickable_url = false
 
 [colors]
-    background = #151515
+    background = rgba(22, 22, 22, 0.9)
     foreground = #D4D4D4
     cursor     = #808080
     highlight  = #222222
