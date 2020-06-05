@@ -1,0 +1,3 @@
+
+runtime! syntax/json.vim
+
