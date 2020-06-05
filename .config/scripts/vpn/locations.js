@@ -435,7 +435,7 @@ const getResult = async () =>
 const main = async () =>
 {
     const locations = await getResult ();
-    console.log(`disc\tDisconnect`);
+    console.log(`disc\t🚩 Disconnect`);
     locations.forEach(x => console.log(`${x.id}\t${x.name}`));
 };
 

@@ -99,6 +99,8 @@ Visual Studio (Code) dark theme
 | [scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter)           | Toggle code comments              |
 | [wellle/targets.vim](https://github.com/wellle/targets.vim)                       | More text objects                 |
 | [tpope/vim-repeat](https://github.com/tpope/vim-repeat)                           | Better command repeat             |
+| [tpope/vim-abolish](https://github.com/tpope//vim-abolish)                        | Better substitution               |
+| [jremmen/vim-ripgrep](https://github.com/jremmen/vim-ripgrep)                     | Better vim searching with tags    |
 | [vim-scripts/SearchComplete](https://github.com/vim-scripts/SearchComplete)       | Auto complete search results      |
 | [rhysd/git-messenger.vim](https://github.com/rhysd/git-messenger.vim)             | Show Git commit message popup     |
 | [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter)               | Show Git status in status line    |

@@ -1,6 +1,9 @@
 {
     // Prevent VIM folder to show up in the home directory
     "session.directory": "~/.config/nvim/.sessions",
+    
+    "diagnostic.virtualText": false,
+    "diagnostic.messageTarget": "float",
 
     "tsserver.trace.server": "verbose",
 
@@ -12,7 +15,7 @@
     //     }
     // },
 
-    // "diagnostic.displayByAle": true,
+    "diagnostic.displayByAle": true,
 
     // Yank
     "yank.enableCompletion": false,
@@ -90,7 +93,7 @@
                 "color": "#3498db"
             },
             "latex": {
-                "code": "ﭔ",
+                "code": "",
                 "color": "#3498db"
             },
             "bibliography": {

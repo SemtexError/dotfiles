@@ -1,5 +1,6 @@
 " Fix command in Coc setting json
 autocmd FileType json syntax match Comment +\/\/.\+$+
+autocmd FileType jsonc syntax match Comment +\/\/.\+$+
 
 set updatetime=300
 set shortmess+=c

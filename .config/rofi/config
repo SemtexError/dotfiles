@@ -1,2 +1,0 @@
-rofi.theme: ~/.config/rofi/simple.rasi
-rofi.modi: window,run,ssh,calc

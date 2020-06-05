@@ -1,100 +1,100 @@
 ; Modules to add: bluetooth, mounted devices
 [global/wm]
-    include-file = ~/.config/polybar/colors
-    include-file = ~/.config/polybar/modules
+include-file = ~/.config/polybar/colors
+include-file = ~/.config/polybar/modules
 
 [settings]
-    padding = 3
+padding = 3
 
 ; Format
-    format-padding = ${settings.padding}
-    format-foreground = ${colors.format-color}
-    format-prefix-foreground = ${colors.format-color}
+format-padding = ${settings.padding}
+format-foreground = ${colors.format-color}
+format-prefix-foreground = ${colors.format-color}
+
 
 [bar/main]
-    modules-right = spotify powermenu wireless-network wired-network battery brightness volume date time 
-    modules-center = vpn
-    modules-left = i3
+modules-right = spotify powermenu wireless-network wired-network battery brightness volume date time 
+modules-center = vpn
+modules-left = i3
 
-    wm-restack = i3
+wm-restack = i3
 ; Monitor
-    monitor=${env:MONITOR:}
+monitor=${env:MONITOR:}
 
 ; Position
-    width = 100%
-    height = 35
-    offset-x = 0%
-    offset-y = 0%
-    bottom = false
-    fixed-center = true
+width = 100%
+height = 35
+offset-x = 0%
+offset-y = 0%
+bottom = false
+fixed-center = true
 
 ; Color
-    background = ${colors.background}
-    foreground = ${colors.format-color}
+background = ${colors.background}
+foreground = ${colors.format-color}
 
 ; Line
-    line-size = 0
-    line-color = #f00
+line-size = 0
+line-color = #f00
 
 ; Border
-    border-size = 0
-    border-color = #00000000
+border-size = 0
+border-color = #00000000
 
 ; Padding
-    padding-left = 0
-    padding-right = 0
+padding-left = 0
+padding-right = 0
 
 ; Module margin
-    module-margin-left = 0
-    module-margin-right = 0
+module-margin-left = 0
+module-margin-right = 0
 
 ; Font
-    font-0 = Noto Sans:size=13;0
-    font-1 = Material Design Icons:size=14;1
+font-0 = Noto Sans:size=13;0
+font-1 = Material Design Icons:size=14;1
 
 ; Tray
-    tray-position = right
-    tray-padding = 3
-
+tray-position = right
+tray-padding = 3
 
 [bar/secondary]
-    modules-right = 
-    modules-center = 
-    modules-left = i3
+modules-left = i3
+modules-center = 
+modules-right = volume time
 
-    wm-restack = i3
+wm-restack = i3
 ; Monitor
-    monitor=${env:MONITOR:}
+monitor=${env:MONITOR:}
 
 ; Position
-    width = 100%
-    height = 35
-    offset-x = 0%
-    offset-y = 0%
-    bottom = false
-    fixed-center = true
+width = 100%
+height = 35
+offset-x = 0%
+offset-y = 0%
+bottom = false
+fixed-center = true
 
 ; Color
-    background = ${colors.background}
-    foreground = ${colors.format-color}
+background = ${colors.background}
+foreground = ${colors.format-color}
 
 ; Line
-    line-size = 0
-    line-color = #f00
+line-size = 0
+line-color = #f00
 
 ; Border
-    border-size = 0
-    border-color = #00000000
+border-size = 0
+border-color = #00000000
 
 ; Padding
-    padding-left = 0
-    padding-right = 0
+padding-left = 0
+padding-right = 0
 
 ; Module margin
-    module-margin-left = 0
-    module-margin-right = 0
+module-margin-left = 0
+module-margin-right = 0
 
 ; Font
-    font-0 = Noto Sans:size=13;0
-    font-1 = Material Design Icons:size=14;1
+font-0 = Noto Sans:size=13;0
+font-1 = Material Design Icons:size=14;1
 ; vim:ft=dosini

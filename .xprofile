@@ -10,6 +10,7 @@
 unclutter & # Remove mouse when idle
 nm-applet & # Launch network manager applet (Laptop)
 libinput-gestures-setup start & # Launch gestures (Laptop)
+picom & # Start compositor
 
 xss-lock -- ~/.config/i3lock/launch.sh & # Auto lock after a while
 

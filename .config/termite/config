@@ -1,46 +1,46 @@
 [options]
-    font = Material Design Icons 18
-    font = Fira code 14
+font = Material Design Icons 18
+font = Fira code 14
 
 # I missclick way more then I actually use it
-    clickable_url = false
+clickable_url = false
 
 [colors]
-    background = rgba(22, 22, 22, 0.9)
-    foreground = #D4D4D4
-    cursor     = #808080
-    highlight  = #222222
+background = rgba(22, 22, 22, 0.9)
+foreground = #D4D4D4
+cursor     = #808080
+highlight  = #222222
 
 # 16 color space
 
 # Black, Gray, Silver, White
-    color0  = #222222
-    color8  = #222222
-    color7  = #BBBBBB
-    color15 = #D4D4D4
+color0  = #222222
+color8  = #222222
+color7  = #BBBBBB
+color15 = #D4D4D4
 
 # Red
-    color1  = #E74C3C
-    color9  = #CE9178
+color1  = #E74C3C
+color9  = #CE9178
 
 # Green
-    color2  = #2ECC71
-    color10 = #608B4E
+color2  = #2ECC71
+color10 = #608B4E
 
 # Yellow
-    color3  = #F1C40F
-    color11 = #F1C40F
+color3  = #F1C40F
+color11 = #F1C40F
 
 # Blue
-    color4  = #3498DB
-    color12 = #2980B9
+color4  = #3498DB
+color12 = #2980B9
 
 # Purple
-    color5  = #9B59B6
-    color13 = #8E44AD
+color5  = #9B59B6
+color13 = #8E44AD
 
 # Teal
-    color6  = #4EC9B0
-    color14 = #4EC9B0
+color6  = #4EC9B0
+color14 = #4EC9B0
 
 # vim: ft=dosini cms=#%s

@@ -17,12 +17,14 @@ call plug#begin('~/.config/nvim/.extensions')
     Plug 'liuchengxu/vim-clap'
 
 " ====== Editor ======
-    Plug 'psliwka/vim-smoothie'
+    Plug 'vim-scripts/SearchComplete'
     Plug 'easymotion/vim-easymotion'
     Plug 'scrooloose/nerdcommenter'
+    Plug 'psliwka/vim-smoothie'
+    Plug 'jremmen/vim-ripgrep'
     Plug 'wellle/targets.vim'
     Plug 'tpope/vim-repeat'
-    Plug 'vim-scripts/SearchComplete'
+    Plug 'tpope/vim-abolish'
 
 " ====== Git ======
     Plug 'rhysd/git-messenger.vim'

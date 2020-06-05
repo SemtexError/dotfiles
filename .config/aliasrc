@@ -8,6 +8,13 @@ alias vi="$EDITOR"
 alias vim="$EDITOR"
 alias nano="$EDITOR"
 
+# Git
+alias g="git"
+alias ga="git add -A"
+alias gm="git commit -m "
+alias gs="git status"
+alias gp="git pull"
+
 # Tmux
 alias tm="tmux a || tmux"
 alias xclip="xclip -selection clipboard"

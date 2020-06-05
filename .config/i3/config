@@ -61,7 +61,7 @@ workspace $ws3   output $mon1
  workspace $ws9  output $mon3
  workspace $ws10 output $mon3
 
-smart_gaps on
+# smart_gaps on
 gaps inner $gap
 gaps outer 0
 
@@ -221,10 +221,10 @@ bindsym $mod+Ctrl+Shift+l 			exec ~/.config/i3lock/launch.sh
 # bindsym $mod+Ctrl+Shift+m 			exec 
 
 # N
-bindsym $mod+n 						exec $nsi flash_window
+# bindsym $mod+n 					exec 
 # bindsym $mod+Shift+n 				exec 
 # bindsym $mod+Ctrl+n 				exec 
-# bindsym $mod+Ctrl+Shift+n 			exec 
+# bindsym $mod+Ctrl+Shift+n 		exec 
 
 # O
 # bindsym $mod+o 						exec 
