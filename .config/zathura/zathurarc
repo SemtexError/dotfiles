@@ -31,4 +31,5 @@ map <C-=> zoom in
 map <C-k> navigate previous
 map <C-j> navigate next 
 
+map <C-s> toggle_statusbar
 " vim:ft=vim

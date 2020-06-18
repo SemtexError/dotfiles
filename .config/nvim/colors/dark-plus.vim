@@ -495,3 +495,6 @@ call Highlight("logTime", s:identifier)
 
 " == ALE ==
 call Highlight("yamlKey", s:statement)
+
+" == Markdown ==
+call Highlight("htmlH1", { "gui": "bold" })
