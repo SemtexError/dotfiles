@@ -41,6 +41,8 @@ export RIDER_PROPERTIES="$XDG_CONFIG_HOME/rider"
 export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
 export PSQL_HISTORY="$XDG_CACHE_HOME/pg/psql_history"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
+export ANDROID_SDK_HOME="$XDG_CONFIG_HOME"/android
+export ADB_VENDOR_KEY="$XDG_CONFIG_HOME"/android
 
 # Dotnet
 export DOTNET_ROOT=/opt/dotnet
