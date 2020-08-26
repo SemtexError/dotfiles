@@ -1,0 +1,10 @@
+configuration {
+	show-icons: true;
+	drun-display-format: "{name}";
+	sidebar-mode: false;
+	theme: "~/.config/rofi/themes/simple.rasi";
+	display-window: "缾";
+	display-run: "$";
+	display-ssh: "~#";
+	display-drun: "§";
+}

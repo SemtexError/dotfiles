@@ -75,7 +75,7 @@
             "^bin$", // C#
             "^obj$", // C#
             "^dist$", // Javascript
-            "^node_modules$", // NPM
+            "^node_modules$" // NPM
         ]
     },
     "explorer.icon.customIcons": {

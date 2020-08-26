@@ -6,16 +6,16 @@
     time = "%H:%M"
     label = %time%
 
-    format-prefix = " "
+    format-prefix = " "
     format-background = ${colors.highlight-background}
 
 ; Only on desktop
 [module/wired-network]
     type = internal/network
     interface = eno1
-	format-connected = 
-    label-connected = 
-	format-disconnected =  
+	format-connected = ""
+    label-connected = ""
+	format-disconnected = " "
 
 ; Only on laptop
 [module/wireless-network]
@@ -68,7 +68,7 @@
     date = "%d-%m-%Y"
     label = %date%
 
-    format-prefix = "ﷻ "
+    format-prefix = " "
 
 ; Only on laptop
 [module/volume2]
