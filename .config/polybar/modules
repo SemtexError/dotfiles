@@ -156,8 +156,9 @@
 [module/vpn]
     type = custom/script
     label = %output%
-    interval = 5
-    exec = ~/.config/scripts/vpn/vpn-status
+    interval = 10
+; NodeJs is kinda slow but it works much better.
+    exec = node ~/.config/scripts/vpn/vpn-status.js
     click-left = "~/.config/scripts/vpn/switch.sh >/dev/null 2>&1 &"
     format-background = ${colors.highlight-background}
 
