@@ -3,6 +3,7 @@ let g:OmniSharp_server_stdio = 1
 let g:OmniSharp_highlight_types = 2
 let g:OmniSharp_highlight_debug = 1
 let g:OmniSharp_selector_ui = 'fzf'
+let g:OmniSharp_popup = 1
 
 " Disable 'Use explicit type' and 'Variable not initialized' warnings.
 let g:OmniSharp_diagnostic_overrides = {

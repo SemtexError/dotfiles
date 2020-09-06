@@ -29,7 +29,9 @@ set tm=500
 
 " Set colors to 265
 syntax on
-set termguicolors
+if exists('+termguicolors')
+    set termguicolors
+endif
 
 " Automatically read the file when it's changed from the outside
 set autoread 
@@ -41,7 +43,7 @@ command! WS execute 'w !sudo tee % > /dev/null' <bar> edit!
 " Return to the last edit position when returning to a buffer
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-" Map leader to space
+" Map meader to space
 let mapleader = " "
 
 " Map jj to escape so that you can exit insert mode easily

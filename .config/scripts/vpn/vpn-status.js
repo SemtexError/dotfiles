@@ -23,15 +23,32 @@ const removeColors = value => {
 const getStatus = async () => {
     try {
         const result = await execute('expressvpn status');
+        if (!result) {
+            return 'An invalid command result';
+        }
+
         const lines = result.split('\n');
 
         if (lines.length === 0) {
             return 'An invalid result';
         }
 
-        const location = removeColors(lines[0]).trim();
+        let locationIndex = 0;
+        if (result.indexOf('A new version') > -1) {
+            locationIndex = 1;
+        }
 
-        console.log(location);
+        const location = removeColors(lines[locationIndex]).trim();
+
+        if (location.indexOf('Unable to connect') > -1) {
+            return 'Unable to connect';
+        }
+
+        if (location.indexOf('Unable to connect') > -1) {
+            return 'Unable to connect';
+        }
+
+        return location.replace(/^Connected to /gi, '');
 
     }
     catch (e) {

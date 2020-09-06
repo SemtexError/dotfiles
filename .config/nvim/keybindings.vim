@@ -24,7 +24,7 @@ nnoremap <C-l> <C-w>l
 nnoremap <C-p> :pu<cr>
 nnoremap <M-p> :pu!<cr>
 
-" Saving
+" Prevent saving errors
 nnoremap <leader><leader> :w!<cr>
 command! W w
 command! WQ wq

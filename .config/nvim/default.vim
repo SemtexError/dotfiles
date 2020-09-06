@@ -4,18 +4,19 @@ set shiftwidth=4
 set expandtab
 
 " Default options
-set hidden " Allow switching of buffer when it hasn't been saved yet
-set encoding=UTF-8 " Default file encoding
-set undofile " Enable undo persistence across sessions
-set history=10000 " The lines of history to remember
-set number relativenumber " Relative line numbering
-set ruler " Always show current position
-set lazyredraw " Don't redraw while performing a macro
-set showmatch " Show matching braces
-set wildmode=longest,list,full " Auto complete order of Vim commands
-set clipboard+=unnamedplus " Set clipboard to + outside Tmux
-set splitbelow splitright " Split below instead of above first
-set backspace=eol,start,indent " Configure backspace so it acts as it should act
+set encoding=UTF-8          " Default file encoding
+set colorcolumn=120         " Create a line on 120 column to indicate long lines.
+set hidden                  " Allow switching of buffer when it hasn't been saved yet
+set undofile                " Enable undo persistence across sessions
+set history=10000           " The lines of history to remember
+set number relativenumber   " Relative line numbering
+set ruler                   " Always show current position
+set lazyredraw              " Don't redraw while performing a macro
+set showmatch               " Show matching braces
+set clipboard+=unnamedplus  " Set clipboard to + outside Tmux
+set splitbelow splitright   " Split below instead of above first
+set backspace=eol,start,indent  " Configure backspace so it acts as it should act
+set wildmode=longest,list,full  " Auto complete order of Vim commands
 set completeopt=longest,menuone,preview
 if has('nvim')
     set cursorline " Enable current line indicator

@@ -21,10 +21,6 @@ The primary distro is Arch Linux, but they will work on other distros also. By u
 
 `curl -Lks https://raw.githubusercontent.com/SemtexError/dotfiles/master/.config/scripts/dotfiles.sh | /bin/bash`
 
-or
-
-`wget https://raw.githubusercontent.com/SemtexError/dotfiles/master/.config/scripts/dotfiles.sh`
-
 or VIM only
 
 `curl https://raw.githubusercontent.com/SemtexError/dotfiles/master/.vimrc > $HOME/.vimrc`
