@@ -211,6 +211,7 @@
 	"prettier.singleQuote": true,
 	"prettier.trailingComma": "all",
 	"prettier.printWidth": 300,
+	"prettier.useTabs": true,
 
 	// Vetur
     "vetur.format.defaultFormatter.html": "js-beautify-html",
@@ -274,7 +275,9 @@
 		"fortawesome",
 		"prepend",
 		"readonly",
-		"rgba"
+		"rgba",
+		"Magento",
+		"datatable"
 	],
 	"scss.lint.validProperties": [
 		"composes"

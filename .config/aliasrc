@@ -29,6 +29,7 @@ alias latexmk="latexmk -pdf -pvc -outdir=out -interaction=nonstopmode"
 # File system
 alias mkdir="mkdir -p"
 alias find="fd"
+[ -f "/usr/bin/fdfind" ] && alias fd=fdfind # Alias fd to the fd find on Ubuntu
 
 # Grep by ripgrep or fallback to default grep
 grep () {
@@ -41,4 +42,13 @@ ls () {
     exa --color=auto --group-directories-first $@ 2> /dev/null || 
         /usr/bin/ls --color=auto --group-directories-first $@
 }
+
+se () {
+    fd $@ | fzf --layout=reverse --height=50% | xargs -r $EDITOR
+}
+    
+dirs () {
+    cd "$(cat ~/.config/directories | fzf --layout=reverse --height=50%)"
+}
+
 alias la="ls -la"
