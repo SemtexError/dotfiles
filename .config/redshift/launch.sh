@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
-killall -q redshift
+killall -q redshift-gtk
 
-while pgrep -u $UID -x redshift >/dev/null; do sleep 1; done
+while pgrep -u $UID -x redshift-gtk >/dev/null; do sleep 1; done
 
-redshift &
+redshift-gtk &
