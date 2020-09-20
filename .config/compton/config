@@ -22,6 +22,7 @@ shadow-exclude = [
 ];
 
 conky = {
+	opacity = 1,
 	shadow = false
 }
 
@@ -53,7 +54,9 @@ blur-background-exclude = [
 # opacity-rule = [ "80:class_g = 'URxvt'" ];
 
 opacity-rule = [
-  "0:_NET_WM_STATE@:32a *= '_NET_WM_STATE_HIDDEN'"
+  "0:_NET_WM_STATE@:32a *= '_NET_WM_STATE_HIDDEN'",
+  "90:class_g = 'URxvt' && focused",
+  "60:class_g = 'URxvt' && !focused"
 ];
 
 # Fading
@@ -99,5 +102,18 @@ glx-swap-method = "undefined";
 # Window type settings
 wintypes:
 {
-  tooltip = { fade = true; shadow = true; opacity = 0.75; focus = true; };
+	dropdown_menu = {
+		opacity = 1;
+	};
+
+	popup_menu = {
+		opacity = 1;
+	};
+
+	tooltip = {
+		fade = true;
+		shadow = true;
+		opacity = 0.75;
+		focus = true; 
+	};
 };

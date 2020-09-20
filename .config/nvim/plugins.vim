@@ -33,6 +33,7 @@ call plug#begin('~/.config/nvim/.extensions')
 " ====== Helpers ======
     Plug 'andymass/vim-matchup'
     Plug 'jiangmiao/auto-pairs'
+    Plug 'junegunn/vim-peekaboo'
 
 " ====== languages tools ======
     Plug 'dense-analysis/ale'

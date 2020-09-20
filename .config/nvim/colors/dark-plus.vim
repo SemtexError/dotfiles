@@ -194,6 +194,7 @@ call Highlight("csUserIdentifier", s:identifier)
 
 " String
 call Highlight("csCharacter", s:string)
+call Highlight("csString", s:string)
 
 " == Javascript ==
 

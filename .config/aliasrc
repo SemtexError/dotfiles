@@ -19,36 +19,46 @@ alias gp="git pull"
 alias tm="tmux a || tmux"
 alias xclip="xclip -selection clipboard"
 
-# Move shit out of the home directory
-alias mvn="mvn -gs "$XDG_CONFIG_HOME"/maven/settings.xml"
-alias tmux="tmux -f "$XDG_CONFIG_HOME"/tmux/tmux.conf"
-
 # Other
 alias latexmk="latexmk -pdf -pvc -outdir=out -interaction=nonstopmode"
 
 # File system
 alias mkdir="mkdir -p"
-alias find="fd"
-[ -f "/usr/bin/fdfind" ] && alias fd=fdfind # Alias fd to the fd find on Ubuntu
+alias la="ls -la"
+
+# Add CD alternative
+export _ZO_FZF_OPTS="--layout=reverse --height=50%"
+[ -f "/usr/bin/zoxide" ] && eval "$(zoxide init zsh)"
 
 # Grep by ripgrep or fallback to default grep
 grep () {
-    rg --color=auto $@ 2> /dev/null ||
-        /usr/bin/grep --color=auto $@
+    [ -f "/usr/bin/rg" ] && /usr/bin/rg --color=auto $@ && return
+    [ -f "/usr/bin/grep" ] && /usr/bin/grep --color=auto $@ && return
 }
 
 # List files by Exa or fallback to the default LS
 ls () {
-    exa --color=auto --group-directories-first $@ 2> /dev/null || 
-        /usr/bin/ls --color=auto --group-directories-first $@
+    [ -f "/usr/bin/exa" ] && /usr/bin/exa --color=auto --group-directories-first $@ && return
+    [ -f "/usr/bin/ls" ] && /usr/bin/ls --color=auto --group-directories-first $@ && return
+}
+
+# Cat by Bat or fallback to the default cat
+cat () {
+    [ -f "/usr/bin/bat" ] && /usr/bin/bat $@ && return
+    [ -f "/usr/bin/cat" ] && /usr/bin/cat $@ && return
+}
+
+find () {
+    [ -f "/usr/bin/fdd" ] && /usr/bin/fd $@ && return
+    [ -f "/usr/bin/fdfind" ] && /usr/bin/fdfind $@ && return
+    [ -f "/usr/bin/find" ] && /usr/bin/find $@ && return
 }
 
 se () {
-    fd $@ | fzf --layout=reverse --height=50% | xargs -r $EDITOR
+    fd $@ | fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' --layout reverse --preview-window down | xargs -r $EDITOR
 }
     
 dirs () {
-    cd "$(cat ~/.config/directories | fzf --layout=reverse --height=50%)"
+    DIR=$(cat ~/.config/directories | fzf --layout=reverse --height=50%)
+    [[ ! -z "$DIR" ]] && cd $DIR
 }
-
-alias la="ls -la"
