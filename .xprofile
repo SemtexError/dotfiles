@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# ~/.config/flashfocus/launch.sh & # Launch flashfocus
-# ~/.config/compton/launch.sh & # Compositor for transparency
 ~/.config/redshift/launch.sh &  # Blue shift at night
 ~/.config/scripts/setbg & # Set the wallpaper
 ~/.config/i3/screens.sh & # Set the monitors (if present)

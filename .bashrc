@@ -7,12 +7,6 @@ cdls() { cd "$@" && ls -hN --color=auto --group-directories-first; }
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# ============================
-# ========= Exports ==========
-# ============================
-
-export VISUAL=nvim
-export EDITOR="$VISUAL"
 
 export LANG=en_US.UTF-8
 export LV_CTYPE=en_US.UTF-8
@@ -34,16 +28,8 @@ if [ -n "$SSH_CLIENT" ]; then
 fi
 export PS1+='\[\e[0;34m\]${PWD#"${PWD%/*/*}/"}\[\e[0m\]> '
 
-
 # Alias
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 
 # Exports
 [ -f "$HOME/.config/exportrc" ] && source "$HOME/.config/exportrc"
-
-# ============================
-# ========= Other ============
-# ============================
-
-# Start to tmux
-# [ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
