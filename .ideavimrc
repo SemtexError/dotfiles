@@ -35,3 +35,4 @@ nnoremap <C-o> :action Back<CR>
 nnoremap <C-i> :action Forward<CR>
 nnoremap <C-r> :action $Redo<CR>
 nnoremap R :action RefactoringMenu<CR>
+

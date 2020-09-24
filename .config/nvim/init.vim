@@ -12,3 +12,4 @@ source $HOME/.config/nvim/keybindings.vim
 
 " Debug
 source $HOME/.config/nvim/debug.vim
+

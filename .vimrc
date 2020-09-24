@@ -110,3 +110,4 @@ nnoremap gn :bnext<CR>
 " Move around in insert mode, handy with auto insert braces etc.
 inoremap <M-l> <right>
 inoremap <M-h> <left>
+
