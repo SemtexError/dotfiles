@@ -1,0 +1,15 @@
+#!/bin/bash
+
+case $1 in --increase)
+        ponymix increase 1
+        ;;
+    --decrease)
+        ponymix decrease 1
+        ;;
+    --toggle)
+        echo "toggle"
+        ponymix toggle
+        ;;
+esac
+
+
