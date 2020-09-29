@@ -33,3 +33,4 @@ export PS1+='\[\e[0;34m\]${PWD#"${PWD%/*/*}/"}\[\e[0m\]> '
 
 # Exports
 [ -f "$HOME/.config/exportrc" ] && source "$HOME/.config/exportrc"
+
