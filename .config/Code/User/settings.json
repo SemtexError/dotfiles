@@ -283,7 +283,8 @@
 		"composes"
 	],
 	"scss.lint.unknownAtRules": "ignore",
-	"vetur.experimental.templateInterpolationService": true
+	"vetur.experimental.templateInterpolationService": true,
+	"workbench.colorTheme": "Visual Studio 2019 Dark"
 	
 }
   
