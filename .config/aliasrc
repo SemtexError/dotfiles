@@ -51,7 +51,7 @@ cat () {
 }
 
 find () {
-    [ -f "/usr/bin/fdd" ] && /usr/bin/fd $@ && return
+    [ -f "/usr/bin/fd" ] && /usr/bin/fd $@ && return
     [ -f "/usr/bin/fdfind" ] && /usr/bin/fdfind $@ && return
     [ -f "/usr/bin/find" ] && /usr/bin/find $@ && return
 }

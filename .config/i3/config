@@ -10,8 +10,8 @@ focus_follows_mouse no
 
 for_window [class="Tor Browser"] floating enable move position center resize set 1100 1100
 for_window [class="xfreerdp"] floating enable move position center
-for_window [class="hybrid-saas"] resize set 2500 1300
-for_window [class="hybrid-saas"] move position center
+for_window [class="hybrid saas"] floating enable resize set 2000 1000
+for_window [class="Hybrid SaaS"] floating enable resize set 2000 1000
 
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="bubble"] floating enable
@@ -370,5 +370,6 @@ bindsym XF86AudioMute 				exec $nsi ~/.config/scripts/audio --toggle
 bindsym XF86AudioPause 				exec $nsi playerctl play-pause 
 bindsym XF86AudioNext 				exec $nsi playerctl next
 bindsym XF86AudioPrev 				exec $nsi playerctl previous
+
 
 exec_always $nsi ~/.config/polybar/launch.sh # Launch statusbar(s)
