@@ -65,3 +65,7 @@ nnoremap gn :bnext<CR>
 " Move around in insert mode, handy with auto insert braces etc.
 inoremap <M-l> <right>
 inoremap <M-h> <left>
+
+" This is a test: disable yanking after paste.
+vnoremap p "_dP
+vnoremap <leader>p p
