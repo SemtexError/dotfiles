@@ -1,6 +1,8 @@
 {
     // Prevent VIM folder to show up in the home directory
     "session.directory": "~/.config/nvim/.sessions",
+
+    "vetur.experimental.templateInterpolationService": true,
     
     "diagnostic.virtualText": false,
     "diagnostic.messageTarget": "float",

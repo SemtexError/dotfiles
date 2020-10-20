@@ -23,8 +23,9 @@ call plug#begin('~/.config/nvim/.extensions')
     Plug 'psliwka/vim-smoothie'
     Plug 'jremmen/vim-ripgrep'
     Plug 'wellle/targets.vim'
-    Plug 'tpope/vim-repeat'
+	Plug 'tpope/vim-surround'
     Plug 'tpope/vim-abolish'
+    Plug 'tpope/vim-repeat'
 
 " ====== Git ======
     Plug 'rhysd/git-messenger.vim'

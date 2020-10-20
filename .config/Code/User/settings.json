@@ -52,7 +52,6 @@
 	// Workbench
 	"workbench.tree.renderIndentGuides": "always",
 	"workbench.tree.indent": 18,
-	"workbench.iconTheme": "material-icon-theme",
 	"workbench.activityBar.visible": true,
     "workbench.sideBar.location": "right",
     "workbench.editor.enablePreview": false,
@@ -131,7 +130,6 @@
 
 	// ===== Extensions =====
 	"extensions.ignoreRecommendations": true,
-	"extensions.showRecommendationsOnlyOnDemand": true,
 	
 	// Git
 	"git.autofetch": true,
@@ -284,7 +282,10 @@
 	],
 	"scss.lint.unknownAtRules": "ignore",
 	"vetur.experimental.templateInterpolationService": true,
-	"workbench.colorTheme": "Visual Studio 2019 Dark"
+	"workbench.enableExperiments": false,
+	"workbench.settings.enableNaturalLanguageSearch": false,
+	"update.mode": "none",
+	"update.showReleaseNotes": false
 	
 }
   

@@ -1,7 +1,7 @@
 /******
 * name: arkenfox user.js
-* date: 23 Sep 2020
-* version 81-beta
+* date: 13 Oct 2020
+* version 82-alpha
 * url: https://github.com/arkenfox/user.js
 * license: MIT: https://github.com/arkenfox/user.js/blob/master/LICENSE.txt
 
@@ -160,10 +160,6 @@ user_pref("geo.provider.network.url", "https://location.services.mozilla.com/v1/
 user_pref("geo.provider.ms-windows-location", false); // [WINDOWS]
 user_pref("geo.provider.use_corelocation", false); // [MAC]
 user_pref("geo.provider.use_gpsd", false); // [LINUX]
-/* 0206: disable geographically specific results/search engines e.g. "browser.search.*.US"
- * i.e. ignore all of Mozilla's various search engines in multiple locales ***/
-user_pref("browser.search.geoSpecificDefaults", false);
-user_pref("browser.search.geoSpecificDefaults.url", "");
 /* 0207: disable region updates
  * [1] https://firefox-source-docs.mozilla.org/toolkit/modules/toolkit_modules/Region.html ***/
 user_pref("browser.region.network.url", ""); // [FF78+]
@@ -736,7 +732,7 @@ user_pref("security.mixed_content.block_display_content", true);
 user_pref("security.mixed_content.block_object_subrequest", true);
 /* 1244: enable HTTPS-Only mode [FF76+]
  * When "https_only_mode" (all windows) is true, "https_only_mode_pbm" (private windows only) is ignored
- * [WARNING] This is experimental, see [1] and you can't set exceptions if FPI is enabled, see [2]
+ * [WARNING] This is experimental [1] and you can't set exceptions if FPI is enabled [2] (fixed in FF83)
  * [SETTING] to add site exceptions: Page Info>Permissions>Use insecure HTTP (FF80+)
  * [SETTING] Privacy & Security>HTTPS-Only Mode (FF80+ with browser.preferences.exposeHTTPSOnly = true)
  * [1] https://bugzilla.mozilla.org/1613063 [META]
@@ -794,9 +790,9 @@ user_pref("security.insecure_connection_text.enabled", true); // [FF60+]
 user_pref("_user.js.parrot", "1400 syntax error: the parrot's bereft of life!");
 /* 1401: disable websites choosing fonts (0=block, 1=allow)
  * This can limit most (but not all) JS font enumeration which is a high entropy fingerprinting vector
- * [SETUP-WEB] Can break some PDFs (missing text). Limiting to default fonts can "uglify" the web
+ * [WARNING] **DO NOT USE**: in FF80+ RFP covers this, and non-RFP users should use font vis (4618)
  * [SETTING] General>Language and Appearance>Fonts & Colors>Advanced>Allow pages to choose... ***/
-user_pref("browser.display.use_document_fonts", 0);
+   // user_pref("browser.display.use_document_fonts", 0);
 /* 1403: disable icon fonts (glyphs) and local fallback rendering
  * [1] https://bugzilla.mozilla.org/789788
  * [2] https://gitlab.torproject.org/legacy/trac/-/issues/8455 ***/
@@ -812,9 +808,8 @@ user_pref("gfx.font_rendering.opentype_svg.enabled", false);
 user_pref("gfx.font_rendering.graphite.enabled", false);
 /* 1409: limit system font exposure to a whitelist [FF52+] [RESTART]
  * If the whitelist is empty, then whitelisting is considered disabled and all fonts are allowed
- * [NOTE] in FF80 RFP restricts the whitelist to bundled and "Base Fonts"
- * ...and in FF81+ the whitelist **overrides** RFP's font visibility (see 4618)
- * [WARNING] Creating your own probably highly-unique whitelist will raise your entropy.
+ * [WARNING] **DO NOT USE**: in FF80+ RFP covers this, and non-RFP users should use font vis (4618)
+ * [NOTE] In FF81+ the whitelist **overrides** RFP's font visibility (see 4618)
  * [1] https://bugzilla.mozilla.org/1121643 ***/
    // user_pref("font.system.whitelist", ""); // [HIDDEN PREF]
 
@@ -1073,11 +1068,6 @@ user_pref("javascript.options.asmjs", false);
  * [NOTE] In FF71+ this no longer affects extensions (1576254)
  * [1] https://developer.mozilla.org/docs/WebAssembly ***/
 user_pref("javascript.options.wasm", false);
-/* 2426: disable Intersection Observer API [FF55+]
- * [1] https://developer.mozilla.org/docs/Web/API/Intersection_Observer_API
- * [2] https://w3c.github.io/IntersectionObserver/
- * [3] https://bugzilla.mozilla.org/1243846 ***/
-   // user_pref("dom.IntersectionObserver.enabled", false);
 /* 2429: enable (limited but sufficient) window.opener protection [FF65+]
  * Makes rel=noopener implicit for target=_blank in anchor and area elements when no rel attribute is set ***/
 user_pref("dom.targetBlankNoOpener.enabled", true); // [DEFAULT: true FF79+]
@@ -1124,7 +1114,7 @@ user_pref("dom.webaudio.enabled", false);
 /*** [SECTION 2600]: MISCELLANEOUS ***/
 user_pref("_user.js.parrot", "2600 syntax error: the parrot's run down the curtain!");
 /* 2601: prevent accessibility services from accessing your browser [RESTART]
- * [SETTING] Privacy & Security>Permissions>Prevent accessibility services from accessing your browser
+ * [SETTING] Privacy & Security>Permissions>Prevent accessibility services from accessing your browser (FF80 or lower)
  * [1] https://support.mozilla.org/kb/accessibility-services ***/
 user_pref("accessibility.force_disabled", 1);
 /* 2602: disable sending additional analytics to web servers
@@ -1697,99 +1687,12 @@ user_pref("_user.js.parrot", "9999 syntax error: the parrot's deprecated!");
    // [-] https://bugzilla.mozilla.org/1603712
 user_pref("intl.charset.fallback.override", "windows-1252");
 // * * * /
-// ***/
-
-/* ESR68.x still uses all the following prefs
-// [NOTE] replace the * with a slash in the line above to re-enable them
-// FF69
-// 1405: disable WOFF2 (Web Open Font Format) [FF35+]
-   // [-] https://bugzilla.mozilla.org/1556991
-   // user_pref("gfx.downloadable_fonts.woff2.enabled", false);
-// 1802: enforce click-to-play for plugins
-   // [-] https://bugzilla.mozilla.org/1519434
-user_pref("plugins.click_to_play", true); // [DEFAULT: true FF25+]
-// 2033: disable autoplay for muted videos [FF63+] - replaced by 'media.autoplay.default' options (2030)
-   // [-] https://bugzilla.mozilla.org/1562331
-   // user_pref("media.autoplay.allow-muted", false);
-// * * * /
-// FF71
-// 2608: disable WebIDE and ADB extension download
-   // [1] https://trac.torproject.org/projects/tor/ticket/16222
-   // [-] https://bugzilla.mozilla.org/1539462
-user_pref("devtools.webide.enabled", false); // [DEFAULT: false FF70+]
-user_pref("devtools.webide.autoinstallADBExtension", false); // [FF64+]
-// 2731: enforce websites to ask to store data for offline use
-   // [1] https://support.mozilla.org/questions/1098540
-   // [2] https://bugzilla.mozilla.org/959985
-   // [-] https://bugzilla.mozilla.org/1574480
-user_pref("offline-apps.allow_by_default", false);
-// * * * /
-// FF72
-// 0105a: disable Activity Stream telemetry
-   // [-] https://bugzilla.mozilla.org/1597697
-user_pref("browser.newtabpage.activity-stream.telemetry.ping.endpoint", "");
-// 0330: disable Hybdrid Content telemetry
-   // [-] https://bugzilla.mozilla.org/1520491
-user_pref("toolkit.telemetry.hybridContent.enabled", false); // [FF59+]
-// 2720: enforce IndexedDB (IDB) as enabled
-   // IDB is required for extensions and Firefox internals (even before FF63 in [1])
-   // To control *website* IDB data, control allowing cookies and service workers, or use
-   // Temporary Containers. To mitigate *website* IDB, FPI helps (4001), and/or sanitize
-   // on close (Offline Website Data, see 2800) or on-demand (Ctrl-Shift-Del), or automatically
-   // via an extension. Note that IDB currently cannot be sanitized by host.
-   // [1] https://blog.mozilla.org/addons/2018/08/03/new-backend-for-storage-local-api/
-   // [-] https://bugzilla.mozilla.org/1488583
-user_pref("dom.indexedDB.enabled", true); // [DEFAULT: true]
-// * * * /
-// FF74
-// 0203: use Mozilla geolocation service instead of Google when geolocation is enabled
-   // Optionally enable logging to the console (defaults to false)
-   // [-] https://bugzilla.mozilla.org/1613627
-user_pref("geo.wifi.uri", "https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%");
-   // user_pref("geo.wifi.logging.enabled", true); // [HIDDEN PREF]
-// 1704: set behaviour on "+ Tab" button to display container menu [FF53+] [SETUP-CHROME]
-   // 0=no menu (default), 1=show when clicked, 2=show on long press
-   // [1] https://bugzilla.mozilla.org/1328756
-   // [-] https://bugzilla.mozilla.org/1606265
-user_pref("privacy.userContext.longPressBehavior", 2);
-// 2012: limit WebGL
-   // [-] https://bugzilla.mozilla.org/1477756
-user_pref("webgl.disable-extensions", true);
-// * * * /
-// FF76
-// 0401: sanitize blocklist url
-   // [2] https://trac.torproject.org/projects/tor/ticket/16931
-   // [-] https://bugzilla.mozilla.org/1618188
-user_pref("extensions.blocklist.url", "https://blocklists.settings.services.mozilla.com/v1/blocklist/3/%APP_ID%/%APP_VERSION%/");
-// 2201: prevent websites from disabling new window features
-   // [-] https://bugzilla.mozilla.org/buglist.cgi?bug_id=1507375,1660524
-user_pref("dom.disable_window_open_feature.close", true);
-user_pref("dom.disable_window_open_feature.location", true); // [DEFAULT: true]
-user_pref("dom.disable_window_open_feature.menubar", true);
-user_pref("dom.disable_window_open_feature.minimizable", true);
-user_pref("dom.disable_window_open_feature.personalbar", true); // bookmarks toolbar
-user_pref("dom.disable_window_open_feature.resizable", true); // [DEFAULT: true]
-user_pref("dom.disable_window_open_feature.status", true); // [DEFAULT: true]
-user_pref("dom.disable_window_open_feature.titlebar", true);
-user_pref("dom.disable_window_open_feature.toolbar", true);
-// * * * /
-// FF77
-// 0850e: disable location bar one-off searches [FF51+]
-   // [-] https://bugzilla.mozilla.org/1628926
-   // user_pref("browser.urlbar.oneOffSearches", false);
-// 2605: block web content in file processes [FF55+]
-   // [SETUP-WEB] You may want to disable this for corporate or developer environments
-   // [1] https://bugzilla.mozilla.org/1343184
-   // [-] https://bugzilla.mozilla.org/1603007
-user_pref("browser.tabs.remote.allowLinkedWebInFileUriProcess", false);
-// * * * /
-// FF78
-// 2031: disable autoplay of HTML5 media if you interacted with the site [FF66+] - replaced by 'media.autoplay.blocking_policy'
-   // [-] https://bugzilla.mozilla.org/1509933
-user_pref("media.autoplay.enabled.user-gestures-needed", false);
-// 5000's: disable chrome animations - replaced FF77+ by 'ui.prefersReducedMotion' (4520)
-   // [-] https://bugzilla.mozilla.org/1640501
-   // user_pref("toolkit.cosmeticAnimations.enabled", false); // [FF55+]
+// FF82
+// 0206: disable geographically specific results/search engines e.g. "browser.search.*.US"
+   // i.e. ignore all of Mozilla's various search engines in multiple locales
+   // [-] https://bugzilla.mozilla.org/1619926
+user_pref("browser.search.geoSpecificDefaults", false);
+user_pref("browser.search.geoSpecificDefaults.url", "");
 // * * * /
 // ***/
 
@@ -1896,6 +1799,6 @@ user_pref("media.ffmpeg.dmabuf-textures.enabled", true);
 user_pref("media.ffmpeg.vaapi.enabled", true);
 user_pref("media.ffvpx.enabled", false);
 
-// Date: 24-09-2020
+// Date: 17-10-2020
 // https://github.com/ghacksuserjs/ghacks-user.js
 // vim:ft=javascript

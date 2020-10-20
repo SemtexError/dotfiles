@@ -12,6 +12,7 @@ for_window [class="Tor Browser"] floating enable move position center resize set
 for_window [class="xfreerdp"] floating enable move position center
 for_window [class="hybrid saas"] floating enable resize set 2000 1000
 for_window [class="Hybrid SaaS"] floating enable resize set 2000 1000
+for_window [class="galculator"] floating enable move position center 
 
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="bubble"] floating enable

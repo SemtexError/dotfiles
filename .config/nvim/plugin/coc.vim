@@ -13,10 +13,7 @@ let g:coc_global_extensions= [
             \ 'coc-vetur',
             \ 'coc-html',
             \ 'coc-css',
-            \ 'coc-tailwindcss',
-            \ 'coc-rust-analyzer',
             \ 'coc-json',
-            \ 'coc-webpack',
             \ 'coc-pairs',
             \ 'coc-lists',
             \ 'coc-explorer',
@@ -25,7 +22,6 @@ let g:coc_global_extensions= [
             \ 'coc-bibtex',
             \ 'coc-import-cost',
             \ 'coc-yank',
-            \ 'coc-rls',
             \ 'coc-marketplace'
             \]
 
